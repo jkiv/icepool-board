@@ -1,10 +1,19 @@
 icepool-board
 =============
 
-KiCad designs for the icepool project.
+KiCad 5 designs for the icepool project.
 
-icepool is a low-power SHA-256d FPGA miner (e.g. BTC) based on Lattice
-Semiconductor ICE40 FPGAs using the open-source IceStorm toolchain.
+icepool is a general purpose multi-FPGA circuit board designed around
+Lattice ICE40 FPGAs.
+
+Key features include,
+
+- Host ARM processor for serial communication, debugging, and programming of FPGAs.
+- Broadcast interface for sending data from host to all FPGAs.
+- FIFO interface for data passing between FPGAs.
+
+The goal is to produce an inexpensive, flexible multi-core parallel co-processor
+for embedded computing projects.
 
 These designs are licensed under the Creative Commons
 Attribution-ShareALike-NonCommercial 4.0 license.

@@ -15,8 +15,5 @@ Key features include,
 The goal is to produce an inexpensive, flexible multi-core parallel co-processor
 for embedded computing projects.
 
-These designs are licensed under the Creative Commons
-Attribution-ShareALike-NonCommercial 4.0 license.
-
 Please consider supporting this project and others like it by donating:
 * 13zRrs1YDdooUN5WtfXRSDn8KnJdok4qG9

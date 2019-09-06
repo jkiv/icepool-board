@@ -1,6 +1,6 @@
-shapool-board (c) by jkiv
+icepool-board (c) by Jon Kivinen
 
-shapool-board is licensed under a
+icepool-board is licensed under a
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 =======================================================================

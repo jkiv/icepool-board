@@ -1,42 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:Abracon
-LIBS:Lattice
-LIBS:Microchip
-LIBS:TI
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:ice40hx8k-bg121-board-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -51,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L iCE40HX8K-BG121(121-Ball_caBGA) U?
+L Lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 1 1 5B0F43DF
 P 2350 1850
 AR Path="/5B00955A/5B0F43DF" Ref="U?"  Part="1" 
@@ -70,7 +33,7 @@ F 3 "" H 2350 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L iCE40HX8K-BG121(121-Ball_caBGA) U?
+L Lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 2 1 5B0F43E6
 P 5600 1850
 AR Path="/5B0F3DD9/5B0F43E6" Ref="U?"  Part="2" 
@@ -87,7 +50,7 @@ F 3 "" H 5600 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L iCE40HX8K-BG121(121-Ball_caBGA) U?
+L Lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 4 1 5B0F43F4
 P 5600 4000
 AR Path="/5B0F3DD9/5B0F43F4" Ref="U?"  Part="4" 
@@ -104,7 +67,7 @@ F 3 "" H 5600 4100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L D_Schottky_Small_ALT D1-?
+L Device:D_Schottky_Small_ALT D1-?
 U 1 1 5B0F43FB
 P 8350 2350
 AR Path="/5B0F3DD9/5B0F43FB" Ref="D1-?"  Part="1" 
@@ -121,7 +84,7 @@ F 3 "" V 8350 2350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F4402
 P 8350 1850
 AR Path="/5B0F3DD9/5B0F4402" Ref="C1-?"  Part="1" 
@@ -138,7 +101,7 @@ F 3 "" H 8350 1850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F4409
 P 8350 2150
 AR Path="/5B0F3DD9/5B0F4409" Ref="C1-?"  Part="1" 
@@ -155,7 +118,7 @@ F 3 "" H 8350 2150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R_Small R1-?
+L Device:R_Small R1-?
 U 1 1 5B0F4410
 P 8100 1750
 AR Path="/5B0F3DD9/5B0F4410" Ref="R1-?"  Part="1" 
@@ -172,7 +135,7 @@ F 3 "" H 8100 1750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R_Small R1-?
+L Device:R_Small R1-?
 U 1 1 5B0F4417
 P 8100 2150
 AR Path="/5B0F3DD9/5B0F4417" Ref="R1-?"  Part="1" 
@@ -189,7 +152,7 @@ F 3 "" H 8100 2150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +1V2 #PWR?
+L power:+1V2 #PWR?
 U 1 1 5B0F441E
 P 7750 1650
 AR Path="/5B0F3DD9/5B0F441E" Ref="#PWR?"  Part="1" 
@@ -206,7 +169,7 @@ F 3 "" H 7750 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR?
+L power:+3V3 #PWR?
 U 1 1 5B0F4444
 P 8050 2400
 AR Path="/5B0F3DD9/5B0F4444" Ref="#PWR?"  Part="1" 
@@ -223,7 +186,7 @@ F 3 "" H 8050 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F444A
 P 8350 2700
 AR Path="/5B0F3DD9/5B0F444A" Ref="C1-?"  Part="1" 
@@ -240,7 +203,7 @@ F 3 "" H 8350 2700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B0F4451
 P 8350 2850
 AR Path="/5B0F3DD9/5B0F4451" Ref="#PWR?"  Part="1" 
@@ -257,7 +220,7 @@ F 3 "" H 8350 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B0F4497
 P 7750 2250
 AR Path="/5B0F3DD9/5B0F4497" Ref="#PWR?"  Part="1" 
@@ -274,7 +237,7 @@ F 3 "" H 7750 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L iCE40HX8K-BG121(121-Ball_caBGA) U?
+L Lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 5 1 5B0F449D
 P 9350 1900
 AR Path="/5B00955A/5B0F449D" Ref="U?"  Part="5" 
@@ -293,7 +256,7 @@ F 3 "" H 9350 2000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B0F44A4
 P 10250 2000
 AR Path="/5B0F3DD9/5B0F44A4" Ref="#PWR?"  Part="1" 
@@ -310,7 +273,7 @@ F 3 "" H 10250 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F44AA
 P 8350 1150
 AR Path="/5B0F3DD9/5B0F44AA" Ref="C1-?"  Part="1" 
@@ -327,7 +290,7 @@ F 3 "" H 8350 1150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F44B1
 P 8350 1250
 AR Path="/5B0F3DD9/5B0F44B1" Ref="C1-?"  Part="1" 
@@ -344,7 +307,7 @@ F 3 "" H 8350 1250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F44B8
 P 8350 1350
 AR Path="/5B0F3DD9/5B0F44B8" Ref="C1-?"  Part="1" 
@@ -361,7 +324,7 @@ F 3 "" H 8350 1350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F44BF
 P 8350 1450
 AR Path="/5B0F3DD9/5B0F44BF" Ref="C1-?"  Part="1" 
@@ -378,7 +341,7 @@ F 3 "" H 8350 1450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F44C6
 P 8350 1550
 AR Path="/5B0F3DD9/5B0F44C6" Ref="C1-?"  Part="1" 
@@ -395,7 +358,7 @@ F 3 "" H 8350 1550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +3V3 #PWR?
+L power:+3V3 #PWR?
 U 1 1 5B0F44CD
 P 8650 1000
 AR Path="/5B0F3DD9/5B0F44CD" Ref="#PWR?"  Part="1" 
@@ -412,7 +375,7 @@ F 3 "" H 8650 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B0F44D9
 P 7900 1350
 AR Path="/5B0F3DD9/5B0F44D9" Ref="#PWR?"  Part="1" 
@@ -429,7 +392,7 @@ F 3 "" H 7900 1350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F44DF
 P 10350 1150
 AR Path="/5B0F3DD9/5B0F44DF" Ref="C1-?"  Part="1" 
@@ -446,7 +409,7 @@ F 3 "" H 10350 1150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F44E6
 P 10350 1250
 AR Path="/5B0F3DD9/5B0F44E6" Ref="C1-?"  Part="1" 
@@ -463,7 +426,7 @@ F 3 "" H 10350 1250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F44ED
 P 10350 1350
 AR Path="/5B0F3DD9/5B0F44ED" Ref="C1-?"  Part="1" 
@@ -480,7 +443,7 @@ F 3 "" H 10350 1350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C1-?
+L Device:C_Small C1-?
 U 1 1 5B0F44F4
 P 10350 1450
 AR Path="/5B0F3DD9/5B0F44F4" Ref="C1-?"  Part="1" 
@@ -497,7 +460,7 @@ F 3 "" H 10350 1450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B0F44FB
 P 10800 1300
 AR Path="/5B0F3DD9/5B0F44FB" Ref="#PWR?"  Part="1" 
@@ -514,7 +477,7 @@ F 3 "" H 10800 1300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R_Small R1-?
+L Device:R_Small R1-?
 U 1 1 5B0F4502
 P 3600 4950
 AR Path="/5B0F3DD9/5B0F4502" Ref="R1-?"  Part="1" 
@@ -531,7 +494,7 @@ F 3 "" H 3600 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B0F4509
 P 3600 5150
 AR Path="/5B0F3DD9/5B0F4509" Ref="#PWR?"  Part="1" 
@@ -550,7 +513,7 @@ $EndComp
 Text HLabel 3750 4250 2    60   Input ~ 0
 CRESET_B
 $Comp
-L iCE40HX8K-BG121(121-Ball_caBGA) U?
+L Lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 3 1 5B0F43ED
 P 2350 4000
 AR Path="/5B0F3DD9/5B0F43ED" Ref="U?"  Part="3" 
@@ -581,7 +544,7 @@ DONE_B
 Text Notes 3650 4850 0    60   ~ 0
 SS_B\nSPI Slave-mode
 $Comp
-L Jumper_NO_Small JP?
+L Device:Jumper_NO_Small JP?
 U 1 1 5B1E6C25
 P 9350 3300
 AR Path="/5B360EF0/5B1E6C25" Ref="JP?"  Part="1" 
@@ -600,7 +563,7 @@ D_SDI
 Text HLabel 9650 3300 2    60   Output ~ 0
 D_SDO
 $Comp
-L +1V2 #PWR?
+L power:+1V2 #PWR?
 U 1 1 5B1E74C3
 P 10050 1000
 AR Path="/5B360EF0/5B1E74C3" Ref="#PWR?"  Part="1" 
@@ -617,7 +580,7 @@ $EndComp
 Text HLabel 1000 3350 0    60   Input ~ 0
 D_SEL
 $Comp
-L R_Small R?
+L Device:R_Small R?
 U 1 1 5B391B48
 P 9425 4700
 AR Path="/5B360EF0/5B391B48" Ref="R?"  Part="1" 
@@ -632,7 +595,7 @@ F 3 "" H 9425 4700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R_Small R4-?
+L Device:R_Small R4-?
 U 1 1 5B393564
 P 9425 4500
 F 0 "R4-?" V 9475 4475 50  0000 L CNN
@@ -643,7 +606,7 @@ F 3 "" H 9425 4500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R_Small R8-?
+L Device:R_Small R8-?
 U 1 1 5B394609
 P 9425 5300
 F 0 "R8-?" V 9475 5275 50  0000 L CNN
@@ -668,7 +631,7 @@ SDI
 Text HLabel 9175 4900 0    60   Output ~ 0
 SDO
 $Comp
-L R_Small R6-?
+L Device:R_Small R6-?
 U 1 1 5B39C792
 P 9425 4900
 F 0 "R6-?" V 9475 4875 50  0000 L CNN
@@ -697,7 +660,7 @@ D_DSI
 Text HLabel 9150 5100 0    60   Input ~ 0
 D_SDI
 $Comp
-L R_Small R7-?
+L Device:R_Small R7-?
 U 1 1 5B3B8092
 P 9425 5100
 F 0 "R7-?" V 9475 5075 50  0000 L CNN

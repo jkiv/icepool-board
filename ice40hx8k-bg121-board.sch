@@ -1,42 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:Abracon
-LIBS:Lattice
-LIBS:Microchip
-LIBS:TI
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:ice40hx8k-bg121-board-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr USLegal 14000 8500
 encoding utf-8
@@ -51,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ASTX-H11 X?
+L Abracon:ASTX-H11 X?
 U 1 1 5B037B32
 P 1400 5875
 F 0 "X?" H 1400 6175 60  0000 C CNN
@@ -62,7 +25,7 @@ F 3 "" H 1400 5875 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B0398F5
 P 800 5925
 F 0 "C?" H 600 6025 50  0000 L CNN
@@ -73,7 +36,7 @@ F 3 "" H 800 5925 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B039F1C
 P 800 6075
 F 0 "#PWR?" H 800 5825 50  0001 C CNN
@@ -84,7 +47,7 @@ F 3 "" H 800 6075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B039F78
 P 1950 6075
 F 0 "#PWR?" H 1950 5825 50  0001 C CNN
@@ -95,7 +58,7 @@ F 3 "" H 1950 6075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR?
+L power:+3V3 #PWR?
 U 1 1 5B03A157
 P 800 5625
 F 0 "#PWR?" H 800 5475 50  0001 C CNN
@@ -118,7 +81,7 @@ D_SDI
 Text Label 1025 1325 2    60   ~ 0
 D_SDI_01
 $Comp
-L TPS54394 U?
+L TI:TPS54394 U?
 U 1 1 5B11F9F7
 P 4875 6225
 F 0 "U?" H 4875 7075 60  0000 C CNN
@@ -129,7 +92,7 @@ F 3 "" H 4875 6075 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B12A436
 P 5625 5825
 F 0 "C?" V 5525 5725 39  0000 L CNN
@@ -140,7 +103,7 @@ F 3 "" H 5625 5825 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B12BA77
 P 4125 5825
 F 0 "C?" V 4025 5725 39  0000 L CNN
@@ -151,7 +114,7 @@ F 3 "" H 4125 5825 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L L_Small L?
+L Device:L_Small L?
 U 1 1 5B12D4B7
 P 5925 6025
 F 0 "L?" V 5975 6075 39  0000 R CNN
@@ -162,7 +125,7 @@ F 3 "" H 5925 6025 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L L_Small L?
+L Device:L_Small L?
 U 1 1 5B12EEDD
 P 3825 6025
 F 0 "L?" V 3875 6075 39  0000 R CNN
@@ -173,7 +136,7 @@ F 3 "" H 3825 6025 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B134A71
 P 6325 6225
 F 0 "C?" V 6275 6075 39  0000 L CNN
@@ -184,7 +147,7 @@ F 3 "" H 6325 6225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B13F602
 P 3425 6225
 F 0 "C?" V 3375 6025 39  0000 L CNN
@@ -195,7 +158,7 @@ F 3 "" H 3425 6225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B13F710
 P 3825 5625
 F 0 "C?" V 3725 5525 39  0000 L CNN
@@ -206,7 +169,7 @@ F 3 "" H 3825 5625 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B13FCC9
 P 5925 5625
 F 0 "C?" V 5825 5525 39  0000 L CNN
@@ -217,7 +180,7 @@ F 3 "" H 5925 5625 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R_Small R?
+L Device:R_Small R?
 U 1 1 5B142F2C
 P 6625 6525
 F 0 "R?" V 6525 6425 39  0000 L CNN
@@ -228,7 +191,7 @@ F 3 "" H 6625 6525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R?
+L Device:R_Small R?
 U 1 1 5B143AF1
 P 6625 6225
 F 0 "R?" V 6525 6125 39  0000 L CNN
@@ -239,7 +202,7 @@ F 3 "" H 6625 6225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R?
+L Device:R_Small R?
 U 1 1 5B1444F5
 P 3125 6325
 F 0 "R?" V 3025 6225 39  0000 L CNN
@@ -250,7 +213,7 @@ F 3 "" H 3125 6325 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R?
+L Device:R_Small R?
 U 1 1 5B1444FB
 P 3125 6675
 F 0 "R?" V 3025 6575 39  0000 L CNN
@@ -261,7 +224,7 @@ F 3 "" H 3125 6675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B1449A3
 P 5575 7225
 F 0 "C?" V 5475 7125 39  0000 L CNN
@@ -272,7 +235,7 @@ F 3 "" H 5575 7225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG?
 U 1 1 5B16B261
 P 6725 6025
 F 0 "#FLG?" H 6725 6100 50  0001 C CNN
@@ -283,7 +246,7 @@ F 3 "" H 6725 6025 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +1V2 #PWR?
+L power:+1V2 #PWR?
 U 1 1 5B16F52E
 P 6525 5975
 F 0 "#PWR?" H 6525 5825 50  0001 C CNN
@@ -294,7 +257,7 @@ F 3 "" H 6525 5975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B171CFD
 P 6625 6725
 F 0 "#PWR?" H 6625 6475 50  0001 C CNN
@@ -305,7 +268,7 @@ F 3 "" H 6625 6725 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B172334
 P 6325 6425
 F 0 "#PWR?" H 6325 6175 50  0001 C CNN
@@ -316,7 +279,7 @@ F 3 "" H 6325 6425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B172D7C
 P 6125 5725
 F 0 "#PWR?" H 6125 5475 50  0001 C CNN
@@ -327,7 +290,7 @@ F 3 "" H 6125 5725 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR?
 U 1 1 5B17425E
 P 5625 5525
 F 0 "#PWR?" H 5625 5375 50  0001 C CNN
@@ -338,7 +301,7 @@ F 3 "" H 5625 5525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR?
 U 1 1 5B174610
 P 5575 6425
 F 0 "#PWR?" H 5575 6275 50  0001 C CNN
@@ -349,7 +312,7 @@ F 3 "" H 5575 6425 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B174AAC
 P 5575 6225
 F 0 "#PWR?" H 5575 5975 50  0001 C CNN
@@ -360,7 +323,7 @@ F 3 "" H 5575 6225 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B1755BB
 P 5575 7425
 F 0 "#PWR?" H 5575 7175 50  0001 C CNN
@@ -371,7 +334,7 @@ F 3 "" H 5575 7425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B175E6D
 P 4875 7425
 F 0 "#PWR?" H 4875 7175 50  0001 C CNN
@@ -382,7 +345,7 @@ F 3 "" H 4875 7425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR?
 U 1 1 5B179B49
 P 4125 5525
 F 0 "#PWR?" H 4125 5375 50  0001 C CNN
@@ -393,7 +356,7 @@ F 3 "" H 4125 5525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B17E893
 P 3575 5775
 F 0 "#PWR?" H 3575 5525 50  0001 C CNN
@@ -404,7 +367,7 @@ F 3 "" H 3575 5775 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B18F0AF
 P 3425 6425
 F 0 "#PWR?" H 3425 6175 50  0001 C CNN
@@ -415,7 +378,7 @@ F 3 "" H 3425 6425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR?
+L power:+3V3 #PWR?
 U 1 1 5B190B09
 P 3225 5975
 F 0 "#PWR?" H 3225 5825 50  0001 C CNN
@@ -426,7 +389,7 @@ F 3 "" H 3225 5975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG?
 U 1 1 5B191CF0
 P 3025 6025
 F 0 "#FLG?" H 3025 6100 50  0001 C CNN
@@ -437,7 +400,7 @@ F 3 "" H 3025 6025 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B19645A
 P 3125 6875
 F 0 "#PWR?" H 3125 6625 50  0001 C CNN
@@ -448,7 +411,7 @@ F 3 "" H 3125 6875 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR?
 U 1 1 5B19B6C7
 P 4175 6425
 F 0 "#PWR?" H 4175 6275 50  0001 C CNN
@@ -459,7 +422,7 @@ F 3 "" H 4175 6425 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B19BB0E
 P 4175 6225
 F 0 "#PWR?" H 4175 5975 50  0001 C CNN
@@ -470,7 +433,7 @@ F 3 "" H 4175 6225 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B19C8D3
 P 4175 7025
 F 0 "#PWR?" H 4175 6775 50  0001 C CNN
@@ -481,7 +444,7 @@ F 3 "" H 4175 7025 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B1B7701
 P 2825 6325
 F 0 "C?" V 2725 6225 39  0000 L CNN
@@ -492,7 +455,7 @@ F 3 "" H 2825 6325 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B1BF40B
 P 3625 6225
 F 0 "C?" V 3575 6025 39  0000 L CNN
@@ -503,7 +466,7 @@ F 3 "" H 3625 6225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B1BF9F6
 P 3625 6425
 F 0 "#PWR?" H 3625 6175 50  0001 C CNN
@@ -514,7 +477,7 @@ F 3 "" H 3625 6425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L Device:C_Small C?
 U 1 1 5B1C0F40
 P 6125 6225
 F 0 "C?" V 6075 6025 39  0000 L CNN
@@ -525,7 +488,7 @@ F 3 "" H 6125 6225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B1C23EF
 P 6125 6425
 F 0 "#PWR?" H 6125 6175 50  0001 C CNN
@@ -538,7 +501,7 @@ $EndComp
 NoConn ~ 4275 6625
 NoConn ~ 5475 6625
 $Comp
-L R_Small R?
+L Device:R_Small R?
 U 1 1 5B1EF5AE
 P 10650 1100
 F 0 "R?" V 10550 1050 39  0000 L CNN
@@ -549,7 +512,7 @@ F 3 "" H 10650 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR?
+L power:+3V3 #PWR?
 U 1 1 5B1EF5B6
 P 10650 900
 F 0 "#PWR?" H 10650 750 50  0001 C CNN
@@ -562,7 +525,7 @@ $EndComp
 Text Label 11250 1300 2    39   ~ 0
 SUCCESS_B
 $Comp
-L R_Small R?
+L Device:R_Small R?
 U 1 1 5B1F15F2
 P 11600 1075
 F 0 "R?" V 11500 1025 39  0000 L CNN
@@ -573,7 +536,7 @@ F 3 "" H 11600 1075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR?
+L power:+3V3 #PWR?
 U 1 1 5B1F15FA
 P 11600 875
 F 0 "#PWR?" H 11600 725 50  0001 C CNN
@@ -588,7 +551,7 @@ RESET_B
 Text Label 2375 1025 0    60   ~ 0
 D_SEL
 $Comp
-L Jumper_NO_Small JP?
+L Device:Jumper_NO_Small JP?
 U 1 1 5B274523
 P 9825 6125
 F 0 "JP?" H 9825 6205 50  0000 C CNN
@@ -614,7 +577,7 @@ F 3 "" H 1625 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B145854
 P 1275 7200
 F 0 "#PWR?" H 1275 6950 50  0001 C CNN
@@ -625,7 +588,7 @@ F 3 "" H 1275 7200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR?
 U 1 1 5B145F4C
 P 1125 7025
 F 0 "#PWR?" H 1125 6875 50  0001 C CNN
@@ -1106,7 +1069,7 @@ F10 "DONE_B" O R 9300 4225 60
 F11 "D_SEL" I R 9300 4025 60 
 $EndSheet
 $Comp
-L R_Small R?
+L Device:R_Small R?
 U 1 1 5B372245
 P 12450 1075
 F 0 "R?" V 12350 1025 39  0000 L CNN
@@ -1117,7 +1080,7 @@ F 3 "" H 12450 1075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR?
+L power:+3V3 #PWR?
 U 1 1 5B37224B
 P 12450 875
 F 0 "#PWR?" H 12450 725 50  0001 C CNN
@@ -1130,7 +1093,7 @@ $EndComp
 Text Label 13050 1275 2    39   ~ 0
 DONE_B
 $Comp
-L Jumper_NO_Small JP?
+L Device:Jumper_NO_Small JP?
 U 1 1 5B372252
 P 12650 1275
 F 0 "JP?" H 12650 1355 50  0000 C CNN
@@ -1169,7 +1132,7 @@ $EndComp
 NoConn ~ 8075 6800
 NoConn ~ 8575 6800
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B425F6F
 P 7825 6700
 F 0 "#PWR?" H 7825 6450 50  0001 C CNN
@@ -1180,7 +1143,7 @@ F 3 "" H 7825 6700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B42639B
 P 8825 5600
 F 0 "#PWR?" H 8825 5350 50  0001 C CNN
@@ -1191,7 +1154,7 @@ F 3 "" H 8825 5600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B4267C0
 P 8825 5800
 F 0 "#PWR?" H 8825 5550 50  0001 C CNN
@@ -1202,7 +1165,7 @@ F 3 "" H 8825 5800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B426BE5
 P 8825 6000
 F 0 "#PWR?" H 8825 5750 50  0001 C CNN
@@ -1213,7 +1176,7 @@ F 3 "" H 8825 6000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B42700A
 P 7825 7400
 F 0 "#PWR?" H 7825 7150 50  0001 C CNN
@@ -1224,7 +1187,7 @@ F 3 "" H 7825 7400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B42760F
 P 8825 6700
 F 0 "#PWR?" H 8825 6450 50  0001 C CNN
@@ -1235,7 +1198,7 @@ F 3 "" H 8825 6700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B427615
 P 8825 6900
 F 0 "#PWR?" H 8825 6650 50  0001 C CNN
@@ -1246,7 +1209,7 @@ F 3 "" H 8825 6900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B42761B
 P 8825 7100
 F 0 "#PWR?" H 8825 6850 50  0001 C CNN
@@ -1257,7 +1220,7 @@ F 3 "" H 8825 7100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B427C39
 P 7825 5600
 F 0 "#PWR?" H 7825 5350 50  0001 C CNN
@@ -1268,7 +1231,7 @@ F 3 "" H 7825 5600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B427C3F
 P 7825 6300
 F 0 "#PWR?" H 7825 6050 50  0001 C CNN
@@ -1313,7 +1276,7 @@ D_RET
 Text Label 8075 6900 2    39   ~ 0
 D_SDO
 $Comp
-L Jumper_NO_Small JP?
+L Device:Jumper_NO_Small JP?
 U 1 1 5B1EF5A7
 P 10850 1300
 F 0 "JP?" H 10850 1380 50  0000 C CNN
@@ -1324,7 +1287,7 @@ F 3 "" H 10850 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper_NO_Small JP?
+L Device:Jumper_NO_Small JP?
 U 1 1 5B1F1602
 P 11800 1275
 F 0 "JP?" H 11800 1355 50  0000 C CNN
@@ -1339,7 +1302,7 @@ RESET_B
 Wire Wire Line
 	1000 6025 1000 5725
 Wire Wire Line
-	800  5625 800  5825
+	800  5625 800  5725
 Wire Wire Line
 	1000 5725 800  5725
 Connection ~ 800  5725
@@ -1373,7 +1336,7 @@ Wire Wire Line
 	5775 5825 5775 6025
 Connection ~ 5775 6025
 Wire Wire Line
-	5475 6025 5825 6025
+	5475 6025 5775 6025
 Wire Wire Line
 	6525 6025 6525 5975
 Connection ~ 6525 6025
@@ -1381,7 +1344,7 @@ Wire Wire Line
 	6625 6025 6625 6125
 Connection ~ 6625 6025
 Wire Wire Line
-	6625 6325 6625 6425
+	6625 6325 6625 6375
 Wire Wire Line
 	6625 6625 6625 6725
 Wire Wire Line
@@ -1401,13 +1364,13 @@ Wire Wire Line
 Wire Wire Line
 	5575 7425 5575 7325
 Wire Wire Line
-	3925 5625 4275 5625
+	3925 5625 4125 5625
 Wire Wire Line
 	4125 5625 4125 5525
 Wire Wire Line
 	4225 5825 4275 5825
 Wire Wire Line
-	5475 5625 5825 5625
+	5475 5625 5625 5625
 Wire Wire Line
 	6025 5625 6125 5625
 Wire Wire Line
@@ -1417,7 +1380,7 @@ Wire Wire Line
 Wire Wire Line
 	3975 5825 3975 6025
 Wire Wire Line
-	3925 6025 4275 6025
+	3925 6025 3975 6025
 Connection ~ 4125 5625
 Wire Wire Line
 	3725 5625 3575 5625
@@ -1433,9 +1396,9 @@ Wire Wire Line
 	3225 6025 3225 5975
 Connection ~ 3225 6025
 Wire Wire Line
-	3125 6425 3125 6575
+	3125 6425 3125 6475
 Wire Wire Line
-	3125 6025 3125 6225
+	3125 6025 3125 6175
 Connection ~ 3125 6025
 Wire Wire Line
 	3125 6775 3125 6875
@@ -1449,15 +1412,15 @@ Wire Wire Line
 Wire Wire Line
 	4875 7425 4875 7375
 Wire Wire Line
-	3025 6025 3725 6025
+	3025 6025 3125 6025
 Wire Wire Line
-	2825 6475 3325 6475
+	2825 6475 3125 6475
 Wire Wire Line
 	3325 6475 3325 6825
 Wire Wire Line
 	3325 6825 4275 6825
 Wire Wire Line
-	6025 6025 6725 6025
+	6025 6025 6125 6025
 Wire Wire Line
 	6625 6375 6425 6375
 Wire Wire Line
@@ -1504,7 +1467,7 @@ Wire Wire Line
 Wire Wire Line
 	9925 6125 10125 6125
 Wire Wire Line
-	1275 7200 1425 7200
+	1275 7200 1325 7200
 Wire Wire Line
 	1325 7200 1325 7300
 Wire Wire Line
@@ -1512,7 +1475,7 @@ Wire Wire Line
 Wire Wire Line
 	1125 7400 1425 7400
 Wire Wire Line
-	1125 7025 1125 7400
+	1125 7025 1125 7100
 Wire Wire Line
 	1125 7100 1425 7100
 Connection ~ 1125 7100
@@ -2023,4 +1986,42 @@ Text Notes 9675 7725 0    60   ~ 0
 shapool-board
 Text Notes 12875 7875 0    60   ~ 0
 2018-0x16
+Wire Wire Line
+	800  5725 800  5825
+Wire Wire Line
+	6325 6025 6525 6025
+Wire Wire Line
+	5775 6025 5825 6025
+Wire Wire Line
+	6525 6025 6625 6025
+Wire Wire Line
+	6625 6025 6725 6025
+Wire Wire Line
+	5625 5625 5825 5625
+Wire Wire Line
+	6625 6375 6625 6425
+Wire Wire Line
+	4125 5625 4275 5625
+Wire Wire Line
+	3975 6025 4275 6025
+Wire Wire Line
+	3425 6025 3625 6025
+Wire Wire Line
+	3225 6025 3425 6025
+Wire Wire Line
+	3125 6025 3225 6025
+Wire Wire Line
+	3125 6475 3125 6575
+Wire Wire Line
+	3125 6475 3325 6475
+Wire Wire Line
+	3125 6175 3125 6225
+Wire Wire Line
+	3625 6025 3725 6025
+Wire Wire Line
+	6125 6025 6325 6025
+Wire Wire Line
+	1125 7100 1125 7400
+Wire Wire Line
+	1325 7200 1425 7200
 $EndSCHEMATC

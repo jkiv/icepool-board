@@ -151,4 +151,5 @@
   (lib (name dk_USB-DVI-HDMI-Connectors)(type Legacy)(uri ${KIPRJMOD}/external/digikey-kicad-library/digikey-symbols/dk_USB-DVI-HDMI-Connectors.lib)(options "")(descr ""))
   (lib (name icepool-lattice)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-lattice.lib)(options "")(descr ""))
   (lib (name icepool-atmel)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-atmel.lib)(options "")(descr ""))
+  (lib (name icepool-renesas)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-renesas.lib)(options "")(descr ""))
 )

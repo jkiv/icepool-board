@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -347,14 +347,54 @@ Text Label 4150 3500 0    50   ~ 0
 VDDCORE
 Wire Wire Line
 	4100 3500 4500 3500
-Text Notes 1800 3200 0    50   ~ 0
+Text Notes 750  3150 0    50   ~ 0
 RS482\n- TX\n- RX
-Text Notes 4550 4150 0    50   ~ 0
-Debug\n- SWIO\n- SWCLK
-Text Notes 1800 3800 0    50   ~ 0
-FPGA SPI\n- GMOSI\n- MOSI\n- MISO\n- SCK\n- ~GS
-Text Notes 1800 4150 0    50   ~ 0
+Text Notes 750  3800 0    50   ~ 0
+FPGA SPI\n- GMOSI\n- MOSI\n- MISO\n- SCK\n- ~GS\n- ~RESET
+Text Notes 750  4100 0    50   ~ 0
 FPGA Interrupt\n- ~DONE
-Text Notes 1800 4500 0    50   ~ 0
-Display (I2C)?\n- DATA\n- CLK
+Text Notes 750  4450 0    50   ~ 0
+Display (I2C)?\n- SDA\n- SCL
+Text Notes 4650 2950 0    50   ~ 0
+Max Supply Rise: 0.1 V/us
+Text Notes 750  7300 0    50   ~ 0
+- DEBUG HEADER\n- I2C HEADER\n- RS485 HEADER\n- POWER (5V-12V, 10A) HEADER\n
+Text Notes 2100 2000 0    50   ~ 0
+VCC = +5V\n(goal: 5V - 12V)
+$Sheet
+S 5600 1000 1100 800 
+U 5D74F1A4
+F0 "ICE40HX8K-BG121_0" 50
+F1 "ice40hx8k-bg121.sch" 50
+F2 "~RESET" I L 5600 1700 50 
+F3 "~GS" I L 5600 1550 50 
+F4 "MOSI" I L 5600 1250 50 
+F5 "MISO" O R 6700 1100 50 
+F6 "GMOSI" I L 5600 1100 50 
+F7 "SCK" I L 5600 1400 50 
+F8 "~READY" O R 6700 1250 50 
+$EndSheet
+Text Notes 8200 2200 0    50   ~ 0
+FPGAs
+Wire Notes Line
+	5300 550  5300 2250
+Wire Notes Line
+	5300 2250 8500 2250
+Wire Notes Line
+	8500 2250 8500 550 
+Wire Notes Line
+	8500 550  5300 550 
+$Sheet
+S 7050 1000 1050 800 
+U 5D7C5399
+F0 "ICE40HX8K-BG121_1" 50
+F1 "ice40hx8k-bg121.sch" 50
+F2 "GMOSI" I L 7050 1100 50 
+F3 "MOSI" I L 7050 1250 50 
+F4 "SCK" I L 7050 1400 50 
+F5 "~GS" I L 7050 1550 50 
+F6 "~RESET" I L 7050 1700 50 
+F7 "MISO" O R 8100 1100 50 
+F8 "~READY" O R 8100 1250 50 
+$EndSheet
 $EndSCHEMATC

@@ -1,6 +1,7 @@
 refs/
 icepool-board/external/digikey-kicad-library/
 icepool-board/external/icepool-library/
+fp-info-cache
 
 # For PCBs designed using KiCad: http://www.kicad-pcb.org/
 # Format documentation: http://kicad-pcb.org/help/file-formats/
@@ -10,6 +11,7 @@ icepool-board/external/icepool-library/
 *.bak
 *.bck
 *.kicad_pcb-bak
+*.sch-bak
 *~
 _autosave-*
 *.tmp

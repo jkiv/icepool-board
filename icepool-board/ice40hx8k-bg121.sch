@@ -635,20 +635,7 @@ Wire Wire Line
 Text Label 2600 2750 2    50   ~ 0
 VPP_2V5
 Wire Wire Line
-	2300 2750 2650 2750
-Wire Wire Line
 	1650 3550 1850 3550
-$Comp
-L Device:D_Schottky D?
-U 1 1 5D92CA02
-P 2000 3550
-F 0 "D?" H 2000 3334 50  0000 C CNN
-F 1 "D_Schottky" H 2000 3425 50  0000 C CNN
-F 2 "" H 2000 3550 50  0001 C CNN
-F 3 "~" H 2000 3550 50  0001 C CNN
-	1    2000 3550
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1650 3550 1650 3400
 $Comp
@@ -681,4 +668,17 @@ Wire Wire Line
 	2000 1550 2150 1550
 Text HLabel 4750 5100 2    50   Input ~ 0
 GMISO
+$Comp
+L Device:D_Schottky D?
+U 1 1 5D92CA02
+P 2000 3550
+F 0 "D?" H 2000 3334 50  0000 C CNN
+F 1 "MBR0520LT1G" H 2000 3425 50  0000 C CNN
+F 2 "" H 2000 3550 50  0001 C CNN
+F 3 "~" H 2000 3550 50  0001 C CNN
+	1    2000 3550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2300 2750 2650 2750
 $EndSCHEMATC

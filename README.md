@@ -18,7 +18,7 @@ The goal is to produce an inexpensive, flexible multi-core parallel co-processor
 for embedded computing projects.
 
 Please consider supporting this project and others like it by donating:
-* BTC: 13zRrs1YDdooUN5WtfXRSDn8KnJdok4qG9
+* XBT: 13zRrs1YDdooUN5WtfXRSDn8KnJdok4qG9
 
 ## Dependencies
 

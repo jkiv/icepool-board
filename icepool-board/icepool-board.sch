@@ -46,8 +46,6 @@ F 3 "~" H 850 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 1200 1850 1100
-Wire Wire Line
 	1150 1100 850  1100
 Wire Wire Line
 	850  1100 850  900 
@@ -110,11 +108,6 @@ F 3 "~" H 4300 1250 50  0001 C CNN
 	1    4300 1250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4100 1100 4300 1100
-Wire Wire Line
-	4100 1200 4100 1100
-Connection ~ 4100 1100
 Wire Wire Line
 	3400 1100 3100 1100
 Wire Wire Line
@@ -721,7 +714,6 @@ Wire Wire Line
 	3800 4450 4200 4450
 Text Notes 4250 4450 0    50   ~ 0
 +1.2V
-NoConn ~ 4200 4450
 Text Label 2350 5850 2    50   ~ 0
 XIN
 Wire Wire Line
@@ -2173,8 +2165,7 @@ F 3 "~" H 2050 1100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1950 1100 1850 1100
-Connection ~ 1850 1100
+	1950 1100 1900 1100
 $Comp
 L Device:L_Small L2
 U 1 1 5EF19AD1
@@ -2501,4 +2492,20 @@ Text Notes 4150 1650 0    50   ~ 0
 FB = BLM21PG331SN1D
 Text Notes 1550 2900 0    50   ~ 0
 MLL1200STR
+Wire Wire Line
+	1850 1200 1900 1200
+Wire Wire Line
+	1900 1200 1900 1100
+Connection ~ 1900 1100
+Wire Wire Line
+	1900 1100 1850 1100
+Wire Wire Line
+	4100 1100 4150 1100
+Wire Wire Line
+	4100 1200 4150 1200
+Wire Wire Line
+	4150 1200 4150 1100
+Connection ~ 4150 1100
+Wire Wire Line
+	4150 1100 4300 1100
 $EndSCHEMATC

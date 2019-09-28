@@ -1579,8 +1579,6 @@ Wire Notes Line
 	6900 7750 5200 7750
 Wire Notes Line
 	5200 7750 5200 6400
-Text Notes 6400 7700 0    50   ~ 0
-FPGA Clock
 Wire Notes Line
 	5550 8050 5400 8050
 Wire Notes Line
@@ -2036,8 +2034,6 @@ F10 "~READY_ANY" I L 7550 1700 50
 F11 "GMISO" O R 8600 800 50 
 F12 "CLK" I L 7550 1850 50 
 $EndSheet
-Text Notes 5600 8950 0    50   ~ 0
-"Standard 7x5mm" package.\nOther mfgr have what appear to be\ndrop-in replacements for these...\n\nAny OSC on 12 to 24MHz should\nsuffice. The FPGA PLL bumps this\nup to approx 60MHz programatically.\n\nLeaving a parallel termination R,\nin case it is needed. (1/10 wave-\nlength is approx. 1.2m @ 12MHz)\n\nIf more devices, fanout buffer\nmay be necessary to drive.
 $Comp
 L power:+3V3 #PWR0127
 U 1 1 5DB09507
@@ -2136,35 +2132,6 @@ F 3 "" H 8300 4050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8300 3750 8300 3550
-Wire Wire Line
-	6300 7000 6550 7000
-Wire Wire Line
-	6550 7400 6550 7300
-$Comp
-L power:GND #PWR?
-U 1 1 5EBDB560
-P 6550 7400
-F 0 "#PWR?" H 6550 7150 50  0001 C CNN
-F 1 "GND" H 6555 7227 50  0000 C CNN
-F 2 "" H 6550 7400 50  0001 C CNN
-F 3 "" H 6550 7400 50  0001 C CNN
-	1    6550 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 5EBDB555
-P 6550 7200
-F 0 "R?" H 6618 7246 50  0000 L CNN
-F 1 "RTerm" H 6618 7155 50  0000 L CNN
-F 2 "" H 6550 7200 50  0001 C CNN
-F 3 "~" H 6550 7200 50  0001 C CNN
-	1    6550 7200
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6550 7100 6550 7000
-Connection ~ 6550 7000
 Text Label 5450 1850 0    50   ~ 0
 OSC
 Wire Wire Line
@@ -2173,8 +2140,6 @@ Text Label 7350 1850 0    50   ~ 0
 OSC
 Wire Wire Line
 	7350 1850 7550 1850
-Wire Wire Line
-	6550 7000 6650 7000
 Wire Wire Line
 	8600 3550 8600 3750
 Wire Wire Line
@@ -2502,7 +2467,40 @@ Wire Notes Line
 Wire Notes Line
 	7050 7800 7050 9000
 Wire Notes Line
-	7050 9000 5550 9000
-Wire Notes Line
 	5550 9000 5550 7800
+Wire Notes Line
+	7050 9000 5550 9000
+Text Notes 5600 8950 0    50   ~ 0
+"Standard 7x5mm" package.\nOther mfgr have what appear to be\ndrop-in replacements for these...\n\nAny OSC on 12 to 24MHz should\nsuffice. The FPGA PLL bumps this\nup to approx 60MHz programatically.\n\nLeaving a parallel termination R,\nin case it is needed. (1/10 wave-\nlength is approx. 1.2m @ 12MHz)\n\nIf more devices, fanout buffer\nmay be necessary to drive.
+$Comp
+L power:GND #PWR?
+U 1 1 5EBDB560
+P 6550 7400
+F 0 "#PWR?" H 6550 7150 50  0001 C CNN
+F 1 "GND" H 6555 7227 50  0000 C CNN
+F 2 "" H 6550 7400 50  0001 C CNN
+F 3 "" H 6550 7400 50  0001 C CNN
+	1    6550 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 7000 6650 7000
+Wire Wire Line
+	6300 7000 6550 7000
+Connection ~ 6550 7000
+Wire Wire Line
+	6550 7100 6550 7000
+$Comp
+L Device:R_Small_US R?
+U 1 1 5EBDB555
+P 6550 7200
+F 0 "R?" H 6618 7246 50  0000 L CNN
+F 1 "OMIT" H 6618 7155 50  0000 L CNN
+F 2 "" H 6550 7200 50  0001 C CNN
+F 3 "~" H 6550 7200 50  0001 C CNN
+	1    6550 7200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6550 7400 6550 7300
 $EndSCHEMATC

@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name digikey-footprints)(type KiCad)(uri ${KIPRJMOD}/external/digikey-kicad-library/digikey-footprints.pretty)(options "")(descr ""))
+  (lib (name icepool-library)(type KiCad)(uri ${KIPRJMOD}/external/icepool-library/icepool-library.pretty)(options "")(descr ""))
 )

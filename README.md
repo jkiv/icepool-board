@@ -27,4 +27,4 @@ This project depends on the following KiCad libraries:
 * digikey-kicad-library: https://github.com/Digi-Key/digikey-kicad-library
 * icepool-library: https://github.com/jkiv/icepool-library
 
-These repositories can be cloned or downloaded into their respective folders in icepool-board/external/.
+These repositories can be cloned or downloaded into their respective folders in `icepool-board/external/`.

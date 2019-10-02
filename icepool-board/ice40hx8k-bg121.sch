@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 29 0
+LIBS:icepool-board-cache
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -63,19 +64,6 @@ F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 9750 6431 60  0000 C CNN
 F 2 "icepool-library:BGA-121_11x11_9.0x9.0mm" H 9750 5000 60  0001 C CNN
 F 3 "" H 9750 5000 60  0000 C CNN
 	4    9750 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L icepool-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U6
-U 5 1 5D75D226
-P 5000 1850
-AR Path="/5D7C5399/5D75D226" Ref="U6"  Part="5" 
-AR Path="/5D74F1A4/5D75D226" Ref="U5"  Part="5" 
-F 0 "U5" H 5000 2887 60  0000 C CNN
-F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 5000 2781 60  0000 C CNN
-F 2 "icepool-library:BGA-121_11x11_9.0x9.0mm" H 5000 1350 60  0001 C CNN
-F 3 "" H 5000 1350 60  0000 C CNN
-	5    5000 1850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -206,8 +194,6 @@ Wire Wire Line
 	4950 4850 5100 4850
 Wire Wire Line
 	5100 4850 5100 5000
-Text Notes 5150 5000 0    50   ~ 0
-SPI_SS_B = 0: SPI salve
 NoConn ~ 5800 2500
 Wire Wire Line
 	5700 2500 5800 2500
@@ -241,7 +227,7 @@ AR Path="/5D7C5399/5D7D0814" Ref="C42"  Part="1"
 AR Path="/5D74F1A4/5D7D0814" Ref="C29"  Part="1" 
 F 0 "C29" V 871 2500 50  0000 C CNN
 F 1 "0.1uF" V 962 2500 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1100 2500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1100 2500 50  0001 C CNN
 F 3 "~" H 1100 2500 50  0001 C CNN
 	1    1100 2500
 	0    1    1    0   
@@ -254,7 +240,7 @@ AR Path="/5D7C5399/5D7D23A5" Ref="C43"  Part="1"
 AR Path="/5D74F1A4/5D7D23A5" Ref="C30"  Part="1" 
 F 0 "C30" V 871 2900 50  0000 C CNN
 F 1 "0.1uF" V 962 2900 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1100 2900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1100 2900 50  0001 C CNN
 F 3 "~" H 1100 2900 50  0001 C CNN
 	1    1100 2900
 	0    1    1    0   
@@ -267,22 +253,9 @@ AR Path="/5D7C5399/5D7D2D83" Ref="C44"  Part="1"
 AR Path="/5D74F1A4/5D7D2D83" Ref="C31"  Part="1" 
 F 0 "C31" V 871 3300 50  0000 C CNN
 F 1 "0.1uF" V 962 3300 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1100 3300 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1100 3300 50  0001 C CNN
 F 3 "~" H 1100 3300 50  0001 C CNN
 	1    1100 3300
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small C45
-U 1 1 5D7D31FC
-P 1100 3700
-AR Path="/5D7C5399/5D7D31FC" Ref="C45"  Part="1" 
-AR Path="/5D74F1A4/5D7D31FC" Ref="C32"  Part="1" 
-F 0 "C32" V 871 3700 50  0000 C CNN
-F 1 "0.1uF" V 962 3700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1100 3700 50  0001 C CNN
-F 3 "~" H 1100 3700 50  0001 C CNN
-	1    1100 3700
 	0    1    1    0   
 $EndComp
 Text Label 600  2900 0    50   ~ 0
@@ -309,7 +282,7 @@ AR Path="/5D7C5399/5D7EF316" Ref="C46"  Part="1"
 AR Path="/5D74F1A4/5D7EF316" Ref="C33"  Part="1" 
 F 0 "C33" V 871 4100 50  0000 C CNN
 F 1 "0.1uF" V 962 4100 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1100 4100 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1100 4100 50  0001 C CNN
 F 3 "~" H 1100 4100 50  0001 C CNN
 	1    1100 4100
 	0    1    1    0   
@@ -366,8 +339,6 @@ Wire Wire Line
 	1300 900  1300 1300
 Wire Wire Line
 	1200 900  1300 900 
-Wire Wire Line
-	750  2100 1000 2100
 Text Label 750  2100 0    50   ~ 0
 VCC3
 $Comp
@@ -378,7 +349,7 @@ AR Path="/5D7C5399/5D7ECCCB" Ref="C41"  Part="1"
 AR Path="/5D74F1A4/5D7ECCCB" Ref="C28"  Part="1" 
 F 0 "C28" V 871 2100 50  0000 C CNN
 F 1 "0.1uF" V 962 2100 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1100 2100 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1100 2100 50  0001 C CNN
 F 3 "~" H 1100 2100 50  0001 C CNN
 	1    1100 2100
 	0    1    1    0   
@@ -395,13 +366,11 @@ AR Path="/5D7C5399/5D7ECCC3" Ref="C40"  Part="1"
 AR Path="/5D74F1A4/5D7ECCC3" Ref="C27"  Part="1" 
 F 0 "C27" V 871 1700 50  0000 C CNN
 F 1 "0.1uF" V 962 1700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1100 1700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1100 1700 50  0001 C CNN
 F 3 "~" H 1100 1700 50  0001 C CNN
 	1    1100 1700
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	750  1300 1000 1300
 Text Label 750  1300 0    50   ~ 0
 VCC1
 $Comp
@@ -412,13 +381,11 @@ AR Path="/5D7C5399/5D7EA564" Ref="C37"  Part="1"
 AR Path="/5D74F1A4/5D7EA564" Ref="C24"  Part="1" 
 F 0 "C24" V 871 1300 50  0000 C CNN
 F 1 "0.1uF" V 962 1300 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1100 1300 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1100 1300 50  0001 C CNN
 F 3 "~" H 1100 1300 50  0001 C CNN
 	1    1100 1300
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	750  900  1000 900 
 Text Label 750  900  0    50   ~ 0
 VCC0
 $Comp
@@ -429,7 +396,7 @@ AR Path="/5D7C5399/5D7E49AB" Ref="C34"  Part="1"
 AR Path="/5D74F1A4/5D7E49AB" Ref="C21"  Part="1" 
 F 0 "C21" V 871 900 50  0000 C CNN
 F 1 "0.1uF" V 962 900 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1100 900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1100 900 50  0001 C CNN
 F 3 "~" H 1100 900 50  0001 C CNN
 	1    1100 900 
 	0    1    1    0   
@@ -624,18 +591,6 @@ F 3 "~" H 5100 5100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5100 5300 5100 5200
-Wire Wire Line
-	4950 4750 5000 4750
-Wire Wire Line
-	4950 4650 5000 4650
-Wire Wire Line
-	4950 4550 5000 4550
-Text HLabel 5000 4750 2    50   Input ~ 0
-SCK
-Text HLabel 5000 4650 2    50   Input ~ 0
-GMOSI
-Text HLabel 5000 4550 2    50   Input ~ 0
-GMISO
 $Comp
 L power:GND #PWR065
 U 1 1 5D7BA998
@@ -725,11 +680,7 @@ Wire Wire Line
 	2000 950  2000 900 
 Connection ~ 2000 900 
 Wire Wire Line
-	2000 900  2400 900 
-Wire Wire Line
 	2400 1150 2400 1200
-Wire Wire Line
-	2400 1200 2000 1200
 Wire Wire Line
 	2000 1150 2000 1200
 Connection ~ 2000 1200
@@ -743,7 +694,7 @@ AR Path="/5D74F1A4/5EDE65D1" Ref="C26"  Part="1"
 AR Path="/5D7C5399/5EDE65D1" Ref="C39"  Part="1" 
 F 0 "C26" H 2492 1696 50  0000 L CNN
 F 1 "0.1uF" H 2492 1605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2400 1650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2400 1650 50  0001 C CNN
 F 3 "~" H 2400 1650 50  0001 C CNN
 	1    2400 1650
 	1    0    0    -1  
@@ -771,11 +722,7 @@ Wire Wire Line
 	2000 1550 2000 1500
 Connection ~ 2000 1500
 Wire Wire Line
-	2000 1500 2400 1500
-Wire Wire Line
 	2400 1750 2400 1800
-Wire Wire Line
-	2400 1800 2000 1800
 Wire Wire Line
 	2000 1750 2000 1800
 Connection ~ 2000 1800
@@ -796,7 +743,7 @@ AR Path="/5D74F1A4/5D88C47D" Ref="C23"  Part="1"
 AR Path="/5D7C5399/5D88C47D" Ref="C36"  Part="1" 
 F 0 "C23" H 2492 1096 50  0000 L CNN
 F 1 "0.1uF" H 2492 1005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2400 1050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2400 1050 50  0001 C CNN
 F 3 "~" H 2400 1050 50  0001 C CNN
 	1    2400 1050
 	1    0    0    -1  
@@ -812,13 +759,69 @@ Wire Wire Line
 Wire Wire Line
 	4950 4150 5050 4150
 Wire Wire Line
-	4950 3950 5050 3950
-Wire Wire Line
 	2750 3750 2650 3750
-Text HLabel 5050 3950 2    50   Input ~ 0
-MOSI
 Text HLabel 2650 3750 0    50   Output ~ 0
 MISO
 Text HLabel 5050 4150 2    50   Input ~ 0
 ~GS
+Wire Wire Line
+	2400 1200 2000 1200
+Wire Wire Line
+	2000 1500 2400 1500
+Wire Wire Line
+	2400 1800 2000 1800
+Wire Wire Line
+	750  1300 1000 1300
+Wire Wire Line
+	2000 900  2400 900 
+Wire Wire Line
+	750  900  1000 900 
+Wire Wire Line
+	750  2100 1000 2100
+$Comp
+L icepool-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U6
+U 5 1 5D75D226
+P 5000 1850
+AR Path="/5D7C5399/5D75D226" Ref="U6"  Part="5" 
+AR Path="/5D74F1A4/5D75D226" Ref="U5"  Part="5" 
+F 0 "U5" H 5000 2887 60  0000 C CNN
+F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 5000 2781 60  0000 C CNN
+F 2 "icepool-library:BGA-121_11x11_9.0x9.0mm" H 5000 1350 60  0001 C CNN
+F 3 "" H 5000 1350 60  0000 C CNN
+	5    5000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C45
+U 1 1 5D7D31FC
+P 1100 3700
+AR Path="/5D7C5399/5D7D31FC" Ref="C45"  Part="1" 
+AR Path="/5D74F1A4/5D7D31FC" Ref="C32"  Part="1" 
+F 0 "C32" V 871 3700 50  0000 C CNN
+F 1 "0.1uF" V 962 3700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1100 3700 50  0001 C CNN
+F 3 "~" H 1100 3700 50  0001 C CNN
+	1    1100 3700
+	0    1    1    0   
+$EndComp
+Text Label 5100 4900 0    50   ~ 0
+SPI_SS_B
+Text HLabel 5000 4550 2    50   Input ~ 0
+GMISO
+Text HLabel 5000 4650 2    50   Input ~ 0
+GMOSI
+Text HLabel 5000 4750 2    50   Input ~ 0
+SCK
+Wire Wire Line
+	4950 4550 5000 4550
+Wire Wire Line
+	4950 4650 5000 4650
+Wire Wire Line
+	4950 4750 5000 4750
+Text Notes 3800 5050 0    50   ~ 0
+SPI_SS_B = 0: SPI slave
+Wire Wire Line
+	4950 3850 5050 3850
+Text HLabel 5050 3850 2    50   Input ~ 0
+MOSI
 $EndSCHEMATC

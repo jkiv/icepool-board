@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:icepool-board-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -721,10 +721,6 @@ Wire Notes Line
 	2500 5150 2500 5750
 Wire Notes Line
 	2500 5750 1950 5750
-Wire Notes Line
-	1950 5750 1950 5150
-Wire Notes Line
-	1950 5150 2500 5150
 Text Label 3850 6300 0    50   ~ 0
 SCK
 Text Label 2350 6150 2    50   ~ 0
@@ -765,17 +761,6 @@ Wire Wire Line
 	3800 5400 4250 5400
 Wire Wire Line
 	3800 5250 4250 5250
-$Comp
-L icepool-atmel:ATSAMD21E U3
-U 1 1 5D7394CA
-P 3100 5150
-F 0 "U3" H 3100 6515 50  0000 C CNN
-F 1 "ATSAMD21E" H 3100 6424 50  0000 C CNN
-F 2 "digikey-footprints:QFN-32-1EP_5x5mm" H 3100 5300 50  0001 C CNN
-F 3 "" H 3100 5300 50  0001 C CNN
-	1    3100 5150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5500 800  5500 950 
 Wire Wire Line
@@ -1124,110 +1109,6 @@ F 2 "" H 9600 3950 50  0001 C CNN
 F 3 "" H 9600 3950 50  0001 C CNN
 	1    9600 3950
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP17
-U 1 1 5E3F3A2C
-P 2300 4050
-F 0 "TP17" V 2300 4350 50  0000 C CNN
-F 1 "PA00" V 2300 4350 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 4050 50  0001 C CNN
-F 3 "~" H 2500 4050 50  0001 C CNN
-	1    2300 4050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP18
-U 1 1 5E3F4F38
-P 2300 4200
-F 0 "TP18" V 2300 4500 50  0000 C CNN
-F 1 "PA01" V 2300 4500 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 4200 50  0001 C CNN
-F 3 "~" H 2500 4200 50  0001 C CNN
-	1    2300 4200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP19
-U 1 1 5E3F59A6
-P 2300 4350
-F 0 "TP19" V 2300 4650 50  0000 C CNN
-F 1 "PA02" V 2300 4650 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 4350 50  0001 C CNN
-F 3 "~" H 2500 4350 50  0001 C CNN
-	1    2300 4350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP20
-U 1 1 5E3F5C9F
-P 2300 4500
-F 0 "TP20" V 2300 4800 50  0000 C CNN
-F 1 "PA03" V 2300 4800 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 4500 50  0001 C CNN
-F 3 "~" H 2500 4500 50  0001 C CNN
-	1    2300 4500
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP21
-U 1 1 5E3F5F23
-P 2300 4650
-F 0 "TP21" V 2300 4950 50  0000 C CNN
-F 1 "PA04" V 2300 4950 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 4650 50  0001 C CNN
-F 3 "~" H 2500 4650 50  0001 C CNN
-	1    2300 4650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP22
-U 1 1 5E3F61A7
-P 2300 4800
-F 0 "TP22" V 2300 5100 50  0000 C CNN
-F 1 "PA05" V 2300 5100 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 4800 50  0001 C CNN
-F 3 "~" H 2500 4800 50  0001 C CNN
-	1    2300 4800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP23
-U 1 1 5E3F64D1
-P 2300 4950
-F 0 "TP23" V 2300 5250 50  0000 C CNN
-F 1 "PA06" V 2300 5250 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 4950 50  0001 C CNN
-F 3 "~" H 2500 4950 50  0001 C CNN
-	1    2300 4950
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2300 5100 2400 5100
-Wire Wire Line
-	2300 4950 2400 4950
-Wire Wire Line
-	2300 4800 2400 4800
-Wire Wire Line
-	2300 4650 2400 4650
-Wire Wire Line
-	2300 4500 2400 4500
-Wire Wire Line
-	2300 4350 2400 4350
-Wire Wire Line
-	2300 4200 2400 4200
-Wire Wire Line
-	2300 4050 2400 4050
-$Comp
-L Connector:TestPoint TP24
-U 1 1 5E3F6678
-P 2300 5100
-F 0 "TP24" V 2300 5400 50  0000 C CNN
-F 1 "PA07" V 2300 5400 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 5100 50  0001 C CNN
-F 3 "~" H 2500 5100 50  0001 C CNN
-	1    2300 5100
-	0    -1   -1   0   
 $EndComp
 $Comp
 L power:+3.3V #PWR020
@@ -2535,4 +2416,31 @@ Wire Wire Line
 	1900 1100 2100 1100
 Wire Wire Line
 	4300 1100 4500 1100
+Wire Notes Line
+	1950 5150 2500 5150
+Wire Notes Line
+	1950 5750 1950 5150
+$Comp
+L icepool-atmel:ATSAMD21E U3
+U 1 1 5D7394CA
+P 3100 5150
+F 0 "U3" H 3100 6515 50  0000 C CNN
+F 1 "ATSAMD21E" H 3100 6424 50  0000 C CNN
+F 2 "digikey-footprints:QFN-32-1EP_5x5mm" H 3100 5300 50  0001 C CNN
+F 3 "" H 3100 5300 50  0001 C CNN
+	1    3100 5150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2400 4050
+NoConn ~ 2400 4200
+NoConn ~ 2400 4350
+NoConn ~ 2400 4500
+NoConn ~ 2400 4650
+NoConn ~ 2400 4800
+NoConn ~ 2400 4950
+NoConn ~ 2400 5100
+Text Notes 2250 5000 1    50   ~ 0
+TODO Breakout Header?
+NoConn ~ 7100 4150
+NoConn ~ 7100 4250
 $EndSCHEMATC

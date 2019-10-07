@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:icepool-board-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -173,16 +173,16 @@ Text Notes 10600 7650 0    50   ~ 0
 Text Notes 7350 7500 0    50   ~ 0
 "icepool" prototype board
 Wire Wire Line
-	4700 4050 4700 3950
+	4450 4050 4450 3950
 $Comp
 L power:+3V3 #PWR032
 U 1 1 5D73EC53
-P 4700 3950
-F 0 "#PWR032" H 4700 3800 50  0001 C CNN
-F 1 "+3V3" H 4715 4123 50  0000 C CNN
-F 2 "" H 4700 3950 50  0001 C CNN
-F 3 "" H 4700 3950 50  0001 C CNN
-	1    4700 3950
+P 4450 3950
+F 0 "#PWR032" H 4450 3800 50  0001 C CNN
+F 1 "+3V3" H 4465 4123 50  0000 C CNN
+F 2 "" H 4450 3950 50  0001 C CNN
+F 3 "" H 4450 3950 50  0001 C CNN
+	1    4450 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -195,10 +195,10 @@ Wire Wire Line
 	3000 6750 3000 6850
 Connection ~ 3000 6750
 $Comp
-L power:GND #PWR045
+L power:GND #PWR046
 U 1 1 5D740875
 P 3000 6850
-F 0 "#PWR045" H 3000 6600 50  0001 C CNN
+F 0 "#PWR046" H 3000 6600 50  0001 C CNN
 F 1 "GND" H 3005 6677 50  0000 C CNN
 F 2 "" H 3000 6850 50  0001 C CNN
 F 3 "" H 3000 6850 50  0001 C CNN
@@ -851,17 +851,6 @@ Wire Wire Line
 Wire Wire Line
 	3800 5100 4350 5100
 $Comp
-L Device:Crystal Y1
-U 1 1 5DC2BF45
-P 1450 6750
-F 0 "Y1" H 1450 7018 50  0000 C CNN
-F 1 "16MHz" H 1450 6927 50  0000 C CNN
-F 2 "Oscillator:Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm" H 1450 6750 50  0001 C CNN
-F 3 "~" H 1450 6750 50  0001 C CNN
-	1    1450 6750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C18
 U 1 1 5DC2D243
 P 1100 6900
@@ -892,10 +881,10 @@ Wire Wire Line
 Wire Wire Line
 	1750 6750 1750 6800
 $Comp
-L power:GND #PWR046
+L power:GND #PWR047
 U 1 1 5DC4811F
 P 1100 7100
-F 0 "#PWR046" H 1100 6850 50  0001 C CNN
+F 0 "#PWR047" H 1100 6850 50  0001 C CNN
 F 1 "GND" H 1105 6927 50  0000 C CNN
 F 2 "" H 1100 7100 50  0001 C CNN
 F 3 "" H 1100 7100 50  0001 C CNN
@@ -903,10 +892,10 @@ F 3 "" H 1100 7100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR047
+L power:GND #PWR048
 U 1 1 5DC48BA6
 P 1750 7100
-F 0 "#PWR047" H 1750 6850 50  0001 C CNN
+F 0 "#PWR048" H 1750 6850 50  0001 C CNN
 F 1 "GND" H 1755 6927 50  0000 C CNN
 F 2 "" H 1750 7100 50  0001 C CNN
 F 3 "" H 1750 7100 50  0001 C CNN
@@ -916,7 +905,7 @@ $EndComp
 Wire Wire Line
 	1750 7100 1750 7000
 Wire Wire Line
-	1100 7100 1100 7000
+	1100 7100 1100 7050
 Wire Wire Line
 	1750 6750 2000 6750
 Connection ~ 1750 6750
@@ -1571,17 +1560,6 @@ F 3 "~" H 9900 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R19
-U 1 1 5E820A90
-P 4200 4050
-F 0 "R19" V 3995 4050 50  0000 C CNN
-F 1 "0R" V 4086 4050 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 4200 4050 50  0001 C CNN
-F 3 "~" H 4200 4050 50  0001 C CNN
-	1    4200 4050
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R_Small_US R17
 U 1 1 5DBCBE79
 P 6150 3950
@@ -1712,7 +1690,7 @@ F 3 "" H 8200 2800 50  0001 C CNN
 	1    8200 2800
 	1    0    0    -1  
 $EndComp
-Text Notes 800  6400 0    50   ~ 0
+Text Notes 2200 7350 0    50   ~ 0
 TODO better estimate of CLs
 $Sheet
 S 5650 700  1100 1250
@@ -1749,10 +1727,10 @@ F11 "GMISO" O R 8600 800 50
 F12 "CLK" I L 7550 1850 50 
 $EndSheet
 $Comp
-L power:+3V3 #PWR044
+L power:+3V3 #PWR045
 U 1 1 5DB09507
 P 5650 6650
-F 0 "#PWR044" H 5650 6500 50  0001 C CNN
+F 0 "#PWR045" H 5650 6500 50  0001 C CNN
 F 1 "+3V3" H 5665 6823 50  0000 C CNN
 F 2 "" H 5650 6650 50  0001 C CNN
 F 3 "" H 5650 6650 50  0001 C CNN
@@ -1802,10 +1780,10 @@ Connection ~ 6000 7350
 Wire Wire Line
 	6000 7350 6000 7400
 $Comp
-L power:GND #PWR048
+L power:GND #PWR049
 U 1 1 5E132550
 P 6000 7400
-F 0 "#PWR048" H 6000 7150 50  0001 C CNN
+F 0 "#PWR049" H 6000 7150 50  0001 C CNN
 F 1 "GND" H 6005 7227 50  0000 C CNN
 F 2 "" H 6000 7400 50  0001 C CNN
 F 3 "" H 6000 7400 50  0001 C CNN
@@ -2132,10 +2110,10 @@ Wire Notes Line
 Text Notes 5600 8950 0    50   ~ 0
 "Standard 7x5mm" package.\nOther mfgr have what appear to be\ndrop-in replacements for these...\n\nAny OSC on 12 to 24MHz should\nsuffice. The FPGA PLL bumps this\nup to approx 60MHz programatically.\n\nLeaving a parallel termination R,\nin case it is needed. (1/10 wave-\nlength is approx. 1.2m @ 12MHz)\n\nIf more devices, fanout buffer\nmay be necessary to drive.
 $Comp
-L power:GND #PWR049
+L power:GND #PWR050
 U 1 1 5EBDB560
 P 6550 7400
-F 0 "#PWR049" H 6550 7150 50  0001 C CNN
+F 0 "#PWR050" H 6550 7150 50  0001 C CNN
 F 1 "GND" H 6555 7227 50  0000 C CNN
 F 2 "" H 6550 7400 50  0001 C CNN
 F 3 "" H 6550 7400 50  0001 C CNN
@@ -2150,10 +2128,10 @@ Connection ~ 6550 7000
 Wire Wire Line
 	6550 7100 6550 7000
 $Comp
-L Device:R_Small_US R21
+L Device:R_Small_US R20
 U 1 1 5EBDB555
 P 6550 7200
-F 0 "R21" H 6618 7246 50  0000 L CNN
+F 0 "R20" H 6618 7246 50  0000 L CNN
 F 1 "OMIT" H 6618 7155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6550 7200 50  0001 C CNN
 F 3 "~" H 6550 7200 50  0001 C CNN
@@ -2296,21 +2274,10 @@ F 3 "~" H 8600 3850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:L_Small L1
-U 1 1 5DA60CA2
-P 2150 2600
-F 0 "L1" V 2335 2600 50  0000 C CNN
-F 1 "FB" V 2244 2600 50  0000 C CNN
-F 2 "Inductor_SMD:L_0805_2012Metric" H 2150 2600 50  0001 C CNN
-F 3 "~" H 2150 2600 50  0001 C CNN
-	1    2150 2600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_Small_US R20
+L Device:R_Small_US R19
 U 1 1 5D9ADFEA
 P 8800 5650
-F 0 "R20" V 8700 5600 50  0000 C CNN
+F 0 "R19" V 8700 5600 50  0000 C CNN
 F 1 "120R" V 8750 5800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 8800 5650 50  0001 C CNN
 F 3 "~" H 8800 5650 50  0001 C CNN
@@ -2360,15 +2327,9 @@ Wire Wire Line
 Wire Wire Line
 	2450 2350 2450 2600
 Wire Wire Line
-	3800 4050 4100 4050
-Wire Wire Line
 	4450 4200 4450 4050
 Wire Wire Line
-	4450 4050 4300 4050
-Wire Wire Line
 	4300 4200 4450 4200
-Wire Wire Line
-	4450 4050 4700 4050
 Connection ~ 4450 4050
 Text Label 8450 5650 0    50   ~ 0
 RX-
@@ -2443,4 +2404,48 @@ Text Notes 2250 5000 1    50   ~ 0
 TODO Breakout Header?
 NoConn ~ 7100 4150
 NoConn ~ 7100 4250
+$Comp
+L Device:L_Small L1
+U 1 1 5DA60CA2
+P 2150 2600
+F 0 "L1" V 2335 2600 50  0000 C CNN
+F 1 "FB" V 2244 2600 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 2150 2600 50  0001 C CNN
+F 3 "~" H 2150 2600 50  0001 C CNN
+	1    2150 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Crystal_GND24 Y1
+U 1 1 5DB900C6
+P 1450 6750
+F 0 "Y1" H 1200 6950 50  0000 L CNN
+F 1 "16MHz" H 1550 6950 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_Abracon_ABM3B-4Pin_5.0x3.2mm" H 1450 6750 50  0001 C CNN
+F 3 "~" H 1450 6750 50  0001 C CNN
+	1    1450 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR044
+U 1 1 5DB91D5C
+P 1450 6450
+F 0 "#PWR044" H 1450 6200 50  0001 C CNN
+F 1 "GND" H 1455 6277 50  0000 C CNN
+F 2 "" H 1450 6450 50  0001 C CNN
+F 3 "" H 1450 6450 50  0001 C CNN
+	1    1450 6450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1450 6450 1450 6550
+Wire Wire Line
+	1450 6950 1450 7050
+Wire Wire Line
+	1450 7050 1100 7050
+Connection ~ 1100 7050
+Wire Wire Line
+	1100 7050 1100 7000
+Wire Wire Line
+	3800 4050 4450 4050
 $EndSCHEMATC

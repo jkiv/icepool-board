@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:icepool-board-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 3 3
 Title ""
 Date ""
 Rev ""
@@ -539,7 +539,7 @@ $EndComp
 Wire Wire Line
 	3200 2250 3200 2300
 Text HLabel 5400 4450 2    50   Input ~ 0
-~RESET
+CRESET_B
 Wire Wire Line
 	4950 4450 5400 4450
 $Comp
@@ -714,12 +714,8 @@ F 3 "~" H 2400 1050 50  0001 C CNN
 	1    2400 1050
 	1    0    0    -1  
 $EndComp
-Text HLabel 2650 3850 0    50   Input ~ 0
-~READY_ANY
 Text HLabel 2650 3950 0    50   Output ~ 0
-~READY
-Wire Wire Line
-	2750 3850 2650 3850
+READY_OUT
 Wire Wire Line
 	2750 3950 2650 3950
 Wire Wire Line
@@ -790,4 +786,8 @@ Wire Wire Line
 	4950 3850 5050 3850
 Text HLabel 5050 3850 2    50   Input ~ 0
 MOSI
+Text HLabel 2650 3850 0    50   Output ~ 0
+READY_IN
+Wire Wire Line
+	2750 3850 2650 3850
 $EndSCHEMATC

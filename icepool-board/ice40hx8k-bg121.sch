@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:icepool-board-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -456,12 +456,12 @@ $EndComp
 Wire Wire Line
 	3200 1600 3200 1700
 $Comp
-L Device:R_Small_US R22
+L Device:R_Small_US R23
 U 1 1 5D80744D
 P 3550 1700
-AR Path="/5D74F1A4/5D80744D" Ref="R22"  Part="1" 
-AR Path="/5D7C5399/5D80744D" Ref="R26"  Part="1" 
-F 0 "R26" V 3345 1700 50  0000 C CNN
+AR Path="/5D74F1A4/5D80744D" Ref="R23"  Part="1" 
+AR Path="/5D7C5399/5D80744D" Ref="R27"  Part="1" 
+F 0 "R27" V 3345 1700 50  0000 C CNN
 F 1 "120R" V 3436 1700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 3550 1700 50  0001 C CNN
 F 3 "~" H 3550 1700 50  0001 C CNN
@@ -469,12 +469,12 @@ F 3 "~" H 3550 1700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small_US R23
+L Device:R_Small_US R24
 U 1 1 5D80825F
 P 3550 2000
-AR Path="/5D74F1A4/5D80825F" Ref="R23"  Part="1" 
-AR Path="/5D7C5399/5D80825F" Ref="R27"  Part="1" 
-F 0 "R27" V 3345 2000 50  0000 C CNN
+AR Path="/5D74F1A4/5D80825F" Ref="R24"  Part="1" 
+AR Path="/5D7C5399/5D80825F" Ref="R28"  Part="1" 
+F 0 "R28" V 3345 2000 50  0000 C CNN
 F 1 "120R" V 3436 2000 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 3550 2000 50  0001 C CNN
 F 3 "~" H 3550 2000 50  0001 C CNN
@@ -543,12 +543,12 @@ CRESET_B
 Wire Wire Line
 	4950 4450 5400 4450
 $Comp
-L Device:R_Small_US R25
+L Device:R_Small_US R26
 U 1 1 5E945D22
 P 5100 5100
-AR Path="/5D74F1A4/5E945D22" Ref="R25"  Part="1" 
-AR Path="/5D7C5399/5E945D22" Ref="R29"  Part="1" 
-F 0 "R29" H 5032 5054 50  0000 R CNN
+AR Path="/5D74F1A4/5E945D22" Ref="R26"  Part="1" 
+AR Path="/5D7C5399/5E945D22" Ref="R30"  Part="1" 
+F 0 "R30" H 5032 5054 50  0000 R CNN
 F 1 "10k" H 5032 5145 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 5100 5100 50  0001 C CNN
 F 3 "~" H 5100 5100 50  0001 C CNN
@@ -575,12 +575,12 @@ Wire Wire Line
 Text HLabel 2650 3450 0    50   Input ~ 0
 CLK
 $Comp
-L Device:R_Small_US R24
+L Device:R_Small_US R25
 U 1 1 5ED26A4F
 P 5350 4150
-AR Path="/5D74F1A4/5ED26A4F" Ref="R24"  Part="1" 
-AR Path="/5D7C5399/5ED26A4F" Ref="R28"  Part="1" 
-F 0 "R28" H 5418 4196 50  0000 L CNN
+AR Path="/5D74F1A4/5ED26A4F" Ref="R25"  Part="1" 
+AR Path="/5D7C5399/5ED26A4F" Ref="R29"  Part="1" 
+F 0 "R29" H 5418 4196 50  0000 L CNN
 F 1 "10k" H 5418 4105 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 5350 4150 50  0001 C CNN
 F 3 "~" H 5350 4150 50  0001 C CNN
@@ -715,7 +715,7 @@ F 3 "~" H 2400 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 2650 3950 0    50   Output ~ 0
-READY_OUT
+READY
 Wire Wire Line
 	2750 3950 2650 3950
 Wire Wire Line
@@ -768,7 +768,7 @@ F 3 "~" H 1100 3700 50  0001 C CNN
 $EndComp
 Text Label 5100 4900 0    50   ~ 0
 SPI_SS_B
-Text HLabel 5000 4550 2    50   Input ~ 0
+Text HLabel 5000 4550 2    50   Output ~ 0
 GMISO
 Text HLabel 5000 4650 2    50   Input ~ 0
 GMOSI
@@ -786,7 +786,7 @@ Wire Wire Line
 	4950 3850 5050 3850
 Text HLabel 5050 3850 2    50   Input ~ 0
 MOSI
-Text HLabel 2650 3850 0    50   Output ~ 0
+Text HLabel 2650 3850 0    50   Input ~ 0
 READY_IN
 Wire Wire Line
 	2750 3850 2650 3850

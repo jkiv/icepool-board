@@ -17,53 +17,51 @@ $EndDescr
 $Comp
 L dk_PMIC-Voltage-Regulators-Linear:LD1117S33CTR U1
 U 1 1 5D72896C
-P 1450 1100
-F 0 "U1" H 1500 1387 60  0000 C CNN
-F 1 "LD1117S33CTR" H 1500 1281 60  0000 C CNN
-F 2 "digikey-footprints:SOT-223" H 1650 1300 60  0001 L CNN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" H 1650 1400 60  0001 L CNN
-F 4 "497-1241-1-ND" H 1650 1500 60  0001 L CNN "Digi-Key_PN"
-F 5 "LD1117S33CTR" H 1650 1600 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 1650 1700 60  0001 L CNN "Category"
-F 7 "PMIC - Voltage Regulators - Linear" H 1650 1800 60  0001 L CNN "Family"
-F 8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" H 1650 1900 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/stmicroelectronics/LD1117S33CTR/497-1241-1-ND/586241" H 1650 2000 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC REG LINEAR 3.3V 800MA SOT223" H 1650 2100 60  0001 L CNN "Description"
-F 11 "STMicroelectronics" H 1650 2200 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 1650 2300 60  0001 L CNN "Status"
-	1    1450 1100
+P 1500 1050
+F 0 "U1" H 1550 1337 60  0000 C CNN
+F 1 "LD1117S33CTR" H 1550 1231 60  0000 C CNN
+F 2 "digikey-footprints:SOT-223" H 1700 1250 60  0001 L CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" H 1700 1350 60  0001 L CNN
+F 4 "497-1241-1-ND" H 1700 1450 60  0001 L CNN "Digi-Key_PN"
+F 5 "LD1117S33CTR" H 1700 1550 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 1700 1650 60  0001 L CNN "Category"
+F 7 "PMIC - Voltage Regulators - Linear" H 1700 1750 60  0001 L CNN "Family"
+F 8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" H 1700 1850 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/stmicroelectronics/LD1117S33CTR/497-1241-1-ND/586241" H 1700 1950 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC REG LINEAR 3.3V 800MA SOT223" H 1700 2050 60  0001 L CNN "Description"
+F 11 "STMicroelectronics" H 1700 2150 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1700 2250 60  0001 L CNN "Status"
+	1    1500 1050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C1
 U 1 1 5D72B43C
-P 850 1250
-F 0 "C1" H 942 1296 50  0000 L CNN
-F 1 "0.1uF" H 942 1205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 850 1250 50  0001 C CNN
-F 3 "~" H 850 1250 50  0001 C CNN
-	1    850  1250
+P 900 1200
+F 0 "C1" H 992 1246 50  0000 L CNN
+F 1 "0.1uF" H 992 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 900 1200 50  0001 C CNN
+F 3 "~" H 900 1200 50  0001 C CNN
+	1    900  1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 1100 1100 1100
+	1200 1050 1150 1050
+Connection ~ 900  1050
 Wire Wire Line
-	850  1100 850  900 
-Connection ~ 850  1100
+	900  1350 1500 1350
+Connection ~ 1500 1350
 Wire Wire Line
-	850  1400 1450 1400
-Connection ~ 1450 1400
-Wire Wire Line
-	1450 1400 1450 1500
+	1500 1350 1500 1450
 $Comp
 L power:GND #PWR05
 U 1 1 5D73163F
-P 1450 1500
-F 0 "#PWR05" H 1450 1250 50  0001 C CNN
-F 1 "GND" H 1455 1327 50  0000 C CNN
-F 2 "" H 1450 1500 50  0001 C CNN
-F 3 "" H 1450 1500 50  0001 C CNN
-	1    1450 1500
+P 1500 1450
+F 0 "#PWR05" H 1500 1200 50  0001 C CNN
+F 1 "GND" H 1505 1277 50  0000 C CNN
+F 2 "" H 1500 1450 50  0001 C CNN
+F 3 "" H 1500 1450 50  0001 C CNN
+	1    1500 1450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -110,8 +108,6 @@ F 3 "~" H 4300 1250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3400 1100 3350 1100
-Wire Wire Line
-	3100 1100 3100 900 
 Connection ~ 3100 1100
 Wire Wire Line
 	3100 1400 3700 1400
@@ -145,12 +141,12 @@ $EndComp
 $Comp
 L power:VCC #PWR01
 U 1 1 5D73FD90
-P 850 900
-F 0 "#PWR01" H 850 750 50  0001 C CNN
-F 1 "VCC" H 867 1073 50  0000 C CNN
-F 2 "" H 850 900 50  0001 C CNN
-F 3 "" H 850 900 50  0001 C CNN
-	1    850  900 
+P 900 850
+F 0 "#PWR01" H 900 700 50  0001 C CNN
+F 1 "VCC" H 917 1023 50  0000 C CNN
+F 2 "" H 900 850 50  0001 C CNN
+F 3 "" H 900 850 50  0001 C CNN
+	1    900  850 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -937,9 +933,9 @@ Wire Wire Line
 Wire Wire Line
 	4300 1150 4300 1100
 Wire Wire Line
-	850  1350 850  1400
+	900  1300 900  1350
 Wire Wire Line
-	850  1150 850  1100
+	900  1100 900  1050
 Wire Wire Line
 	3100 1150 3100 1100
 Wire Wire Line
@@ -1115,8 +1111,6 @@ F 3 "" H 2450 2950 50  0001 C CNN
 	1    2450 2950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2450 2850 2450 2950
 Connection ~ 2450 2600
 Wire Wire Line
 	2450 2600 2450 2650
@@ -1454,18 +1448,18 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR03
 U 1 1 5E71FCF3
-P 2100 1000
-F 0 "#PWR03" H 2100 850 50  0001 C CNN
-F 1 "+3V3" H 2115 1173 50  0000 C CNN
-F 2 "" H 2100 1000 50  0001 C CNN
-F 3 "" H 2100 1000 50  0001 C CNN
-	1    2100 1000
+P 2150 950
+F 0 "#PWR03" H 2150 800 50  0001 C CNN
+F 1 "+3V3" H 2165 1123 50  0000 C CNN
+F 2 "" H 2150 950 50  0001 C CNN
+F 3 "" H 2150 950 50  0001 C CNN
+	1    2150 950 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2100 1000 2100 1100
+	2150 950  2150 1000
 Wire Wire Line
-	4500 1100 4500 1000
+	4500 1100 4500 1050
 $Comp
 L power:+1V2 #PWR07
 U 1 1 5EF83DB3
@@ -1746,12 +1740,12 @@ FB = BLM21PG331SN1D
 Text Notes 1550 2900 0    50   ~ 0
 MLL1200STR
 Wire Wire Line
-	1850 1200 1900 1200
+	1900 1150 1950 1150
 Wire Wire Line
-	1900 1200 1900 1100
-Connection ~ 1900 1100
+	1950 1150 1950 1050
+Connection ~ 1950 1050
 Wire Wire Line
-	1900 1100 1850 1100
+	1950 1050 1900 1050
 Wire Wire Line
 	4100 1100 4150 1100
 Wire Wire Line
@@ -1849,8 +1843,6 @@ $EndComp
 Wire Wire Line
 	1650 2600 1650 2400
 Wire Wire Line
-	1200 2600 1650 2600
-Wire Wire Line
 	9850 4000 9600 4000
 $Comp
 L Device:R_Small_US R17
@@ -1915,7 +1907,7 @@ Wire Wire Line
 Wire Wire Line
 	1750 2600 2050 2600
 Wire Wire Line
-	2450 2350 2450 2600
+	2450 2350 2450 2450
 Wire Wire Line
 	4450 4200 4450 4050
 Wire Wire Line
@@ -1940,16 +1932,16 @@ Wire Wire Line
 $Comp
 L Device:R_Small_US R1
 U 1 1 5DAD3E8F
-P 1000 1100
-F 0 "R1" V 795 1100 50  0000 C CNN
-F 1 "0R" V 886 1100 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 1000 1100 50  0001 C CNN
-F 3 "~" H 1000 1100 50  0001 C CNN
-	1    1000 1100
+P 1050 1050
+F 0 "R1" V 845 1050 50  0000 C CNN
+F 1 "0R" V 936 1050 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 1050 1050 50  0001 C CNN
+F 3 "~" H 1050 1050 50  0001 C CNN
+	1    1050 1050
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	900  1100 850  1100
+	950  1050 900  1050
 $Comp
 L Device:R_Small_US R2
 U 1 1 5DAD50FC
@@ -1964,7 +1956,7 @@ $EndComp
 Wire Wire Line
 	3150 1100 3100 1100
 Wire Wire Line
-	1900 1100 2100 1100
+	1950 1050 2150 1050
 Wire Wire Line
 	4300 1100 4500 1100
 Wire Notes Line
@@ -2211,4 +2203,69 @@ F 3 "~" H 8200 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5650 1700 5250 1700
+NoConn ~ 3800 5250
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5DB9A0B3
+P 2150 1000
+F 0 "#FLG0101" H 2150 1075 50  0001 C CNN
+F 1 "PWR_FLAG" V 2150 1128 50  0000 L CNN
+F 2 "" H 2150 1000 50  0001 C CNN
+F 3 "~" H 2150 1000 50  0001 C CNN
+	1    2150 1000
+	0    1    1    0   
+$EndComp
+Connection ~ 2150 1000
+Wire Wire Line
+	2150 1000 2150 1050
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5DB9AAFB
+P 2450 2450
+F 0 "#FLG0102" H 2450 2525 50  0001 C CNN
+F 1 "PWR_FLAG" V 2450 2577 50  0000 L CNN
+F 2 "" H 2450 2450 50  0001 C CNN
+F 3 "~" H 2450 2450 50  0001 C CNN
+	1    2450 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5DBB39B8
+P 4500 1050
+F 0 "#FLG0103" H 4500 1125 50  0001 C CNN
+F 1 "PWR_FLAG" V 4500 1178 50  0000 L CNN
+F 2 "" H 4500 1050 50  0001 C CNN
+F 3 "~" H 4500 1050 50  0001 C CNN
+	1    4500 1050
+	0    1    1    0   
+$EndComp
+Connection ~ 4500 1050
+Wire Wire Line
+	4500 1050 4500 1000
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5DBB3FBE
+P 1600 2600
+F 0 "#FLG0104" H 1600 2675 50  0001 C CNN
+F 1 "PWR_FLAG" H 1600 2773 50  0000 C CNN
+F 2 "" H 1600 2600 50  0001 C CNN
+F 3 "~" H 1600 2600 50  0001 C CNN
+	1    1600 2600
+	-1   0    0    1   
+$EndComp
+Connection ~ 2450 2450
+Wire Wire Line
+	2450 2450 2450 2600
+Wire Wire Line
+	3100 900  3100 1100
+Wire Wire Line
+	900  850  900  1050
+Connection ~ 1600 2600
+Wire Wire Line
+	1600 2600 1650 2600
+Wire Wire Line
+	1200 2600 1600 2600
+Wire Wire Line
+	2450 2850 2450 2950
 $EndSCHEMATC

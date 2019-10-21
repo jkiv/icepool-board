@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:icepool-board-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -204,23 +204,19 @@ $EndComp
 Text Label 3850 4700 0    50   ~ 0
 ~RESET
 Text Label 3850 5100 0    50   ~ 0
-SWDCLK_TCK
+SWD_CLK
 Text Label 3850 4950 0    50   ~ 0
-SWDIO_TMS
+SWD_IO
 Text Label 3850 4450 0    50   ~ 0
 VDDCORE
 Text Notes 3300 3700 0    50   ~ 0
 Max Supply Rise: 0.1 V/us
-Text Label 6950 3950 0    50   ~ 0
-SWDIO_TMS
-Text Label 6950 4050 0    50   ~ 0
-SWDCLK_TCK
-Text Label 6950 4150 0    50   ~ 0
-TDO
-Text Label 6950 4250 0    50   ~ 0
-TDI
+Text Label 6400 3950 0    50   ~ 0
+SWD_IO
+Text Label 6400 4050 0    50   ~ 0
+SWD_CLK
 Wire Wire Line
-	6300 4150 6300 4050
+	5750 4150 5750 4050
 $Comp
 L Connector:Conn_01x04_Male J3
 U 1 1 5D90BF7F
@@ -308,26 +304,26 @@ F 3 "" H 1600 5250 50  0001 C CNN
 	1    1600 5250
 	1    0    0    -1  
 $EndComp
-Text Label 6950 4350 0    50   ~ 0
+Text Label 6400 4350 0    50   ~ 0
 ~RESET
 Wire Wire Line
 	3800 4700 4100 4700
 $Comp
 L power:GND #PWR038
 U 1 1 5DAD510C
-P 6200 4350
-F 0 "#PWR038" H 6200 4100 50  0001 C CNN
-F 1 "GND" V 6205 4222 50  0000 R CNN
-F 2 "" H 6200 4350 50  0001 C CNN
-F 3 "" H 6200 4350 50  0001 C CNN
-	1    6200 4350
+P 5650 4350
+F 0 "#PWR038" H 5650 4100 50  0001 C CNN
+F 1 "GND" V 5655 4222 50  0000 R CNN
+F 2 "" H 5650 4350 50  0001 C CNN
+F 3 "" H 5650 4350 50  0001 C CNN
+	1    5650 4350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6200 4350 6300 4350
+	5650 4350 5750 4350
 Text Notes 10500 6250 0    50   ~ 0
 RS485/USART
-Text Notes 7300 4500 0    50   ~ 0
+Text Notes 6750 4500 0    50   ~ 0
 SWD Header
 Text Notes 6400 3250 0    50   ~ 0
 I2C Header
@@ -401,25 +397,8 @@ F 3 "~" H 6200 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5500 3200 5600 3200
-$Comp
-L power:+3V3 #PWR011
-U 1 1 5E03355F
-P 6050 2750
-F 0 "#PWR011" H 6050 2600 50  0001 C CNN
-F 1 "+3V3" H 6065 2923 50  0000 C CNN
-F 2 "" H 6050 2750 50  0001 C CNN
-F 3 "" H 6050 2750 50  0001 C CNN
-	1    6050 2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5950 2900 6050 2900
-Wire Wire Line
-	6050 2900 6050 2750
 Wire Wire Line
 	6300 3000 6400 3000
-Wire Wire Line
-	6400 3000 6400 2750
 Wire Wire Line
 	6650 3100 6650 2750
 $Comp
@@ -543,18 +522,14 @@ Text Label 2350 6000 2    50   ~ 0
 XOUT
 Wire Wire Line
 	2150 6000 2400 6000
-Text Label 2350 5250 2    50   ~ 0
+Text Label 2350 4650 2    50   ~ 0
 RX
-Text Label 2350 5400 2    50   ~ 0
+Text Label 2350 4800 2    50   ~ 0
 TX
 Wire Wire Line
-	2400 5250 2250 5250
+	2400 4650 2250 4650
 Wire Wire Line
-	2400 5400 2250 5400
-Text Notes 2000 5700 0    50   ~ 0
-SERCOM0
-Wire Notes Line
-	2500 5150 2500 5750
+	2400 4800 2250 4800
 Wire Notes Line
 	2500 5750 1950 5750
 Text Label 3850 6300 0    50   ~ 0
@@ -571,26 +546,18 @@ Wire Notes Line
 	2050 6350 2050 6050
 Text Notes 4500 6250 2    50   ~ 0
 SERCOM1
-Text Label 3850 6000 0    50   ~ 0
+Text Label 2350 5250 2    50   ~ 0
 SDA
-Text Label 3850 5850 0    50   ~ 0
+Text Label 2350 5400 2    50   ~ 0
 SCL
 Wire Wire Line
-	3800 6000 4000 6000
+	2400 5250 2200 5250
 Wire Wire Line
-	3800 5850 4000 5850
-Wire Notes Line
-	3800 5750 3800 6050
-Text Notes 4500 5950 2    50   ~ 0
-SERCOM3
+	2400 5400 2200 5400
 NoConn ~ 2400 5550
 NoConn ~ 2400 5700
 Text Label 3850 5400 0    50   ~ 0
 READY
-Text Label 3850 5550 0    50   ~ 0
-~GS
-Wire Wire Line
-	3800 5550 3950 5550
 Wire Wire Line
 	5500 800  5500 950 
 Wire Wire Line
@@ -605,11 +572,7 @@ MISO
 Wire Wire Line
 	3800 6150 4050 6150
 Wire Notes Line
-	4600 5750 4600 6350
-Wire Notes Line
 	2050 6350 4600 6350
-Wire Notes Line
-	3800 5750 4600 5750
 Wire Notes Line
 	2050 6050 4600 6050
 Wire Wire Line
@@ -617,69 +580,59 @@ Wire Wire Line
 $Comp
 L dk_Rectangular-Connectors-Headers-Male-Pins:FTSH-105-01-F-DV-K J4
 U 1 1 5D8FA17A
-P 6700 4150
-F 0 "J4" H 6700 4565 50  0000 C CNN
-F 1 "SWD" H 6700 4474 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_2x05_P1.00mm_Vertical" H 6900 4350 50  0001 L CNN
-F 3 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 6900 4450 50  0001 L CNN
-F 4 "SAM8796-ND" H 6900 4550 60  0001 L CNN "Digi-Key_PN"
-F 5 "FTSH-105-01-F-DV-K" H 6900 4650 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 6900 4750 60  0001 L CNN "Category"
-F 7 "Rectangular Connectors - Headers, Male Pins" H 6900 4850 60  0001 L CNN "Family"
-F 8 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 6900 4950 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/samtec-inc/FTSH-105-01-F-DV-K/SAM8796-ND/2649974" H 6900 5050 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN HEADER SMD 10POS 1.27MM" H 6900 5150 60  0001 L CNN "Description"
-F 11 "Samtec Inc." H 6900 5250 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 6900 5350 60  0001 L CNN "Status"
-	1    6700 4150
+P 6150 4150
+F 0 "J4" H 6150 4565 50  0000 C CNN
+F 1 "SWD" H 6150 4474 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_2x05_P1.00mm_Vertical" H 6350 4350 50  0001 L CNN
+F 3 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 6350 4450 50  0001 L CNN
+F 4 "SAM8796-ND" H 6350 4550 60  0001 L CNN "Digi-Key_PN"
+F 5 "FTSH-105-01-F-DV-K" H 6350 4650 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 6350 4750 60  0001 L CNN "Category"
+F 7 "Rectangular Connectors - Headers, Male Pins" H 6350 4850 60  0001 L CNN "Family"
+F 8 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 6350 4950 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/samtec-inc/FTSH-105-01-F-DV-K/SAM8796-ND/2649974" H 6350 5050 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN HEADER SMD 10POS 1.27MM" H 6350 5150 60  0001 L CNN "Description"
+F 11 "Samtec Inc." H 6350 5250 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6350 5350 60  0001 L CNN "Status"
+	1    6150 4150
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR031
 U 1 1 5DAFFB57
-P 5900 3800
-F 0 "#PWR031" H 5900 3650 50  0001 C CNN
-F 1 "+3V3" H 5915 3973 50  0000 C CNN
-F 2 "" H 5900 3800 50  0001 C CNN
-F 3 "" H 5900 3800 50  0001 C CNN
-	1    5900 3800
+P 5350 3800
+F 0 "#PWR031" H 5350 3650 50  0001 C CNN
+F 1 "+3V3" H 5365 3973 50  0000 C CNN
+F 2 "" H 5350 3800 50  0001 C CNN
+F 3 "" H 5350 3800 50  0001 C CNN
+	1    5350 3800
 	1    0    0    -1  
 $EndComp
-Text Notes 6500 4250 2    50   ~ 0
+Text Notes 5950 4250 2    50   ~ 0
 KEY
 Wire Wire Line
-	6300 4150 6300 4250
-Connection ~ 6300 4150
-Connection ~ 6300 4350
-Connection ~ 6300 4250
+	5750 4150 5750 4250
+Connection ~ 5750 4150
+Connection ~ 5750 4350
+Connection ~ 5750 4250
 Wire Wire Line
-	6300 4250 6300 4350
+	5750 4250 5750 4350
 Wire Wire Line
-	6300 4050 6500 4050
+	5750 4050 5950 4050
 Wire Wire Line
-	6300 4150 6500 4150
+	5750 4150 5950 4150
 Wire Wire Line
-	6300 4250 6500 4250
+	5750 4250 5950 4250
 Wire Wire Line
-	6300 4350 6500 4350
+	5750 4350 5950 4350
 Wire Wire Line
-	6900 3950 7400 3950
+	6350 4350 6650 4350
 Wire Wire Line
-	6900 4150 7100 4150
+	5700 3950 5950 3950
 Wire Wire Line
-	6900 4250 7100 4250
+	5500 3950 5350 3950
 Wire Wire Line
-	6900 4350 7200 4350
-Wire Wire Line
-	6250 3950 6500 3950
-Wire Wire Line
-	6050 3950 5900 3950
-Wire Wire Line
-	5900 3950 5900 3800
-Wire Wire Line
-	3800 4950 4300 4950
-Wire Wire Line
-	3800 5100 4350 5100
+	5350 3950 5350 3800
 $Comp
 L Device:C_Small C18
 U 1 1 5DC2D243
@@ -995,8 +948,8 @@ Wire Wire Line
 	10000 5550 10200 5550
 Wire Wire Line
 	10200 5250 10000 5250
-Text Notes 8500 6200 0    50   ~ 0
-Since one-to-many,\nterminating resistors\nonly required on final\nnode.
+Text Notes 8150 6150 0    50   ~ 0
+Connect JP1 on final node\nto enable termination R.
 Wire Notes Line
 	11100 6300 5200 6300
 Wire Notes Line
@@ -1195,44 +1148,40 @@ $EndComp
 $Comp
 L Device:R_Small_US R19
 U 1 1 5DBCBE79
-P 6150 3950
-F 0 "R19" V 5945 3950 50  0000 C CNN
-F 1 "0R" V 6036 3950 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 6150 3950 50  0001 C CNN
-F 3 "~" H 6150 3950 50  0001 C CNN
-	1    6150 3950
+P 5600 3950
+F 0 "R19" V 5395 3950 50  0000 C CNN
+F 1 "0R" V 5486 3950 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 5600 3950 50  0001 C CNN
+F 3 "~" H 5600 3950 50  0001 C CNN
+	1    5600 3950
 	0    1    1    0   
 $EndComp
 $Comp
 L power:+3.3V #PWR028
 U 1 1 5E83C577
-P 7650 3700
-F 0 "#PWR028" H 7650 3550 50  0001 C CNN
-F 1 "+3.3V" H 7665 3873 50  0000 C CNN
-F 2 "" H 7650 3700 50  0001 C CNN
-F 3 "" H 7650 3700 50  0001 C CNN
-	1    7650 3700
+P 7100 3700
+F 0 "#PWR028" H 7100 3550 50  0001 C CNN
+F 1 "+3.3V" H 7115 3873 50  0000 C CNN
+F 2 "" H 7100 3700 50  0001 C CNN
+F 3 "" H 7100 3700 50  0001 C CNN
+	1    7100 3700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7650 3800 7650 3700
+	7100 3800 7100 3700
 $Comp
 L Device:R_Small_US R18
 U 1 1 5E83C582
-P 7650 3900
-F 0 "R18" H 7718 3946 50  0000 L CNN
-F 1 "10k" H 7718 3855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 7650 3900 50  0001 C CNN
-F 3 "~" H 7650 3900 50  0001 C CNN
-	1    7650 3900
+P 7100 3900
+F 0 "R18" H 7168 3946 50  0000 L CNN
+F 1 "10k" H 7168 3855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7100 3900 50  0001 C CNN
+F 3 "~" H 7100 3900 50  0001 C CNN
+	1    7100 3900
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7650 4050 7650 4000
-Text Label 3850 5700 0    50   ~ 0
-CRESET_B
-Wire Wire Line
-	3800 5700 4200 5700
+	7100 4050 7100 4000
 Wire Wire Line
 	5250 1550 5650 1550
 Text Label 7150 1550 0    50   ~ 0
@@ -1309,7 +1258,7 @@ F 3 "" H 8200 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 2200 7350 0    50   ~ 0
-TODO better estimate of CLs
+TODO better estimate of CL (C18 and C19)
 $Comp
 L power:+3V3 #PWR046
 U 1 1 5DB09507
@@ -1328,8 +1277,8 @@ L Oscillator:ASV-xxxMHz X1
 U 1 1 5E0CB721
 P 6000 7000
 F 0 "X1" H 6050 7500 50  0000 L CNN
-F 1 "ASV-12.000MHz-L??-50" H 5750 7400 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_Abracon_ABM3B-4Pin_5.0x3.2mm" H 6700 6650 50  0001 C CNN
+F 1 "CB3LV-3I-16M0000" H 5750 7400 50  0000 L CNN
+F 2 "Oscillator:Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm" H 6700 6650 50  0001 C CNN
 F 3 "http://www.abracon.com/Oscillators/ASV.pdf" H 5900 7000 50  0001 C CNN
 	1    6000 7000
 	1    0    0    -1  
@@ -1434,15 +1383,15 @@ $EndComp
 Text Label 8800 3550 3    50   ~ 0
 SCK
 Wire Wire Line
-	6900 4050 7650 4050
+	6350 4050 7100 4050
 Wire Notes Line
-	5750 4550 7850 4550
+	5200 4550 7300 4550
 Wire Notes Line
-	7850 4550 7850 3400
+	7300 4550 7300 3400
 Wire Notes Line
-	7850 3400 5750 3400
+	7300 3400 5200 3400
 Wire Notes Line
-	5750 3400 5750 4550
+	5200 3400 5200 4550
 Wire Wire Line
 	2250 2600 2450 2600
 $Comp
@@ -1671,37 +1620,6 @@ Wire Notes Line
 	7050 9000 5550 9000
 Text Notes 5600 8950 0    50   ~ 0
 "Standard 7x5mm" package.\nOther mfgr have what appear to be\ndrop-in replacements for these...\n\nAny OSC on 12 to 24MHz should\nsuffice. The FPGA PLL bumps this\nup to approx 60MHz programatically.\n\nLeaving a parallel termination R,\nin case it is needed. (1/10 wave-\nlength is approx. 1.2m @ 12MHz)\n\nIf more devices, fanout buffer\nmay be necessary to drive.
-$Comp
-L power:GND #PWR051
-U 1 1 5EBDB560
-P 6550 7400
-F 0 "#PWR051" H 6550 7150 50  0001 C CNN
-F 1 "GND" H 6555 7227 50  0000 C CNN
-F 2 "" H 6550 7400 50  0001 C CNN
-F 3 "" H 6550 7400 50  0001 C CNN
-	1    6550 7400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6550 7000 6650 7000
-Wire Wire Line
-	6300 7000 6550 7000
-Connection ~ 6550 7000
-Wire Wire Line
-	6550 7100 6550 7000
-$Comp
-L Device:R_Small_US R22
-U 1 1 5EBDB555
-P 6550 7200
-F 0 "R22" H 6618 7246 50  0000 L CNN
-F 1 "OMIT" H 6618 7155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6550 7200 50  0001 C CNN
-F 3 "~" H 6550 7200 50  0001 C CNN
-	1    6550 7200
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6550 7400 6550 7300
 $Comp
 L Device:R_Small_US R14
 U 1 1 5DB8709D
@@ -1939,31 +1857,11 @@ Wire Wire Line
 	4300 1100 4500 1100
 Wire Notes Line
 	1950 5150 2500 5150
-Wire Notes Line
-	1950 5750 1950 5150
-$Comp
-L icepool-atmel:ATSAMD21E U3
-U 1 1 5D7394CA
-P 3100 5150
-F 0 "U3" H 3100 6515 50  0000 C CNN
-F 1 "ATSAMD21E" H 3100 6424 50  0000 C CNN
-F 2 "digikey-footprints:QFN-32-1EP_5x5mm" H 3100 5300 50  0001 C CNN
-F 3 "" H 3100 5300 50  0001 C CNN
-	1    3100 5150
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2400 4050
 NoConn ~ 2400 4200
 NoConn ~ 2400 4350
 NoConn ~ 2400 4500
-NoConn ~ 2400 4650
-NoConn ~ 2400 4800
-NoConn ~ 2400 4950
-NoConn ~ 2400 5100
-Text Notes 2250 5000 1    50   ~ 0
-TODO Breakout Header?
-NoConn ~ 7100 4150
-NoConn ~ 7100 4250
+NoConn ~ 6350 4150
+NoConn ~ 6350 4250
 $Comp
 L Device:L_Small L1
 U 1 1 5DA60CA2
@@ -2181,7 +2079,6 @@ F 3 "~" H 8200 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5650 1700 5250 1700
-NoConn ~ 3800 5250
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5DB9A0B3
@@ -2268,4 +2165,145 @@ F 3 "~" H 3450 2150 50  0001 C CNN
 	1    3450 2150
 	1    0    0    -1  
 $EndComp
+$Comp
+L icepool-atmel:ATSAMD21E U3
+U 1 1 5D7394CA
+P 3100 5150
+F 0 "U3" H 3100 6515 50  0000 C CNN
+F 1 "ATSAMD21E" H 3100 6424 50  0000 C CNN
+F 2 "digikey-footprints:QFN-32-1EP_5x5mm" H 3100 5300 50  0001 C CNN
+F 3 "" H 3100 5300 50  0001 C CNN
+	1    3100 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4050 2000 4050
+Text Label 2350 4050 2    50   ~ 0
+CRESET_B
+Wire Wire Line
+	3800 5250 3950 5250
+Text Label 3850 5250 0    50   ~ 0
+~GS
+Wire Notes Line
+	4600 5450 3800 5450
+Wire Notes Line
+	3800 5450 3800 6050
+Wire Notes Line
+	4600 5450 4600 6350
+Text Notes 2000 5700 0    50   ~ 0
+SERCOM2
+Text Notes 4400 5600 2    50   ~ 0
+SERCOM3
+NoConn ~ 2400 4950
+NoConn ~ 2400 5100
+Wire Notes Line
+	1950 4550 2500 4550
+Text Notes 2000 5100 0    50   ~ 0
+SERCOM0
+Wire Notes Line
+	1950 4550 1950 5750
+Wire Notes Line
+	2500 4550 2500 5750
+Text Label 3850 6000 0    50   ~ 0
+USB_D+
+Wire Wire Line
+	3800 5850 4150 5850
+Text Label 3850 5850 0    50   ~ 0
+USB_D-
+Wire Wire Line
+	3800 6000 4150 6000
+NoConn ~ 3800 5700
+NoConn ~ 3800 5550
+Wire Wire Line
+	9650 1550 9650 1600
+Wire Wire Line
+	9650 1600 9700 1600
+Wire Wire Line
+	9750 1600 9750 1550
+Wire Wire Line
+	9700 1600 9700 1650
+Connection ~ 9700 1600
+Wire Wire Line
+	9700 1600 9750 1600
+$Comp
+L power:GND #PWR070
+U 1 1 5DF3E31A
+P 9700 1650
+F 0 "#PWR070" H 9700 1400 50  0001 C CNN
+F 1 "GND" H 9705 1477 50  0000 C CNN
+F 2 "" H 9700 1650 50  0001 C CNN
+F 3 "" H 9700 1650 50  0001 C CNN
+	1    9700 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J7
+U 1 1 5DC03ACE
+P 9750 1150
+F 0 "J7" H 9807 1617 50  0000 C CNN
+F 1 "USB_B_Micro" H 9807 1526 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal" H 9900 1100 50  0001 C CNN
+F 3 "~" H 9900 1100 50  0001 C CNN
+	1    9750 1150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10050 1350
+Text Label 10100 1250 0    50   ~ 0
+USB_D-
+Text Label 10100 1150 0    50   ~ 0
+USB_D+
+Wire Wire Line
+	10050 950  10200 950 
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5E1BFACB
+P 10200 950
+F 0 "TP1" H 10258 1068 50  0000 L CNN
+F 1 "VBUS" H 10258 977 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10400 950 50  0001 C CNN
+F 3 "~" H 10400 950 50  0001 C CNN
+	1    10200 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 1250 10400 1250
+Wire Wire Line
+	10050 1150 10400 1150
+Wire Notes Line
+	9350 1950 11100 1950
+Wire Notes Line
+	11100 1950 11100 550 
+Wire Notes Line
+	11100 550  9350 550 
+Wire Notes Line
+	9350 550  9350 1950
+Text Notes 10850 1900 0    50   ~ 0
+USB
+Text Notes 10050 1600 0    50   ~ 0
+TODO clamping diodes?
+Wire Wire Line
+	6300 7000 6650 7000
+Wire Wire Line
+	6350 3950 6700 3950
+Wire Wire Line
+	3800 4950 4150 4950
+Wire Wire Line
+	3800 5100 4200 5100
+Wire Wire Line
+	6400 3000 6400 2750
+Wire Wire Line
+	5950 2900 6050 2900
+$Comp
+L power:+3V3 #PWR011
+U 1 1 5E03355F
+P 6050 2750
+F 0 "#PWR011" H 6050 2600 50  0001 C CNN
+F 1 "+3V3" H 6065 2923 50  0000 C CNN
+F 2 "" H 6050 2750 50  0001 C CNN
+F 3 "" H 6050 2750 50  0001 C CNN
+	1    6050 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2900 6050 2750
 $EndSCHEMATC

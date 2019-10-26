@@ -31,7 +31,7 @@ These repositories can be cloned into their respective folders in `icepool-board
 
 For example, starting at the repo root directory:
 
-    $ cd icepool-board/external/digikey-kicad-library
+    $ cd hardware/external/digikey-kicad-library
     $ git init
     $ git remote add origin https://github.com/Digi-Key/digikey-kicad-library.git
     $ git pull origin master

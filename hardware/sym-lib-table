@@ -152,4 +152,6 @@
   (lib (name icepool-lattice)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-lattice.lib)(options "")(descr ""))
   (lib (name icepool-atmel)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-atmel.lib)(options "")(descr ""))
   (lib (name icepool-renesas)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-renesas.lib)(options "")(descr ""))
+  (lib (name icepool-vishay)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-vishay.lib)(options "")(descr ""))
+  (lib (name icepool-maxim)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-maxim.lib)(options "")(descr ""))
 )

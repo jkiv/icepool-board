@@ -154,4 +154,5 @@
   (lib (name icepool-renesas)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-renesas.lib)(options "")(descr ""))
   (lib (name icepool-vishay)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-vishay.lib)(options "")(descr ""))
   (lib (name icepool-maxim)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-maxim.lib)(options "")(descr ""))
+  (lib (name icepool-onsemi)(type Legacy)(uri ${KIPRJMOD}/external/icepool-library/symbols/icepool-onsemi.lib)(options "")(descr ""))
 )

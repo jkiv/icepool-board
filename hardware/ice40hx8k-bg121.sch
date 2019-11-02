@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
 LIBS:icepool-board-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 6
 Title "icepool-board"
-Date ""
-Rev "201910"
+Date "2019-11"
+Rev "201911"
 Comp "fourside.io"
 Comment1 ""
 Comment2 ""

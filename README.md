@@ -25,17 +25,12 @@ Please consider supporting this project and others like it by donating:
 This project depends on the following KiCad libraries:
 
 * [Digi-Key/digikey-kicad-library](https://github.com/Digi-Key/digikey-kicad-library)
-* [jkiv/icepool-library](https://github.com/jkiv/icepool-library)
+* [jkiv/jk-library](https://github.com/jkiv/jk-library)
 
-These repositories can be cloned into their respective folders in `icepool-board/external/`.
+These repositories can be cloned into `hardware/external/`.
 
 For example, starting at the repo root directory:
 
-    $ cd icepool-board/external/digikey-kicad-library
-    $ git init
-    $ git remote add origin https://github.com/Digi-Key/digikey-kicad-library.git
-    $ git pull origin master
-    $ cd ../icepool-library
-    $ git init
-    $ git remote add origin https://github.com/jkiv/icepool-library.git 
-    $ git pull origin master
+    $ cd hardware/external/
+    $ git clone https://github.com/Digi-Key/digikey-kicad-library.git
+    $ git clone https://github.com/jkiv/jk-library.git 

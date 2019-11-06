@@ -558,39 +558,14 @@ Wire Notes Line
 Wire Notes Line
 	12450 3150 10800 3150
 $Comp
-L Device:C_Small C3
-U 1 1 5E0BDDBD
-P 2800 3250
-F 0 "C3" H 2892 3296 50  0000 L CNN
-F 1 "10uF" H 2892 3205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2800 3250 50  0001 C CNN
-F 3 "~" H 2800 3250 50  0001 C CNN
-	1    2800 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR025
-U 1 1 5E0BE247
-P 2800 3450
-F 0 "#PWR025" H 2800 3200 50  0001 C CNN
-F 1 "GND" H 2805 3277 50  0000 C CNN
-F 2 "" H 2800 3450 50  0001 C CNN
-F 3 "" H 2800 3450 50  0001 C CNN
-	1    2800 3450
-	1    0    0    -1  
-$EndComp
-Connection ~ 2800 3100
-Wire Wire Line
-	2800 3100 2800 3150
-$Comp
 L power:VCC #PWR016
 U 1 1 5DA5446D
-P 2800 2850
-F 0 "#PWR016" H 2800 2700 50  0001 C CNN
-F 1 "VCC" H 2817 3023 50  0000 C CNN
-F 2 "" H 2800 2850 50  0001 C CNN
-F 3 "" H 2800 2850 50  0001 C CNN
-	1    2800 2850
+P 2800 3000
+F 0 "#PWR016" H 2800 2850 50  0001 C CNN
+F 1 "VCC" H 2817 3173 50  0000 C CNN
+F 2 "" H 2800 3000 50  0001 C CNN
+F 3 "" H 2800 3000 50  0001 C CNN
+	1    2800 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -705,8 +680,6 @@ Wire Notes Line
 	14650 2350 12550 2350
 Wire Notes Line
 	12550 2350 12550 3500
-Wire Wire Line
-	2600 3100 2800 3100
 Text Notes 850  4050 0    50   ~ 0
 (EVB-N uses LT3030 dual output supply.)
 $Comp
@@ -726,7 +699,7 @@ U 1 1 5D93351E
 P 4000 3050
 F 0 "H1" H 4100 3053 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4100 3008 50  0001 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 4000 3050 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 4000 3050 50  0001 C CNN
 F 3 "~" H 4000 3050 50  0001 C CNN
 	1    4000 3050
 	1    0    0    -1  
@@ -737,7 +710,7 @@ U 1 1 5D934EFC
 P 4300 3050
 F 0 "H2" H 4400 3053 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4400 3008 50  0001 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 4300 3050 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 4300 3050 50  0001 C CNN
 F 3 "~" H 4300 3050 50  0001 C CNN
 	1    4300 3050
 	1    0    0    -1  
@@ -748,7 +721,7 @@ U 1 1 5D935351
 P 4600 3050
 F 0 "H3" H 4700 3053 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4700 3008 50  0001 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 4600 3050 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 4600 3050 50  0001 C CNN
 F 3 "~" H 4600 3050 50  0001 C CNN
 	1    4600 3050
 	1    0    0    -1  
@@ -759,7 +732,7 @@ U 1 1 5D93559B
 P 4900 3050
 F 0 "H4" H 5000 3053 50  0000 L CNN
 F 1 "MountingHole_Pad" H 5000 3008 50  0001 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 4900 3050 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad_Via" H 4900 3050 50  0001 C CNN
 F 3 "~" H 4900 3050 50  0001 C CNN
 	1    4900 3050
 	1    0    0    -1  
@@ -840,7 +813,7 @@ $EndComp
 Text Notes 850  3550 0    50   ~ 0
 B2PS-VR
 Wire Wire Line
-	2800 2850 2800 2950
+	2800 3000 2800 3100
 Text Label 13900 1600 0    50   ~ 0
 RX-
 Wire Wire Line
@@ -997,17 +970,6 @@ $EndComp
 Wire Wire Line
 	1300 1900 900  1900
 $Comp
-L power:PWR_FLAG #FLG01
-U 1 1 5DB9AAFB
-P 2800 2950
-F 0 "#FLG01" H 2800 3025 50  0001 C CNN
-F 1 "PWR_FLAG" V 2800 3077 50  0000 L CNN
-F 2 "" H 2800 2950 50  0001 C CNN
-F 3 "~" H 2800 2950 50  0001 C CNN
-	1    2800 2950
-	0    1    1    0   
-$EndComp
-$Comp
 L power:PWR_FLAG #FLG02
 U 1 1 5DBB3FBE
 P 1600 3100
@@ -1018,13 +980,8 @@ F 3 "~" H 1600 3100 50  0001 C CNN
 	1    1600 3100
 	-1   0    0    1   
 $EndComp
-Connection ~ 2800 2950
-Wire Wire Line
-	2800 2950 2800 3100
 Wire Wire Line
 	1200 3100 1600 3100
-Wire Wire Line
-	2800 3350 2800 3400
 Wire Wire Line
 	15150 3350 15150 3400
 $Comp
@@ -1115,8 +1072,6 @@ Wire Wire Line
 	2300 3100 2200 3100
 NoConn ~ 2200 3300
 NoConn ~ 2200 2900
-Wire Wire Line
-	2400 3100 2300 3100
 Connection ~ 2300 3100
 Wire Wire Line
 	1600 3100 1800 3100
@@ -1864,49 +1819,6 @@ Wire Notes Line
 	15950 2350 14750 2350
 Wire Notes Line
 	14750 3750 15950 3750
-$Comp
-L Device:C_Small C4
-U 1 1 5DBA85BF
-P 3150 3250
-F 0 "C4" H 3242 3296 50  0000 L CNN
-F 1 "10uF" H 3242 3205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3150 3250 50  0001 C CNN
-F 3 "~" H 3150 3250 50  0001 C CNN
-	1    3150 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C5
-U 1 1 5DBA89EE
-P 3500 3250
-F 0 "C5" H 3592 3296 50  0000 L CNN
-F 1 "10uF" H 3592 3205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3500 3250 50  0001 C CNN
-F 3 "~" H 3500 3250 50  0001 C CNN
-	1    3500 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3500 3150 3500 3100
-Wire Wire Line
-	3500 3100 3150 3100
-Wire Wire Line
-	3150 3150 3150 3100
-Connection ~ 3150 3100
-Wire Wire Line
-	3150 3100 2800 3100
-Wire Wire Line
-	3150 3350 3150 3400
-Wire Wire Line
-	3150 3400 2800 3400
-Connection ~ 2800 3400
-Wire Wire Line
-	2800 3400 2800 3450
-Wire Wire Line
-	3150 3400 3500 3400
-Wire Wire Line
-	3500 3400 3500 3350
-Connection ~ 3150 3400
 $Sheet
 S 850  4250 1450 1300
 U 5DBF3FCD
@@ -1920,17 +1832,6 @@ Wire Notes Line
 NoConn ~ 13450 1900
 NoConn ~ 15050 1900
 NoConn ~ 15050 3350
-$Comp
-L Device:L_Small L1
-U 1 1 5DA60CA2
-P 2500 3100
-F 0 "L1" V 2685 3100 50  0000 C CNN
-F 1 "FB" V 2594 3100 50  0000 C CNN
-F 2 "Inductor_SMD:L_0805_2012Metric" H 2500 3100 50  0001 C CNN
-F 3 "~" H 2500 3100 50  0001 C CNN
-	1    2500 3100
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Device:R_Small_US R12
 U 1 1 5DBCBE79
@@ -1997,4 +1898,6 @@ F 3 "" H 6950 2050 50  0001 C CNN
 	1    6950 2050
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	2300 3100 2800 3100
 $EndSCHEMATC

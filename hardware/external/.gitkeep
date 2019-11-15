@@ -1,0 +1,6 @@
+This directory contains 3rd party libraries.
+
+Until submodules are used, these 3rd party libraries need to be cloned here manually:
+
+    git clone git@github.com:DigiKey/digikey-kicad-library
+    git clone git@github.com:jkiv/icepool-library

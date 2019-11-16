@@ -313,10 +313,6 @@ Wire Wire Line
 Wire Wire Line
 	13700 3300 14000 3300
 Wire Wire Line
-	13050 2900 13300 2900
-Wire Wire Line
-	12850 2900 12700 2900
-Wire Wire Line
 	12700 2900 12700 2750
 Wire Wire Line
 	1350 3200 1350 3300
@@ -1733,17 +1729,6 @@ NoConn ~ 13450 1900
 NoConn ~ 15050 1900
 NoConn ~ 15050 3350
 $Comp
-L Device:R_Small_US R12
-U 1 1 5DBCBE79
-P 12950 2900
-F 0 "R12" V 12745 2900 50  0000 C CNN
-F 1 "0R" V 12836 2900 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 12950 2900 50  0001 C CNN
-F 3 "~" H 12950 2900 50  0001 C CNN
-	1    12950 2900
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:TestPoint TP1
 U 1 1 5E1BFACB
 P 15600 2750
@@ -1883,4 +1868,19 @@ F 3 "" H 4750 5200 50  0001 C CNN
 	1    4750 5200
 	1    0    0    -1  
 $EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP2
+U 1 1 5DD468C3
+P 12950 2900
+F 0 "JP2" H 12950 3105 50  0000 C CNN
+F 1 "SWD_VBUS" H 12950 3014 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 12950 2900 50  0001 C CNN
+F 3 "~" H 12950 2900 50  0001 C CNN
+	1    12950 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13100 2900 13300 2900
+Wire Wire Line
+	12700 2900 12800 2900
 $EndSCHEMATC

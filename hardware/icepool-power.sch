@@ -1604,4 +1604,8 @@ F 3 "" H 9550 3950 50  0001 C CNN
 	1    9550 3950
 	1    0    0    -1  
 $EndComp
+Text Label 4850 5000 0    50   ~ 0
+SW_1v2
+Text Label 4900 1150 0    50   ~ 0
+SW_3v3
 $EndSCHEMATC

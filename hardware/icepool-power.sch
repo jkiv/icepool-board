@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:icepool-board-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
@@ -1574,11 +1573,7 @@ Wire Wire Line
 Wire Wire Line
 	7600 1250 7600 1150
 Wire Wire Line
-	7600 950  7600 1150
-Wire Wire Line
 	6650 5000 6650 5150
-Wire Wire Line
-	7550 4800 7550 5000
 Connection ~ 7550 5000
 Text Notes 8250 750  0    50   ~ 0
 Replaced TPS77801 (750mA) with FAN2306 (10A)
@@ -1608,4 +1603,8 @@ Text Label 4850 5000 0    50   ~ 0
 SW_1v2
 Text Label 4900 1150 0    50   ~ 0
 SW_3v3
+Wire Wire Line
+	7550 4800 7550 5000
+Wire Wire Line
+	7600 950  7600 1150
 $EndSCHEMATC

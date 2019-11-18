@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:icepool-board-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
@@ -1783,8 +1782,6 @@ F 3 "" H 6950 2050 50  0001 C CNN
 	1    6950 2050
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2300 3100 2800 3100
 $Comp
 L Mechanical:Fiducial FID1
 U 1 1 5E5E9443
@@ -1883,4 +1880,6 @@ Wire Wire Line
 	13100 2900 13300 2900
 Wire Wire Line
 	12700 2900 12800 2900
+Wire Wire Line
+	2300 3100 2800 3100
 $EndSCHEMATC

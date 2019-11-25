@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:icepool-board-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
@@ -1614,7 +1613,7 @@ U 1 1 5DDBF401
 P 7550 5000
 F 0 "TP4" V 7504 5188 50  0000 L CNN
 F 1 "1V2 Test" V 7595 5188 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7750 5000 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 7750 5000 50  0001 C CNN
 F 3 "~" H 7750 5000 50  0001 C CNN
 	1    7550 5000
 	0    1    1    0   
@@ -1625,7 +1624,7 @@ U 1 1 5DDC01D2
 P 7600 1150
 F 0 "TP2" V 7554 1338 50  0000 L CNN
 F 1 "3V3 Test" V 7645 1338 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7800 1150 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 7800 1150 50  0001 C CNN
 F 3 "~" H 7800 1150 50  0001 C CNN
 	1    7600 1150
 	0    1    1    0   
@@ -1636,7 +1635,7 @@ U 1 1 5DDC18AC
 P 10250 2600
 F 0 "TP3" V 10204 2788 50  0000 L CNN
 F 1 "5V Test" V 10295 2788 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10450 2600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 10450 2600 50  0001 C CNN
 F 3 "~" H 10450 2600 50  0001 C CNN
 	1    10250 2600
 	0    1    1    0   

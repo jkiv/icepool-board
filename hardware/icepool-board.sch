@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:icepool-board-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
@@ -1709,7 +1708,7 @@ U 1 1 5E1BFACB
 P 15600 2750
 F 0 "TP1" H 15658 2868 50  0000 L CNN
 F 1 "VBUS" H 15658 2777 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 15800 2750 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 15800 2750 50  0001 C CNN
 F 3 "~" H 15800 2750 50  0001 C CNN
 	1    15600 2750
 	1    0    0    -1  
@@ -1761,34 +1760,34 @@ $EndComp
 $Comp
 L Mechanical:Fiducial FID1
 U 1 1 5E5E9443
-P 3200 3200
-F 0 "FID1" H 3285 3246 50  0000 L CNN
-F 1 "Fiducial" H 3285 3155 50  0000 L CNN
-F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 3200 3200 50  0001 C CNN
-F 3 "~" H 3200 3200 50  0001 C CNN
-	1    3200 3200
+P 3250 2900
+F 0 "FID1" H 3335 2946 50  0000 L CNN
+F 1 "Fiducial" H 3335 2855 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 3250 2900 50  0001 C CNN
+F 3 "~" H 3250 2900 50  0001 C CNN
+	1    3250 2900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:Fiducial FID2
 U 1 1 5E5E9F83
-P 3200 3400
-F 0 "FID2" H 3285 3446 50  0000 L CNN
-F 1 "Fiducial" H 3285 3355 50  0000 L CNN
-F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 3200 3400 50  0001 C CNN
-F 3 "~" H 3200 3400 50  0001 C CNN
-	1    3200 3400
+P 3250 3100
+F 0 "FID2" H 3335 3146 50  0000 L CNN
+F 1 "Fiducial" H 3335 3055 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 3250 3100 50  0001 C CNN
+F 3 "~" H 3250 3100 50  0001 C CNN
+	1    3250 3100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:Fiducial FID3
 U 1 1 5E5EA92F
-P 3200 3600
-F 0 "FID3" H 3285 3646 50  0000 L CNN
-F 1 "Fiducial" H 3285 3555 50  0000 L CNN
-F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 3200 3600 50  0001 C CNN
-F 3 "~" H 3200 3600 50  0001 C CNN
-	1    3200 3600
+P 3250 3300
+F 0 "FID3" H 3335 3346 50  0000 L CNN
+F 1 "Fiducial" H 3335 3255 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 3250 3300 50  0001 C CNN
+F 3 "~" H 3250 3300 50  0001 C CNN
+	1    3250 3300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1879,4 +1878,37 @@ NoConn ~ 15450 1100
 NoConn ~ 15450 1000
 NoConn ~ 13450 1900
 NoConn ~ 15050 1900
+$Comp
+L Mechanical:Fiducial FID4
+U 1 1 5DEBCD02
+P 3250 3500
+F 0 "FID4" H 3335 3546 50  0000 L CNN
+F 1 "Fiducial" H 3335 3455 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 3250 3500 50  0001 C CNN
+F 3 "~" H 3250 3500 50  0001 C CNN
+	1    3250 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID5
+U 1 1 5DEBD864
+P 3250 3700
+F 0 "FID5" H 3335 3746 50  0000 L CNN
+F 1 "Fiducial" H 3335 3655 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 3250 3700 50  0001 C CNN
+F 3 "~" H 3250 3700 50  0001 C CNN
+	1    3250 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID6
+U 1 1 5DEBE20A
+P 3250 3900
+F 0 "FID6" H 3335 3946 50  0000 L CNN
+F 1 "Fiducial" H 3335 3855 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 3250 3900 50  0001 C CNN
+F 3 "~" H 3250 3900 50  0001 C CNN
+	1    3250 3900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 29 0
+LIBS:icepool-board-cache
+EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
@@ -267,7 +268,7 @@ U 1 1 5D8FA17A
 P 13500 3100
 F 0 "J5" H 13500 3515 50  0000 C CNN
 F 1 "SWD" H 13500 3424 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_2x05_P1.00mm_Vertical" H 13700 3300 50  0001 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical" H 13700 3300 50  0001 L CNN
 F 3 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 13700 3400 50  0001 L CNN
 F 4 "SAM8796-ND" H 13700 3500 60  0001 L CNN "Digi-Key_PN"
 F 5 "FTSH-105-01-F-DV-K" H 13700 3600 60  0001 L CNN "MPN"

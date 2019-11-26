@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 29 0
+LIBS:icepool-board-cache
+EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8

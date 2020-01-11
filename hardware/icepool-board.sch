@@ -647,7 +647,7 @@ U 1 1 5D9ADFEA
 P 14250 1600
 F 0 "R6" V 14150 1550 50  0000 C CNN
 F 1 "120R" V 14200 1750 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 14250 1600 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 14250 1600 50  0001 C CNN
 F 3 "~" H 14250 1600 50  0001 C CNN
 	1    14250 1600
 	0    1    1    0   
@@ -663,17 +663,6 @@ F 3 "~" V 13450 1425 50  0001 C CNN
 	1    13450 1400
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:Jumper_NO_Small JP1
-U 1 1 5DD733CB
-P 14250 1700
-F 0 "JP1" H 14250 1885 50  0000 C CNN
-F 1 "RS485-Term" H 14250 1794 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 14250 1700 50  0001 C CNN
-F 3 "~" H 14250 1700 50  0001 C CNN
-	1    14250 1700
-	-1   0    0    1   
-$EndComp
 Text Notes 850  3550 0    50   ~ 0
 B2PS-VR
 Wire Wire Line
@@ -686,10 +675,6 @@ Wire Wire Line
 	14350 1600 14400 1600
 Wire Wire Line
 	14400 1600 14400 1700
-Wire Wire Line
-	14400 1700 14350 1700
-Wire Wire Line
-	13850 1700 14150 1700
 Wire Wire Line
 	13850 1500 14050 1500
 Wire Wire Line
@@ -1780,17 +1765,6 @@ F 3 "~" H 3250 3300 50  0001 C CNN
 	1    3250 3300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R_Small_US R18
-U 1 1 5DEB038E
-P 4750 4550
-F 0 "R18" H 4818 4596 50  0000 L CNN
-F 1 "120R" H 4818 4505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 4750 4550 50  0001 C CNN
-F 3 "~" H 4750 4550 50  0001 C CNN
-	1    4750 4550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4750 4450 4750 4200
 Wire Wire Line
@@ -1912,4 +1886,17 @@ F 3 "~" H 3650 4750 50  0001 C CNN
 	1    3650 4750
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Device:R_Small_US R18
+U 1 1 5DEB038E
+P 4750 4550
+F 0 "R18" H 4818 4596 50  0000 L CNN
+F 1 "120R" H 4818 4505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4750 4550 50  0001 C CNN
+F 3 "~" H 4750 4550 50  0001 C CNN
+	1    4750 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13850 1700 14400 1700
 $EndSCHEMATC

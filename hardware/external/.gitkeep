@@ -1,6 +1,6 @@
-This directory contains 3rd party libraries.
+This directory is used to store "external" KiCad libraries. 
 
-Until submodules are used, these 3rd party libraries need to be cloned here manually:
+Until git submodules are used, these libraries need to be cloned here manually:
 
     git clone git@github.com:DigiKey/digikey-kicad-library
-    git clone git@github.com:jkiv/icepool-library
+    git clone git@github.com:jkiv/jkiv-kicad-library

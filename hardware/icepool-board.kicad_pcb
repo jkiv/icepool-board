@@ -36,7 +36,7 @@
   )
 
   (setup
-    (last_trace_width 0.1524)
+    (last_trace_width 0.25)
     (user_trace_width 0.1016)
     (user_trace_width 0.1524)
     (user_trace_width 0.2)
@@ -9504,9 +9504,6 @@
   (segment (start 141.75 122.95) (end 140.735 122.95) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B757))
   (segment (start 139.665 122.985) (end 139.2 123.45) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B6FA))
   (segment (start 140.7 122.985) (end 139.665 122.985) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B6F7))
-  (segment (start 128.45 123.45) (end 128.45 123.3) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B78D))
-  (segment (start 128.765 122.985) (end 129.95 122.985) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B733))
-  (segment (start 128.45 123.3) (end 128.765 122.985) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B790))
   (via (at 132.6 124.55) (size 0.4572) (drill 0.2286) (layers F.Cu B.Cu) (net 5) (tstamp 5DD1A45B))
   (segment (start 132.6 124.55) (end 133 124.15) (width 0.3048) (layer F.Cu) (net 5) (tstamp 5DD1B6E8))
   (segment (start 132.635 124.585) (end 132.6 124.55) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B6DF))
@@ -9663,6 +9660,9 @@
   (segment (start 115.4835 123.19) (end 115.4835 124.1195) (width 0.1524) (layer B.Cu) (net 5))
   (segment (start 113.665 115.665) (end 115.1 117.1) (width 0.508) (layer F.Cu) (net 5))
   (segment (start 113.665 114.554) (end 113.665 115.665) (width 0.508) (layer F.Cu) (net 5))
+  (segment (start 128.45 123.3) (end 128.765 122.985) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B790) (status 1000000))
+  (segment (start 128.765 122.985) (end 129.95 122.985) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B733) (status 1000000))
+  (segment (start 128.45 123.45) (end 128.45 123.3) (width 0.3048) (layer B.Cu) (net 5) (tstamp 5DD1B78D) (status 1000000))
   (segment (start 121.75 111.2952) (end 121.8452 111.2) (width 0.3048) (layer F.Cu) (net 6) (tstamp 5DD1B604))
   (segment (start 121.75 112.025) (end 121.75 111.2952) (width 0.3048) (layer F.Cu) (net 6) (tstamp 5DD1B5E9))
   (segment (start 121.8452 111.2) (end 121.85 111.2) (width 0.3048) (layer F.Cu) (net 6) (tstamp 5DD1B5C5))

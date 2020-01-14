@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L icepool-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
 U 1 1 5D74F583
 P 5750 1700
 AR Path="/5D7C5399/5D74F583" Ref="U4"  Part="1" 
@@ -24,13 +24,13 @@ AR Path="/5E9AF0AF/5D74F583" Ref="U5"  Part="1"
 AR Path="/5E9AF0BC/5D74F583" Ref="U6"  Part="1" 
 F 0 "U3" H 5750 2687 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 5750 2581 60  0000 C CNN
-F 2 "icepool-library:BGA-121_11x11_9.0x9.0mm" H 5750 1200 60  0001 C CNN
+F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 5750 1200 60  0001 C CNN
 F 3 "" H 5750 1200 60  0000 C CNN
 	1    5750 1700
 	1    0    0    -1  
 $EndComp
 $Comp
-L icepool-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
 U 2 1 5D750F66
 P 8950 1700
 AR Path="/5D7C5399/5D750F66" Ref="U4"  Part="2" 
@@ -39,7 +39,7 @@ AR Path="/5E9AF0AF/5D750F66" Ref="U5"  Part="2"
 AR Path="/5E9AF0BC/5D750F66" Ref="U6"  Part="2" 
 F 0 "U3" H 8950 2687 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 8950 2581 60  0000 C CNN
-F 2 "icepool-library:BGA-121_11x11_9.0x9.0mm" H 8950 1200 60  0001 C CNN
+F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 8950 1200 60  0001 C CNN
 F 3 "" H 8950 1200 60  0000 C CNN
 	2    8950 1700
 	1    0    0    -1  
@@ -618,7 +618,7 @@ Wire Wire Line
 Wire Wire Line
 	1000 4250 1250 4250
 $Comp
-L icepool-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
 U 5 1 5D75D226
 P 2650 1800
 AR Path="/5D7C5399/5D75D226" Ref="U4"  Part="5" 
@@ -627,7 +627,7 @@ AR Path="/5E9AF0AF/5D75D226" Ref="U5"  Part="5"
 AR Path="/5E9AF0BC/5D75D226" Ref="U6"  Part="5" 
 F 0 "U3" H 2650 2837 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 2650 2731 60  0000 C CNN
-F 2 "icepool-library:BGA-121_11x11_9.0x9.0mm" H 2650 1300 60  0001 C CNN
+F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 2650 1300 60  0001 C CNN
 F 3 "" H 2650 1300 60  0000 C CNN
 	5    2650 1800
 	1    0    0    -1  
@@ -866,7 +866,7 @@ NoConn ~ 6850 3450
 NoConn ~ 6850 3650
 NoConn ~ 6850 3750
 $Comp
-L icepool-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
 U 3 1 5D753833
 P 5750 3800
 AR Path="/5D7C5399/5D753833" Ref="U4"  Part="3" 
@@ -875,7 +875,7 @@ AR Path="/5E9AF0AF/5D753833" Ref="U5"  Part="3"
 AR Path="/5E9AF0BC/5D753833" Ref="U6"  Part="3" 
 F 0 "U3" H 5750 4837 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 5750 4731 60  0000 C CNN
-F 2 "icepool-library:BGA-121_11x11_9.0x9.0mm" H 5750 3300 60  0001 C CNN
+F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 5750 3300 60  0001 C CNN
 F 3 "" H 5750 3300 60  0000 C CNN
 	3    5750 3800
 	1    0    0    -1  
@@ -998,7 +998,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 4450 6900 4450
 $Comp
-L icepool-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
 U 4 1 5D75A968
 P 8950 3750
 AR Path="/5D7C5399/5D75A968" Ref="U4"  Part="4" 
@@ -1007,7 +1007,7 @@ AR Path="/5E9AF0AF/5D75A968" Ref="U5"  Part="4"
 AR Path="/5E9AF0BC/5D75A968" Ref="U6"  Part="4" 
 F 0 "U3" H 8950 4787 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 8950 4681 60  0000 C CNN
-F 2 "icepool-library:BGA-121_11x11_9.0x9.0mm" H 8950 3250 60  0001 C CNN
+F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 8950 3250 60  0001 C CNN
 F 3 "" H 8950 3250 60  0000 C CNN
 	4    8950 3750
 	1    0    0    -1  

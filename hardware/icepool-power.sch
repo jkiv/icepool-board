@@ -788,12 +788,12 @@ Wire Wire Line
 Wire Wire Line
 	2700 4800 2650 4800
 $Comp
-L icepool-onsemi:FAN2306 U9
+L jkiv-onsemi:FAN2306 U9
 U 1 1 5DD2641B
 P 3500 6050
 F 0 "U9" H 3475 7565 50  0000 C CNN
 F 1 "FAN2306" H 3475 7474 50  0000 C CNN
-F 2 "icepool-library:FAN2306" H 3450 7450 50  0001 C CNN
+F 2 "jkiv-library:FAN2306" H 3450 7450 50  0001 C CNN
 F 3 "" H 3450 7450 50  0001 C CNN
 	1    3500 6050
 	1    0    0    -1  
@@ -1535,12 +1535,12 @@ Connection ~ 7550 5000
 Text Notes 8250 750  0    50   ~ 0
 Replaced TPS77801 (750mA) with FAN2306 (10A)
 $Comp
-L icepool-onsemi:FAN2306 U7
+L jkiv-onsemi:FAN2306 U7
 U 1 1 5DBF4C84
 P 3550 2200
 F 0 "U7" H 3525 3715 50  0000 C CNN
 F 1 "FAN2306" H 3525 3624 50  0000 C CNN
-F 2 "icepool-library:FAN2306" H 3500 3600 50  0001 C CNN
+F 2 "jkiv-library:FAN2306" H 3500 3600 50  0001 C CNN
 F 3 "" H 3500 3600 50  0001 C CNN
 	1    3550 2200
 	1    0    0    -1  

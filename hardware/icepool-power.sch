@@ -1641,4 +1641,10 @@ F 3 "~" H 2100 7650 50  0001 C CNN
 	1    2100 7650
 	1    0    0    -1  
 $EndComp
+Text Notes 9950 4100 0    50   ~ 0
+TODO 10k?
+Text Notes 8450 5600 0    50   ~ 0
+TODO power good indicator LEDs?
+Text Notes 8450 5700 0    50   ~ 0
+VIN with transistor from PG?
 $EndSCHEMATC

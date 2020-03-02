@@ -5,8 +5,7 @@ icepool-board
 
 KiCad 5 design files for the *icepool* project.
 
-*icepool* is a multi-FPGA circuit board designed around
-Lattice ICE40 FPGAs.
+*icepool* is a FPGA development board designed around Lattice ICE40 FPGAs.
 
 Key features include,
 
@@ -14,8 +13,7 @@ Key features include,
 - One-to-many SPI interface for sending data from MCU to the FPGAs.
 - Daisy-chained SPI interface for passing data to and from the MCU and each FPGA.
 
-The goal is to produce an inexpensive, multi-core, parallel co-processor
-for embedded computing projects.
+The goal is to produce an inexpensive, low-power, parallel co-processor for embedded computing projects.
 
 Please consider supporting this project and others like it by donating:
 * XBT: 13zRrs1YDdooUN5WtfXRSDn8KnJdok4qG9
@@ -25,17 +23,12 @@ Please consider supporting this project and others like it by donating:
 This project depends on the following KiCad libraries:
 
 * [Digi-Key/digikey-kicad-library](https://github.com/Digi-Key/digikey-kicad-library)
-* [jkiv/icepool-library](https://github.com/jkiv/icepool-library)
+* [jkiv/jkiv-kicad-library](https://github.com/jkiv/jkiv-kicad-library)
 
-These repositories can be cloned into their respective folders in `icepool-board/external/`.
+These repositories must be cloned into `hardware/external/`.
 
 For example, starting at the repo root directory:
 
-    $ cd hardware/external/digikey-kicad-library
-    $ git init
-    $ git remote add origin https://github.com/Digi-Key/digikey-kicad-library.git
-    $ git pull origin master
-    $ cd ../icepool-library
-    $ git init
-    $ git remote add origin https://github.com/jkiv/icepool-library.git 
-    $ git pull origin master
+    $ cd hardware/external/
+    $ git clone https://github.com/Digi-Key/digikey-kicad-library.git
+    $ git clone https://github.com/jkiv/jkiv-kicad-library.git 

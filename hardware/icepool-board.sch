@@ -488,8 +488,6 @@ Text Label 5100 1600 2    50   ~ 0
 ~WE
 Text Label 6450 1900 0    50   ~ 0
 READY_2_3
-Wire Wire Line
-	8100 1150 8350 1150
 Text Label 8150 1150 0    50   ~ 0
 MISO
 Wire Wire Line
@@ -562,8 +560,6 @@ F12 "READY_IN" I L 7050 1900 50
 $EndSheet
 Text Label 4850 1900 2    50   ~ 0
 READY_1_2
-Wire Wire Line
-	8100 1900 8400 1900
 Text Label 5100 1750 2    50   ~ 0
 CRESET_B_2
 Wire Wire Line
@@ -1259,8 +1255,6 @@ F 3 "" H 11600 1750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	11600 1750 11600 1650
-Text Label 8900 1550 2    50   ~ 0
-READY_0
 Wire Wire Line
 	11100 4650 11300 4650
 Wire Wire Line
@@ -1286,17 +1280,6 @@ F 3 "~" H 10900 4450 50  0001 C CNN
 $EndComp
 Text Notes 4900 7000 0    50   ~ 0
 RS485
-$Comp
-L power:GND #PWR04
-U 1 1 5E83EE21
-P 8950 1900
-F 0 "#PWR04" H 8950 1650 50  0001 C CNN
-F 1 "GND" H 8955 1727 50  0000 C CNN
-F 2 "" H 8950 1900 50  0001 C CNN
-F 3 "" H 8950 1900 50  0001 C CNN
-	1    8950 1900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7900 5700 7750 5700
 Wire Wire Line
@@ -1339,52 +1322,6 @@ Wire Wire Line
 Text Label 11450 1800 2    50   ~ 0
 USB_SHIELD
 $Comp
-L Device:R_Small_US R2
-U 1 1 5EA7CDAB
-P 8950 1750
-F 0 "R2" H 9018 1796 50  0000 L CNN
-F 1 "OMIT" H 9018 1705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 8950 1750 50  0001 C CNN
-F 3 "~" H 8950 1750 50  0001 C CNN
-	1    8950 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8950 1900 8950 1850
-$Comp
-L Device:R_Small_US R1
-U 1 1 5EA96126
-P 8950 1350
-F 0 "R1" H 9018 1396 50  0000 L CNN
-F 1 "4k7" H 9018 1305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 8950 1350 50  0001 C CNN
-F 3 "~" H 8950 1350 50  0001 C CNN
-	1    8950 1350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8950 1250 8950 1200
-$Comp
-L power:+3V3 #PWR01
-U 1 1 5EA9E712
-P 8950 1200
-F 0 "#PWR01" H 8950 1050 50  0001 C CNN
-F 1 "+3V3" H 8965 1373 50  0000 C CNN
-F 2 "" H 8950 1200 50  0001 C CNN
-F 3 "" H 8950 1200 50  0001 C CNN
-	1    8950 1200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8950 1450 8950 1550
-Wire Wire Line
-	8950 1550 8600 1550
-Connection ~ 8950 1550
-Wire Wire Line
-	8950 1550 8950 1650
-Text Notes 9300 1850 0    50   ~ 0
-Option to change READY_0 value,\nbut should be able to change\nmeaning in software.\n\n"READY_ALL"\n- Consider READY_0 = TRUE\n\n"READY_ANY"\n- Consider READY_0 = FALSE
-$Comp
 L Device:CP1_Small C5
 U 1 1 5E2DBDAB
 P 2450 3450
@@ -1421,10 +1358,6 @@ Wire Wire Line
 	4250 1150 5150 1150
 Wire Wire Line
 	4250 1900 5150 1900
-Wire Wire Line
-	2400 1900 3200 1900
-Wire Wire Line
-	2400 1150 3200 1150
 Text Label 3700 6300 0    50   ~ 0
 DS+
 $Comp
@@ -1710,4 +1643,71 @@ F 3 "~" H 3100 4900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 3350 4900
+Text Notes 9300 1850 0    50   ~ 0
+Option to change READY_0 value,\nbut should be able to change\nmeaning in software.\n\n"READY_ALL"\n- Consider READY_0 = TRUE\n\n"READY_ANY"\n- Consider READY_0 = FALSE
+Wire Wire Line
+	8950 1550 8950 1650
+Connection ~ 8950 1550
+Wire Wire Line
+	8950 1550 8600 1550
+Wire Wire Line
+	8950 1450 8950 1550
+$Comp
+L power:+3V3 #PWR01
+U 1 1 5EA9E712
+P 8950 1200
+F 0 "#PWR01" H 8950 1050 50  0001 C CNN
+F 1 "+3V3" H 8965 1373 50  0000 C CNN
+F 2 "" H 8950 1200 50  0001 C CNN
+F 3 "" H 8950 1200 50  0001 C CNN
+	1    8950 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 1250 8950 1200
+$Comp
+L Device:R_Small_US R1
+U 1 1 5EA96126
+P 8950 1350
+F 0 "R1" H 9018 1396 50  0000 L CNN
+F 1 "4k7" H 9018 1305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8950 1350 50  0001 C CNN
+F 3 "~" H 8950 1350 50  0001 C CNN
+	1    8950 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 1900 8950 1850
+$Comp
+L Device:R_Small_US R2
+U 1 1 5EA7CDAB
+P 8950 1750
+F 0 "R2" H 9018 1796 50  0000 L CNN
+F 1 "OMIT" H 9018 1705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8950 1750 50  0001 C CNN
+F 3 "~" H 8950 1750 50  0001 C CNN
+	1    8950 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E83EE21
+P 8950 1900
+F 0 "#PWR04" H 8950 1650 50  0001 C CNN
+F 1 "GND" H 8955 1727 50  0000 C CNN
+F 2 "" H 8950 1900 50  0001 C CNN
+F 3 "" H 8950 1900 50  0001 C CNN
+	1    8950 1900
+	1    0    0    -1  
+$EndComp
+Text Label 8900 1550 2    50   ~ 0
+READY_0
+Wire Wire Line
+	8100 1900 8400 1900
+Wire Wire Line
+	8100 1150 8350 1150
+Wire Wire Line
+	2400 1900 3200 1900
+Wire Wire Line
+	2400 1150 3200 1150
 $EndSCHEMATC

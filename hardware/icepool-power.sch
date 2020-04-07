@@ -110,8 +110,6 @@ Wire Wire Line
 	1850 800  1850 950 
 Wire Wire Line
 	1850 950  2200 950 
-Text Notes 650  1300 0    50   ~ 0
-(TODO by peak current)
 $Comp
 L Device:C_Small C73
 U 1 1 5DBFA748
@@ -398,7 +396,7 @@ L Device:R_Small_US R25
 U 1 1 5DCA7708
 P 4550 1900
 F 0 "R25" H 4618 1946 50  0000 L CNN
-F 1 "1.54k" H 4618 1855 50  0000 L CNN
+F 1 "1.50k" H 4618 1855 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4550 1900 50  0001 C CNN
 F 3 "~" H 4550 1900 50  0001 C CNN
 	1    4550 1900
@@ -539,19 +537,6 @@ $EndComp
 Wire Wire Line
 	2150 2250 2150 2150
 Connection ~ 2150 2150
-Text Notes 700  2400 0    50   ~ 0
-TODO this cap affects Cout (5V)?
-$Comp
-L Device:R_Small_US R29
-U 1 1 5DCFF2CF
-P 2150 3800
-F 0 "R29" H 2218 3846 50  0000 L CNN
-F 1 "56R" H 2218 3755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 2150 3800 50  0001 C CNN
-F 3 "~" H 2150 3800 50  0001 C CNN
-	1    2150 3800
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C_Small C86
 U 1 1 5DCFFBD7
@@ -567,8 +552,6 @@ Wire Wire Line
 	2750 3550 2550 3550
 Wire Wire Line
 	2550 3550 2550 3700
-Wire Wire Line
-	2150 3700 2150 3400
 Wire Wire Line
 	2150 3400 2750 3400
 Text GLabel 2650 6950 0    50   UnSpc ~ 0
@@ -931,7 +914,7 @@ L Device:R_Small_US R32
 U 1 1 5DD264CB
 P 4500 5750
 F 0 "R32" H 4568 5796 50  0000 L CNN
-F 1 "1.54k" H 4568 5705 50  0000 L CNN
+F 1 "1.50k" H 4568 5705 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4500 5750 50  0001 C CNN
 F 3 "~" H 4500 5750 50  0001 C CNN
 	1    4500 5750
@@ -1282,8 +1265,6 @@ F 3 "" H 1650 5800 50  0001 C CNN
 	1    1650 5800
 	0    1    1    0   
 $EndComp
-Text Notes 700  6250 0    50   ~ 0
-TODO this cap affects Cout (5V)?
 Connection ~ 2100 6000
 Wire Wire Line
 	2100 6100 2100 6000
@@ -1540,7 +1521,7 @@ L Device:R_Small_US R36
 U 1 1 5DD26542
 P 2100 7650
 F 0 "R36" H 2168 7696 50  0000 L CNN
-F 1 "20R" H 2168 7605 50  0000 L CNN
+F 1 "20k" H 2168 7605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 2100 7650 50  0001 C CNN
 F 3 "~" H 2100 7650 50  0001 C CNN
 	1    2100 7650
@@ -1599,5 +1580,18 @@ F 2 "Capacitor_SMD:C_0402_1005Metric" H 8550 2750 50  0001 C CNN
 F 3 "~" H 8550 2750 50  0001 C CNN
 	1    8550 2750
 	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2150 3700 2150 3400
+$Comp
+L Device:R_Small_US R29
+U 1 1 5DCFF2CF
+P 2150 3800
+F 0 "R29" H 2218 3846 50  0000 L CNN
+F 1 "56k" H 2218 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 2150 3800 50  0001 C CNN
+F 3 "~" H 2150 3800 50  0001 C CNN
+	1    2150 3800
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

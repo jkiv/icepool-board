@@ -602,17 +602,6 @@ Text Label 7150 3300 2    50   ~ 0
 CRESET_B_1
 Wire Wire Line
 	6700 3450 7200 3450
-$Comp
-L jkiv-atmel:ATSAMD21E U1
-U 1 1 5D7394CA
-P 7900 4100
-F 0 "U1" H 7900 5465 50  0000 C CNN
-F 1 "ATSAMD21E" H 7900 5374 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm_ThermalVias" H 7900 4250 50  0001 C CNN
-F 3 "" H 7900 4250 50  0001 C CNN
-	1    7900 4100
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	5450 6100 5450 2600
 Wire Wire Line
@@ -872,12 +861,12 @@ SCK
 Wire Notes Line
 	7300 4700 6750 4700
 Wire Wire Line
-	7200 3750 7050 3750
-Wire Wire Line
 	7200 3600 7050 3600
-Text Label 7150 3750 2    50   ~ 0
-TX
+Wire Wire Line
+	7200 3900 7050 3900
 Text Label 7150 3600 2    50   ~ 0
+TX
+Text Label 7150 3900 2    50   ~ 0
 RX
 Wire Wire Line
 	6950 4950 7200 4950
@@ -1566,11 +1555,6 @@ Wire Wire Line
 	4900 6300 4900 6350
 Wire Wire Line
 	4900 6550 4900 6650
-NoConn ~ 7200 4050
-Wire Wire Line
-	7200 3900 7050 3900
-Text Label 7050 3900 0    50   ~ 0
-DE
 Wire Notes Line
 	650  5850 5200 5850
 Wire Notes Line
@@ -1710,4 +1694,21 @@ Wire Wire Line
 	2400 1150 3200 1150
 Text Notes 5600 6050 0    50   ~ 0
 ABM10W-16.0000MHZ
+$Comp
+L jkiv-atmel:ATSAMD21E U1
+U 1 1 5D7394CA
+P 7900 4100
+F 0 "U1" H 7900 5465 50  0000 C CNN
+F 1 "ATSAMD21E" H 7900 5374 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm_ThermalVias" H 7900 4250 50  0001 C CNN
+F 3 "" H 7900 4250 50  0001 C CNN
+	1    7900 4100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7050 3750
+NoConn ~ 7200 4050
+Wire Wire Line
+	7200 3750 7050 3750
+Text Label 7050 3750 0    50   ~ 0
+XCK
 $EndSCHEMATC

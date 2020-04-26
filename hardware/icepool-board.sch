@@ -16,12 +16,12 @@ Comment4 ""
 $EndDescr
 Text Notes 850  3950 0    50   ~ 0
 ARM Core Voltage = +3.3V\nFPGA I/O Voltage = +3.3V\nFPGA Core Voltage = +1.2V
-Text Label 11950 3150 0    50   ~ 0
+Text Label 11650 3150 0    50   ~ 0
 SWD_IO
-Text Label 11950 3250 0    50   ~ 0
+Text Label 11650 3250 0    50   ~ 0
 SWD_CLK
 Wire Wire Line
-	11400 3350 11400 3250
+	11100 3350 11100 3250
 Text Label 1250 1000 2    50   ~ 0
 MOSI
 Text Label 1250 1300 2    50   ~ 0
@@ -58,9 +58,9 @@ Wire Wire Line
 	3200 1450 3050 1450
 Wire Wire Line
 	3200 1600 3050 1600
-Text Label 11950 3550 0    50   ~ 0
+Text Label 11650 3550 0    50   ~ 0
 ~RESET
-Text Notes 12350 3800 0    50   ~ 0
+Text Notes 13250 3800 0    50   ~ 0
 SWD Header
 Text Notes 12100 4700 0    50   ~ 0
 I2C Header
@@ -148,42 +148,42 @@ NoConn ~ 4350 1000
 $Comp
 L dk_Rectangular-Connectors-Headers-Male-Pins:FTSH-105-01-F-DV-K J3
 U 1 1 5D8FA17A
-P 11700 3350
-F 0 "J3" H 11700 3765 50  0000 C CNN
-F 1 "SWD" H 11700 3674 50  0000 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 11900 3550 50  0001 L CNN
-F 3 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 11900 3650 50  0001 L CNN
-F 4 "SAM8796-ND" H 11900 3750 60  0001 L CNN "Digi-Key_PN"
-F 5 "FTSH-105-01-F-DV-K" H 11900 3850 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 11900 3950 60  0001 L CNN "Category"
-F 7 "Rectangular Connectors - Headers, Male Pins" H 11900 4050 60  0001 L CNN "Family"
-F 8 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 11900 4150 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/samtec-inc/FTSH-105-01-F-DV-K/SAM8796-ND/2649974" H 11900 4250 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN HEADER SMD 10POS 1.27MM" H 11900 4350 60  0001 L CNN "Description"
-F 11 "Samtec Inc." H 11900 4450 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 11900 4550 60  0001 L CNN "Status"
-	1    11700 3350
+P 11400 3350
+F 0 "J3" H 11400 3765 50  0000 C CNN
+F 1 "SWD" H 11400 3674 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 11600 3550 50  0001 L CNN
+F 3 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 11600 3650 50  0001 L CNN
+F 4 "SAM8796-ND" H 11600 3750 60  0001 L CNN "Digi-Key_PN"
+F 5 "FTSH-105-01-F-DV-K" H 11600 3850 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 11600 3950 60  0001 L CNN "Category"
+F 7 "Rectangular Connectors - Headers, Male Pins" H 11600 4050 60  0001 L CNN "Family"
+F 8 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 11600 4150 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/samtec-inc/FTSH-105-01-F-DV-K/SAM8796-ND/2649974" H 11600 4250 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN HEADER SMD 10POS 1.27MM" H 11600 4350 60  0001 L CNN "Description"
+F 11 "Samtec Inc." H 11600 4450 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 11600 4550 60  0001 L CNN "Status"
+	1    11400 3350
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR012
 U 1 1 5DAFFB57
-P 11400 3000
-F 0 "#PWR012" H 11400 2850 50  0001 C CNN
-F 1 "+3V3" H 11415 3173 50  0000 C CNN
-F 2 "" H 11400 3000 50  0001 C CNN
-F 3 "" H 11400 3000 50  0001 C CNN
-	1    11400 3000
+P 11000 3000
+F 0 "#PWR012" H 11000 2850 50  0001 C CNN
+F 1 "+3V3" H 11015 3173 50  0000 C CNN
+F 2 "" H 11000 3000 50  0001 C CNN
+F 3 "" H 11000 3000 50  0001 C CNN
+	1    11000 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	11400 3250 11500 3250
+	11100 3250 11200 3250
 Wire Wire Line
-	11400 3350 11500 3350
+	11100 3350 11200 3350
 Wire Wire Line
-	11900 3550 12200 3550
+	11600 3550 11900 3550
 Wire Wire Line
-	11400 3150 11400 3000
+	11000 3150 11000 3000
 Wire Wire Line
 	1350 3200 1350 3300
 Wire Wire Line
@@ -262,11 +262,7 @@ $EndComp
 Text Label 3150 1750 2    50   ~ 0
 CRESET_B_1
 Wire Notes Line
-	10800 3850 12900 3850
-Wire Notes Line
-	12900 3850 12900 2700
-Wire Notes Line
-	12900 2700 10800 2700
+	13800 3850 13800 2700
 Wire Notes Line
 	10800 2700 10800 3850
 Text Notes 850  4050 0    50   ~ 0
@@ -349,8 +345,8 @@ Text Notes 850  3550 0    50   ~ 0
 B2PS-VR
 Wire Wire Line
 	2800 3000 2800 3100
-NoConn ~ 11900 3350
-NoConn ~ 11900 3450
+NoConn ~ 11600 3350
+NoConn ~ 11600 3450
 $Sheet
 S 1300 900  1100 1250
 U 5D74F1A4
@@ -423,7 +419,7 @@ USB_D+
 Text Notes 12850 2550 0    50   ~ 0
 USB
 Wire Wire Line
-	11900 3150 12250 3150
+	11600 3150 11950 3150
 Wire Wire Line
 	12100 4450 12100 4200
 Wire Wire Line
@@ -1192,26 +1188,10 @@ Wire Wire Line
 	2800 3100 2800 3350
 Text Notes 3650 4450 0    50   ~ 0
 TODO 3.3V 1.2V indicators, from 12V
-NoConn ~ 11500 3450
-NoConn ~ 11500 3550
+NoConn ~ 11200 3450
+NoConn ~ 11200 3550
 Wire Wire Line
-	11400 3150 11500 3150
-$Comp
-L power:GND #PWR015
-U 1 1 5E3EE2C9
-P 11350 3350
-F 0 "#PWR015" H 11350 3100 50  0001 C CNN
-F 1 "GND" V 11355 3222 50  0000 R CNN
-F 2 "" H 11350 3350 50  0001 C CNN
-F 3 "" H 11350 3350 50  0001 C CNN
-	1    11350 3350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	11350 3350 11400 3350
-Connection ~ 11400 3350
-Wire Wire Line
-	11900 3250 12250 3250
+	11600 3250 11950 3250
 Wire Wire Line
 	12450 1050 12450 950 
 $Comp
@@ -1711,4 +1691,90 @@ Wire Wire Line
 	7200 3750 7050 3750
 Text Label 7050 3750 0    50   ~ 0
 XCK
+$Comp
+L Connector_Generic:Conn_01x03 J7
+U 1 1 5EAFA5D4
+P 13300 3250
+F 0 "J7" H 13380 3292 50  0000 L CNN
+F 1 "SWD_ALT" H 13380 3201 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 13300 3250 50  0001 C CNN
+F 3 "~" H 13300 3250 50  0001 C CNN
+	1    13300 3250
+	1    0    0    -1  
+$EndComp
+Text Label 12800 3150 0    50   ~ 0
+SWD_IO
+Text Label 12800 3250 0    50   ~ 0
+SWD_CLK
+Text Label 12850 3350 0    50   ~ 0
+~RESET
+Wire Wire Line
+	12800 3350 13100 3350
+Wire Wire Line
+	12750 3150 13100 3150
+Wire Wire Line
+	12750 3250 13100 3250
+Wire Wire Line
+	12600 3450 12600 3300
+$Comp
+L power:GND #PWR0113
+U 1 1 5EB3899F
+P 12600 3450
+F 0 "#PWR0113" H 12600 3200 50  0001 C CNN
+F 1 "GND" V 12605 3322 50  0000 R CNN
+F 2 "" H 12600 3450 50  0001 C CNN
+F 3 "" H 12600 3450 50  0001 C CNN
+	1    12600 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5EAF97AF
+P 12250 3200
+F 0 "J6" H 12168 3417 50  0000 C CNN
+F 1 "SWD_PWR" H 12168 3326 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12250 3200 50  0001 C CNN
+F 3 "~" H 12250 3200 50  0001 C CNN
+	1    12250 3200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5EBECC5A
+P 11000 3400
+F 0 "#PWR0114" H 11000 3150 50  0001 C CNN
+F 1 "GND" H 11005 3227 50  0000 C CNN
+F 2 "" H 11000 3400 50  0001 C CNN
+F 3 "" H 11000 3400 50  0001 C CNN
+	1    11000 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11100 3250 11000 3250
+Wire Wire Line
+	11000 3250 11000 3400
+Connection ~ 11100 3250
+Wire Wire Line
+	11000 3150 11200 3150
+Wire Wire Line
+	12600 3200 12600 3000
+$Comp
+L power:+3V3 #PWR0115
+U 1 1 5EC2EFC6
+P 12600 3000
+F 0 "#PWR0115" H 12600 2850 50  0001 C CNN
+F 1 "+3V3" H 12615 3173 50  0000 C CNN
+F 2 "" H 12600 3000 50  0001 C CNN
+F 3 "" H 12600 3000 50  0001 C CNN
+	1    12600 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12450 3200 12600 3200
+Wire Wire Line
+	12450 3300 12600 3300
+Wire Notes Line
+	10800 3850 13800 3850
+Wire Notes Line
+	10800 2700 13800 2700
 $EndSCHEMATC

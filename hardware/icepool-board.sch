@@ -62,8 +62,6 @@ Text Label 11650 3550 0    50   ~ 0
 ~RESET
 Text Notes 13250 3800 0    50   ~ 0
 SWD Header
-Text Notes 12100 4700 0    50   ~ 0
-I2C Header
 Text Notes 4750 5700 0    50   ~ 0
 Power Supply
 Text Label 2550 4900 0    50   ~ 0
@@ -84,58 +82,6 @@ $EndComp
 Connection ~ 2850 4900
 Text Label 2650 1150 0    50   ~ 0
 FIFO_0_1
-Text Label 11150 4350 0    50   ~ 0
-I2C_SDA
-Text Label 11150 4450 0    50   ~ 0
-I2C_SCL
-$Comp
-L Device:R_Small_US R5
-U 1 1 5DFDA20B
-P 11550 4350
-F 0 "R5" V 11345 4350 50  0000 C CNN
-F 1 "4k7" V 11436 4350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 11550 4350 50  0001 C CNN
-F 3 "~" H 11550 4350 50  0001 C CNN
-	1    11550 4350
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small_US R6
-U 1 1 5DFDA5AA
-P 11900 4450
-F 0 "R6" V 11695 4450 50  0000 C CNN
-F 1 "4k7" V 11786 4450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 11900 4450 50  0001 C CNN
-F 3 "~" H 11900 4450 50  0001 C CNN
-	1    11900 4450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	12000 4450 12100 4450
-Wire Wire Line
-	12350 4550 12350 4200
-$Comp
-L power:+3V3 #PWR021
-U 1 1 5E086A98
-P 12350 4200
-F 0 "#PWR021" H 12350 4050 50  0001 C CNN
-F 1 "+3V3" H 12365 4373 50  0000 C CNN
-F 2 "" H 12350 4200 50  0001 C CNN
-F 3 "" H 12350 4200 50  0001 C CNN
-	1    12350 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR020
-U 1 1 5E086E02
-P 12100 4200
-F 0 "#PWR020" H 12100 4050 50  0001 C CNN
-F 1 "+3V3" H 12115 4373 50  0000 C CNN
-F 2 "" H 12100 4200 50  0001 C CNN
-F 3 "" H 12100 4200 50  0001 C CNN
-	1    12100 4200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1150 1000 1150 1150
 Wire Wire Line
@@ -223,21 +169,6 @@ Wire Wire Line
 Text Notes 1200 2400 0    50   ~ 0
 Devices can implement "any" or "all" logic for "ready" status line.
 $Comp
-L power:GND #PWR022
-U 1 1 5DFB427C
-P 11300 4650
-F 0 "#PWR022" H 11300 4400 50  0001 C CNN
-F 1 "GND" V 11305 4522 50  0000 R CNN
-F 2 "" H 11300 4650 50  0001 C CNN
-F 3 "" H 11300 4650 50  0001 C CNN
-	1    11300 4650
-	0    -1   -1   0   
-$EndComp
-Wire Notes Line
-	10800 4750 10800 3950
-Wire Notes Line
-	12550 3950 12550 4750
-$Comp
 L power:VCC #PWR011
 U 1 1 5DA5446D
 P 2800 3000
@@ -259,8 +190,6 @@ F 3 "~" H 2850 5150 50  0001 C CNN
 	1    2850 5150
 	1    0    0    -1  
 $EndComp
-Text Label 3150 1750 2    50   ~ 0
-CRESET_B_1
 Wire Notes Line
 	13800 3850 13800 2700
 Wire Notes Line
@@ -363,6 +292,8 @@ F9 "CRESET_B" I L 1300 1750 50
 F10 "GMISO" O R 2400 1000 50 
 F11 "VCORE" I L 1300 2050 50 
 F12 "READY_IN" I L 1300 1900 50 
+F13 "SPI_SS_B" I R 2400 1450 50 
+F14 "CDONE" O R 2400 1600 50 
 $EndSheet
 $Sheet
 S 3200 900  1050 1250
@@ -380,11 +311,13 @@ F9 "CRESET_B" I L 3200 1750 50
 F10 "GMISO" O R 4250 1000 50 
 F11 "VCORE" I L 3200 2050 50 
 F12 "READY_IN" I L 3200 1900 50 
+F13 "SPI_SS_B" I R 4250 1450 50 
+F14 "CDONE" O R 4250 1600 50 
 $EndSheet
 Text Label 1250 1900 2    50   ~ 0
 READY_0
 Text Label 1250 1750 2    50   ~ 0
-CRESET_B_0
+CRESET_B
 Wire Wire Line
 	1300 1900 900  1900
 $Comp
@@ -420,23 +353,6 @@ Text Notes 12850 2550 0    50   ~ 0
 USB
 Wire Wire Line
 	11600 3150 11950 3150
-Wire Wire Line
-	12100 4450 12100 4200
-Wire Wire Line
-	11650 4350 11750 4350
-$Comp
-L power:+3V3 #PWR019
-U 1 1 5E03355F
-P 11750 4200
-F 0 "#PWR019" H 11750 4050 50  0001 C CNN
-F 1 "+3V3" H 11765 4373 50  0000 C CNN
-F 2 "" H 11750 4200 50  0001 C CNN
-F 3 "" H 11750 4200 50  0001 C CNN
-	1    11750 4200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11750 4350 11750 4200
 $Comp
 L dk_Slide-Switches:JS202011SCQN S1
 U 1 1 5E37C9E7
@@ -516,8 +432,6 @@ Wire Wire Line
 	6250 1000 6350 1000
 Wire Wire Line
 	8100 1000 8200 1000
-Text Label 7000 1750 2    50   ~ 0
-CRESET_B_3
 Text Label 8150 1900 0    50   ~ 0
 READY
 $Sheet
@@ -536,6 +450,8 @@ F9 "CRESET_B" I L 5150 1750 50
 F10 "GMISO" O R 6250 1000 50 
 F11 "VCORE" I L 5150 2050 50 
 F12 "READY_IN" I L 5150 1900 50 
+F13 "SPI_SS_B" I R 6250 1450 50 
+F14 "CDONE" O R 6250 1600 50 
 $EndSheet
 $Sheet
 S 7050 900  1050 1250
@@ -553,23 +469,15 @@ F9 "CRESET_B" I L 7050 1750 50
 F10 "GMISO" O R 8100 1000 50 
 F11 "VCORE" I L 7050 2050 50 
 F12 "READY_IN" I L 7050 1900 50 
+F13 "SPI_SS_B" I R 8100 1450 50 
+F14 "CDONE" O R 8100 1600 50 
 $EndSheet
 Text Label 4850 1900 2    50   ~ 0
 READY_1_2
-Text Label 5100 1750 2    50   ~ 0
-CRESET_B_2
 Wire Wire Line
 	4850 1000 5150 1000
 Text Label 4500 1150 0    50   ~ 0
 FIFO_1_2
-Wire Wire Line
-	6550 1750 7050 1750
-Wire Wire Line
-	4650 1750 5150 1750
-Wire Wire Line
-	800  1750 1300 1750
-Wire Wire Line
-	2700 1750 3200 1750
 Wire Notes Line
 	650  2600 5350 2600
 Wire Wire Line
@@ -584,20 +492,6 @@ Wire Notes Line
 	5350 5750 650  5750
 Wire Notes Line
 	650  650  650  2500
-Wire Wire Line
-	6700 3000 7200 3000
-Text Label 7150 3000 2    50   ~ 0
-CRESET_B_3
-Wire Wire Line
-	6700 3150 7200 3150
-Text Label 7150 3150 2    50   ~ 0
-CRESET_B_2
-Wire Wire Line
-	6700 3300 7200 3300
-Text Label 7150 3300 2    50   ~ 0
-CRESET_B_1
-Wire Wire Line
-	6700 3450 7200 3450
 Wire Notes Line
 	5450 6100 5450 2600
 Wire Wire Line
@@ -612,18 +506,12 @@ Wire Wire Line
 	8600 4500 8950 4500
 Text Label 8650 4650 0    50   ~ 0
 USB_D-
-Wire Notes Line
-	7300 3500 7300 4700
-Wire Notes Line
-	6750 3500 6750 4700
 Text Notes 6800 4050 0    50   ~ 0
 SERCOM0
 Wire Notes Line
 	6750 3500 7300 3500
 Text Notes 9150 4950 2    50   ~ 0
 SERCOM3
-Text Notes 6800 4650 0    50   ~ 0
-SERCOM2
 Wire Notes Line
 	9400 4400 9400 5300
 Wire Notes Line
@@ -634,8 +522,8 @@ Text Label 8650 4200 0    50   ~ 0
 ~GS
 Wire Wire Line
 	8600 4200 8750 4200
-Text Label 7150 3450 2    50   ~ 0
-CRESET_B_0
+Text Label 6750 3450 0    50   ~ 0
+SPI_SS_B_0
 Wire Wire Line
 	8600 4350 8900 4350
 Wire Wire Line
@@ -834,12 +722,6 @@ Text Label 8650 5100 0    50   ~ 0
 MISO
 Text Label 8650 4350 0    50   ~ 0
 READY
-NoConn ~ 7200 4650
-NoConn ~ 7200 4500
-Text Label 7150 4350 2    50   ~ 0
-I2C_SCL
-Text Label 7150 4200 2    50   ~ 0
-I2C_SDA
 Text Notes 9300 5200 2    50   ~ 0
 SERCOM1
 Wire Notes Line
@@ -854,8 +736,6 @@ Text Label 7150 5100 2    50   ~ 0
 MOSI
 Text Label 8650 5250 0    50   ~ 0
 SCK
-Wire Notes Line
-	7300 4700 6750 4700
 Wire Wire Line
 	7200 3600 7050 3600
 Text Label 7150 3600 2    50   ~ 0
@@ -959,10 +839,6 @@ Wire Notes Line
 	650  650  10700 650 
 Wire Notes Line
 	650  2500 10700 2500
-Wire Wire Line
-	6850 4350 7200 4350
-Wire Wire Line
-	6850 4200 7200 4200
 $Sheet
 S 850  4250 1450 1300
 U 5DBF3FCD
@@ -1218,29 +1094,6 @@ F 3 "" H 11600 1750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	11600 1750 11600 1650
-Wire Wire Line
-	11100 4650 11300 4650
-Wire Wire Line
-	11100 4550 12350 4550
-Wire Wire Line
-	11100 4450 11800 4450
-Wire Wire Line
-	11100 4350 11450 4350
-Wire Notes Line
-	10800 4750 12550 4750
-Wire Notes Line
-	10800 3950 12550 3950
-$Comp
-L Connector_Generic:Conn_01x04 J4
-U 1 1 5E77123A
-P 10900 4450
-F 0 "J4" H 10818 4767 50  0000 C CNN
-F 1 "I2C" H 10818 4676 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10900 4450 50  0001 C CNN
-F 3 "~" H 10900 4450 50  0001 C CNN
-	1    10900 4450
-	-1   0    0    -1  
-$EndComp
 Text Notes 4450 7000 0    50   ~ 0
 RS485
 Wire Wire Line
@@ -1473,64 +1326,64 @@ F 3 "~" H 3100 4900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 3350 4900
-Text Notes 9300 1850 0    50   ~ 0
+Text Notes 9350 1850 0    50   ~ 0
 Option to change READY_0 value,\nbut should be able to change\nmeaning in software.\n\n"READY_ALL"\n- Consider READY_0 = TRUE\n\n"READY_ANY"\n- Consider READY_0 = FALSE
 Wire Wire Line
-	8950 1550 8950 1650
-Connection ~ 8950 1550
+	9100 1550 9100 1650
+Connection ~ 9100 1550
 Wire Wire Line
-	8950 1550 8600 1550
+	9100 1550 8750 1550
 Wire Wire Line
-	8950 1450 8950 1550
+	9100 1450 9100 1550
 $Comp
 L power:+3V3 #PWR01
 U 1 1 5EA9E712
-P 8950 1200
-F 0 "#PWR01" H 8950 1050 50  0001 C CNN
-F 1 "+3V3" H 8965 1373 50  0000 C CNN
-F 2 "" H 8950 1200 50  0001 C CNN
-F 3 "" H 8950 1200 50  0001 C CNN
-	1    8950 1200
+P 9100 1200
+F 0 "#PWR01" H 9100 1050 50  0001 C CNN
+F 1 "+3V3" H 9115 1373 50  0000 C CNN
+F 2 "" H 9100 1200 50  0001 C CNN
+F 3 "" H 9100 1200 50  0001 C CNN
+	1    9100 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 1250 8950 1200
+	9100 1250 9100 1200
 $Comp
 L Device:R_Small_US R1
 U 1 1 5EA96126
-P 8950 1350
-F 0 "R1" H 9018 1396 50  0000 L CNN
-F 1 "4k7" H 9018 1305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 8950 1350 50  0001 C CNN
-F 3 "~" H 8950 1350 50  0001 C CNN
-	1    8950 1350
+P 9100 1350
+F 0 "R1" H 9168 1396 50  0000 L CNN
+F 1 "4k7" H 9168 1305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9100 1350 50  0001 C CNN
+F 3 "~" H 9100 1350 50  0001 C CNN
+	1    9100 1350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 1900 8950 1850
+	9100 1900 9100 1850
 $Comp
 L Device:R_Small_US R2
 U 1 1 5EA7CDAB
-P 8950 1750
-F 0 "R2" H 9018 1796 50  0000 L CNN
-F 1 "OMIT" H 9018 1705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 8950 1750 50  0001 C CNN
-F 3 "~" H 8950 1750 50  0001 C CNN
-	1    8950 1750
+P 9100 1750
+F 0 "R2" H 9168 1796 50  0000 L CNN
+F 1 "OMIT" H 9168 1705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9100 1750 50  0001 C CNN
+F 3 "~" H 9100 1750 50  0001 C CNN
+	1    9100 1750
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR04
 U 1 1 5E83EE21
-P 8950 1900
-F 0 "#PWR04" H 8950 1650 50  0001 C CNN
-F 1 "GND" H 8955 1727 50  0000 C CNN
-F 2 "" H 8950 1900 50  0001 C CNN
-F 3 "" H 8950 1900 50  0001 C CNN
-	1    8950 1900
+P 9100 1900
+F 0 "#PWR04" H 9100 1650 50  0001 C CNN
+F 1 "GND" H 9105 1727 50  0000 C CNN
+F 2 "" H 9100 1900 50  0001 C CNN
+F 3 "" H 9100 1900 50  0001 C CNN
+	1    9100 1900
 	1    0    0    -1  
 $EndComp
-Text Label 8900 1550 2    50   ~ 0
+Text Label 9050 1550 2    50   ~ 0
 READY_0
 Wire Wire Line
 	8100 1900 8400 1900
@@ -1542,17 +1395,6 @@ Wire Wire Line
 	2400 1150 3200 1150
 Text Notes 5600 6050 0    50   ~ 0
 ABM10W-16.0000MHZ
-$Comp
-L jkiv-atmel:ATSAMD21E U1
-U 1 1 5D7394CA
-P 7900 4100
-F 0 "U1" H 7900 5465 50  0000 C CNN
-F 1 "ATSAMD21E" H 7900 5374 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm_ThermalVias" H 7900 4250 50  0001 C CNN
-F 3 "" H 7900 4250 50  0001 C CNN
-	1    7900 4100
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x03 J7
 U 1 1 5EAFA5D4
@@ -1749,4 +1591,103 @@ Wire Notes Line
 	650  5850 4750 5850
 Wire Notes Line
 	4750 7050 650  7050
+Wire Wire Line
+	1300 1750 900  1750
+Text Label 3150 1750 2    50   ~ 0
+CRESET_B
+Wire Wire Line
+	3200 1750 2800 1750
+Text Label 5100 1750 2    50   ~ 0
+CRESET_B
+Wire Wire Line
+	5150 1750 4750 1750
+Text Label 7000 1750 2    50   ~ 0
+CRESET_B
+Wire Wire Line
+	7050 1750 6650 1750
+Text Label 2450 1450 0    50   ~ 0
+SPI_SS_B_0
+Wire Wire Line
+	2400 1450 2900 1450
+Text Label 4300 1450 0    50   ~ 0
+SPI_SS_B_1
+Wire Wire Line
+	4250 1450 4750 1450
+Text Label 6300 1450 0    50   ~ 0
+SPI_SS_B_2
+Wire Wire Line
+	6250 1450 6750 1450
+Text Label 8150 1450 0    50   ~ 0
+SPI_SS_B_3
+Wire Wire Line
+	8100 1450 8600 1450
+Text Label 2450 1600 0    50   ~ 0
+CDONE
+Wire Wire Line
+	2400 1600 2700 1600
+Text Label 4300 1600 0    50   ~ 0
+CDONE
+Wire Wire Line
+	4250 1600 4550 1600
+Text Label 6300 1600 0    50   ~ 0
+CDONE
+Wire Wire Line
+	6250 1600 6550 1600
+Text Label 8150 1600 0    50   ~ 0
+CDONE
+Wire Wire Line
+	8100 1600 8400 1600
+Wire Wire Line
+	7200 3450 6750 3450
+Text Label 6750 3300 0    50   ~ 0
+SPI_SS_B_1
+Wire Wire Line
+	7200 3300 6750 3300
+Text Label 6750 3150 0    50   ~ 0
+SPI_SS_B_2
+Wire Wire Line
+	7200 3150 6750 3150
+Text Label 6750 3000 0    50   ~ 0
+SPI_SS_B_3
+Wire Wire Line
+	7200 3000 6750 3000
+Text Label 6900 4500 0    50   ~ 0
+CDONE
+Wire Wire Line
+	6900 4500 7200 4500
+Text Label 6850 4650 0    50   ~ 0
+CRESET_B
+Wire Wire Line
+	6850 4650 7200 4650
+$Comp
+L jkiv-atmel:ATSAMD21E U1
+U 1 1 5D7394CA
+P 7900 4100
+F 0 "U1" H 7900 5465 50  0000 C CNN
+F 1 "ATSAMD21E" H 7900 5374 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm_ThermalVias" H 7900 4250 50  0001 C CNN
+F 3 "" H 7900 4250 50  0001 C CNN
+	1    7900 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4200 7200 4200
+Wire Wire Line
+	6850 4350 7200 4350
+Text Label 7150 4200 2    50   ~ 0
+I2C_SDA
+Text Label 7150 4350 2    50   ~ 0
+I2C_SCL
+Text Notes 6450 4600 0    50   ~ 0
+SERCOM2
+Wire Notes Line
+	7300 4400 6750 4400
+Wire Notes Line
+	6750 4400 6750 3500
+Wire Notes Line
+	7300 3500 7300 4400
+Wire Notes Line
+	6750 4250 6600 4250
+Wire Notes Line
+	6600 4250 6600 4500
 $EndSCHEMATC

@@ -353,43 +353,7 @@ Text Notes 12850 2550 0    50   ~ 0
 USB
 Wire Wire Line
 	11600 3150 11950 3150
-$Comp
-L dk_Slide-Switches:JS202011SCQN S1
-U 1 1 5E37C9E7
-P 2000 3200
-F 0 "S1" H 2000 3683 50  0000 C CNN
-F 1 "JS202011SCQN" H 2000 3592 50  0000 C CNN
-F 2 "digikey-footprints:Switch_Slide_JS202011SCQN" H 2200 3400 50  0001 L CNN
-F 3 "https://www.ckswitches.com/media/1422/js.pdf" H 2200 3500 60  0001 L CNN
-F 4 "401-2002-1-ND" H 2200 3600 60  0001 L CNN "Digi-Key_PN"
-F 5 "JS202011SCQN" H 2200 3700 60  0001 L CNN "MPN"
-F 6 "Switches" H 2200 3800 60  0001 L CNN "Category"
-F 7 "Slide Switches" H 2200 3900 60  0001 L CNN "Family"
-F 8 "https://www.ckswitches.com/media/1422/js.pdf" H 2200 4000 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/c-k/JS202011SCQN/401-2002-1-ND/1640098" H 2200 4100 60  0001 L CNN "DK_Detail_Page"
-F 10 "SWITCH SLIDE DPDT 300MA 6V" H 2200 4200 60  0001 L CNN "Description"
-F 11 "C&K" H 2200 4300 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 2200 4400 60  0001 L CNN "Status"
-	1    2000 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 3500 2300 3500
-Wire Wire Line
-	2300 3500 2300 3100
-Wire Wire Line
-	2300 3100 2200 3100
-NoConn ~ 2200 3300
-NoConn ~ 2200 2900
-Connection ~ 2300 3100
-Wire Wire Line
-	1600 3100 1800 3100
-Wire Wire Line
-	1800 3100 1800 3000
 Connection ~ 1600 3100
-Wire Wire Line
-	1800 3100 1800 3400
-Connection ~ 1800 3100
 Text Label 5100 1000 2    50   ~ 0
 MOSI
 Text Label 5100 1300 2    50   ~ 0
@@ -926,8 +890,6 @@ F 3 "~" H 3350 3200 50  0001 C CNN
 	1    3350 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2300 3100 2450 3100
 $Comp
 L Mechanical:Fiducial FID4
 U 1 1 5DEBCD02
@@ -1043,8 +1005,6 @@ Wire Wire Line
 	2800 3650 2800 3550
 Text Notes 850  2950 0    50   ~ 0
 +12V
-Text Notes 2450 3050 0    50   ~ 0
-C? L?
 $Comp
 L Device:LED D1
 U 1 1 5DEB0397
@@ -1690,4 +1650,8 @@ Wire Notes Line
 	6750 4250 6600 4250
 Wire Notes Line
 	6600 4250 6600 4500
+Wire Wire Line
+	1600 3100 2450 3100
+Text Notes 1900 3050 0    50   ~ 0
+FB? L?
 $EndSCHEMATC

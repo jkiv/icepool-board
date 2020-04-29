@@ -166,8 +166,6 @@ Wire Wire Line
 	3850 4900 3850 5000
 Wire Wire Line
 	3850 4550 3850 4700
-Text Notes 1200 2400 0    50   ~ 0
-Devices can implement "any" or "all" logic for "ready" status line.
 $Comp
 L power:VCC #PWR011
 U 1 1 5DA5446D
@@ -541,8 +539,6 @@ F 3 "~" H 6150 2950 50  0001 C CNN
 	1    6150 2950
 	0    1    1    0   
 $EndComp
-Text Notes 5550 6250 0    50   ~ 0
-TODO better estimate of CL
 $Comp
 L Device:L_Small L1
 U 1 1 5E73369B
@@ -1143,73 +1139,69 @@ F 3 "~" H 4100 4550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 4350 4550
-Text Notes 9350 1850 0    50   ~ 0
-Option to change READY_0 value,\nbut should be able to change\nmeaning in software.\n\n"READY_ALL"\n- Consider READY_0 = TRUE\n\n"READY_ANY"\n- Consider READY_0 = FALSE
+Text Notes 9350 2100 0    50   ~ 0
+Devices can implement "any"\nor "all" logic for "ready" status\nline.\n\nOption to change READY_0 value,\nbut should be able to change\nmeaning in software.\n\n"READY_ALL"\n- Consider READY_0 = TRUE\n\n"READY_ANY"\n- Consider READY_0 = FALSE
 Wire Wire Line
-	9100 1550 9100 1650
-Connection ~ 9100 1550
+	9050 1600 9050 1700
+Connection ~ 9050 1600
 Wire Wire Line
-	9100 1550 8750 1550
+	9050 1600 8700 1600
 Wire Wire Line
-	9100 1450 9100 1550
+	9050 1500 9050 1600
 $Comp
 L power:+3V3 #PWR01
 U 1 1 5EA9E712
-P 9100 1200
-F 0 "#PWR01" H 9100 1050 50  0001 C CNN
-F 1 "+3V3" H 9115 1373 50  0000 C CNN
-F 2 "" H 9100 1200 50  0001 C CNN
-F 3 "" H 9100 1200 50  0001 C CNN
-	1    9100 1200
+P 9050 1250
+F 0 "#PWR01" H 9050 1100 50  0001 C CNN
+F 1 "+3V3" H 9065 1423 50  0000 C CNN
+F 2 "" H 9050 1250 50  0001 C CNN
+F 3 "" H 9050 1250 50  0001 C CNN
+	1    9050 1250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9100 1250 9100 1200
+	9050 1300 9050 1250
 $Comp
 L Device:R_Small_US R1
 U 1 1 5EA96126
-P 9100 1350
-F 0 "R1" H 9168 1396 50  0000 L CNN
-F 1 "4k7" H 9168 1305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 9100 1350 50  0001 C CNN
-F 3 "~" H 9100 1350 50  0001 C CNN
-	1    9100 1350
+P 9050 1400
+F 0 "R1" H 9118 1446 50  0000 L CNN
+F 1 "4k7" H 9118 1355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9050 1400 50  0001 C CNN
+F 3 "~" H 9050 1400 50  0001 C CNN
+	1    9050 1400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9100 1900 9100 1850
+	9050 1950 9050 1900
 $Comp
 L Device:R_Small_US R2
 U 1 1 5EA7CDAB
-P 9100 1750
-F 0 "R2" H 9168 1796 50  0000 L CNN
-F 1 "OMIT" H 9168 1705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 9100 1750 50  0001 C CNN
-F 3 "~" H 9100 1750 50  0001 C CNN
-	1    9100 1750
+P 9050 1800
+F 0 "R2" H 9118 1846 50  0000 L CNN
+F 1 "OMIT" H 9118 1755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9050 1800 50  0001 C CNN
+F 3 "~" H 9050 1800 50  0001 C CNN
+	1    9050 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR04
 U 1 1 5E83EE21
-P 9100 1900
-F 0 "#PWR04" H 9100 1650 50  0001 C CNN
-F 1 "GND" H 9105 1727 50  0000 C CNN
-F 2 "" H 9100 1900 50  0001 C CNN
-F 3 "" H 9100 1900 50  0001 C CNN
-	1    9100 1900
+P 9050 1950
+F 0 "#PWR04" H 9050 1700 50  0001 C CNN
+F 1 "GND" H 9055 1777 50  0000 C CNN
+F 2 "" H 9050 1950 50  0001 C CNN
+F 3 "" H 9050 1950 50  0001 C CNN
+	1    9050 1950
 	1    0    0    -1  
 $EndComp
-Text Label 9050 1550 2    50   ~ 0
+Text Label 9000 1600 2    50   ~ 0
 READY_0
 Wire Wire Line
 	8100 1900 8400 1900
 Wire Wire Line
 	8100 1150 8350 1150
-Wire Wire Line
-	2400 1900 3200 1900
-Wire Wire Line
-	2400 1150 3200 1150
 Text Notes 5600 6050 0    50   ~ 0
 ABM10W-16.0000MHZ
 $Comp
@@ -1648,4 +1640,8 @@ Wire Notes Line
 	2550 7150 2550 8250
 Text Notes 4550 8200 0    50   ~ 0
 I2C
+Wire Wire Line
+	2400 1900 3200 1900
+Wire Wire Line
+	2400 1150 3200 1150
 $EndSCHEMATC

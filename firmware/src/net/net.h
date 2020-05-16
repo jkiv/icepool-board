@@ -4,8 +4,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#define NET_RX_BUFFER_LEN (1024UL)
-#define NET_TX_BUFFER_LEN (1024UL)
+#include "interface.h"
 
 /*
 
@@ -114,52 +113,81 @@ Message types and structure are defined by the user application.
 
 */
 
-#define NET_FRAME_HEADER_SIZE   (7UL)
-#define NET_FRAME_BODY_MAX_SIZE (32UL)
-#define NET_FRAME_MAX_SIZE (NET_FRAME_HEADER_SIZE + NET_FRAME_BODY_MAX_SIZE)
+#define NET_FRAME_HEADER_SIZE      (sizeof(FrameHeader))
+#define NET_FRAME_BODY_MAX_SIZE    (32UL)
+#define NET_FRAME_MAX_SIZE         (NET_FRAME_HEADER_SIZE + NET_FRAME_BODY_MAX_SIZE)
 
-typedef struct
+#define NET_RX_BUFFER_LEN          (1024UL)
+#define NET_TX_BUFFER_LEN          (1024UL)
+#define NET_RX_USER_BUFFER_LEN     (4 * NET_FRAME_BODY_MAX_SIZE)
+#define NET_TX_ACK_BUFFER_LEN      (4 * NET_FRAME_BODY_MAX_SIZE)
+
+#define NET_FRAME_HEADER_FLAGS_ERR (1UL << 0)
+#define NET_FRAME_HEADER_FLAGS_ACK (1UL << 1)
+
+#define NET_MAX_ACK_DISTANCE       (0x0F)
+
+#define NET_FRAME_ADDR_BROADCAST   (0xFF)
+#define NET_FRAME_ADDR_HOST        (0x00)
+#define NET_FRAME_ADDR_GUEST_UNSET (0xFF)
+
+typedef struct __attribute__ ((__packed__))
 {
     uint8_t  source;
     uint8_t  destination;
-    uint8_t  flags;           // TODO bitfield
+    uint8_t  flags;         // TODO bitfield
     uint8_t  id;
     uint8_t  body_length;
     uint8_t  body_sum;
     uint8_t  header_sum;
 } FrameHeader;
 
-typedef enum {
+typedef enum
+{
   STATE_START,
   STATE_WAIT,
   STATE_RECV_HEADER,
-  STATE_RECV_PAYLOAD,
+  STATE_RECV_BODY,
   STATE_HANDLE_FRAME,
+  STATE_ERROR,
   STATE_UNKNOWN
 } FrameState;
 
 typedef struct
 {
     uint8_t address;
+    uint8_t next_id;
     FrameState state;
+    NetInterface *interface;
 } NetContext;
 
-void net_init(NetContext* context, uint8_t address);
+// Initialize NetContext and underlying buffers.
+void net_init(NetContext* context, NetInterface* iface, uint8_t address);
+
+// Returns 1 if ready to receive a frame using net_recv(). Returns 0 otherwise.
+uint8_t net_available();
+
+// Copies awaiting data into `header` and optional `body`.
+// If no data is available, header and body will remain unchanged.
+// Call net_available() prior to net_recv() to determine whether data is waiting.
+// `body` must be at least NET_FRAME_BODY_MAX_SIZE bytes in size.
+void net_recv(NetContext* context, FrameHeader* header, uint8_t* body);
+
+// Constructs a frame from the provided data and queues it in the net subsystem.
+void net_send(NetContext* context, uint8_t dest_addr, uint8_t* body, size_t body_length);
 
 // Update context state and handle data
 void net_tick(NetContext* context);
 
-// Callback for device read complete.
-void net_on_read(uint8_t d);
+// Computes the 8-bit checksum for the provided `buffer` of `length` bytes.
+uint8_t net_sum(uint8_t* buffer, size_t length);
 
-// Callback for device write complete.
-void net_on_write();
+// Callback for underlying interface.
+// Called after a byte `d` is received on the underlying interface.
+void net_on_interface_read(uint8_t d, void* param);
 
-// Validates frame header data
-// TODO may require context, e.g. addresses, flags, etc.
-uint8_t net_validate_header(FrameHeader* header);
-
-// Validates payload data
-uint8_t net_validate_payload(uint8_t* payload, size_t length, uint8_t sum);
+// Callback for underlying interface.
+// Called after a byte is sent on the underlying interface.
+void net_on_interface_write(void* param);
 
 #endif /* ICEPOOL_NET_H_ */

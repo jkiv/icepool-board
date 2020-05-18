@@ -3,9 +3,12 @@
 #include <stdio.h>
 #include <string.h>
 
+#define MUNIT_ENABLE_ASSERT_ALIASES
+#include "munit.h"
+
 #include "data/ringbuffer.h"
 
-void ringbuffer_init_test()
+MunitResult ringbuffer_init_test(const MunitParameter params[], void* user_data_or_fixture)
 {
   uint8_t _buf[10] = { 0 };
   RingBuffer rb;
@@ -24,9 +27,11 @@ void ringbuffer_init_test()
   assert(ringbuffer_is_full(&rb) == 0);
   assert(ringbuffer_has_occupancy(&rb, 1) == 0);
   assert(ringbuffer_has_vacancy(&rb, 10) == 1);
+
+  return MUNIT_OK;
 }
 
-void ringbuffer_add_test()
+MunitResult ringbuffer_add_test(const MunitParameter params[], void* user_data_or_fixture)
 {
   uint8_t _buf[3] = { 0 };
   RingBuffer rb;
@@ -72,9 +77,11 @@ void ringbuffer_add_test()
   assert(ringbuffer_is_full(&rb) == 1);
   assert(ringbuffer_has_occupancy(&rb, 3) == 1);
   assert(ringbuffer_has_vacancy(&rb, 1) == 0); 
+
+  return MUNIT_OK;
 }
 
-void ringbuffer_remove_test()
+MunitResult ringbuffer_remove_test(const MunitParameter params[], void* user_data_or_fixture)
 {
   uint8_t _buf[3] = { 0 };
   RingBuffer rb;
@@ -111,9 +118,11 @@ void ringbuffer_remove_test()
 
   // Removing from empty buffer
   assert(ringbuffer_remove(&rb) == 0);
+
+  return MUNIT_OK;
 }
 
-void ringbuffer_add_n_test()
+MunitResult ringbuffer_add_n_test(const MunitParameter params[], void* user_data_or_fixture)
 {
   const char* multibyte = "Hello, World!";
   size_t length = strlen(multibyte);
@@ -132,9 +141,11 @@ void ringbuffer_add_n_test()
     assert(ringbuffer_is_empty(&rb) == 0);
     assert(ringbuffer_remove(&rb) == multibyte[i]);
   }
+
+  return MUNIT_OK;
 }
 
-void ringbuffer_remove_n_test()
+MunitResult ringbuffer_remove_n_test(const MunitParameter params[], void* user_data_or_fixture)
 {
   const char* multibyte = "Hello, World!";
   size_t length = strlen(multibyte);
@@ -154,7 +165,6 @@ void ringbuffer_remove_n_test()
   // Remove and check
 
   uint8_t result[64] = { 0 };
-
   assert(ringbuffer_has_occupancy(&rb, length));
 
   ringbuffer_remove_n(&rb, result, length);
@@ -165,15 +175,67 @@ void ringbuffer_remove_n_test()
   for(int i = 0; i < length; i++) {
     assert(result[i] == multibyte[i]);
   }
+
+  return MUNIT_OK;
 }
+
+// Munit Test List
+
+MunitTest ringbuffer_tests[] = {
+  {
+    "/init", /* name */
+    ringbuffer_init_test, /* test */
+    NULL, /* setup */
+    NULL, /* tear_down */
+    MUNIT_TEST_OPTION_NONE, /* options */
+    NULL /* parameters */
+  },
+  {
+    "/add", /* name */
+    ringbuffer_add_test, /* test */
+    NULL, /* setup */
+    NULL, /* tear_down */
+    MUNIT_TEST_OPTION_NONE, /* options */
+    NULL /* parameters */
+  },
+  {
+    "/remove", /* name */
+    ringbuffer_remove_test, /* test */
+    NULL, /* setup */
+    NULL, /* tear_down */
+    MUNIT_TEST_OPTION_NONE, /* options */
+    NULL /* parameters */
+  },
+  {
+    "/add-n", /* name */
+    ringbuffer_add_n_test, /* test */
+    NULL, /* setup */
+    NULL, /* tear_down */
+    MUNIT_TEST_OPTION_NONE, /* options */
+    NULL /* parameters */
+  },
+  {
+    "/remove-n", /* name */
+    ringbuffer_remove_n_test, /* test */
+    NULL, /* setup */
+    NULL, /* tear_down */
+    MUNIT_TEST_OPTION_NONE, /* options */
+    NULL /* parameters */
+  },
+  { NULL, NULL, NULL, NULL, MUNIT_TEST_OPTION_NONE, NULL }
+};
+
+// Munit Test Suite
+
+static const MunitSuite suite = {
+  "/ringbuffer", /* name */
+  ringbuffer_tests, /* tests */
+  NULL, /* suites */
+  1, /* iterations */
+  MUNIT_SUITE_OPTION_NONE /* options */
+};
 
 int main (int argc, const char* argv[])
 {
-  ringbuffer_init_test();
-  ringbuffer_add_test();
-  ringbuffer_remove_test();
-  ringbuffer_add_n_test();
-  ringbuffer_remove_n_test();
-
-  printf("SUCCESS!");
+  return munit_suite_main(&suite, NULL, argc, (char * const *) argv);
 }

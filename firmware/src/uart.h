@@ -37,9 +37,11 @@ size_t uart_read_n(uint8_t* buffer, size_t length);
 size_t uart_write_n(const uint8_t* buffer, size_t length);
 
 // Set callback for when a byte is sent.
-void uart_set_on_write(void (*on_write)());
+// An optional `param` is passed to the callback when called.
+void uart_set_on_write(void (*on_write)(void*), void* param);
 
 // Set callback for when a byte is read. The byte is passed to the callback.
-void uart_set_on_read(void (*on_read)(uint8_t));
+// An optional `param` is also passed to the callback when called.
+void uart_set_on_read(void (*on_read)(uint8_t, void*), void* param);
 
 #endif

@@ -3,6 +3,6 @@
 
 #include "interface.h"
 
-net_interface_uart_init(NetInterface* iface);
+void net_interface_uart_init(NetInterface* iface, void* params);
 
 #endif /* INTERFACE_UART_H_ */

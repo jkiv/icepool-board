@@ -1,5 +1,7 @@
 #include "ringbuffer.h"
 
+// TODO handle null buffer
+
 void ringbuffer_init(RingBuffer* self, uint8_t* buffer, size_t size)
 {
     self->_head = 0;
@@ -8,6 +10,20 @@ void ringbuffer_init(RingBuffer* self, uint8_t* buffer, size_t size)
     self->size = size;
     self->_buffer = buffer;
     // FUTURE self->_buffer = malloc(size);
+}
+
+void ringbuffer_clear(RingBuffer* self, uint8_t zero)
+{
+    // Clear buffer if requested
+    if (zero != 0) {
+        for (size_t i = 0; i < self->size; i++)
+            self->_buffer[i] = 0;
+    }
+    
+    // Reset buffer
+    self->_head = 0;
+    self->_tail = 0;
+    self->_occupancy = 0;
 }
 
 void ringbuffer_deinit(RingBuffer* self)
@@ -37,6 +53,11 @@ uint8_t ringbuffer_has_occupancy(RingBuffer* self, size_t n)
     return (self->_occupancy >= n);
 }
 
+uint8_t ringbuffer_occupancy(RingBuffer* self)
+{
+    return self->_occupancy;
+}
+
 uint8_t ringbuffer_remove(RingBuffer* self)
 {
     if (!ringbuffer_is_empty(self))
@@ -63,8 +84,19 @@ void ringbuffer_add(RingBuffer* self, uint8_t item)
 
 void ringbuffer_remove_n(RingBuffer* self, uint8_t* dest, size_t length)
 {
-    // Source buffer must have a size of `length` or greater and must have an occupancy of `length` or greater.
-    if (self->size >= length && self->_occupancy >= length)
+    if (length == 0)
+    {
+        // Nothing to do...
+        return;
+    }
+    
+    if (self->size < length || self->_occupancy < length)
+    {
+        // Not enough items in source buffer...
+        return;
+    }
+
+    if (dest != NULL)
     {
         uint8_t* src = &self->_buffer[self->_tail];
         uint8_t* src_done = &self->_buffer[(self->_tail + length) % self->size];
@@ -83,34 +115,59 @@ void ringbuffer_remove_n(RingBuffer* self, uint8_t* dest, size_t length)
             }
         }
         
-        // Advance tail
-        self->_tail = (self->_tail + length) % self->size;
     }
+    
+    // Advance tail
+    self->_tail = (self->_tail + length) % self->size;
+        
+    // Update occupancy
+    self->_occupancy -= length;
 }
 
 void ringbuffer_add_n(RingBuffer* self, uint8_t* src, size_t length)
 {
-    // Destination buffer must have a size of `length` or greater and must have an occupancy of `length` or less.
-    if (self->size >= length && ringbuffer_has_vacancy(self, length))
+    if (src == NULL || length == 0)
     {
-        uint8_t* dest = &self->_buffer[self->_head];
-        uint8_t* dest_done = &self->_buffer[(self->_head + length) % self->size];
-        uint8_t* buffer_end = self->_buffer + self->size;
-    
-        // Copy `src` into `dest`
-        while(dest != dest_done)
-        {
-            *dest = *src;
-            dest++;
-            src++;
-        
-            // Wrap `dest` pointer to start of underlying buffer when the end is reached
-            if (dest == buffer_end) {
-                dest = self->_buffer;
-            }
-        }
-    
-        // Advance head
-        self->_head = (self->_head + length) % self->size;
+        // Nothing to do...
+        return;
     }
+    
+    if (self->size < length || !ringbuffer_has_vacancy(self, length))
+    {
+        // Not enough space in destination buffer...
+        return;
+    }
+    
+    uint8_t* dest = &self->_buffer[self->_head];
+    uint8_t* dest_done = &self->_buffer[(self->_head + length) % self->size];
+    uint8_t* buffer_end = self->_buffer + self->size;
+    
+    // Copy `src` into `dest`
+    while(dest != dest_done)
+    {
+        *dest = *src;
+        dest++;
+        src++;
+        
+        // Wrap `dest` pointer to start of underlying buffer when the end is reached
+        if (dest == buffer_end) {
+            dest = self->_buffer;
+        }
+    }
+    
+    // Advance head
+    self->_head = (self->_head + length) % self->size;
+        
+    // Update occupancy
+    self->_occupancy += length;
+}
+
+uint8_t ringbuffer_at(RingBuffer* self, size_t index)
+{
+    // TODO handle index >= size
+    // TODO handle index >= occupancy
+    
+    index = (index + self->_tail) % self->size;
+    
+    return self->_buffer[index];
 }

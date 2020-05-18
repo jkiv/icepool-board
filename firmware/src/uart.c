@@ -9,8 +9,11 @@
 static uint16_t _uart_baud_arithmetic(uint32_t baudrate, uint32_t cpu_freq);
 static uint16_t _uart_baud_fractional(uint32_t baudrate, uint32_t cpu_freq);
 
-static void (*_uart_on_read)(uint8_t);
-static void (*_uart_on_write)();
+static void (*_uart_on_read)(uint8_t, void*);
+static void (*_uart_on_write)(void*);
+
+static void* _uart_on_read_param = NULL;
+static void* _uart_on_write_param = NULL;
 
 void uart_init(uint32_t baudrate)
 {   
@@ -198,7 +201,7 @@ void SERCOM0_Handler()
         
         // Callback that data has been read
         if (_uart_on_read)
-            (*_uart_on_read)(d);
+            (*_uart_on_read)(d, _uart_on_read_param);
     }
     
     // Handle TXC interrupt
@@ -213,16 +216,18 @@ void SERCOM0_Handler()
         
         // Callback that data has been written
         if (_uart_on_write)
-            (*_uart_on_write)();
+            (*_uart_on_write)(_uart_on_write_param);
     }
 }
 
-void uart_set_on_write(void (*on_write)())
+void uart_set_on_write(void (*on_write)(void*), void* param)
 {
     _uart_on_write = on_write;
+    _uart_on_write_param = param;
 }
 
-void uart_set_on_read(void (*on_read)(uint8_t))
+void uart_set_on_read(void (*on_read)(uint8_t, void*), void* param)
 {
     _uart_on_read = on_read;
+    _uart_on_read_param = param;
 }

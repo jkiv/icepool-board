@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 #include "interface.h"
+#include "../data/ringbuffer.h"
 
 /*
 
@@ -156,9 +157,13 @@ typedef enum
 typedef struct
 {
     uint8_t address;
-    uint8_t next_id;
+    uint8_t next_id; // FUTURE endpoint-specific next_id's
     FrameState state;
-    NetInterface *interface;
+    RingBuffer ack_waiting;
+    RingBuffer recv;
+    // TODO interface buffers?
+    // TODO frame buffer?
+    NetInterface* interface;
 } NetContext;
 
 // Initialize NetContext and underlying buffers.
@@ -174,7 +179,7 @@ uint8_t net_available();
 void net_recv(NetContext* context, FrameHeader* header, uint8_t* body);
 
 // Constructs a frame from the provided data and queues it in the net subsystem.
-void net_send(NetContext* context, uint8_t dest_addr, uint8_t* body, size_t body_length);
+void net_send(NetContext* context, uint8_t address, uint8_t* body, size_t body_length);
 
 // Update context state and handle data
 void net_tick(NetContext* context);

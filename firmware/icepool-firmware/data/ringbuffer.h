@@ -1,5 +1,5 @@
-#ifndef ICEPOOL_DATA_RINGBUFFER_H_
-#define ICEPOOL_DATA_RINGBUFFER_H_
+#ifndef DATA_RINGBUFFER_H__
+#define DATA_RINGBUFFER_H__
 
 #include <stddef.h>
 #include <stdint.h>

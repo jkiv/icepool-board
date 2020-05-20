@@ -1,24 +1,25 @@
-#ifndef NET_INTERFACE_H_
-#define NET_INTERFACE_H_
+#ifndef NET_INTERFACE_H__
+#define NET_INTERFACE_H__
 
 #include "net.h"
 #include "../data/ringbuffer.h"
 
-typedef struct
+struct NetInterface_t;
+typedef struct NetInterface_t NetInterface;
+
+struct NetInterface_t
 {
     RingBuffer rx_buffer;
     RingBuffer tx_buffer;
-    FrameBuffer frame_buffer;
     
-    void* other;
+    void (*write)(NetInterface* self, uint8_t data);
+    uint8_t (*read)(NetInterface* self);
+    void (*rx_enable)(NetInterface* self);
+    void (*rx_disable)(NetInterface* self);
+    void (*tx_enable)(NetInterface* self);
+    void (*tx_disable)(NetInterface* self);
     
-    void (*write)(void* self, uint8_t data);
-    uint8_t (*read)(void* self);
-    void (*rx_enable)(void* self);
-    void (*rx_disable)(void* self);
-    void (*tx_enable)(void* self);
-    void (*tx_disable)(void* self);
-    
-} NetInterface;
+    void* child;
+};
 
-#endif /* NET_INTERFACE_H_ */
+#endif /* NET_INTERFACE_H__ */

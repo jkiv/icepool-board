@@ -1,11 +1,26 @@
-#ifndef NET_H_
-#define NET_H_
+#ifndef NET_H__
+#define NET_H__
 
 #include <stdint.h>
 #include <stdlib.h>
 
 #include "interface.h"
 #include "../data/ringbuffer.h"
+
+#define NET_CONTEXT_RX_BUFFER_LEN  (2 * NET_FRAME_BODY_MAX_SIZE)
+#define NET_CONTEXT_ACK_BUFFER_LEN (2 * NET_FRAME_BODY_MAX_SIZE)
+
+#define NET_IFACE_RX_BUFFER_LEN    (512UL)
+#define NET_IFACE_TX_BUFFER_LEN    (512UL)
+
+#define NET_FRAME_HEADER_FLAGS_ERR (1UL << 0)
+#define NET_FRAME_HEADER_FLAGS_ACK (1UL << 1)
+
+#define NET_MAX_ACK_DISTANCE       (0x0F)
+
+#define NET_FRAME_ADDR_BROADCAST   (0xFF)
+#define NET_FRAME_ADDR_HOST        (0x00)
+#define NET_FRAME_ADDR_GUEST_UNSET (0xFF)
 
 typedef struct __attribute__ ((__packed__))
 {
@@ -22,31 +37,24 @@ typedef struct __attribute__ ((__packed__))
 #define NET_FRAME_BODY_MAX_SIZE    (32UL)
 #define NET_FRAME_MAX_SIZE         (NET_FRAME_HEADER_SIZE + NET_FRAME_BODY_MAX_SIZE)
 
-#define NET_CONTEXT_RX_BUFFER_LEN  (4 * NET_FRAME_BODY_MAX_SIZE)
-#define NET_CONTEXT_ACK_BUFFER_LEN (4 * NET_FRAME_BODY_MAX_SIZE)
-
-#define NET_IFACE_RX_BUFFER_LEN    (512UL)
-#define NET_IFACE_TX_BUFFER_LEN    (512UL)
-
-#define NET_FRAME_HEADER_FLAGS_ERR (1UL << 0)
-#define NET_FRAME_HEADER_FLAGS_ACK (1UL << 1)
-
-#define NET_MAX_ACK_DISTANCE       (0x0F)
-
-#define NET_FRAME_ADDR_BROADCAST   (0xFF)
-#define NET_FRAME_ADDR_HOST        (0x00)
-#define NET_FRAME_ADDR_GUEST_UNSET (0xFF)
-
 typedef enum
 {
-  STATE_START,
-  STATE_WAIT,
-  STATE_RECV_HEADER,
-  STATE_RECV_BODY,
-  STATE_HANDLE_FRAME,
-  STATE_ERROR,
-  STATE_UNKNOWN
+    STATE_START,
+    STATE_WAIT,
+    STATE_RECV_HEADER,
+    STATE_RECV_BODY,
+    STATE_HANDLE_FRAME,
+    STATE_ERROR,
+    STATE_UNKNOWN
 } FrameState;
+
+typedef struct
+{
+    FrameHeader header;
+    uint8_t body[NET_FRAME_BODY_MAX_SIZE];
+} FrameBuffer;
+
+typedef struct NetInterface_t NetInterface; // FUTURE why?
 
 typedef struct
 {
@@ -55,14 +63,9 @@ typedef struct
     FrameState state;
     RingBuffer recv_buffer;
     RingBuffer ack_waiting_buffer;
+    FrameBuffer frame_buffer;
     NetInterface* interface;
 } NetContext;
-
-typedef struct  
-{
-    FrameHeader header;
-    uint8_t body[NET_FRAME_BODY_MAX_SIZE];
-} FrameBuffer;
 
 // Initialize NetContext and underlying buffers.
 void net_init(NetContext* context, NetInterface* iface, uint8_t address);
@@ -93,4 +96,4 @@ void net_on_interface_read(uint8_t d, void* param);
 // Called after a byte is sent on the underlying interface.
 void net_on_interface_write(void* param);
 
-#endif /* NET_H_ */
+#endif /* NET_H__ */

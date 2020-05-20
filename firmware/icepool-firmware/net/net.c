@@ -1,6 +1,4 @@
 #include "net.h"
-#include "interface.h"
-#include "../data/ringbuffer.h"
 
 // Validates frame header data
 static uint8_t _net_validate_header(FrameHeader* header);
@@ -87,9 +85,8 @@ void net_tick(NetContext* context)
 {
     NetInterface* iface = context->interface;
     
-    FrameBuffer* frame_buffer = &iface->frame_buffer;
+    FrameBuffer* frame_buffer = &context->frame_buffer;
     RingBuffer* rx_buffer = &iface->rx_buffer;
-    RingBuffer* tx_buffer = &iface->tx_buffer;
     
     switch(context->state)
     {
@@ -298,7 +295,7 @@ void _net_send_raw_frame(NetContext* context, FrameHeader* header, uint8_t* body
 {
     NetInterface* iface = context->interface;
     RingBuffer* tx_buffer = &iface->tx_buffer;
-    FrameBuffer* frame_buffer = &iface->frame_buffer;
+    FrameBuffer* frame_buffer = &context->frame_buffer;
     
     // Populate the header checksum
     header->header_sum = net_sum((uint8_t*) header, NET_FRAME_HEADER_SIZE-1);

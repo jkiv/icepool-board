@@ -1,5 +1,5 @@
-#ifndef ICEPOOL_UART_H__
-#define ICEPOOL_UART_H__
+#ifndef UART_H__
+#define UART_H__
 
 #include <stdint.h>
 #include <stddef.h>
@@ -44,4 +44,4 @@ void uart_set_on_write(void (*on_write)(void*), void* param);
 // An optional `param` is also passed to the callback when called.
 void uart_set_on_read(void (*on_read)(uint8_t, void*), void* param);
 
-#endif
+#endif /* UART_H__ */

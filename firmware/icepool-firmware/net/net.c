@@ -294,7 +294,6 @@ uint8_t _net_validate_body(FrameHeader* header, uint8_t* body)
 void _net_send_raw_frame(NetContext* context, FrameHeader* header, uint8_t* body)
 {
     NetInterface* iface = context->interface;
-    RingBuffer* tx_buffer = &iface->tx_buffer;
     FrameBuffer* frame_buffer = &context->frame_buffer;
     
     // Populate the header checksum
@@ -306,18 +305,21 @@ void _net_send_raw_frame(NetContext* context, FrameHeader* header, uint8_t* body
     iface->tx_disable(iface);
     
     // Append header to the send queue  
-    ringbuffer_add_n(tx_buffer, (uint8_t*) header, NET_FRAME_HEADER_SIZE);
+    ringbuffer_add_n(&iface->tx_buffer, (uint8_t*) header, NET_FRAME_HEADER_SIZE);
     
     // Append body to the send queue
     if (body != NULL && header->body_length > 0)
     {
-        ringbuffer_add_n(tx_buffer, frame_buffer->body, header->body_length);
+        ringbuffer_add_n(&iface->tx_buffer, frame_buffer->body, header->body_length);
     }
     
     iface->tx_enable(iface);
     
     // Force a write to the interface
     // TODO flush?
+    if (!ringbuffer_is_empty(&iface->tx_buffer)) {
+        iface->write(iface, ringbuffer_remove(&iface->tx_buffer));
+    }
 }
 
 uint8_t _net_random_id()
@@ -329,14 +331,15 @@ void _net_resend_unacked(NetContext* context, uint8_t address)
 {
     NetInterface* iface = context->interface;
     
-    RingBuffer* ack = &(context->ack_buffer);
-    size_t occupancy = ringbuffer_occupancy(ack);
+    RingBuffer* ack_buffer = &context->ack_buffer;
+    
+    size_t occupancy = ringbuffer_occupancy(ack_buffer);
     
     uint8_t frame_address;
     uint8_t frame_body_length;
     
     // Buffer is empty, nothing to possibly re-send
-    if (ringbuffer_is_empty(ack)) {
+    if (ringbuffer_is_empty(ack_buffer)) {
         return;
     }
     
@@ -345,12 +348,12 @@ void _net_resend_unacked(NetContext* context, uint8_t address)
     for(size_t j = 0; j < occupancy; )
     {
         // Peak at header data in buffer
-        frame_address     = ringbuffer_at(ack, 1);
-        frame_body_length = ringbuffer_at(ack, 4);
+        frame_address     = ringbuffer_at(ack_buffer, 1);
+        frame_body_length = ringbuffer_at(ack_buffer, 4);
         
         for(size_t i = 0; i < NET_FRAME_HEADER_SIZE + frame_body_length; i++)
         {
-            uint8_t d = ringbuffer_remove(ack);
+            uint8_t d = ringbuffer_remove(ack_buffer);
             
             // Re-send frame data if it matches the given `address`
             if (frame_address == address)
@@ -363,7 +366,7 @@ void _net_resend_unacked(NetContext* context, uint8_t address)
             
             // Add the frame data back to the ACK buffer
             // to preserve temporal ordering.
-            ringbuffer_add(ack, d);
+            ringbuffer_add(ack_buffer, d);
         }
         
         // Advance by as many bytes as we affected
@@ -372,6 +375,9 @@ void _net_resend_unacked(NetContext* context, uint8_t address)
         
     // Force a write to the interface
     // TODO flush?
+    if (!ringbuffer_is_empty(&iface->tx_buffer)) {
+        iface->write(iface, ringbuffer_remove(&iface->tx_buffer));
+    }
 }
 
 void _net_remove_ack(NetContext* context, uint8_t address, uint8_t ack_id)

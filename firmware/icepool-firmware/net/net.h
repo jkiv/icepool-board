@@ -54,6 +54,8 @@ typedef struct
     uint8_t body[NET_FRAME_BODY_MAX_SIZE];
 } FrameBuffer;
 
+typedef struct NetInterface_t NetInterface; // FIXME why???
+
 typedef struct
 {
     uint8_t address;

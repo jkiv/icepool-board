@@ -55,7 +55,9 @@ void _net_interface_uart_on_read(uint8_t data, void* params)
     NetInterface* self = (NetInterface*) params;
     
     // FIXME `rx_buffer` may be locked by caller
-    ringbuffer_add(&self->rx_buffer, data);
+    if (!ringbuffer_is_full(&self->tx_buffer)) {
+        ringbuffer_add(&self->rx_buffer, data);
+    }
 }
 
 // FUTURE these callbacks may look identical between NetInterface___'s

@@ -140,12 +140,13 @@ void ringbuffer_add_n(RingBuffer* self, uint8_t* src, size_t length)
     
     uint8_t* dest = &self->_buffer[self->_head];
     uint8_t* dest_done = &self->_buffer[(self->_head + length) % self->size];
-    uint8_t* buffer_end = self->_buffer + self->size;
+    uint8_t* buffer_end = &self->_buffer[self->size - 1];
     
     // Copy `src` into `dest`
     while(dest != dest_done)
     {
         *dest = *src;
+        
         dest++;
         src++;
         

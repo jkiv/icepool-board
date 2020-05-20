@@ -14,7 +14,7 @@ static void _net_send_raw_frame(NetContext* context, FrameHeader* header, uint8_
 static uint8_t _net_random_id();
 
 // Given an ACK header, clear relevant frames out of the ACK buffer for a given endpoint
-static void _net_remove_ack_waiting(NetContext* context, uint8_t address, uint8_t ack_id);
+static void _net_remove_ack(NetContext* context, uint8_t address, uint8_t ack_id);
 
 // Resend all un-ACK'd frames for a given endpoint
 static void _net_resend_unacked(NetContext* context, uint8_t address);
@@ -72,12 +72,12 @@ void net_send(NetContext* context, uint8_t address, uint8_t* body, size_t body_l
     _net_send_raw_frame(context, &header, body);
     
     // Append header to the ack list
-    ringbuffer_add_n(&context->ack_waiting_buffer, (uint8_t*) &header, NET_FRAME_HEADER_SIZE);
+    ringbuffer_add_n(&context->ack_buffer, (uint8_t*) &header, NET_FRAME_HEADER_SIZE);
         
     // Append body to the ack list
     if (body != NULL && header.body_length > 0)
     {
-        ringbuffer_add_n(&context->ack_waiting_buffer, body, header.body_length);
+        ringbuffer_add_n(&context->ack_buffer, body, header.body_length);
     }
 }
 
@@ -177,7 +177,7 @@ void net_tick(NetContext* context)
             else if (frame_buffer->header.flags & NET_FRAME_HEADER_FLAGS_ACK)
             {
                 // Handle ACK
-                _net_remove_ack_waiting(context, frame_buffer->header.source, frame_buffer->header.id);
+                _net_remove_ack(context, frame_buffer->header.source, frame_buffer->header.id);
                 
                 context->state = STATE_WAIT;
             }
@@ -329,14 +329,14 @@ void _net_resend_unacked(NetContext* context, uint8_t address)
 {
     NetInterface* iface = context->interface;
     
-    RingBuffer* ack_waiting = &(context->ack_waiting_buffer);
-    size_t occupancy = ringbuffer_occupancy(ack_waiting);
+    RingBuffer* ack = &(context->ack_buffer);
+    size_t occupancy = ringbuffer_occupancy(ack);
     
     uint8_t frame_address;
     uint8_t frame_body_length;
     
     // Buffer is empty, nothing to possibly re-send
-    if (ringbuffer_is_empty(ack_waiting)) {
+    if (ringbuffer_is_empty(ack)) {
         return;
     }
     
@@ -345,12 +345,12 @@ void _net_resend_unacked(NetContext* context, uint8_t address)
     for(size_t j = 0; j < occupancy; )
     {
         // Peak at header data in buffer
-        frame_address     = ringbuffer_at(ack_waiting, 1);
-        frame_body_length = ringbuffer_at(ack_waiting, 4);
+        frame_address     = ringbuffer_at(ack, 1);
+        frame_body_length = ringbuffer_at(ack, 4);
         
         for(size_t i = 0; i < NET_FRAME_HEADER_SIZE + frame_body_length; i++)
         {
-            uint8_t d = ringbuffer_remove(ack_waiting);
+            uint8_t d = ringbuffer_remove(ack);
             
             // Re-send frame data if it matches the given `address`
             if (frame_address == address)
@@ -363,7 +363,7 @@ void _net_resend_unacked(NetContext* context, uint8_t address)
             
             // Add the frame data back to the ACK buffer
             // to preserve temporal ordering.
-            ringbuffer_add(ack_waiting, d);
+            ringbuffer_add(ack, d);
         }
         
         // Advance by as many bytes as we affected
@@ -374,17 +374,17 @@ void _net_resend_unacked(NetContext* context, uint8_t address)
     // TODO flush?
 }
 
-void _net_remove_ack_waiting(NetContext* context, uint8_t address, uint8_t ack_id)
+void _net_remove_ack(NetContext* context, uint8_t address, uint8_t ack_id)
 {
     uint8_t frame_address;
     uint8_t frame_id;
     uint8_t frame_body_length;
     
-    RingBuffer* ack_waiting = &context->ack_waiting_buffer;
-    size_t occupancy = ringbuffer_occupancy(ack_waiting);
+    RingBuffer* ack = &context->ack_buffer;
+    size_t occupancy = ringbuffer_occupancy(ack);
     
     // Buffer is empty, nothing to possibly ACK
-    if (ringbuffer_is_empty(ack_waiting)) {
+    if (ringbuffer_is_empty(ack)) {
         return;
     }        
     
@@ -394,21 +394,21 @@ void _net_remove_ack_waiting(NetContext* context, uint8_t address, uint8_t ack_i
     for(size_t j = 0; j < occupancy; )
     {
         // Peak at header data in buffer -- the oldest item
-        frame_address     = ringbuffer_at(ack_waiting, 1);
-        frame_id          = ringbuffer_at(ack_waiting, 3);
-        frame_body_length = ringbuffer_at(ack_waiting, 4);
+        frame_address     = ringbuffer_at(ack, 1);
+        frame_id          = ringbuffer_at(ack, 3);
+        frame_body_length = ringbuffer_at(ack, 4);
         
         // Go through the whole buffer, drop frames that are ack'd by `address` and `ack_id`
         
         // Handle removing/dropping single frame
         for(size_t i = 0; i < NET_FRAME_HEADER_SIZE + frame_body_length; i++)
         {
-            uint8_t d = ringbuffer_remove(ack_waiting);
+            uint8_t d = ringbuffer_remove(ack);
             
             if (!(frame_address == address && (ack_id - frame_id) < NET_MAX_ACK_DISTANCE))
             {
                 // Don't drop this data
-                ringbuffer_add(ack_waiting, d);
+                ringbuffer_add(ack, d);
             }
         }
      

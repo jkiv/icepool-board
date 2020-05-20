@@ -6,31 +6,49 @@
 #include "net/net.h"
 #include "net/interface.h"
 
+
+
 // Dummy NetInterface
 
-void dummy_write(uint8_t x)
+void dummy_write(NetInterface* self, uint8_t x)
 {
     //printf("\tdummy_write: %X\n", x);
 }
 
-uint8_t dummy_read()
+uint8_t dummy_read(NetInterface* self)
 {
     return 0; // TODO
 }
 
-void dummy_void()
+void dummy_dummy(NetInterface* self)
 {
     // ...
 }
 
 void net_interface_dummy_init(NetInterface* interface)
 {
+    // Initialize interface
     interface->read = dummy_read;
     interface->write = dummy_write;
-    interface->rx_enable = dummy_void;
-    interface->rx_disable = dummy_void;
-    interface->tx_enable = dummy_void;
-    interface->tx_disable = dummy_void;
+    interface->rx_enable = dummy_dummy;
+    interface->rx_disable = dummy_dummy;
+    interface->tx_enable = dummy_dummy;
+    interface->tx_disable = dummy_dummy;
+    interface->child = NULL;
+}
+
+void net_interface_dummy_on_read(uint8_t data, void* params)
+{
+  NetInterface* interface = (NetInterface*) params;
+
+  ringbuffer_add(&interface->rx_buffer, data);
+}
+
+void net_interface_dummy_on_write(void* params)
+{
+  NetInterface* interface = (NetInterface*) params;
+
+  // TODO
 }
 
 // TODO 
@@ -59,6 +77,18 @@ MunitResult net_init_test(const MunitParameter params[], void* user_data_or_fixt
 
     net_interface_dummy_init(&interface);
 
+    // FUTURE buffers initialized by context
+    uint8_t recv_buffer[NET_CONTEXT_RECV_BUFFER_LEN];
+    uint8_t ack_buffer[NET_CONTEXT_ACK_BUFFER_LEN];
+    ringbuffer_init(&context.recv_buffer, recv_buffer, NET_CONTEXT_RECV_BUFFER_LEN);
+    ringbuffer_init(&context.ack_buffer, ack_buffer, NET_CONTEXT_ACK_BUFFER_LEN);
+
+    // FUTURE buffers initialized by interface
+    uint8_t rx_buffer[NET_IFACE_RX_BUFFER_LEN];
+    uint8_t tx_buffer[NET_IFACE_TX_BUFFER_LEN];
+    ringbuffer_init(&interface.rx_buffer, rx_buffer, NET_IFACE_RX_BUFFER_LEN);
+    ringbuffer_init(&interface.tx_buffer, tx_buffer, NET_IFACE_TX_BUFFER_LEN);
+
     net_init(&context, &interface, NET_FRAME_ADDR_GUEST_UNSET);
 
     assert(context.address == NET_FRAME_ADDR_GUEST_UNSET);
@@ -74,6 +104,18 @@ MunitResult net_initial_state_test(const MunitParameter params[], void* user_dat
     NetInterface interface;
 
     net_interface_dummy_init(&interface);
+
+    // FUTURE buffers initialized by context
+    uint8_t recv_buffer[NET_CONTEXT_RECV_BUFFER_LEN];
+    uint8_t ack_buffer[NET_CONTEXT_ACK_BUFFER_LEN];
+    ringbuffer_init(&context.recv_buffer, recv_buffer, NET_CONTEXT_RECV_BUFFER_LEN);
+    ringbuffer_init(&context.ack_buffer, ack_buffer, NET_CONTEXT_ACK_BUFFER_LEN);
+
+    // FUTURE buffers initialized by interface
+    uint8_t rx_buffer[NET_IFACE_RX_BUFFER_LEN];
+    uint8_t tx_buffer[NET_IFACE_TX_BUFFER_LEN];
+    ringbuffer_init(&interface.rx_buffer, rx_buffer, NET_IFACE_RX_BUFFER_LEN);
+    ringbuffer_init(&interface.tx_buffer, tx_buffer, NET_IFACE_TX_BUFFER_LEN);
 
     net_init(&context, &interface, NET_FRAME_ADDR_GUEST_UNSET);
 
@@ -110,6 +152,18 @@ MunitResult net_good_header_test(const MunitParameter params[], void* user_data_
 
     net_interface_dummy_init(&interface);
 
+    // FUTURE buffers initialized by context
+    uint8_t recv_buffer[NET_CONTEXT_RECV_BUFFER_LEN];
+    uint8_t ack_buffer[NET_CONTEXT_ACK_BUFFER_LEN];
+    ringbuffer_init(&context.recv_buffer, recv_buffer, NET_CONTEXT_RECV_BUFFER_LEN);
+    ringbuffer_init(&context.ack_buffer, ack_buffer, NET_CONTEXT_ACK_BUFFER_LEN);
+
+    // FUTURE buffers initialized by interface
+    uint8_t rx_buffer[NET_IFACE_RX_BUFFER_LEN];
+    uint8_t tx_buffer[NET_IFACE_TX_BUFFER_LEN];
+    ringbuffer_init(&interface.rx_buffer, rx_buffer, NET_IFACE_RX_BUFFER_LEN);
+    ringbuffer_init(&interface.tx_buffer, tx_buffer, NET_IFACE_TX_BUFFER_LEN);
+
     net_init(&context, &interface, NET_FRAME_ADDR_GUEST_UNSET);
 
     // Start tickin'
@@ -128,29 +182,29 @@ MunitResult net_good_header_test(const MunitParameter params[], void* user_data_
 
     // Simulate reading in a frame from an interface
 
-    net_on_interface_read(header_data[0], NULL);
+    net_interface_dummy_on_read(header_data[0], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_HEADER);
 
-    net_on_interface_read(header_data[1], NULL);
+    net_interface_dummy_on_read(header_data[1], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[2], NULL);
+    net_interface_dummy_on_read(header_data[2], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[3], NULL);
+    net_interface_dummy_on_read(header_data[3], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[4], NULL);
+    net_interface_dummy_on_read(header_data[4], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[5], NULL);
+    net_interface_dummy_on_read(header_data[5], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_HEADER);
 
-    net_on_interface_read(header_data[6], NULL);
+    net_interface_dummy_on_read(header_data[6], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_HANDLE_FRAME);
@@ -188,6 +242,18 @@ MunitResult net_bad_header_test(const MunitParameter params[], void* user_data_o
 
     net_interface_dummy_init(&interface);
 
+    // FUTURE buffers initialized by context
+    uint8_t recv_buffer[NET_CONTEXT_RECV_BUFFER_LEN];
+    uint8_t ack_buffer[NET_CONTEXT_ACK_BUFFER_LEN];
+    ringbuffer_init(&context.recv_buffer, recv_buffer, NET_CONTEXT_RECV_BUFFER_LEN);
+    ringbuffer_init(&context.ack_buffer, ack_buffer, NET_CONTEXT_ACK_BUFFER_LEN);
+
+    // FUTURE buffers initialized by interface
+    uint8_t rx_buffer[NET_IFACE_RX_BUFFER_LEN];
+    uint8_t tx_buffer[NET_IFACE_TX_BUFFER_LEN];
+    ringbuffer_init(&interface.rx_buffer, rx_buffer, NET_IFACE_RX_BUFFER_LEN);
+    ringbuffer_init(&interface.tx_buffer, tx_buffer, NET_IFACE_TX_BUFFER_LEN);
+
     net_init(&context, &interface, NET_FRAME_ADDR_GUEST_UNSET);
 
     // Start tickin'
@@ -200,29 +266,29 @@ MunitResult net_bad_header_test(const MunitParameter params[], void* user_data_o
 
     // Simulate reading in a frame from an interface
 
-    net_on_interface_read(header_data[0], NULL);
+    net_interface_dummy_on_read(header_data[0], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_HEADER);
 
-    net_on_interface_read(header_data[1], NULL);
+    net_interface_dummy_on_read(header_data[1], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[2], NULL);
+    net_interface_dummy_on_read(header_data[2], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[3], NULL);
+    net_interface_dummy_on_read(header_data[3], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[4], NULL);
+    net_interface_dummy_on_read(header_data[4], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[5], NULL);
+    net_interface_dummy_on_read(header_data[5], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_HEADER);
 
-    net_on_interface_read(header_data[6], NULL);
+    net_interface_dummy_on_read(header_data[6], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_ERROR);
@@ -264,6 +330,18 @@ MunitResult net_good_frame_test(const MunitParameter params[], void* user_data_o
 
     net_interface_dummy_init(&interface);
 
+    // FUTURE buffers initialized by context
+    uint8_t recv_buffer[NET_CONTEXT_RECV_BUFFER_LEN];
+    uint8_t ack_buffer[NET_CONTEXT_ACK_BUFFER_LEN];
+    ringbuffer_init(&context.recv_buffer, recv_buffer, NET_CONTEXT_RECV_BUFFER_LEN);
+    ringbuffer_init(&context.ack_buffer, ack_buffer, NET_CONTEXT_ACK_BUFFER_LEN);
+
+    // FUTURE buffers initialized by interface
+    uint8_t rx_buffer[NET_IFACE_RX_BUFFER_LEN];
+    uint8_t tx_buffer[NET_IFACE_TX_BUFFER_LEN];
+    ringbuffer_init(&interface.rx_buffer, rx_buffer, NET_IFACE_RX_BUFFER_LEN);
+    ringbuffer_init(&interface.tx_buffer, tx_buffer, NET_IFACE_TX_BUFFER_LEN);
+
     net_init(&context, &interface, NET_FRAME_ADDR_GUEST_UNSET);
 
     // Start tickin'
@@ -276,54 +354,54 @@ MunitResult net_good_frame_test(const MunitParameter params[], void* user_data_o
 
     // Simulate reading in a frame from an interface
 
-    net_on_interface_read(header_data[0], NULL);
+    net_interface_dummy_on_read(header_data[0], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_HEADER);
 
-    net_on_interface_read(header_data[1], NULL);
+    net_interface_dummy_on_read(header_data[1], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[2], NULL);
+    net_interface_dummy_on_read(header_data[2], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[3], NULL);
+    net_interface_dummy_on_read(header_data[3], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[4], NULL);
+    net_interface_dummy_on_read(header_data[4], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[5], NULL);
+    net_interface_dummy_on_read(header_data[5], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_HEADER);
 
-    net_on_interface_read(header_data[6], NULL);
+    net_interface_dummy_on_read(header_data[6], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[0], NULL);
+    net_interface_dummy_on_read(body_data[0], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[1], NULL);
+    net_interface_dummy_on_read(body_data[1], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[2], NULL);
+    net_interface_dummy_on_read(body_data[2], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[3], NULL);
+    net_interface_dummy_on_read(body_data[3], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[4], NULL);
+    net_interface_dummy_on_read(body_data[4], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_HANDLE_FRAME);
@@ -367,6 +445,18 @@ MunitResult net_bad_frame_test(const MunitParameter params[], void* user_data_or
 
     net_interface_dummy_init(&interface);
 
+    // FUTURE buffers initialized by context
+    uint8_t recv_buffer[NET_CONTEXT_RECV_BUFFER_LEN];
+    uint8_t ack_buffer[NET_CONTEXT_ACK_BUFFER_LEN];
+    ringbuffer_init(&context.recv_buffer, recv_buffer, NET_CONTEXT_RECV_BUFFER_LEN);
+    ringbuffer_init(&context.ack_buffer, ack_buffer, NET_CONTEXT_ACK_BUFFER_LEN);
+
+    // FUTURE buffers initialized by interface
+    uint8_t rx_buffer[NET_IFACE_RX_BUFFER_LEN];
+    uint8_t tx_buffer[NET_IFACE_TX_BUFFER_LEN];
+    ringbuffer_init(&interface.rx_buffer, rx_buffer, NET_IFACE_RX_BUFFER_LEN);
+    ringbuffer_init(&interface.tx_buffer, tx_buffer, NET_IFACE_TX_BUFFER_LEN);
+
     net_init(&context, &interface, NET_FRAME_ADDR_GUEST_UNSET);
 
     // Start tickin'
@@ -379,54 +469,54 @@ MunitResult net_bad_frame_test(const MunitParameter params[], void* user_data_or
 
     // Simulate reading in a frame from an interface
 
-    net_on_interface_read(header_data[0], NULL);
+    net_interface_dummy_on_read(header_data[0], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_HEADER);
 
-    net_on_interface_read(header_data[1], NULL);
+    net_interface_dummy_on_read(header_data[1], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[2], NULL);
+    net_interface_dummy_on_read(header_data[2], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[3], NULL);
+    net_interface_dummy_on_read(header_data[3], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[4], NULL);
+    net_interface_dummy_on_read(header_data[4], (void*) &interface);
     net_tick(&context);
 
-    net_on_interface_read(header_data[5], NULL);
+    net_interface_dummy_on_read(header_data[5], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_HEADER);
 
-    net_on_interface_read(header_data[6], NULL);
+    net_interface_dummy_on_read(header_data[6], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[0], NULL);
+    net_interface_dummy_on_read(body_data[0], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[1], NULL);
+    net_interface_dummy_on_read(body_data[1], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[2], NULL);
+    net_interface_dummy_on_read(body_data[2], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[3], NULL);
+    net_interface_dummy_on_read(body_data[3], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_RECV_BODY);
 
-    net_on_interface_read(body_data[4], NULL);
+    net_interface_dummy_on_read(body_data[4], (void*) &interface);
     net_tick(&context);
 
     assert(context.state == STATE_HANDLE_FRAME);

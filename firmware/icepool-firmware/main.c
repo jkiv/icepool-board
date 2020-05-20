@@ -9,7 +9,7 @@
 // Raw buffers for context, interface
 static uint8_t _iface_rx_buffer[NET_IFACE_RX_BUFFER_LEN];
 static uint8_t _iface_tx_buffer[NET_IFACE_TX_BUFFER_LEN];
-static uint8_t _context_rx_buffer[NET_CONTEXT_RX_BUFFER_LEN];
+static uint8_t _context_rx_buffer[NET_CONTEXT_RECV_BUFFER_LEN];
 static uint8_t _context_ack_buffer[NET_CONTEXT_ACK_BUFFER_LEN];
 
 // Local buffer for frame data
@@ -33,10 +33,10 @@ int main(void)
     net_init(&context, &interface, 0x01);
     
     // Initialize buffers
+    ringbuffer_init(&context.recv_buffer, _context_rx_buffer, NET_CONTEXT_RECV_BUFFER_LEN);
+    ringbuffer_init(&context.ack_buffer, _context_ack_buffer, NET_CONTEXT_ACK_BUFFER_LEN);
     ringbuffer_init(&interface.rx_buffer, _iface_rx_buffer, NET_IFACE_RX_BUFFER_LEN);
     ringbuffer_init(&interface.tx_buffer, _iface_tx_buffer, NET_IFACE_TX_BUFFER_LEN);
-    ringbuffer_init(&context.recv_buffer, _context_rx_buffer, NET_CONTEXT_RX_BUFFER_LEN);
-    ringbuffer_init(&context.ack_waiting_buffer, _context_ack_buffer, NET_CONTEXT_ACK_BUFFER_LEN);
     
     // Set up UART
     uart_init(9600);

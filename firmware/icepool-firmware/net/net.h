@@ -7,7 +7,7 @@
 #include "interface.h"
 #include "../data/ringbuffer.h"
 
-#define NET_CONTEXT_RX_BUFFER_LEN  (2 * NET_FRAME_BODY_MAX_SIZE)
+#define NET_CONTEXT_RECV_BUFFER_LEN  (2 * NET_FRAME_BODY_MAX_SIZE)
 #define NET_CONTEXT_ACK_BUFFER_LEN (2 * NET_FRAME_BODY_MAX_SIZE)
 
 #define NET_IFACE_RX_BUFFER_LEN    (512UL)
@@ -54,15 +54,13 @@ typedef struct
     uint8_t body[NET_FRAME_BODY_MAX_SIZE];
 } FrameBuffer;
 
-typedef struct NetInterface_t NetInterface; // FUTURE why?
-
 typedef struct
 {
     uint8_t address;
     uint8_t next_id; // FUTURE endpoint-specific next_id's
     FrameState state;
     RingBuffer recv_buffer;
-    RingBuffer ack_waiting_buffer;
+    RingBuffer ack_buffer;
     FrameBuffer frame_buffer;
     NetInterface* interface;
 } NetContext;

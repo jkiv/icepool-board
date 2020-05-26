@@ -6,7 +6,7 @@ interface_deps=$(src)/net/interface.h
 termios_deps=net/interface_termios.h net/interface_termios.c
 
 echo_simple: $(net_deps) $(ringbuffer_deps) $(interface_deps) $(termios_deps) echo_simple.c
-	clang -v --std=c99 -O1 -o $@ \
+	clang -v -g --std=c99 -O1 -o $@ \
 	  -I$(src) -I. \
 	  echo_simple.c \
 	  net/interface_termios.c \

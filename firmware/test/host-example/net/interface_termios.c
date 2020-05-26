@@ -58,7 +58,8 @@ void _termios_init(NetInterfaceTermiosConfig* config)
     exit(EXIT_FAILURE);
   }
 
-  fcntl(fd, F_SETFL, 0);
+  // Clear file descriptor flags 
+  //fcntl(fd, F_SETFL, 0);
   
   // Configure port
   tcgetattr(fd, &options);
@@ -90,16 +91,20 @@ void _termios_init(NetInterfaceTermiosConfig* config)
   options.c_cflag &= ~CSTOPB;
   options.c_cflag &= ~CSIZE;
   options.c_cflag |= (CS8 | CLOCAL | CREAD);
+  
+  // Disable hardware flow control
+  options.c_cflag &= ~CNEW_RTSCTS;
+  //options.c_cflag &= ~CRTSCTS;
 
   // Local Options
   options.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG); // raw input
 
   // Input Options
-  options.c_iflag &= ~(INPCK);                  // Disable parity check
-  options.c_iflag |= (ISTRIP | IGNPAR | ICRNL); // Strip parity, ignore parity errors, map CR -> NL
+  options.c_iflag &= ~(INPCK);          // Disable parity check
+  options.c_iflag &= ~(PARMRK);         // Disable marking parity errors
+  options.c_iflag |= (ISTRIP | IGNPAR); // Strip parity, ignore parity errors, map CR -> NL
 
   // Output Options
-  
   options.c_oflag &= ~(OPOST); // raw output
                                // -- ignores all other out options
 
@@ -107,11 +112,13 @@ void _termios_init(NetInterfaceTermiosConfig* config)
   // TODO
 
   // Flush and update options
-  tcsetattr(fd, TCSAFLUSH, &options);
+  tcsetattr(fd, TCSANOW, &options);
 
   // Wire up asynchronous callbacks
   // TODO
-  
+
+  // Save configuration into NetInterfaceTermiosConfig
+  config->_fd = fd;
   config->_options = options;
 }
 
@@ -129,17 +136,18 @@ uint8_t _termios_read(NetInterfaceTermiosConfig* config)
     return 0;
    
   // Blocking while reading
-  while(read(config->_fd, &data, 1) < 1);
+  while(read(config->_fd, &data, 1) == 0);
 
-  return 0;
+  return data;
 }
 
 void _termios_write(NetInterfaceTermiosConfig* config, uint8_t data)
 {
-  if (config != NULL)
-    write(config->_fd, &data, 1);
-
-  // TODO on write?
+  if (config == NULL)
+    return 0;
+  
+  // Blocking while writing
+  while(write(config->_fd, &data, 1) == 0);
 }
 
 uint8_t _net_interface_termios_read(NetInterface* self)
@@ -156,6 +164,8 @@ void _net_interface_termios_write(NetInterface* self, uint8_t data)
 {
   if (self == NULL)
     return;
+
+  // TODO on write?
 
   _termios_write((NetInterfaceTermiosConfig*) self->child, data);
 }

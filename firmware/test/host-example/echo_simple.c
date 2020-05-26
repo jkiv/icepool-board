@@ -31,6 +31,7 @@ int main(int argc, char* argv[])
     // Body
     'H', 'e', 'l', 'l', 'o', ',', ' ', 'W', 'o', 'r', 'l', 'd', '!'
   };
+
   uint8_t message_echo_ACK[HEADER_LENGTH] = {
     0x0, 0x1, 0x2, 0x0, 0x0, 0x0, 0xF8
   };
@@ -90,6 +91,5 @@ void assert_buffers_are_equal(uint8_t* a, uint8_t* b, size_t length)
       exit(EXIT_FAILURE);
     }
   }
-
   fprintf(stdout, "OK!\n");
 }

@@ -71,6 +71,10 @@ void uart_init(uint32_t baudrate)
     SERCOM0->USART.CTRLB.bit.TXEN = 1;              // Enable transmit buffer
     while(SERCOM0->USART.SYNCBUSY.bit.CTRLB != 0);  // .. wait for SYNC
     
+    // Enable IRQ in NVIC
+    NVIC_SetPriority(SERCOM0_IRQn, (1<<__NVIC_PRIO_BITS) - 1);
+    NVIC_EnableIRQ(SERCOM0_IRQn);
+    
     // UART starts in a disabled state.
     // Use uart_enable() to enable it.
 }
@@ -168,12 +172,7 @@ uint16_t _uart_baud_fractional(uint32_t baudrate, uint32_t cpu_freq)
 
 void uart_enable_interrupts()
 {
-    // Enable IRQ in NVIC
-    NVIC_SetPriority(SERCOM0_IRQn, (1<<__NVIC_PRIO_BITS) - 1);
-    NVIC_EnableIRQ(SERCOM0_IRQn);
-    
     // Enable interrupts in SERCOM
-    
     SERCOM0->USART.INTENSET.bit.TXC = 1;
     SERCOM0->USART.INTENSET.bit.RXC = 1;
 }
@@ -183,9 +182,6 @@ void uart_disable_interrupts()
     // Disable interrupts in SERCOM
     SERCOM0->USART.INTENCLR.bit.TXC = 1;
     SERCOM0->USART.INTENCLR.bit.RXC = 1;
-    
-    // Disable IRQ in NVIC
-    NVIC_DisableIRQ((SERCOM0_IRQn));
 }
 
 // SERCOM0_Handler is defined as a weak reference in `startup_samd21.c`

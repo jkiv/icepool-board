@@ -1,9 +1,6 @@
 #include "../uart.h"
 #include "interface.h"
 
-static void _net_interface_uart_on_read(uint8_t data, void* params);
-static void _net_interface_uart_on_write(void* params);
-
 static uint8_t _net_interface_uart_read(NetInterface* self);
 static void _net_interface_uart_write(NetInterface* self, uint8_t data);
 static void _net_interface_uart_enable_interrupts(NetInterface* self);
@@ -20,8 +17,8 @@ void net_interface_uart_init(NetInterface* self)
     self->tx_disable = _net_interface_uart_disable_interrupts;
     
     // Wire up asynchronous UART callbacks    
-    uart_set_on_read(_net_interface_uart_on_read, (void*) self);
-    uart_set_on_write(_net_interface_uart_on_write, (void*) self);
+    uart_set_on_read(net_on_interface_read, (void*) self);
+    uart_set_on_write(net_on_interface_write, (void*) self);
     
     // FUTURE
     // NetInterfaceUartConfig* x;
@@ -46,29 +43,4 @@ void _net_interface_uart_enable_interrupts(NetInterface* self)
 void _net_interface_uart_disable_interrupts(NetInterface* self)
 {
     uart_disable_interrupts();
-}
-
-// FUTURE these callbacks may look identical between NetInterface___'s
-//        so maybe put in `net.c`?
-void _net_interface_uart_on_read(uint8_t data, void* params)
-{
-    NetInterface* self = (NetInterface*) params;
-    
-    // FIXME `rx_buffer` may be locked by caller
-    if (!ringbuffer_is_full(&self->tx_buffer)) {
-        ringbuffer_add(&self->rx_buffer, data);
-    }
-}
-
-// FUTURE these callbacks may look identical between NetInterface___'s
-//        so maybe put in `net.c`?
-void _net_interface_uart_on_write(void* params)
-{
-    NetInterface* self = (NetInterface*) params;
-     
-    // Send data
-    // FIXME `tx_buffer` may be locked by caller
-    if (!ringbuffer_is_empty(&self->tx_buffer)) {
-        self->write(self, ringbuffer_remove(&self->tx_buffer));
-    }
 }

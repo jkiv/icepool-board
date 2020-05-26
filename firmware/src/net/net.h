@@ -90,7 +90,7 @@ uint8_t net_sum(uint8_t* buffer, size_t length);
 
 // Callback for underlying interface.
 // Called after a byte `d` is received on the underlying interface.
-void net_on_interface_read(uint8_t d, void* param);
+void net_on_interface_read(uint8_t data, void* param);
 
 // Callback for underlying interface.
 // Called after a byte is sent on the underlying interface.

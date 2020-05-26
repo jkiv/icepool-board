@@ -165,7 +165,6 @@ void ringbuffer_add_n(RingBuffer* self, uint8_t* src, size_t length)
 
 uint8_t ringbuffer_at(RingBuffer* self, size_t index)
 {
-    // TODO handle index >= size
     // TODO handle index >= occupancy
     
     index = (index + self->_tail) % self->size;

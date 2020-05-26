@@ -33,9 +33,10 @@ void net_init(NetContext* context, NetInterface* interface, uint8_t address)
 
 uint8_t net_available(NetContext* context)
 {
-    return !ringbuffer_is_empty(&context->recv_buffer);
+    return ringbuffer_has_occupancy(&context->recv_buffer, NET_FRAME_HEADER_SIZE);
 }
 
+// TODO how to tell something went wrong
 void net_recv(NetContext* context, FrameHeader* header, uint8_t* body)
 {
     if (net_available(context))
@@ -43,15 +44,26 @@ void net_recv(NetContext* context, FrameHeader* header, uint8_t* body)
         // Populate header
         ringbuffer_remove_n(&context->recv_buffer, (uint8_t*) header, NET_FRAME_HEADER_SIZE);
         
-        if (body != NULL && header->body_length > 0)
+        // Populate body
+        if (!ringbuffer_has_occupancy(&context->recv_buffer, header->body_length))
         {
-            // Copy body data to return
-            ringbuffer_remove_n(&context->recv_buffer, body, header->body_length);
+            // WARNING: This shouldn't happen, but in case it does, burn it to the ground.
+            
+            ringbuffer_clear(&context->recv_buffer, 0);
+            
+            // TODO signal an error
+            //      or context.error enum + net_error(context)
+            //      or return success
         }
-        else
+        else if (body == NULL)
         {
             // Pop the data into the void
             ringbuffer_remove_n(&context->recv_buffer, NULL, header->body_length);
+        }
+        else
+        {
+            // Copy body to return
+            ringbuffer_remove_n(&context->recv_buffer, body, header->body_length);
         }
     }
 }
@@ -59,6 +71,10 @@ void net_recv(NetContext* context, FrameHeader* header, uint8_t* body)
 // Constructs a frame from the provided data and queues it in the net subsystem.
 void net_send(NetContext* context, uint8_t address, uint8_t* body, size_t body_length)
 {
+    // TODO block until buffer is not full...
+    //      or context.error enum and use net_error(context)
+    //      or return success
+    
     FrameHeader header;
     
     // Build the header
@@ -69,12 +85,14 @@ void net_send(NetContext* context, uint8_t address, uint8_t* body, size_t body_l
     header.body_sum    = net_sum(body, body_length);
     header.header_sum  = net_sum((uint8_t*) &header, NET_FRAME_HEADER_SIZE-1);
     
+    // TODO claim buffer
+    
+    // Add frame to interface transmit buffer
     _net_send_raw_frame(context, &header, body);
     
-    // Append header to the ack list
+    // Append frame to the ack list
     ringbuffer_add_n(&context->ack_buffer, (uint8_t*) &header, NET_FRAME_HEADER_SIZE);
-        
-    // Append body to the ack list
+    
     if (body != NULL && header.body_length > 0)
     {
         ringbuffer_add_n(&context->ack_buffer, body, header.body_length);
@@ -247,25 +265,42 @@ uint8_t net_sum(uint8_t* buffer, size_t length)
     if (buffer == NULL || length == 0)
         return 0xFF;
     
-    // 8-bit one's complement sum:
+    // Inverse of an 8-bit one's complement sum:
     //
     //   - Accumulate each byte into 16-bit sum.
-    //   - Upper 8-bits represent the carries.
-    //   - Add the upper 8-bits to the lower and
-    //     return the inverted lower 8-bits.
-    //
-    // Note: method will only work if `length` < 2^8.
+    //   - Add each carry bit (upper 8 bits) to the sum on add.
+    //   - Return the inverted lower 8-bits.
     
     uint16_t sum = 0;
     
     for(size_t i = 0; i < length; i++)
     {
         sum += buffer[i];
+        sum = (sum & 0xFF) + (sum >> 8);
     }
     
-    sum = ~(((sum << 8) >> 8) + (sum >> 8));
+    return (uint8_t) ((~sum) & 0xFF);
+}
+
+void net_on_interface_read(uint8_t data, void* param)
+{
+    NetInterface* self = (NetInterface*) param;
     
-    return (uint8_t) (sum & 0xFF);
+    // FIXME `rx_buffer` may be locked by caller
+    if (!ringbuffer_is_full(&self->tx_buffer)) {
+        ringbuffer_add(&self->rx_buffer, data);
+    }
+}
+
+void net_on_interface_write(void* param)
+{
+    NetInterface* self = (NetInterface*) param;
+    
+    // Send data
+    // FIXME `tx_buffer` may be locked by caller
+    if (!ringbuffer_is_empty(&self->tx_buffer)) {
+        self->write(self, ringbuffer_remove(&self->tx_buffer));
+    }
 }
 
 uint8_t _net_validate_header(FrameHeader* header)

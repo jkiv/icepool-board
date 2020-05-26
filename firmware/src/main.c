@@ -42,24 +42,12 @@ int main(void)
     uart_enable_interrupts();
     uart_enable();
     
-    /*
-    while(1)
-    {
-        if(ringbuffer_has_occupancy(&interface.rx_buffer, 3))
-        {
-            while(!ringbuffer_is_empty(&interface.rx_buffer))
-            {
-                interface.write(&interface, ringbuffer_remove(&interface.rx_buffer));
-            }
-        }
-    }*/
-    
     while(1)
     {
         net_tick(&context);
         
         // Echo any received data
-        while (!ringbuffer_is_empty(&context.recv_buffer))
+        while (net_available(&context))
         {
             // Pop the header
             // -- re-use context.frame_buffer

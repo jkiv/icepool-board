@@ -5,7 +5,8 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <termios.h> // POSIX terminal interface
-#include <asm/termbits.h>
+
+// #include <asm/termbits.h> // FIXME ubuntu-only?
 
 #include <sys/types.h>
 #include <sys/time.h>

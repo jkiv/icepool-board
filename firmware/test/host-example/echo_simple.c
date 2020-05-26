@@ -63,14 +63,22 @@ int main(int argc, char* argv[])
 
 void write_raw(NetInterface* iface, uint8_t* data, size_t length)
 {
-  for(size_t n; n < length; n++)
+  fprintf(stdout, "Writing...\n");
+  for(size_t n; n < length; n++) {
     iface->write(iface, data[n]);
+    fprintf(stdout, "%02X ", data[n]);
+  }
+  fprintf(stdout, "\n");
 }
 
 void read_raw(NetInterface* iface, uint8_t* data, size_t length)
 {
-  for(size_t n; n < length; n++)
+  fprintf(stdout, "Reading...\n");
+  for(size_t n; n < length; n++) {
     data[n] = iface->read(iface);
+    fprintf(stdout, "%02X ", data[n]);
+  }
+  fprintf(stdout, "\n");
 }
 
 void assert_buffers_are_equal(uint8_t* a, uint8_t* b, size_t length)
@@ -82,4 +90,6 @@ void assert_buffers_are_equal(uint8_t* a, uint8_t* b, size_t length)
       exit(EXIT_FAILURE);
     }
   }
+
+  fprintf(stdout, "OK!\n");
 }

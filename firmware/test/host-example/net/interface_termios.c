@@ -6,13 +6,6 @@
 #include <errno.h>
 
 #include <termios.h> // POSIX terminal interface
-#include <bits/termios.h>
-
-// #include <asm/termbits.h> // FIXME ubuntu-only?
-
-#include <sys/types.h>
-#include <sys/time.h>
-#include <sys/select.h>
 
 #include "net/interface_termios.h"
 

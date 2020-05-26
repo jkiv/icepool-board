@@ -75,7 +75,7 @@ void write_raw(NetInterface* iface, uint8_t* data, size_t length)
 void read_raw(NetInterface* iface, uint8_t* data, size_t length)
 {
   fprintf(stdout, "Reading...\n");
-  for(size_t n; n < length; n++) {
+  for(size_t n = 0; n < length; n++) {
     data[n] = iface->read(iface);
     fprintf(stdout, "%02X ", data[n]);
   }
@@ -84,7 +84,7 @@ void read_raw(NetInterface* iface, uint8_t* data, size_t length)
 
 void assert_buffers_are_equal(uint8_t* a, uint8_t* b, size_t length)
 {
-  for(size_t n; n < length; n++)
+  for(size_t n = 0; n < length; n++)
   {
     if (a[n] != b[n]) {
       fprintf(stderr, "Buffers differ at %zu: %02X != %02X\n", n, a[n], b[n]);

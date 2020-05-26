@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
 void write_raw(NetInterface* iface, uint8_t* data, size_t length)
 {
   fprintf(stdout, "Writing...\n");
-  for(size_t n; n < length; n++) {
+  for(size_t n = 0; n < length; n++) {
     iface->write(iface, data[n]);
     fprintf(stdout, "%02X ", data[n]);
   }

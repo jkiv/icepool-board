@@ -93,8 +93,11 @@ void _termios_init(NetInterfaceTermiosConfig* config)
   options.c_cflag |= (CS8 | CLOCAL | CREAD);
   
   // Disable hardware flow control
+#ifdef CNEW_RTSCTS
   options.c_cflag &= ~CNEW_RTSCTS;
-  //options.c_cflag &= ~CRTSCTS;
+#else
+  options.c_cflag &= ~CRTSCTS;
+#endif
 
   // Local Options
   options.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG); // raw input
@@ -143,11 +146,9 @@ uint8_t _termios_read(NetInterfaceTermiosConfig* config)
 
 void _termios_write(NetInterfaceTermiosConfig* config, uint8_t data)
 {
-  if (config == NULL)
-    return 0;
-  
-  // Blocking while writing
-  while(write(config->_fd, &data, 1) == 0);
+  if (config != NULL)
+      // Blocking while writing
+      while(write(config->_fd, &data, 1) == 0);
 }
 
 uint8_t _net_interface_termios_read(NetInterface* self)

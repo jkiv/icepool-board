@@ -87,9 +87,6 @@ void _termios_init(NetInterfaceTermiosConfig* config)
   options.c_cflag &= ~CSIZE;
   options.c_cflag |= (CS8 | CLOCAL | CREAD);
   
-  // Disable hardware flow control
-  options.c_cflag &= ~CRTSCTS;
-
   // Local Options
   options.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG); // raw input
 

@@ -3,7 +3,8 @@
 
 #include <stdint.h> 
 
-#include <asm/termbits.h>
+#include <termios.h>
+// #include <asm/termbits.h> // FIXME ubuntu-only?
 
 #include "net/interface.h"
 

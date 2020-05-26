@@ -4,7 +4,9 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
+
 #include <termios.h> // POSIX terminal interface
+#include <bits/termios.h>
 
 // #include <asm/termbits.h> // FIXME ubuntu-only?
 
@@ -93,11 +95,7 @@ void _termios_init(NetInterfaceTermiosConfig* config)
   options.c_cflag |= (CS8 | CLOCAL | CREAD);
   
   // Disable hardware flow control
-#ifdef CNEW_RTSCTS
-  options.c_cflag &= ~CNEW_RTSCTS;
-#else
   options.c_cflag &= ~CRTSCTS;
-#endif
 
   // Local Options
   options.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG); // raw input

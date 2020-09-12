@@ -15,15 +15,15 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 1 1 5D74F583
 P 5750 1700
-AR Path="/5D7C5399/5D74F583" Ref="U4"  Part="1" 
-AR Path="/5D74F1A4/5D74F583" Ref="U3"  Part="1" 
-AR Path="/5E9AF0AF/5D74F583" Ref="U5"  Part="1" 
-AR Path="/5E9AF0BC/5D74F583" Ref="U6"  Part="1" 
-AR Path="/5FC264E9/5D74F583" Ref="U?"  Part="1" 
-F 0 "U3" H 5750 2687 60  0000 C CNN
+AR Path="/5D7C5399/5D74F583" Ref="U?"  Part="1" 
+AR Path="/5D74F1A4/5D74F583" Ref="U6"  Part="1" 
+AR Path="/5E9AF0AF/5D74F583" Ref="U?"  Part="1" 
+AR Path="/5E9AF0BC/5D74F583" Ref="U?"  Part="1" 
+AR Path="/5FC264E9/5D74F583" Ref="U9"  Part="1" 
+F 0 "U6" H 5750 2687 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 5750 2581 60  0000 C CNN
 F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 5750 1200 60  0001 C CNN
 F 3 "" H 5750 1200 60  0000 C CNN
@@ -31,15 +31,15 @@ F 3 "" H 5750 1200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 2 1 5D750F66
 P 8950 1700
-AR Path="/5D7C5399/5D750F66" Ref="U4"  Part="2" 
-AR Path="/5D74F1A4/5D750F66" Ref="U3"  Part="2" 
-AR Path="/5E9AF0AF/5D750F66" Ref="U5"  Part="2" 
-AR Path="/5E9AF0BC/5D750F66" Ref="U6"  Part="2" 
-AR Path="/5FC264E9/5D750F66" Ref="U?"  Part="2" 
-F 0 "U3" H 8950 2687 60  0000 C CNN
+AR Path="/5D7C5399/5D750F66" Ref="U?"  Part="2" 
+AR Path="/5D74F1A4/5D750F66" Ref="U6"  Part="2" 
+AR Path="/5E9AF0AF/5D750F66" Ref="U?"  Part="2" 
+AR Path="/5E9AF0BC/5D750F66" Ref="U?"  Part="2" 
+AR Path="/5FC264E9/5D750F66" Ref="U9"  Part="2" 
+F 0 "U6" H 8950 2687 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 8950 2581 60  0000 C CNN
 F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 8950 1200 60  0001 C CNN
 F 3 "" H 8950 1200 60  0000 C CNN
@@ -131,15 +131,15 @@ Connection ~ 3750 1550
 Wire Wire Line
 	3750 1550 3750 1650
 $Comp
-L power:GND #PWR047
+L power:GND #PWR?
 U 1 1 5D7AA375
 P 3750 2600
-AR Path="/5D7C5399/5D7AA375" Ref="#PWR047"  Part="1" 
-AR Path="/5D74F1A4/5D7AA375" Ref="#PWR036"  Part="1" 
-AR Path="/5E9AF0AF/5D7AA375" Ref="#PWR058"  Part="1" 
-AR Path="/5E9AF0BC/5D7AA375" Ref="#PWR069"  Part="1" 
-AR Path="/5FC264E9/5D7AA375" Ref="#PWR?"  Part="1" 
-F 0 "#PWR036" H 3750 2350 50  0001 C CNN
+AR Path="/5D7C5399/5D7AA375" Ref="#PWR?"  Part="1" 
+AR Path="/5D74F1A4/5D7AA375" Ref="#PWR033"  Part="1" 
+AR Path="/5E9AF0AF/5D7AA375" Ref="#PWR?"  Part="1" 
+AR Path="/5E9AF0BC/5D7AA375" Ref="#PWR?"  Part="1" 
+AR Path="/5FC264E9/5D7AA375" Ref="#PWR043"  Part="1" 
+F 0 "#PWR033" H 3750 2350 50  0001 C CNN
 F 1 "GND" H 3755 2427 50  0000 C CNN
 F 2 "" H 3750 2600 50  0001 C CNN
 F 3 "" H 3750 2600 50  0001 C CNN
@@ -172,15 +172,15 @@ VCC2
 Text Label 3550 1350 2    50   ~ 0
 VCC3
 $Comp
-L Device:C_Small C28
+L Device:C_Small C?
 U 1 1 5D7D0814
 P 2350 3050
-AR Path="/5D7C5399/5D7D0814" Ref="C28"  Part="1" 
-AR Path="/5D74F1A4/5D7D0814" Ref="C13"  Part="1" 
-AR Path="/5E9AF0AF/5D7D0814" Ref="C43"  Part="1" 
-AR Path="/5E9AF0BC/5D7D0814" Ref="C58"  Part="1" 
-AR Path="/5FC264E9/5D7D0814" Ref="C?"  Part="1" 
-F 0 "C13" V 2121 3050 50  0000 C CNN
+AR Path="/5D7C5399/5D7D0814" Ref="C?"  Part="1" 
+AR Path="/5D74F1A4/5D7D0814" Ref="C19"  Part="1" 
+AR Path="/5E9AF0AF/5D7D0814" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D7D0814" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D7D0814" Ref="C39"  Part="1" 
+F 0 "C19" V 2121 3050 50  0000 C CNN
 F 1 "0.1u" V 2212 3050 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2350 3050 50  0001 C CNN
 F 3 "~" H 2350 3050 50  0001 C CNN
@@ -188,15 +188,15 @@ F 3 "~" H 2350 3050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C31
+L Device:C_Small C?
 U 1 1 5D7D23A5
 P 2350 3450
-AR Path="/5D7C5399/5D7D23A5" Ref="C31"  Part="1" 
-AR Path="/5D74F1A4/5D7D23A5" Ref="C16"  Part="1" 
-AR Path="/5E9AF0AF/5D7D23A5" Ref="C46"  Part="1" 
-AR Path="/5E9AF0BC/5D7D23A5" Ref="C61"  Part="1" 
-AR Path="/5FC264E9/5D7D23A5" Ref="C?"  Part="1" 
-F 0 "C16" V 2121 3450 50  0000 C CNN
+AR Path="/5D7C5399/5D7D23A5" Ref="C?"  Part="1" 
+AR Path="/5D74F1A4/5D7D23A5" Ref="C20"  Part="1" 
+AR Path="/5E9AF0AF/5D7D23A5" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D7D23A5" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D7D23A5" Ref="C40"  Part="1" 
+F 0 "C20" V 2121 3450 50  0000 C CNN
 F 1 "0.1u" V 2212 3450 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2350 3450 50  0001 C CNN
 F 3 "~" H 2350 3450 50  0001 C CNN
@@ -204,15 +204,15 @@ F 3 "~" H 2350 3450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C33
+L Device:C_Small C?
 U 1 1 5D7D2D83
 P 2350 3850
-AR Path="/5D7C5399/5D7D2D83" Ref="C33"  Part="1" 
-AR Path="/5D74F1A4/5D7D2D83" Ref="C18"  Part="1" 
-AR Path="/5E9AF0AF/5D7D2D83" Ref="C48"  Part="1" 
-AR Path="/5E9AF0BC/5D7D2D83" Ref="C63"  Part="1" 
-AR Path="/5FC264E9/5D7D2D83" Ref="C?"  Part="1" 
-F 0 "C18" V 2121 3850 50  0000 C CNN
+AR Path="/5D7C5399/5D7D2D83" Ref="C?"  Part="1" 
+AR Path="/5D74F1A4/5D7D2D83" Ref="C21"  Part="1" 
+AR Path="/5E9AF0AF/5D7D2D83" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D7D2D83" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D7D2D83" Ref="C41"  Part="1" 
+F 0 "C21" V 2121 3850 50  0000 C CNN
 F 1 "0.1u" V 2212 3850 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2350 3850 50  0001 C CNN
 F 3 "~" H 2350 3850 50  0001 C CNN
@@ -236,15 +236,15 @@ Wire Wire Line
 Wire Wire Line
 	2250 4250 1850 4250
 $Comp
-L Device:C_Small C29
+L Device:C_Small C?
 U 1 1 5D7EF316
 P 3300 2850
-AR Path="/5D7C5399/5D7EF316" Ref="C29"  Part="1" 
-AR Path="/5D74F1A4/5D7EF316" Ref="C14"  Part="1" 
-AR Path="/5E9AF0AF/5D7EF316" Ref="C44"  Part="1" 
-AR Path="/5E9AF0BC/5D7EF316" Ref="C59"  Part="1" 
-AR Path="/5FC264E9/5D7EF316" Ref="C?"  Part="1" 
-F 0 "C14" V 3071 2850 50  0000 C CNN
+AR Path="/5D7C5399/5D7EF316" Ref="C?"  Part="1" 
+AR Path="/5D74F1A4/5D7EF316" Ref="C27"  Part="1" 
+AR Path="/5E9AF0AF/5D7EF316" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D7EF316" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D7EF316" Ref="C47"  Part="1" 
+F 0 "C27" V 3071 2850 50  0000 C CNN
 F 1 "0.1u" V 3162 2850 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3300 2850 50  0001 C CNN
 F 3 "~" H 3300 2850 50  0001 C CNN
@@ -292,15 +292,15 @@ Wire Wire Line
 Text Label 1000 4250 0    50   ~ 0
 VCC3
 $Comp
-L Device:C_Small C36
+L Device:C_Small C?
 U 1 1 5D7ECCCB
 P 1350 4250
-AR Path="/5D7C5399/5D7ECCCB" Ref="C36"  Part="1" 
-AR Path="/5D74F1A4/5D7ECCCB" Ref="C21"  Part="1" 
-AR Path="/5E9AF0AF/5D7ECCCB" Ref="C51"  Part="1" 
-AR Path="/5E9AF0BC/5D7ECCCB" Ref="C66"  Part="1" 
-AR Path="/5FC264E9/5D7ECCCB" Ref="C?"  Part="1" 
-F 0 "C21" V 1121 4250 50  0000 C CNN
+AR Path="/5D7C5399/5D7ECCCB" Ref="C?"  Part="1" 
+AR Path="/5D74F1A4/5D7ECCCB" Ref="C16"  Part="1" 
+AR Path="/5E9AF0AF/5D7ECCCB" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D7ECCCB" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D7ECCCB" Ref="C36"  Part="1" 
+F 0 "C16" V 1121 4250 50  0000 C CNN
 F 1 "0.1u" V 1212 4250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 1350 4250 50  0001 C CNN
 F 3 "~" H 1350 4250 50  0001 C CNN
@@ -312,15 +312,15 @@ Wire Wire Line
 Text Label 1000 3850 0    50   ~ 0
 VCC2
 $Comp
-L Device:C_Small C32
+L Device:C_Small C?
 U 1 1 5D7ECCC3
 P 1350 3850
-AR Path="/5D7C5399/5D7ECCC3" Ref="C32"  Part="1" 
-AR Path="/5D74F1A4/5D7ECCC3" Ref="C17"  Part="1" 
-AR Path="/5E9AF0AF/5D7ECCC3" Ref="C47"  Part="1" 
-AR Path="/5E9AF0BC/5D7ECCC3" Ref="C62"  Part="1" 
-AR Path="/5FC264E9/5D7ECCC3" Ref="C?"  Part="1" 
-F 0 "C17" V 1121 3850 50  0000 C CNN
+AR Path="/5D7C5399/5D7ECCC3" Ref="C?"  Part="1" 
+AR Path="/5D74F1A4/5D7ECCC3" Ref="C15"  Part="1" 
+AR Path="/5E9AF0AF/5D7ECCC3" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D7ECCC3" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D7ECCC3" Ref="C35"  Part="1" 
+F 0 "C15" V 1121 3850 50  0000 C CNN
 F 1 "0.1u" V 1212 3850 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 1350 3850 50  0001 C CNN
 F 3 "~" H 1350 3850 50  0001 C CNN
@@ -330,15 +330,15 @@ $EndComp
 Text Label 1000 3450 0    50   ~ 0
 VCC1
 $Comp
-L Device:C_Small C30
+L Device:C_Small C?
 U 1 1 5D7EA564
 P 1350 3450
-AR Path="/5D7C5399/5D7EA564" Ref="C30"  Part="1" 
-AR Path="/5D74F1A4/5D7EA564" Ref="C15"  Part="1" 
-AR Path="/5E9AF0AF/5D7EA564" Ref="C45"  Part="1" 
-AR Path="/5E9AF0BC/5D7EA564" Ref="C60"  Part="1" 
-AR Path="/5FC264E9/5D7EA564" Ref="C?"  Part="1" 
-F 0 "C15" V 1121 3450 50  0000 C CNN
+AR Path="/5D7C5399/5D7EA564" Ref="C?"  Part="1" 
+AR Path="/5D74F1A4/5D7EA564" Ref="C14"  Part="1" 
+AR Path="/5E9AF0AF/5D7EA564" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D7EA564" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D7EA564" Ref="C34"  Part="1" 
+F 0 "C14" V 1121 3450 50  0000 C CNN
 F 1 "0.1u" V 1212 3450 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 1350 3450 50  0001 C CNN
 F 3 "~" H 1350 3450 50  0001 C CNN
@@ -348,15 +348,15 @@ $EndComp
 Text Label 1000 3050 0    50   ~ 0
 VCC0
 $Comp
-L Device:C_Small C27
+L Device:C_Small C?
 U 1 1 5D7E49AB
 P 1350 3050
-AR Path="/5D7C5399/5D7E49AB" Ref="C27"  Part="1" 
-AR Path="/5D74F1A4/5D7E49AB" Ref="C12"  Part="1" 
-AR Path="/5E9AF0AF/5D7E49AB" Ref="C42"  Part="1" 
-AR Path="/5E9AF0BC/5D7E49AB" Ref="C57"  Part="1" 
-AR Path="/5FC264E9/5D7E49AB" Ref="C?"  Part="1" 
-F 0 "C12" V 1121 3050 50  0000 C CNN
+AR Path="/5D7C5399/5D7E49AB" Ref="C?"  Part="1" 
+AR Path="/5D74F1A4/5D7E49AB" Ref="C13"  Part="1" 
+AR Path="/5E9AF0AF/5D7E49AB" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D7E49AB" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D7E49AB" Ref="C33"  Part="1" 
+F 0 "C13" V 1121 3050 50  0000 C CNN
 F 1 "0.1u" V 1212 3050 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 1350 3050 50  0001 C CNN
 F 3 "~" H 1350 3050 50  0001 C CNN
@@ -376,15 +376,15 @@ Connection ~ 3750 1050
 Wire Wire Line
 	1450 1350 1450 2450
 $Comp
-L power:+1V2 #PWR034
+L power:+1V2 #PWR026
 U 1 1 5D803612
 P 850 1550
-AR Path="/5D74F1A4/5D803612" Ref="#PWR034"  Part="1" 
-AR Path="/5D7C5399/5D803612" Ref="#PWR045"  Part="1" 
-AR Path="/5E9AF0AF/5D803612" Ref="#PWR056"  Part="1" 
-AR Path="/5E9AF0BC/5D803612" Ref="#PWR067"  Part="1" 
-AR Path="/5FC264E9/5D803612" Ref="#PWR?"  Part="1" 
-F 0 "#PWR034" H 850 1400 50  0001 C CNN
+AR Path="/5D74F1A4/5D803612" Ref="#PWR026"  Part="1" 
+AR Path="/5D7C5399/5D803612" Ref="#PWR?"  Part="1" 
+AR Path="/5E9AF0AF/5D803612" Ref="#PWR?"  Part="1" 
+AR Path="/5E9AF0BC/5D803612" Ref="#PWR?"  Part="1" 
+AR Path="/5FC264E9/5D803612" Ref="#PWR036"  Part="1" 
+F 0 "#PWR026" H 850 1400 50  0001 C CNN
 F 1 "+1V2" H 865 1723 50  0000 C CNN
 F 2 "" H 850 1550 50  0001 C CNN
 F 3 "" H 850 1550 50  0001 C CNN
@@ -394,15 +394,15 @@ $EndComp
 Wire Wire Line
 	850  1550 850  1650
 $Comp
-L Device:R_Small_US R8
+L Device:R_Small_US R6
 U 1 1 5D80744D
 P 1200 1650
-AR Path="/5D74F1A4/5D80744D" Ref="R8"  Part="1" 
-AR Path="/5D7C5399/5D80744D" Ref="R12"  Part="1" 
-AR Path="/5E9AF0AF/5D80744D" Ref="R16"  Part="1" 
-AR Path="/5E9AF0BC/5D80744D" Ref="R20"  Part="1" 
-AR Path="/5FC264E9/5D80744D" Ref="R?"  Part="1" 
-F 0 "R8" V 995 1650 50  0000 C CNN
+AR Path="/5D74F1A4/5D80744D" Ref="R6"  Part="1" 
+AR Path="/5D7C5399/5D80744D" Ref="R?"  Part="1" 
+AR Path="/5E9AF0AF/5D80744D" Ref="R?"  Part="1" 
+AR Path="/5E9AF0BC/5D80744D" Ref="R?"  Part="1" 
+AR Path="/5FC264E9/5D80744D" Ref="R9"  Part="1" 
+F 0 "R6" V 995 1650 50  0000 C CNN
 F 1 "100R" V 1086 1650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 1200 1650 50  0001 C CNN
 F 3 "~" H 1200 1650 50  0001 C CNN
@@ -410,15 +410,15 @@ F 3 "~" H 1200 1650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small_US R9
+L Device:R_Small_US R7
 U 1 1 5D80825F
 P 1200 1950
-AR Path="/5D74F1A4/5D80825F" Ref="R9"  Part="1" 
-AR Path="/5D7C5399/5D80825F" Ref="R13"  Part="1" 
-AR Path="/5E9AF0AF/5D80825F" Ref="R17"  Part="1" 
-AR Path="/5E9AF0BC/5D80825F" Ref="R21"  Part="1" 
-AR Path="/5FC264E9/5D80825F" Ref="R?"  Part="1" 
-F 0 "R9" V 995 1950 50  0000 C CNN
+AR Path="/5D74F1A4/5D80825F" Ref="R7"  Part="1" 
+AR Path="/5D7C5399/5D80825F" Ref="R?"  Part="1" 
+AR Path="/5E9AF0AF/5D80825F" Ref="R?"  Part="1" 
+AR Path="/5E9AF0BC/5D80825F" Ref="R?"  Part="1" 
+AR Path="/5FC264E9/5D80825F" Ref="R10"  Part="1" 
+F 0 "R7" V 995 1950 50  0000 C CNN
 F 1 "100R" V 1086 1950 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 1200 1950 50  0001 C CNN
 F 3 "~" H 1200 1950 50  0001 C CNN
@@ -445,15 +445,15 @@ Wire Wire Line
 Text Label 1600 2050 0    50   ~ 0
 GNDPLL1
 $Comp
-L Device:C_Small C19
+L Device:C_Small C25
 U 1 1 5D88CB86
 P 3200 3850
-AR Path="/5D74F1A4/5D88CB86" Ref="C19"  Part="1" 
-AR Path="/5D7C5399/5D88CB86" Ref="C34"  Part="1" 
-AR Path="/5E9AF0AF/5D88CB86" Ref="C49"  Part="1" 
-AR Path="/5E9AF0BC/5D88CB86" Ref="C64"  Part="1" 
-AR Path="/5FC264E9/5D88CB86" Ref="C?"  Part="1" 
-F 0 "C19" H 3292 3896 50  0000 L CNN
+AR Path="/5D74F1A4/5D88CB86" Ref="C25"  Part="1" 
+AR Path="/5D7C5399/5D88CB86" Ref="C?"  Part="1" 
+AR Path="/5E9AF0AF/5D88CB86" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D88CB86" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D88CB86" Ref="C45"  Part="1" 
+F 0 "C25" H 3292 3896 50  0000 L CNN
 F 1 "10u" H 3292 3805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 3200 3850 50  0001 C CNN
 F 3 "~" H 3200 3850 50  0001 C CNN
@@ -463,15 +463,15 @@ $EndComp
 Text Label 2750 4000 0    50   ~ 0
 GNDPLL0
 $Comp
-L power:+3V3 #PWR046
+L power:+3V3 #PWR?
 U 1 1 5E87AD72
 P 850 2200
-AR Path="/5D7C5399/5E87AD72" Ref="#PWR046"  Part="1" 
-AR Path="/5D74F1A4/5E87AD72" Ref="#PWR035"  Part="1" 
-AR Path="/5E9AF0AF/5E87AD72" Ref="#PWR057"  Part="1" 
-AR Path="/5E9AF0BC/5E87AD72" Ref="#PWR068"  Part="1" 
-AR Path="/5FC264E9/5E87AD72" Ref="#PWR?"  Part="1" 
-F 0 "#PWR035" H 850 2050 50  0001 C CNN
+AR Path="/5D7C5399/5E87AD72" Ref="#PWR?"  Part="1" 
+AR Path="/5D74F1A4/5E87AD72" Ref="#PWR027"  Part="1" 
+AR Path="/5E9AF0AF/5E87AD72" Ref="#PWR?"  Part="1" 
+AR Path="/5E9AF0BC/5E87AD72" Ref="#PWR?"  Part="1" 
+AR Path="/5FC264E9/5E87AD72" Ref="#PWR037"  Part="1" 
+F 0 "#PWR027" H 850 2050 50  0001 C CNN
 F 1 "+3V3" H 865 2373 50  0000 C CNN
 F 2 "" H 850 2200 50  0001 C CNN
 F 3 "" H 850 2200 50  0001 C CNN
@@ -497,15 +497,15 @@ Connection ~ 3200 4000
 Wire Wire Line
 	3200 4000 2750 4000
 $Comp
-L Device:C_Small C24
+L Device:C_Small C30
 U 1 1 5EDE65D1
 P 3600 4450
-AR Path="/5D74F1A4/5EDE65D1" Ref="C24"  Part="1" 
-AR Path="/5D7C5399/5EDE65D1" Ref="C39"  Part="1" 
-AR Path="/5E9AF0AF/5EDE65D1" Ref="C54"  Part="1" 
-AR Path="/5E9AF0BC/5EDE65D1" Ref="C69"  Part="1" 
-AR Path="/5FC264E9/5EDE65D1" Ref="C?"  Part="1" 
-F 0 "C24" H 3692 4496 50  0000 L CNN
+AR Path="/5D74F1A4/5EDE65D1" Ref="C30"  Part="1" 
+AR Path="/5D7C5399/5EDE65D1" Ref="C?"  Part="1" 
+AR Path="/5E9AF0AF/5EDE65D1" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5EDE65D1" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5EDE65D1" Ref="C50"  Part="1" 
+F 0 "C30" H 3692 4496 50  0000 L CNN
 F 1 "0.1u" H 3692 4405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3600 4450 50  0001 C CNN
 F 3 "~" H 3600 4450 50  0001 C CNN
@@ -513,15 +513,15 @@ F 3 "~" H 3600 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C23
+L Device:C_Small C26
 U 1 1 5EDE65DB
 P 3200 4450
-AR Path="/5D74F1A4/5EDE65DB" Ref="C23"  Part="1" 
-AR Path="/5D7C5399/5EDE65DB" Ref="C38"  Part="1" 
-AR Path="/5E9AF0AF/5EDE65DB" Ref="C53"  Part="1" 
-AR Path="/5E9AF0BC/5EDE65DB" Ref="C68"  Part="1" 
-AR Path="/5FC264E9/5EDE65DB" Ref="C?"  Part="1" 
-F 0 "C23" H 3292 4496 50  0000 L CNN
+AR Path="/5D74F1A4/5EDE65DB" Ref="C26"  Part="1" 
+AR Path="/5D7C5399/5EDE65DB" Ref="C?"  Part="1" 
+AR Path="/5E9AF0AF/5EDE65DB" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5EDE65DB" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5EDE65DB" Ref="C46"  Part="1" 
+F 0 "C26" H 3292 4496 50  0000 L CNN
 F 1 "10u" H 3292 4405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 3200 4450 50  0001 C CNN
 F 3 "~" H 3200 4450 50  0001 C CNN
@@ -547,15 +547,15 @@ Wire Wire Line
 Text Label 2750 4600 0    50   ~ 0
 GNDPLL1
 $Comp
-L Device:C_Small C20
+L Device:C_Small C29
 U 1 1 5D88C47D
 P 3600 3850
-AR Path="/5D74F1A4/5D88C47D" Ref="C20"  Part="1" 
-AR Path="/5D7C5399/5D88C47D" Ref="C35"  Part="1" 
-AR Path="/5E9AF0AF/5D88C47D" Ref="C50"  Part="1" 
-AR Path="/5E9AF0BC/5D88C47D" Ref="C65"  Part="1" 
-AR Path="/5FC264E9/5D88C47D" Ref="C?"  Part="1" 
-F 0 "C20" H 3692 3896 50  0000 L CNN
+AR Path="/5D74F1A4/5D88C47D" Ref="C29"  Part="1" 
+AR Path="/5D7C5399/5D88C47D" Ref="C?"  Part="1" 
+AR Path="/5E9AF0AF/5D88C47D" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D88C47D" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D88C47D" Ref="C49"  Part="1" 
+F 0 "C29" H 3692 3896 50  0000 L CNN
 F 1 "0.1u" H 3692 3805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3600 3850 50  0001 C CNN
 F 3 "~" H 3600 3850 50  0001 C CNN
@@ -581,15 +581,15 @@ Wire Wire Line
 Wire Wire Line
 	1000 4250 1250 4250
 $Comp
-L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 5 1 5D75D226
 P 2650 1800
-AR Path="/5D7C5399/5D75D226" Ref="U4"  Part="5" 
-AR Path="/5D74F1A4/5D75D226" Ref="U3"  Part="5" 
-AR Path="/5E9AF0AF/5D75D226" Ref="U5"  Part="5" 
-AR Path="/5E9AF0BC/5D75D226" Ref="U6"  Part="5" 
-AR Path="/5FC264E9/5D75D226" Ref="U?"  Part="5" 
-F 0 "U3" H 2650 2837 60  0000 C CNN
+AR Path="/5D7C5399/5D75D226" Ref="U?"  Part="5" 
+AR Path="/5D74F1A4/5D75D226" Ref="U6"  Part="5" 
+AR Path="/5E9AF0AF/5D75D226" Ref="U?"  Part="5" 
+AR Path="/5E9AF0BC/5D75D226" Ref="U?"  Part="5" 
+AR Path="/5FC264E9/5D75D226" Ref="U9"  Part="5" 
+F 0 "U6" H 2650 2837 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 2650 2731 60  0000 C CNN
 F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 2650 1300 60  0001 C CNN
 F 3 "" H 2650 1300 60  0000 C CNN
@@ -597,14 +597,14 @@ F 3 "" H 2650 1300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C37
+L Device:C_Small C?
 U 1 1 5D7D31FC
 P 2350 4250
-AR Path="/5D7C5399/5D7D31FC" Ref="C37"  Part="1" 
+AR Path="/5D7C5399/5D7D31FC" Ref="C?"  Part="1" 
 AR Path="/5D74F1A4/5D7D31FC" Ref="C22"  Part="1" 
-AR Path="/5E9AF0AF/5D7D31FC" Ref="C52"  Part="1" 
-AR Path="/5E9AF0BC/5D7D31FC" Ref="C67"  Part="1" 
-AR Path="/5FC264E9/5D7D31FC" Ref="C?"  Part="1" 
+AR Path="/5E9AF0AF/5D7D31FC" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5D7D31FC" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5D7D31FC" Ref="C42"  Part="1" 
 F 0 "C22" V 2121 4250 50  0000 C CNN
 F 1 "0.1u" V 2212 4250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2350 4250 50  0001 C CNN
@@ -662,23 +662,6 @@ NoConn ~ 10050 3550
 NoConn ~ 10050 3450
 NoConn ~ 10050 3350
 NoConn ~ 10050 3250
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5E97C726
-P 4700 5750
-AR Path="/5E97C726" Ref="#PWR?"  Part="1" 
-AR Path="/5D74F1A4/5E97C726" Ref="#PWR042"  Part="1" 
-AR Path="/5D7C5399/5E97C726" Ref="#PWR053"  Part="1" 
-AR Path="/5E9AF0AF/5E97C726" Ref="#PWR064"  Part="1" 
-AR Path="/5E9AF0BC/5E97C726" Ref="#PWR075"  Part="1" 
-AR Path="/5FC264E9/5E97C726" Ref="#PWR?"  Part="1" 
-F 0 "#PWR042" H 4700 5600 50  0001 C CNN
-F 1 "+3V3" H 4715 5923 50  0000 C CNN
-F 2 "" H 4700 5750 50  0001 C CNN
-F 3 "" H 4700 5750 50  0001 C CNN
-	1    4700 5750
-	1    0    0    -1  
-$EndComp
 Text Label 5400 6100 0    50   ~ 0
 CLK
 Wire Wire Line
@@ -686,19 +669,17 @@ Wire Wire Line
 Wire Wire Line
 	4700 5800 5050 5800
 Connection ~ 4700 5800
-Wire Wire Line
-	4700 5800 4700 5750
 $Comp
 L Device:C_Small C?
 U 1 1 5E97C738
 P 4500 6200
 AR Path="/5E97C738" Ref="C?"  Part="1" 
-AR Path="/5D74F1A4/5E97C738" Ref="C25"  Part="1" 
-AR Path="/5D7C5399/5E97C738" Ref="C40"  Part="1" 
-AR Path="/5E9AF0AF/5E97C738" Ref="C55"  Part="1" 
-AR Path="/5E9AF0BC/5E97C738" Ref="C70"  Part="1" 
-AR Path="/5FC264E9/5E97C738" Ref="C?"  Part="1" 
-F 0 "C25" H 4408 6154 50  0000 R CNN
+AR Path="/5D74F1A4/5E97C738" Ref="C31"  Part="1" 
+AR Path="/5D7C5399/5E97C738" Ref="C?"  Part="1" 
+AR Path="/5E9AF0AF/5E97C738" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5E97C738" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5E97C738" Ref="C51"  Part="1" 
+F 0 "C31" H 4408 6154 50  0000 R CNN
 F 1 "0.01u" H 4408 6245 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4500 6200 50  0001 C CNN
 F 3 "~" H 4500 6200 50  0001 C CNN
@@ -719,12 +700,12 @@ L power:GND #PWR?
 U 1 1 5E97C743
 P 5050 6500
 AR Path="/5E97C743" Ref="#PWR?"  Part="1" 
-AR Path="/5D74F1A4/5E97C743" Ref="#PWR043"  Part="1" 
-AR Path="/5D7C5399/5E97C743" Ref="#PWR054"  Part="1" 
-AR Path="/5E9AF0AF/5E97C743" Ref="#PWR065"  Part="1" 
-AR Path="/5E9AF0BC/5E97C743" Ref="#PWR076"  Part="1" 
-AR Path="/5FC264E9/5E97C743" Ref="#PWR?"  Part="1" 
-F 0 "#PWR043" H 5050 6250 50  0001 C CNN
+AR Path="/5D74F1A4/5E97C743" Ref="#PWR035"  Part="1" 
+AR Path="/5D7C5399/5E97C743" Ref="#PWR?"  Part="1" 
+AR Path="/5E9AF0AF/5E97C743" Ref="#PWR?"  Part="1" 
+AR Path="/5E9AF0BC/5E97C743" Ref="#PWR?"  Part="1" 
+AR Path="/5FC264E9/5E97C743" Ref="#PWR045"  Part="1" 
+F 0 "#PWR035" H 5050 6250 50  0001 C CNN
 F 1 "GND" H 5055 6327 50  0000 C CNN
 F 2 "" H 5050 6500 50  0001 C CNN
 F 3 "" H 5050 6500 50  0001 C CNN
@@ -752,15 +733,15 @@ Wire Notes Line
 Text HLabel 10050 3150 2    50   Input ~ 0
 SDI1
 $Comp
-L power:GND #PWR051
+L power:GND #PWR?
 U 1 1 5FCD635C
 P 2550 4500
-AR Path="/5D7C5399/5FCD635C" Ref="#PWR051"  Part="1" 
-AR Path="/5D74F1A4/5FCD635C" Ref="#PWR040"  Part="1" 
-AR Path="/5E9AF0AF/5FCD635C" Ref="#PWR062"  Part="1" 
-AR Path="/5E9AF0BC/5FCD635C" Ref="#PWR073"  Part="1" 
-AR Path="/5FC264E9/5FCD635C" Ref="#PWR?"  Part="1" 
-F 0 "#PWR040" H 2550 4250 50  0001 C CNN
+AR Path="/5D7C5399/5FCD635C" Ref="#PWR?"  Part="1" 
+AR Path="/5D74F1A4/5FCD635C" Ref="#PWR031"  Part="1" 
+AR Path="/5E9AF0AF/5FCD635C" Ref="#PWR?"  Part="1" 
+AR Path="/5E9AF0BC/5FCD635C" Ref="#PWR?"  Part="1" 
+AR Path="/5FC264E9/5FCD635C" Ref="#PWR041"  Part="1" 
+F 0 "#PWR031" H 2550 4250 50  0001 C CNN
 F 1 "GND" H 2555 4327 50  0000 C CNN
 F 2 "" H 2550 4500 50  0001 C CNN
 F 3 "" H 2550 4500 50  0001 C CNN
@@ -771,15 +752,15 @@ Wire Wire Line
 	2550 4250 2550 4500
 Connection ~ 2550 4250
 $Comp
-L power:GND #PWR050
+L power:GND #PWR?
 U 1 1 5FCDA69E
 P 1550 4500
-AR Path="/5D7C5399/5FCDA69E" Ref="#PWR050"  Part="1" 
-AR Path="/5D74F1A4/5FCDA69E" Ref="#PWR039"  Part="1" 
-AR Path="/5E9AF0AF/5FCDA69E" Ref="#PWR061"  Part="1" 
-AR Path="/5E9AF0BC/5FCDA69E" Ref="#PWR072"  Part="1" 
-AR Path="/5FC264E9/5FCDA69E" Ref="#PWR?"  Part="1" 
-F 0 "#PWR039" H 1550 4250 50  0001 C CNN
+AR Path="/5D7C5399/5FCDA69E" Ref="#PWR?"  Part="1" 
+AR Path="/5D74F1A4/5FCDA69E" Ref="#PWR028"  Part="1" 
+AR Path="/5E9AF0AF/5FCDA69E" Ref="#PWR?"  Part="1" 
+AR Path="/5E9AF0BC/5FCDA69E" Ref="#PWR?"  Part="1" 
+AR Path="/5FC264E9/5FCDA69E" Ref="#PWR038"  Part="1" 
+F 0 "#PWR028" H 1550 4250 50  0001 C CNN
 F 1 "GND" H 1555 4327 50  0000 C CNN
 F 2 "" H 1550 4500 50  0001 C CNN
 F 3 "" H 1550 4500 50  0001 C CNN
@@ -803,15 +784,15 @@ NoConn ~ 6850 3450
 NoConn ~ 6850 3650
 NoConn ~ 6850 3750
 $Comp
-L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 3 1 5D753833
 P 5750 3800
-AR Path="/5D7C5399/5D753833" Ref="U4"  Part="3" 
-AR Path="/5D74F1A4/5D753833" Ref="U3"  Part="3" 
-AR Path="/5E9AF0AF/5D753833" Ref="U5"  Part="3" 
-AR Path="/5E9AF0BC/5D753833" Ref="U6"  Part="3" 
-AR Path="/5FC264E9/5D753833" Ref="U?"  Part="3" 
-F 0 "U3" H 5750 4837 60  0000 C CNN
+AR Path="/5D7C5399/5D753833" Ref="U?"  Part="3" 
+AR Path="/5D74F1A4/5D753833" Ref="U6"  Part="3" 
+AR Path="/5E9AF0AF/5D753833" Ref="U?"  Part="3" 
+AR Path="/5E9AF0BC/5D753833" Ref="U?"  Part="3" 
+AR Path="/5FC264E9/5D753833" Ref="U9"  Part="3" 
+F 0 "U6" H 5750 4837 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 5750 4731 60  0000 C CNN
 F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 5750 3300 60  0001 C CNN
 F 3 "" H 5750 3300 60  0000 C CNN
@@ -860,15 +841,15 @@ Text HLabel 6850 3150 2    50   Input ~ 0
 Text HLabel 6850 4050 2    50   Input ~ 0
 CRESET_B
 $Comp
-L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U4
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 4 1 5D75A968
 P 8950 3750
-AR Path="/5D7C5399/5D75A968" Ref="U4"  Part="4" 
-AR Path="/5D74F1A4/5D75A968" Ref="U3"  Part="4" 
-AR Path="/5E9AF0AF/5D75A968" Ref="U5"  Part="4" 
-AR Path="/5E9AF0BC/5D75A968" Ref="U6"  Part="4" 
-AR Path="/5FC264E9/5D75A968" Ref="U?"  Part="4" 
-F 0 "U3" H 8950 4787 60  0000 C CNN
+AR Path="/5D7C5399/5D75A968" Ref="U?"  Part="4" 
+AR Path="/5D74F1A4/5D75A968" Ref="U6"  Part="4" 
+AR Path="/5E9AF0AF/5D75A968" Ref="U?"  Part="4" 
+AR Path="/5E9AF0BC/5D75A968" Ref="U?"  Part="4" 
+AR Path="/5FC264E9/5D75A968" Ref="U9"  Part="4" 
+F 0 "U6" H 8950 4787 60  0000 C CNN
 F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 8950 4681 60  0000 C CNN
 F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 8950 3250 60  0001 C CNN
 F 3 "" H 8950 3250 60  0000 C CNN
@@ -884,10 +865,10 @@ U 1 1 5E97C72D
 P 5050 6100
 AR Path="/5E97C72D" Ref="X?"  Part="1" 
 AR Path="/5D74F1A4/5E97C72D" Ref="X1"  Part="1" 
-AR Path="/5D7C5399/5E97C72D" Ref="X2"  Part="1" 
-AR Path="/5E9AF0AF/5E97C72D" Ref="X3"  Part="1" 
-AR Path="/5E9AF0BC/5E97C72D" Ref="X4"  Part="1" 
-AR Path="/5FC264E9/5E97C72D" Ref="X?"  Part="1" 
+AR Path="/5D7C5399/5E97C72D" Ref="X?"  Part="1" 
+AR Path="/5E9AF0AF/5E97C72D" Ref="X?"  Part="1" 
+AR Path="/5E9AF0BC/5E97C72D" Ref="X?"  Part="1" 
+AR Path="/5FC264E9/5E97C72D" Ref="X2"  Part="1" 
 F 0 "X1" H 5100 6600 50  0000 L CNN
 F 1 "ASEM1-12.000MHZ" H 4800 6500 50  0000 L CNN
 F 2 "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm" H 5750 5750 50  0001 C CNN
@@ -900,12 +881,12 @@ L Device:C_Small C?
 U 1 1 5E38BA05
 P 5500 6300
 AR Path="/5E38BA05" Ref="C?"  Part="1" 
-AR Path="/5D74F1A4/5E38BA05" Ref="C26"  Part="1" 
-AR Path="/5D7C5399/5E38BA05" Ref="C41"  Part="1" 
-AR Path="/5E9AF0AF/5E38BA05" Ref="C56"  Part="1" 
-AR Path="/5E9AF0BC/5E38BA05" Ref="C71"  Part="1" 
-AR Path="/5FC264E9/5E38BA05" Ref="C?"  Part="1" 
-F 0 "C26" H 5408 6254 50  0000 R CNN
+AR Path="/5D74F1A4/5E38BA05" Ref="C32"  Part="1" 
+AR Path="/5D7C5399/5E38BA05" Ref="C?"  Part="1" 
+AR Path="/5E9AF0AF/5E38BA05" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5E38BA05" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5E38BA05" Ref="C52"  Part="1" 
+F 0 "C32" H 5408 6254 50  0000 R CNN
 F 1 "OMIT" H 5408 6345 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 5500 6300 50  0001 C CNN
 F 3 "~" H 5500 6300 50  0001 C CNN
@@ -927,20 +908,20 @@ Text HLabel 6850 3950 2    50   Output ~ 0
 CDONE
 Text Notes 5500 6750 0    50   ~ 0
 Oscillator
-Text Notes 3750 7600 0    50   ~ 0
+Text Notes 3750 6150 0    50   ~ 0
 Power
 Text Notes 10450 5300 0    50   ~ 0
 I/O
 $Comp
-L Device:C_Small C101
+L Device:C_Small C?
 U 1 1 5EA9A3F9
 P 3300 3250
-AR Path="/5D7C5399/5EA9A3F9" Ref="C101"  Part="1" 
-AR Path="/5D74F1A4/5EA9A3F9" Ref="C100"  Part="1" 
-AR Path="/5E9AF0AF/5EA9A3F9" Ref="C102"  Part="1" 
-AR Path="/5E9AF0BC/5EA9A3F9" Ref="C103"  Part="1" 
-AR Path="/5FC264E9/5EA9A3F9" Ref="C?"  Part="1" 
-F 0 "C100" V 3071 3250 50  0000 C CNN
+AR Path="/5D7C5399/5EA9A3F9" Ref="C?"  Part="1" 
+AR Path="/5D74F1A4/5EA9A3F9" Ref="C28"  Part="1" 
+AR Path="/5E9AF0AF/5EA9A3F9" Ref="C?"  Part="1" 
+AR Path="/5E9AF0BC/5EA9A3F9" Ref="C?"  Part="1" 
+AR Path="/5FC264E9/5EA9A3F9" Ref="C48"  Part="1" 
+F 0 "C28" V 3071 3250 50  0000 C CNN
 F 1 "0.1u" V 3162 3250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3300 3250 50  0001 C CNN
 F 3 "~" H 3300 3250 50  0001 C CNN
@@ -952,15 +933,15 @@ VPP_2V5
 Wire Wire Line
 	3200 3250 2800 3250
 $Comp
-L power:GND #PWR048
+L power:GND #PWR?
 U 1 1 5D8109A2
 P 3500 3450
-AR Path="/5D7C5399/5D8109A2" Ref="#PWR048"  Part="1" 
-AR Path="/5D74F1A4/5D8109A2" Ref="#PWR037"  Part="1" 
-AR Path="/5E9AF0AF/5D8109A2" Ref="#PWR059"  Part="1" 
-AR Path="/5E9AF0BC/5D8109A2" Ref="#PWR070"  Part="1" 
-AR Path="/5FC264E9/5D8109A2" Ref="#PWR?"  Part="1" 
-F 0 "#PWR037" H 3500 3200 50  0001 C CNN
+AR Path="/5D7C5399/5D8109A2" Ref="#PWR?"  Part="1" 
+AR Path="/5D74F1A4/5D8109A2" Ref="#PWR032"  Part="1" 
+AR Path="/5E9AF0AF/5D8109A2" Ref="#PWR?"  Part="1" 
+AR Path="/5E9AF0BC/5D8109A2" Ref="#PWR?"  Part="1" 
+AR Path="/5FC264E9/5D8109A2" Ref="#PWR042"  Part="1" 
+F 0 "#PWR032" H 3500 3200 50  0001 C CNN
 F 1 "GND" H 3505 3277 50  0000 C CNN
 F 2 "" H 3500 3450 50  0001 C CNN
 F 3 "" H 3500 3450 50  0001 C CNN
@@ -975,14 +956,14 @@ Connection ~ 3500 3250
 Wire Wire Line
 	3500 3250 3500 3450
 $Comp
-L Device:Jumper_NC_Small JP4
+L Device:Jumper_NC_Small JP?
 U 1 1 5EAB04EF
 P 1200 2250
-AR Path="/5E9AF0BC/5EAB04EF" Ref="JP4"  Part="1" 
+AR Path="/5E9AF0BC/5EAB04EF" Ref="JP?"  Part="1" 
 AR Path="/5D74F1A4/5EAB04EF" Ref="JP1"  Part="1" 
-AR Path="/5D7C5399/5EAB04EF" Ref="JP2"  Part="1" 
-AR Path="/5E9AF0AF/5EAB04EF" Ref="JP3"  Part="1" 
-AR Path="/5FC264E9/5EAB04EF" Ref="JP?"  Part="1" 
+AR Path="/5D7C5399/5EAB04EF" Ref="JP?"  Part="1" 
+AR Path="/5E9AF0AF/5EAB04EF" Ref="JP?"  Part="1" 
+AR Path="/5FC264E9/5EAB04EF" Ref="JP2"  Part="1" 
 F 0 "JP1" H 1200 2462 50  0000 C CNN
 F 1 "CUT_2V5" H 1200 2371 50  0000 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 1200 2250 50  0001 C CNN
@@ -995,14 +976,14 @@ Wire Wire Line
 Wire Wire Line
 	850  2250 1100 2250
 $Comp
-L Device:LED D5
+L Device:LED D?
 U 1 1 5EAC8493
 P 5200 5100
-AR Path="/5E9AF0BC/5EAC8493" Ref="D5"  Part="1" 
+AR Path="/5E9AF0BC/5EAC8493" Ref="D?"  Part="1" 
 AR Path="/5D74F1A4/5EAC8493" Ref="D2"  Part="1" 
-AR Path="/5D7C5399/5EAC8493" Ref="D3"  Part="1" 
-AR Path="/5E9AF0AF/5EAC8493" Ref="D4"  Part="1" 
-AR Path="/5FC264E9/5EAC8493" Ref="D?"  Part="1" 
+AR Path="/5D7C5399/5EAC8493" Ref="D?"  Part="1" 
+AR Path="/5E9AF0AF/5EAC8493" Ref="D?"  Part="1" 
+AR Path="/5FC264E9/5EAC8493" Ref="D3"  Part="1" 
 F 0 "D2" H 5193 4845 50  0000 C CNN
 F 1 "LED_IND" H 5193 4936 50  0000 C CNN
 F 2 "LED_SMD:LED_0805_2012Metric" H 5200 5100 50  0001 C CNN
@@ -1015,17 +996,17 @@ LED_IND
 Wire Wire Line
 	5350 5100 5750 5100
 $Comp
-L Device:R_Small_US R14
+L Device:R_Small_US R?
 U 1 1 5EADAC50
 P 4850 5100
-AR Path="/5E9AF0BC/5EADAC50" Ref="R14"  Part="1" 
-AR Path="/5D74F1A4/5EADAC50" Ref="R5"  Part="1" 
-AR Path="/5D7C5399/5EADAC50" Ref="R6"  Part="1" 
-AR Path="/5E9AF0AF/5EADAC50" Ref="R10"  Part="1" 
-AR Path="/5FC264E9/5EADAC50" Ref="R?"  Part="1" 
-F 0 "R5" V 4645 5100 50  0000 C CNN
+AR Path="/5E9AF0BC/5EADAC50" Ref="R?"  Part="1" 
+AR Path="/5D74F1A4/5EADAC50" Ref="R8"  Part="1" 
+AR Path="/5D7C5399/5EADAC50" Ref="R?"  Part="1" 
+AR Path="/5E9AF0AF/5EADAC50" Ref="R?"  Part="1" 
+AR Path="/5FC264E9/5EADAC50" Ref="R11"  Part="1" 
+F 0 "R8" V 4645 5100 50  0000 C CNN
 F 1 "4k7" V 4736 5100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 4850 5100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 4850 5100 50  0001 C CNN
 F 3 "~" H 4850 5100 50  0001 C CNN
 	1    4850 5100
 	0    1    1    0   
@@ -1042,209 +1023,123 @@ Text Label 3750 1050 0    50   ~ 0
 VCORE
 Wire Wire Line
 	3750 1050 4000 1050
-$Comp
-L jkiv-diodes:AP7361C_SOT-89-5 U?
-U 1 1 5F9778B8
-P 2350 5500
-AR Path="/5D74F1A4/5F9778B8" Ref="U?"  Part="1" 
-AR Path="/5FC264E9/5F9778B8" Ref="U?"  Part="1" 
-F 0 "U?" H 2350 5915 50  0000 C CNN
-F 1 "AP7361C_SOT-89-5" H 2350 5824 50  0000 C CNN
-F 2 "" H 2350 5500 50  0001 C CNN
-F 3 "" H 2350 5500 50  0001 C CNN
-	1    2350 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5F9778C2
-P 2800 5600
-AR Path="/5D74F1A4/5F9778C2" Ref="C?"  Part="1" 
-AR Path="/5FC264E9/5F9778C2" Ref="C?"  Part="1" 
-F 0 "C?" H 2892 5646 50  0000 L CNN
-F 1 "4.7u" H 2892 5555 50  0000 L CNN
-F 2 "" H 2800 5600 50  0001 C CNN
-F 3 "~" H 2800 5600 50  0001 C CNN
-	1    2800 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5F9778CC
-P 1650 5600
-AR Path="/5D74F1A4/5F9778CC" Ref="C?"  Part="1" 
-AR Path="/5FC264E9/5F9778CC" Ref="C?"  Part="1" 
-F 0 "C?" H 1742 5646 50  0000 L CNN
-F 1 "4.7u" H 1742 5555 50  0000 L CNN
-F 2 "" H 1650 5600 50  0001 C CNN
-F 3 "~" H 1650 5600 50  0001 C CNN
-	1    1650 5600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1950 5400 1900 5400
-Wire Wire Line
-	1650 5400 1650 5500
-Wire Wire Line
-	2800 5500 2800 5400
-Wire Wire Line
-	2800 5400 2750 5400
-Text Label 2850 5400 0    50   ~ 0
-VCCIO
-Wire Wire Line
-	1650 5700 1650 5900
-Wire Wire Line
-	1650 5900 2350 5900
-Wire Wire Line
-	2350 5900 2350 5850
-Wire Wire Line
-	2350 5900 2800 5900
-Wire Wire Line
-	2800 5900 2800 5700
-Connection ~ 2350 5900
-$Comp
-L power:GND #PWR?
-U 1 1 5F9778E4
-P 2350 5950
-AR Path="/5D74F1A4/5F9778E4" Ref="#PWR?"  Part="1" 
-AR Path="/5FC264E9/5F9778E4" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2350 5700 50  0001 C CNN
-F 1 "GND" H 2355 5777 50  0000 C CNN
-F 2 "" H 2350 5950 50  0001 C CNN
-F 3 "" H 2350 5950 50  0001 C CNN
-	1    2350 5950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2350 5950 2350 5900
-Wire Wire Line
-	1950 5600 1900 5600
-Wire Wire Line
-	1900 5600 1900 5400
-Connection ~ 1900 5400
-Wire Wire Line
-	1900 5400 1650 5400
-Text Notes 3150 5400 0    50   ~ 0
-+3.3V
-Text Label 1400 1050 2    50   ~ 0
-VCCIO
-Connection ~ 1450 1050
-Wire Wire Line
-	1150 1050 1450 1050
-Connection ~ 2800 5400
-Wire Wire Line
-	2800 5400 3100 5400
-Text HLabel 1550 5400 0    50   Input ~ 0
-VCC
-Wire Wire Line
-	1550 5400 1650 5400
-Connection ~ 1650 5400
-Connection ~ 1650 6600
-Wire Wire Line
-	1550 6600 1650 6600
-Text HLabel 1550 6600 0    50   Input ~ 0
-VCC
-Wire Wire Line
-	1650 6600 1650 6700
-Connection ~ 1900 6600
-Wire Wire Line
-	1900 6600 1650 6600
-Wire Wire Line
-	1900 6600 1950 6600
-Wire Wire Line
-	1900 6800 1900 6600
-Text Notes 3150 6600 0    50   ~ 0
-+1.2V
-Wire Wire Line
-	1950 6800 1900 6800
-Wire Wire Line
-	2350 7150 2350 7100
-$Comp
-L power:GND #PWR?
-U 1 1 5F94602E
-P 2350 7150
-AR Path="/5D74F1A4/5F94602E" Ref="#PWR?"  Part="1" 
-AR Path="/5FC264E9/5F94602E" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2350 6900 50  0001 C CNN
-F 1 "GND" H 2355 6977 50  0000 C CNN
-F 2 "" H 2350 7150 50  0001 C CNN
-F 3 "" H 2350 7150 50  0001 C CNN
-	1    2350 7150
-	1    0    0    -1  
-$EndComp
-Connection ~ 2350 7100
-Wire Wire Line
-	2800 7100 2800 6900
-Wire Wire Line
-	2350 7100 2800 7100
-Wire Wire Line
-	2350 7100 2350 7050
-Wire Wire Line
-	1650 7100 2350 7100
-Wire Wire Line
-	1650 6900 1650 7100
-Wire Wire Line
-	2800 6600 3100 6600
-Text Label 2850 6600 0    50   ~ 0
-VCORE
-Connection ~ 2800 6600
-Wire Wire Line
-	2800 6600 2750 6600
-Wire Wire Line
-	2800 6700 2800 6600
-$Comp
-L Device:C_Small C?
-U 1 1 5F8B207F
-P 1650 6800
-AR Path="/5D74F1A4/5F8B207F" Ref="C?"  Part="1" 
-AR Path="/5FC264E9/5F8B207F" Ref="C?"  Part="1" 
-F 0 "C?" H 1742 6846 50  0000 L CNN
-F 1 "4.7u" H 1742 6755 50  0000 L CNN
-F 2 "" H 1650 6800 50  0001 C CNN
-F 3 "~" H 1650 6800 50  0001 C CNN
-	1    1650 6800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5F8B1E0E
-P 2800 6800
-AR Path="/5D74F1A4/5F8B1E0E" Ref="C?"  Part="1" 
-AR Path="/5FC264E9/5F8B1E0E" Ref="C?"  Part="1" 
-F 0 "C?" H 2892 6846 50  0000 L CNN
-F 1 "4.7u" H 2892 6755 50  0000 L CNN
-F 2 "" H 2800 6800 50  0001 C CNN
-F 3 "~" H 2800 6800 50  0001 C CNN
-	1    2800 6800
-	1    0    0    -1  
-$EndComp
-$Comp
-L jkiv-diodes:AP7361C_SOT-89-5 U?
-U 1 1 5F892F5C
-P 2350 6700
-AR Path="/5D74F1A4/5F892F5C" Ref="U?"  Part="1" 
-AR Path="/5FC264E9/5F892F5C" Ref="U?"  Part="1" 
-F 0 "U?" H 2350 7115 50  0000 C CNN
-F 1 "AP7361C_SOT-89-5" H 2350 7024 50  0000 C CNN
-F 2 "" H 2350 6700 50  0001 C CNN
-F 3 "" H 2350 6700 50  0001 C CNN
-	1    2350 6700
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	4100 600  4100 7650
 Wire Notes Line
 	600  600  600  7650
 Wire Notes Line
-	4100 7650 600  7650
+	4100 6200 600  6200
 Wire Notes Line
 	6950 4700 6850 4700
 Wire Notes Line
 	6850 4700 6850 4500
 Text HLabel 6850 3050 2    50   Input ~ 0
 ~WE
-Text Label 4650 5100 2    50   ~ 0
+$Comp
+L jkiv-diodes:AP7361C_SOT-89-5 U5
+U 1 1 5F892F5C
+P 2300 5350
+AR Path="/5D74F1A4/5F892F5C" Ref="U5"  Part="1" 
+AR Path="/5FC264E9/5F892F5C" Ref="U8"  Part="1" 
+F 0 "U5" H 2300 5765 50  0000 C CNN
+F 1 "AP7361C_SOT-89-5" H 2300 5674 50  0000 C CNN
+F 2 "jkiv-library:SOT89-5" H 2300 5350 50  0001 C CNN
+F 3 "" H 2300 5350 50  0001 C CNN
+	1    2300 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C24
+U 1 1 5F8B1E0E
+P 2750 5450
+AR Path="/5D74F1A4/5F8B1E0E" Ref="C24"  Part="1" 
+AR Path="/5FC264E9/5F8B1E0E" Ref="C44"  Part="1" 
+F 0 "C24" H 2842 5496 50  0000 L CNN
+F 1 "4.7u" H 2842 5405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2750 5450 50  0001 C CNN
+F 3 "~" H 2750 5450 50  0001 C CNN
+	1    2750 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C18
+U 1 1 5F8B207F
+P 1600 5450
+AR Path="/5D74F1A4/5F8B207F" Ref="C18"  Part="1" 
+AR Path="/5FC264E9/5F8B207F" Ref="C38"  Part="1" 
+F 0 "C18" H 1692 5496 50  0000 L CNN
+F 1 "4.7u" H 1692 5405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1600 5450 50  0001 C CNN
+F 3 "~" H 1600 5450 50  0001 C CNN
+	1    1600 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 5350 2750 5250
+Wire Wire Line
+	2750 5250 2700 5250
+Connection ~ 2750 5250
+Text Label 2800 5250 0    50   ~ 0
+VCORE
+Wire Wire Line
+	2750 5250 3050 5250
+Wire Wire Line
+	1600 5550 1600 5750
+Wire Wire Line
+	1600 5750 2300 5750
+Wire Wire Line
+	2300 5750 2300 5700
+Wire Wire Line
+	2300 5750 2750 5750
+Wire Wire Line
+	2750 5750 2750 5550
+Connection ~ 2300 5750
+$Comp
+L power:GND #PWR030
+U 1 1 5F94602E
+P 2300 5800
+AR Path="/5D74F1A4/5F94602E" Ref="#PWR030"  Part="1" 
+AR Path="/5FC264E9/5F94602E" Ref="#PWR040"  Part="1" 
+F 0 "#PWR030" H 2300 5550 50  0001 C CNN
+F 1 "GND" H 2305 5627 50  0000 C CNN
+F 2 "" H 2300 5800 50  0001 C CNN
+F 3 "" H 2300 5800 50  0001 C CNN
+	1    2300 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 5800 2300 5750
+Wire Wire Line
+	1900 5450 1850 5450
+Text Notes 3100 5250 0    50   ~ 0
++1.2V
+Wire Wire Line
+	1850 5450 1850 5250
+Wire Wire Line
+	1850 5250 1900 5250
+Wire Wire Line
+	1850 5250 1600 5250
+Connection ~ 1850 5250
+Wire Wire Line
+	1600 5250 1600 5350
+Text HLabel 1500 5250 0    50   Input ~ 0
+VCC
+Wire Wire Line
+	1500 5250 1600 5250
+Connection ~ 1600 5250
+Text HLabel 1300 1050 0    50   Input ~ 0
 VCCIO
 Wire Wire Line
-	4400 5100 4750 5100
+	1300 1050 1450 1050
+Connection ~ 1450 1050
+Text HLabel 4650 5650 0    50   Input ~ 0
+VCCIO
+Wire Wire Line
+	4650 5650 4700 5650
+Wire Wire Line
+	4700 5650 4700 5800
+Text HLabel 4650 5100 0    50   Input ~ 0
+VCCIO
+Wire Wire Line
+	4750 5100 4650 5100
 $EndSCHEMATC

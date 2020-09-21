@@ -1462,4 +1462,6 @@ F 3 "" H 5500 1000 50  0001 C CNN
 	1    5500 1000
 	1    0    0    -1  
 $EndComp
+Text Notes 2900 5300 0    50   ~ 0
+TODO double check package
 $EndSCHEMATC

@@ -168,8 +168,6 @@ Wire Notes Line
 Wire Notes Line
 	650  650  650  2500
 Wire Wire Line
-	8600 4050 9000 4050
-Wire Wire Line
 	8600 3900 8950 3900
 Wire Wire Line
 	8600 4650 8950 4650
@@ -191,8 +189,6 @@ Wire Notes Line
 	8600 4400 8600 5000
 Wire Notes Line
 	9400 4400 8600 4400
-Text Label 8650 4200 0    50   ~ 0
-~SSEL
 Text Label 7200 3450 2    50   ~ 0
 SPI_SS_B_0
 Wire Wire Line
@@ -344,14 +340,14 @@ SERCOM1
 Wire Notes Line
 	6850 5300 6850 5000
 Wire Wire Line
-	7200 5250 7050 5250
+	8600 5250 8750 5250
 Wire Wire Line
-	8600 5250 8800 5250
-Text Label 7150 5250 2    50   ~ 0
+	7200 5250 7000 5250
+Text Label 8650 5250 0    50   ~ 0
 ~WE
 Text Label 7150 5100 2    50   ~ 0
 MOSI
-Text Label 8650 5250 0    50   ~ 0
+Text Label 7150 5250 2    50   ~ 0
 SCK
 Wire Wire Line
 	7200 3600 7050 3600
@@ -411,8 +407,6 @@ Text Label 8650 3400 0    50   ~ 0
 VDDCORE
 Text Label 8650 3900 0    50   ~ 0
 SWD_IO
-Text Label 8650 4050 0    50   ~ 0
-SWD_CLK
 Text Label 8650 3650 0    50   ~ 0
 ~RESET
 $Comp
@@ -1147,8 +1141,6 @@ Wire Notes Line
 	650  650  8600 650 
 Text Notes 6200 850  0    50   ~ 0
 FPGA bypass headers:
-Wire Wire Line
-	8600 4200 8850 4200
 Text Notes 800  3000 0    50   ~ 0
 +5V (<+6V)
 $Comp
@@ -1464,4 +1456,12 @@ F 3 "" H 5500 1000 50  0001 C CNN
 $EndComp
 Text Notes 2900 5300 0    50   ~ 0
 TODO double check package
+Wire Wire Line
+	8600 4200 8850 4200
+Text Label 8650 4050 0    50   ~ 0
+SWD_CLK
+Text Label 8650 4200 0    50   ~ 0
+~SSEL
+Wire Wire Line
+	8600 4050 9000 4050
 $EndSCHEMATC

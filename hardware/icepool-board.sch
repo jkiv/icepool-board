@@ -775,139 +775,62 @@ Wire Notes Line
 Wire Notes Line
 	5450 6100 5450 2600
 Wire Wire Line
-	4700 6300 4600 6300
+	3550 6250 3450 6250
 Wire Wire Line
-	4550 6400 4700 6400
+	3400 6350 3550 6350
 $Comp
 L power:GND #PWR019
 U 1 1 5EB3899F
-P 4550 6400
-F 0 "#PWR019" H 4550 6150 50  0001 C CNN
-F 1 "GND" V 4555 6272 50  0000 R CNN
-F 2 "" H 4550 6400 50  0001 C CNN
-F 3 "" H 4550 6400 50  0001 C CNN
-	1    4550 6400
+P 3400 6350
+F 0 "#PWR019" H 3400 6100 50  0001 C CNN
+F 1 "GND" V 3405 6222 50  0000 R CNN
+F 2 "" H 3400 6350 50  0001 C CNN
+F 3 "" H 3400 6350 50  0001 C CNN
+	1    3400 6350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4600 6300 4600 6200
+	3450 6250 3450 6150
 $Comp
 L power:+3V3 #PWR020
 U 1 1 5EC2EFC6
-P 4600 6200
-F 0 "#PWR020" H 4600 6050 50  0001 C CNN
-F 1 "+3V3" H 4615 6373 50  0000 C CNN
-F 2 "" H 4600 6200 50  0001 C CNN
-F 3 "" H 4600 6200 50  0001 C CNN
-	1    4600 6200
+P 3450 6150
+F 0 "#PWR020" H 3450 6000 50  0001 C CNN
+F 1 "+3V3" H 3465 6323 50  0000 C CNN
+F 2 "" H 3450 6150 50  0001 C CNN
+F 3 "" H 3450 6150 50  0001 C CNN
+	1    3450 6150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x05 J5
 U 1 1 5EAFA5D4
-P 4900 6500
-F 0 "J5" H 4980 6542 50  0000 L CNN
-F 1 "SWD_ALT" H 4980 6451 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 4900 6500 50  0001 C CNN
-F 3 "~" H 4900 6500 50  0001 C CNN
-	1    4900 6500
+P 3750 6450
+F 0 "J5" H 3830 6492 50  0000 L CNN
+F 1 "SWD" H 3830 6401 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 3750 6450 50  0001 C CNN
+F 3 "~" H 3750 6450 50  0001 C CNN
+	1    3750 6450
 	1    0    0    -1  
 $EndComp
-Text Label 4400 6500 0    50   ~ 0
+Text Label 3250 6450 0    50   ~ 0
 SWD_IO
-Text Label 4400 6600 0    50   ~ 0
+Text Label 3250 6550 0    50   ~ 0
 SWD_CLK
-Text Label 4450 6700 0    50   ~ 0
+Text Label 3300 6650 0    50   ~ 0
 ~RESET
 Wire Wire Line
-	4400 6700 4700 6700
+	3250 6650 3550 6650
 Wire Wire Line
-	4350 6500 4700 6500
+	3200 6450 3550 6450
 Wire Wire Line
-	4350 6600 4700 6600
-Wire Wire Line
-	3150 6300 3350 6300
-Connection ~ 3250 6400
-Wire Wire Line
-	3150 6400 3150 6550
-Wire Wire Line
-	3250 6400 3150 6400
-$Comp
-L power:GND #PWR014
-U 1 1 5EBECC5A
-P 3150 6550
-F 0 "#PWR014" H 3150 6300 50  0001 C CNN
-F 1 "GND" H 3155 6377 50  0000 C CNN
-F 2 "" H 3150 6550 50  0001 C CNN
-F 3 "" H 3150 6550 50  0001 C CNN
-	1    3150 6550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3750 6400 4100 6400
-NoConn ~ 3350 6700
-NoConn ~ 3350 6600
-Wire Wire Line
-	3750 6300 4100 6300
-NoConn ~ 3750 6600
-NoConn ~ 3750 6500
+	3200 6550 3550 6550
 Wire Notes Line
 	3000 5850 3000 7000
 Wire Notes Line
-	5350 7000 5350 5850
-Wire Wire Line
-	3150 6300 3150 6150
-Wire Wire Line
-	3750 6700 4050 6700
-Wire Wire Line
-	3250 6500 3350 6500
-Wire Wire Line
-	3250 6400 3350 6400
-$Comp
-L power:+3V3 #PWR013
-U 1 1 5DAFFB57
-P 3150 6150
-F 0 "#PWR013" H 3150 6000 50  0001 C CNN
-F 1 "+3V3" H 3165 6323 50  0000 C CNN
-F 2 "" H 3150 6150 50  0001 C CNN
-F 3 "" H 3150 6150 50  0001 C CNN
-	1    3150 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L dk_Rectangular-Connectors-Headers-Male-Pins:FTSH-105-01-F-DV-K J4
-U 1 1 5D8FA17A
-P 3550 6500
-F 0 "J4" H 3550 6915 50  0000 C CNN
-F 1 "SWD" H 3550 6824 50  0000 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 3750 6700 50  0001 L CNN
-F 3 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 3750 6800 50  0001 L CNN
-F 4 "SAM8796-ND" H 3750 6900 60  0001 L CNN "Digi-Key_PN"
-F 5 "FTSH-105-01-F-DV-K" H 3750 7000 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 3750 7100 60  0001 L CNN "Category"
-F 7 "Rectangular Connectors - Headers, Male Pins" H 3750 7200 60  0001 L CNN "Family"
-F 8 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" H 3750 7300 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/samtec-inc/FTSH-105-01-F-DV-K/SAM8796-ND/2649974" H 3750 7400 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN HEADER SMD 10POS 1.27MM" H 3750 7500 60  0001 L CNN "Description"
-F 11 "Samtec Inc." H 3750 7600 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 3750 7700 60  0001 L CNN "Status"
-	1    3550 6500
-	1    0    0    -1  
-$EndComp
-Text Notes 4850 6950 0    50   ~ 0
+	4200 7000 4200 5850
+Text Notes 3650 6950 0    50   ~ 0
 SWD Header
-Text Label 3800 6700 0    50   ~ 0
-~RESET
-Wire Wire Line
-	3250 6500 3250 6400
-Text Label 3800 6400 0    50   ~ 0
-SWD_CLK
-Text Label 3800 6300 0    50   ~ 0
-SWD_IO
-Wire Notes Line
-	3000 5850 5350 5850
-Wire Notes Line
-	5350 7000 3000 7000
 $Comp
 L Device:Crystal Y1
 U 1 1 5DB900C6
@@ -1464,4 +1387,8 @@ Text Label 8650 4200 0    50   ~ 0
 ~SSEL
 Wire Wire Line
 	8600 4050 9000 4050
+Wire Notes Line
+	3000 5850 4200 5850
+Wire Notes Line
+	4200 7000 3000 7000
 $EndSCHEMATC

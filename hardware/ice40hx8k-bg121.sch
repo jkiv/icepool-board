@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
 Title "icepool-board"
-Date "2020-02-18"
+Date "2020-11-09"
 Rev "2020-04"
 Comp "fourside.io"
 Comment1 ""

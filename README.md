@@ -15,6 +15,12 @@ Key features include,
 
 The goal is to produce an inexpensive, low-power, parallel co-processor for embedded computing projects.
 
+
+
+![icepool-board 3D Render](hardware/images/icepool-board_profile.png)
+
+
+
 Please consider supporting this project and others like it by donating:
 * XBT: 13zRrs1YDdooUN5WtfXRSDn8KnJdok4qG9
 

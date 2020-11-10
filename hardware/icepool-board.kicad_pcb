@@ -10,6 +10,13 @@
   )
 
   (page A4)
+  (title_block
+    (title icepool-board)
+    (date 2020-11-09)
+    (rev 2020-04)
+    (company fourside.io)
+  )
+
   (layers
     (0 F.Cu signal)
     (1 In1.Cu power)

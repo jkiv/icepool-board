@@ -153,6 +153,7 @@
   (lib (name jkiv-atmel)(type Legacy)(uri ${KIPRJMOD}/external/jkiv-kicad-library/jkiv-symbols/jkiv-atmel.lib)(options "")(descr ""))
   (lib (name jkiv-renesas)(type Legacy)(uri ${KIPRJMOD}/external/jkiv-kicad-library/jkiv-symbols/jkiv-renesas.lib)(options "")(descr ""))
   (lib (name jkiv-onsemi)(type Legacy)(uri ${KIPRJMOD}/external/jkiv-kicad-library/jkiv-symbols/jkiv-onsemi.lib)(options "")(descr ""))
-  (lib (name jkiv-nxp)(type Legacy)(uri ${KIPRJMOD}/external/jkiv-kicad-library/jkiv-symbols/jkiv-nxp.lib)(options "")(descr ""))
   (lib (name jkiv-diodes)(type Legacy)(uri ${KIPRJMOD}/external/jkiv-kicad-library/jkiv-symbols/jkiv-diodes.lib)(options "")(descr ""))
+  (lib (name jkiv-alphaomega)(type Legacy)(uri ${KIPRJMOD}/external/jkiv-kicad-library/jkiv-symbols/jkiv-alphaomega.lib)(options "")(descr ""))
+  (lib (name icepool-board-rescue)(type Legacy)(uri ${KIPRJMOD}/icepool-board-rescue.lib)(options "")(descr ""))
 )

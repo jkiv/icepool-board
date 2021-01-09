@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:icepool-board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 5
+Sheet 5 5
 Title "icepool-board"
 Date "2020-11-09"
 Rev "2020-04"
@@ -14,24 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
-U 1 1 5D74F583
-P 5750 1700
-AR Path="/5D7C5399/5D74F583" Ref="U?"  Part="1" 
-AR Path="/5D74F1A4/5D74F583" Ref="U?"  Part="1" 
-AR Path="/5E9AF0AF/5D74F583" Ref="U?"  Part="1" 
-AR Path="/5E9AF0BC/5D74F583" Ref="U?"  Part="1" 
-AR Path="/5FC264E9/5D74F583" Ref="U?"  Part="1" 
-AR Path="/5FFA49FD/5D74F583" Ref="U?"  Part="1" 
-AR Path="/60023325/60024B6C/5D74F583" Ref="U8"  Part="1" 
-F 0 "U8" H 5750 2687 60  0000 C CNN
-F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 5750 2581 60  0000 C CNN
-F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 5750 1200 60  0001 C CNN
-F 3 "" H 5750 1200 60  0000 C CNN
-	1    5750 1700
-	1    0    0    -1  
-$EndComp
 $Comp
 L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
 U 2 1 5D750F66
@@ -441,26 +422,6 @@ F 3 "~" H 3200 3850 50  0001 C CNN
 $EndComp
 Text Label 2750 4000 0    50   ~ 0
 GNDPLL0
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5E87AD72
-P 900 2200
-AR Path="/5D7C5399/5E87AD72" Ref="#PWR?"  Part="1" 
-AR Path="/5D74F1A4/5E87AD72" Ref="#PWR?"  Part="1" 
-AR Path="/5E9AF0AF/5E87AD72" Ref="#PWR?"  Part="1" 
-AR Path="/5E9AF0BC/5E87AD72" Ref="#PWR?"  Part="1" 
-AR Path="/5FC264E9/5E87AD72" Ref="#PWR?"  Part="1" 
-AR Path="/5FFA49FD/5E87AD72" Ref="#PWR?"  Part="1" 
-AR Path="/60023325/60024B6C/5E87AD72" Ref="#PWR068"  Part="1" 
-F 0 "#PWR068" H 900 2050 50  0001 C CNN
-F 1 "+3V3" H 915 2373 50  0000 C CNN
-F 2 "" H 900 2200 50  0001 C CNN
-F 3 "" H 900 2200 50  0001 C CNN
-	1    900  2200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	900  2200 900  2250
 Text Label 2750 3700 0    50   ~ 0
 VCCPLL0
 Wire Wire Line
@@ -549,7 +510,7 @@ F 3 "~" H 3600 3850 50  0001 C CNN
 	1    3600 3850
 	1    0    0    -1  
 $EndComp
-Text HLabel 7850 1850 0    50   Output ~ 0
+Text HLabel 10050 3850 2    50   Output ~ 0
 SDO1
 Wire Wire Line
 	3600 4000 3200 4000
@@ -583,7 +544,7 @@ F 3 "~" H 2350 4250 50  0001 C CNN
 	1    2350 4250
 	0    1    1    0   
 $EndComp
-Text HLabel 10050 3050 2    50   Input ~ 0
+Text HLabel 7850 3000 0    50   Input ~ 0
 READY
 NoConn ~ 4650 1100
 NoConn ~ 4650 1200
@@ -614,7 +575,6 @@ NoConn ~ 10050 1450
 NoConn ~ 10050 1550
 NoConn ~ 10050 1650
 NoConn ~ 10050 1750
-NoConn ~ 10050 1850
 NoConn ~ 7850 2050
 NoConn ~ 7850 1750
 NoConn ~ 7850 1650
@@ -626,14 +586,10 @@ NoConn ~ 7850 1150
 NoConn ~ 7850 1050
 NoConn ~ 10050 4050
 NoConn ~ 10050 3950
-NoConn ~ 10050 3850
-NoConn ~ 10050 3750
 NoConn ~ 10050 3650
-NoConn ~ 10050 3550
 NoConn ~ 10050 3450
 NoConn ~ 10050 3350
-NoConn ~ 10050 3250
-Text HLabel 10050 3150 2    50   Input ~ 0
+Text HLabel 10050 3050 2    50   Input ~ 0
 SDI1
 $Comp
 L power:GND #PWR?
@@ -736,7 +692,6 @@ NoConn ~ 7850 3400
 NoConn ~ 7850 3300
 NoConn ~ 7850 3200
 NoConn ~ 7850 3100
-NoConn ~ 7850 3000
 Text Notes 7000 4750 0    50   ~ 0
 ~CS0~ = 0 by default: SPI slave mode
 Text HLabel 6850 4350 2    50   Input ~ 0
@@ -765,7 +720,6 @@ F 3 "" H 8950 3250 60  0000 C CNN
 	4    8950 3750
 	1    0    0    -1  
 $EndComp
-NoConn ~ 10050 1950
 Text HLabel 6850 3950 2    50   Output ~ 0
 CDONE
 Text Notes 3750 6150 0    50   ~ 0
@@ -839,8 +793,6 @@ F 3 "~" H 1200 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1300 2250 1950 2250
-Wire Wire Line
-	900  2250 1100 2250
 Wire Notes Line
 	4100 6200 600  6200
 Wire Notes Line
@@ -858,7 +810,7 @@ Wire Notes Line
 	600  600  600  6200
 Text HLabel 6850 4450 2    50   Input ~ 0
 ~CS0
-Text HLabel 6850 3150 2    50   Input ~ 0
+Text HLabel 10050 3150 2    50   Input ~ 0
 SCK1
 Wire Wire Line
 	3450 5150 3350 5150
@@ -885,23 +837,6 @@ F 2 "Resistor_SMD:R_0402_1005Metric" H 3250 5150 50  0001 C CNN
 F 3 "~" H 3250 5150 50  0001 C CNN
 	1    3250 5150
 	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1750 5150 1750 5200
-Wire Wire Line
-	1650 5150 1750 5150
-$Comp
-L power:GND #PWR?
-U 1 1 601493F5
-P 1750 5200
-AR Path="/5D74F1A4/601493F5" Ref="#PWR?"  Part="1" 
-AR Path="/60023325/60024B6C/601493F5" Ref="#PWR073"  Part="1" 
-F 0 "#PWR073" H 1750 4950 50  0001 C CNN
-F 1 "GND" H 1755 5027 50  0000 C CNN
-F 2 "" H 1750 5200 50  0001 C CNN
-F 3 "" H 1750 5200 50  0001 C CNN
-	1    1750 5200
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1400 5150 1450 5150
@@ -1035,10 +970,79 @@ Wire Wire Line
 Wire Wire Line
 	950  1650 1000 1650
 NoConn ~ 7850 1950
-Text HLabel 6850 2000 2    50   Input ~ 0
+Text HLabel 10050 1950 2    50   Input ~ 0
 CLK
 Text HLabel 4650 1000 0    50   Input ~ 0
 ~LED
-Text HLabel 6850 3050 2    50   Input ~ 0
+Text HLabel 10050 3750 2    50   Input ~ 0
 ~RW
+Text HLabel 1000 2250 0    50   Input ~ 0
+VCCIO
+Wire Wire Line
+	1000 2250 1100 2250
+NoConn ~ 6850 2000
+$Comp
+L jkiv-lattice:iCE40HX8K-BG121(121-Ball_caBGA) U?
+U 1 1 5D74F583
+P 5750 1700
+AR Path="/5D7C5399/5D74F583" Ref="U?"  Part="1" 
+AR Path="/5D74F1A4/5D74F583" Ref="U?"  Part="1" 
+AR Path="/5E9AF0AF/5D74F583" Ref="U?"  Part="1" 
+AR Path="/5E9AF0BC/5D74F583" Ref="U?"  Part="1" 
+AR Path="/5FC264E9/5D74F583" Ref="U?"  Part="1" 
+AR Path="/5FFA49FD/5D74F583" Ref="U?"  Part="1" 
+AR Path="/60023325/60024B6C/5D74F583" Ref="U8"  Part="1" 
+F 0 "U8" H 5750 2687 60  0000 C CNN
+F 1 "iCE40HX8K-BG121(121-Ball_caBGA)" H 5750 2581 60  0000 C CNN
+F 2 "jkiv-library:BGA-121_11x11_9.0x9.0mm" H 5750 1200 60  0001 C CNN
+F 3 "" H 5750 1200 60  0000 C CNN
+	1    5750 1700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10050 3250
+Wire Wire Line
+	1400 5800 1450 5800
+Text HLabel 1400 5800 0    50   Input ~ 0
+~CS1
+$Comp
+L Device:R_Small_US R?
+U 1 1 601250B3
+P 1550 5800
+AR Path="/5E9AF0BC/601250B3" Ref="R?"  Part="1" 
+AR Path="/5D74F1A4/601250B3" Ref="R?"  Part="1" 
+AR Path="/5D7C5399/601250B3" Ref="R?"  Part="1" 
+AR Path="/5E9AF0AF/601250B3" Ref="R?"  Part="1" 
+AR Path="/5FC264E9/601250B3" Ref="R?"  Part="1" 
+AR Path="/5FFA49FD/601250B3" Ref="R?"  Part="1" 
+AR Path="/60023325/60024B6C/601250B3" Ref="R31"  Part="1" 
+F 0 "R31" V 1345 5800 50  0000 C CNN
+F 1 "10k" V 1436 5800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1550 5800 50  0001 C CNN
+F 3 "~" H 1550 5800 50  0001 C CNN
+	1    1550 5800
+	0    1    1    0   
+$EndComp
+Text HLabel 10050 3550 2    50   Input ~ 0
+~CS1
+NoConn ~ 6850 3150
+Wire Wire Line
+	1750 5150 1650 5150
+Wire Wire Line
+	1750 5800 1650 5800
+Text HLabel 1750 5800 2    50   Input ~ 0
+VCCIO
+NoConn ~ 10050 1850
+$Comp
+L power:GND #PWR0186
+U 1 1 5FF8A0AF
+P 1750 5250
+F 0 "#PWR0186" H 1750 5000 50  0001 C CNN
+F 1 "GND" H 1755 5077 50  0000 C CNN
+F 2 "" H 1750 5250 50  0001 C CNN
+F 3 "" H 1750 5250 50  0001 C CNN
+	1    1750 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 5250 1750 5150
 $EndSCHEMATC

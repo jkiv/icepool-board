@@ -545,7 +545,7 @@ F 3 "~" H 2350 4250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text HLabel 7850 3000 0    50   Input ~ 0
-READY
+~READY_IN
 NoConn ~ 4650 1100
 NoConn ~ 4650 1200
 NoConn ~ 4650 1300
@@ -691,7 +691,6 @@ NoConn ~ 7850 3500
 NoConn ~ 7850 3400
 NoConn ~ 7850 3300
 NoConn ~ 7850 3200
-NoConn ~ 7850 3100
 Text Notes 7000 4750 0    50   ~ 0
 ~CS0~ = 0 by default: SPI slave mode
 Text HLabel 6850 4350 2    50   Input ~ 0
@@ -784,8 +783,8 @@ AR Path="/5E9AF0AF/5EAB04EF" Ref="JP?"  Part="1"
 AR Path="/5FC264E9/5EAB04EF" Ref="JP?"  Part="1" 
 AR Path="/5FFA49FD/5EAB04EF" Ref="JP?"  Part="1" 
 AR Path="/60023325/60024B6C/5EAB04EF" Ref="JP1"  Part="1" 
-F 0 "JP1" H 1200 2462 50  0000 C CNN
-F 1 "CUT_2V5" H 1200 2371 50  0000 C CNN
+F 0 "JP1" H 1200 2350 50  0000 C CNN
+F 1 "CUT_2V5" H 1200 2371 50  0001 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 1200 2250 50  0001 C CNN
 F 3 "~" H 1200 2250 50  0001 C CNN
 	1    1200 2250
@@ -867,7 +866,7 @@ VCCIO
 Wire Wire Line
 	3100 5550 3150 5550
 Text HLabel 3100 5550 0    50   Input ~ 0
-~RW
+~RESET
 $Comp
 L Device:R_Small_US R?
 U 1 1 601964D0
@@ -975,7 +974,7 @@ CLK
 Text HLabel 4650 1000 0    50   Input ~ 0
 ~LED
 Text HLabel 10050 3750 2    50   Input ~ 0
-~RW
+~RESET
 Text HLabel 1000 2250 0    50   Input ~ 0
 VCCIO
 Wire Wire Line
@@ -1045,4 +1044,8 @@ F 3 "" H 1750 5250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1750 5250 1750 5150
+Text HLabel 7850 3100 0    50   Output ~ 0
+~READY_OUT
+NoConn ~ 7850 1850
+NoConn ~ 6850 3050
 $EndSCHEMATC

@@ -17,11 +17,11 @@ Key features include,
 
 
 
-![icepool-board - 3D Render](hardware/images/icepool-board_profile.png)
+![icepool-board - 3D Render](hardware/images/icepool-board-profile-small.png)
 
 Currently, the project includes a daughter board design featuring a single ice40hx8k-bg121 FGPA with independent LDO, 12MHz oscillator, and indicator LED.
 
-<img src="hardware/images/icepool-ice40hx8k-daughterboard-profile.png" alt="ice40hx8k bg121 daughter board - 3D render" style="zoom:50%;" />
+![ice40hx8k bg121 daughter board - 3D render](hardware/images/icepool-ice40hx8k-daughterboard-profile-small.png)
 
 Please consider supporting this project and others like it by donating:
 

@@ -22,11 +22,11 @@ $EndSheet
 Text Notes 1450 1850 0    50   ~ 0
 icepool Mother Board
 $Sheet
-S 3200 850  2000 1900
+S 3100 850  2000 1900
 U 60023325
 F0 "ice40hx8k-daughter-board" 50
 F1 "ice40hx8k-daughter-board.sch" 50
 $EndSheet
-Text Notes 3700 1850 0    50   ~ 0
+Text Notes 3600 1850 0    50   ~ 0
 ice40hx8k Daughter Board
 $EndSCHEMATC

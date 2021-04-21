@@ -5,24 +5,31 @@ icepool-board
 
 KiCad 5 design files for the *icepool* project.
 
-*icepool* is a FPGA development board designed around Lattice ICE40 FPGAs.
+*icepool* is a FPGA cluster and development board.
 
 Key features include,
 
-- An ARM Cortex M0+ co-processor for serial communication, debugging, and FPGA flashing.
-- One-to-many SPI interface for sending data from MCU to the FPGAs.
-- Daisy-chained SPI interface for passing data to and from the MCU and each FPGA.
-
-The goal is to produce an inexpensive, low-power, parallel co-processor for embedded computing projects.
-
-
-
-![icepool-board 3D Render](hardware/images/icepool-board_profile.png)
+- 16x headers for daughter boards.
+- An FT2232H for USB communication and parallel FPGA flashing.
+- One-to-many SPI interface for sending data from the PC to each daughter board.
+- Daisy-chained SPI interface for passing data to and from the PC and each daughter board.
+- A 6-pin ATX +12V power connector for use with conventional PC power supplies.
 
 
+
+![icepool-board - 3D Render](hardware/images/icepool-board_profile.png)
+
+Currently, the project includes a daughter board design featuring a single ice40hx8k-bg121 FGPA with independent LDO, 12MHz oscillator, and indicator LED.
+
+<img src="C:\Users\Stream\Desktop\icepool-board\hardware\images\icepool-ice40hx8k-daughterboard-profile.png" alt="ice40hx8k bg121 daughter board - 3D render" style="zoom:50%;" />
 
 Please consider supporting this project and others like it by donating:
+
 * XBT: 13zRrs1YDdooUN5WtfXRSDn8KnJdok4qG9
+
+## Drivers
+
+See [jkiv/icepool-driver](https://github.com/jkiv/icepool-driver) project for a general purpose Linux C library which relies on `libftdi`.
 
 ## Dependencies
 

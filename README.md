@@ -19,7 +19,7 @@ Key features include,
 
 ![icepool-board - 3D Render](hardware/images/icepool-board-profile-small.png)
 
-Currently, the project includes a daughter board design featuring a single ice40hx8k-bg121 FGPA with independent LDO, 12MHz oscillator, and indicator LED.
+Currently, the project includes a daughter board design featuring a single [ice40hx8k-bg121](http://www.latticesemi.com/iCE40) FPGA with independent 1.2V LDO, 12MHz oscillator, and indicator LED.
 
 ![ice40hx8k bg121 daughter board - 3D render](hardware/images/icepool-ice40hx8k-daughterboard-profile-small.png)
 

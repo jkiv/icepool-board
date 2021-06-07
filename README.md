@@ -1,11 +1,9 @@
 icepool-board
 =============
 
-## About
+KiCad 5 design files for the `icepool` project.
 
-KiCad 5 design files for the *icepool* project.
-
-*icepool* is a FPGA cluster and development board.
+`icepool` is a FPGA cluster and development board.
 
 Key features include,
 
@@ -23,14 +21,6 @@ Currently, the project includes a daughter board design featuring a single [ice4
 
 ![ice40hx8k bg121 daughter board - 3D render](hardware/images/icepool-ice40hx8k-daughterboard-profile-small.png)
 
-Please consider supporting this project and others like it by donating:
-
-* XBT: 13zRrs1YDdooUN5WtfXRSDn8KnJdok4qG9
-
-## Drivers
-
-See [jkiv/icepool-driver](https://github.com/jkiv/icepool-driver) project for a general purpose Linux C library which relies on `libftdi`.
-
 ## Dependencies
 
 This project depends on the following KiCad libraries:
@@ -45,3 +35,18 @@ For example, starting at the repo root directory:
     $ cd hardware/external/
     $ git clone https://github.com/Digi-Key/digikey-kicad-library.git
     $ git clone https://github.com/jkiv/jkiv-kicad-library.git 
+
+## Drivers
+
+See [jkiv/icepool-driver](https://github.com/jkiv/icepool-driver) project for a general-purpose Linux C library with Python3 bindings.
+
+## Cores
+
+* [jkiv/shapool-core](https://github.com/jkiv/shapool-core) - a SHA256d hashing core for cryptocurrency mining.
+
+## Donate
+
+Please consider supporting this project and others like it by donating:
+
+* ☕: [ko-fi.com/jkiv_](https://ko-fi.com/jkiv_)
+* ₿: `13zRrs1YDdooUN5WtfXRSDn8KnJdok4qG9`

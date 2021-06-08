@@ -28,13 +28,10 @@ This project depends on the following KiCad libraries:
 * [Digi-Key/digikey-kicad-library](https://github.com/Digi-Key/digikey-kicad-library)
 * [jkiv/jkiv-kicad-library](https://github.com/jkiv/jkiv-kicad-library)
 
-These repositories must be cloned into `hardware/external/`.
+These repositories are set up as git submodules and can be cloned into `hardware/external/` using the following two commands:
 
-For example, starting at the repo root directory:
-
-    $ cd hardware/external/
-    $ git clone https://github.com/Digi-Key/digikey-kicad-library.git
-    $ git clone https://github.com/jkiv/jkiv-kicad-library.git 
+    $ git submodule init
+    $ git submodule update
 
 ## Drivers
 

@@ -1,0 +1,6 @@
+[submodule "hardware/external/jkiv-kicad-library"]
+	path = hardware/external/jkiv-kicad-library
+	url = https://github.com/jkiv/jkiv-kicad-library.git
+[submodule "hardware/external/digikey-kicad-library"]
+	path = hardware/external/digikey-kicad-library
+	url = https://github.com/Digi-Key/digikey-kicad-library.git

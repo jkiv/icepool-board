@@ -1,6 +1,0 @@
-This directory is used to store "external" KiCad libraries. 
-
-Until git submodules are used, these libraries need to be cloned here manually:
-
-    git clone git@github.com:DigiKey/digikey-kicad-library
-    git clone git@github.com:jkiv/jkiv-kicad-library

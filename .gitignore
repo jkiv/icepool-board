@@ -1,6 +1,4 @@
 refs/
-hardware/external/digikey-kicad-library/
-hardware/external/icepool-library/
 fp-info-cache
 
 # For PCBs designed using KiCad: http://www.kicad-pcb.org/

@@ -291,12 +291,12 @@ Wire Wire Line
 $Comp
 L Device:Jumper_NO_Small JP2
 U 1 1 604EBEE1
-P 1150 2800
-F 0 "JP2" H 1150 2985 50  0000 C CNN
-F 1 "FSW" H 1150 2894 50  0000 C CNN
-F 2 "jkiv-library:J_NO_0201_0603Metric" H 1150 2800 50  0001 C CNN
-F 3 "~" H 1150 2800 50  0001 C CNN
-	1    1150 2800
+P 6400 3050
+F 0 "JP2" H 6400 3235 50  0000 C CNN
+F 1 "FSW" H 6400 3144 50  0000 C CNN
+F 2 "jkiv-library:J_NO_0201_0603Metric" H 6400 3050 50  0001 C CNN
+F 3 "~" H 6400 3050 50  0001 C CNN
+	1    6400 3050
 	1    0    0    -1  
 $EndComp
 Text Label 2100 1850 2    50   ~ 0
@@ -335,14 +335,14 @@ Wire Wire Line
 	2100 1850 1950 1850
 Wire Wire Line
 	2100 1950 1950 1950
-Text Label 1250 2800 0    50   ~ 0
+Text Label 6500 3050 0    50   ~ 0
 FSW
-Text Label 1050 2800 2    50   ~ 0
+Text Label 6300 3050 2    50   ~ 0
 PG
 Wire Wire Line
-	1250 2800 1400 2800
+	6500 3050 6650 3050
 Wire Wire Line
-	1050 2800 950  2800
+	6300 3050 6200 3050
 $Comp
 L Device:R_Small_US R23
 U 1 1 60551BBC
@@ -371,7 +371,7 @@ Connection ~ 4350 1650
 Connection ~ 3950 1650
 Wire Wire Line
 	3950 1650 4350 1650
-Text Notes 950  3050 0    50   ~ 0
+Text Notes 6200 3300 0    50   ~ 0
 Connect for lower-frequency,\nhigher-efficiency operation.
 Text Notes 1600 1100 0    50   ~ 0
 10u between PVIN-PGND\n0.1u between AVIN-AGND
@@ -408,36 +408,169 @@ Wire Wire Line
 Wire Wire Line
 	1750 1300 2050 1300
 Connection ~ 2050 1300
-Text Notes 950  3800 0    50   ~ 0
+Text Notes 6200 4050 0    50   ~ 0
 Connect for +5% output voltage
 Wire Wire Line
-	1400 3600 1550 3600
-Text Label 1400 3600 0    50   ~ 0
+	6650 3850 6800 3850
+Text Label 6650 3850 0    50   ~ 0
 DEF
 $Comp
 L Device:Jumper_NO_Small JP3
 U 1 1 605C2EF6
-P 1300 3600
-F 0 "JP3" H 1300 3785 50  0000 C CNN
-F 1 "FSW" H 1300 3694 50  0000 C CNN
-F 2 "jkiv-library:J_NO_0201_0603Metric" H 1300 3600 50  0001 C CNN
-F 3 "~" H 1300 3600 50  0001 C CNN
-	1    1300 3600
+P 6550 3850
+F 0 "JP3" H 6550 4035 50  0000 C CNN
+F 1 "FSW" H 6550 3944 50  0000 C CNN
+F 2 "jkiv-library:J_NO_0201_0603Metric" H 6550 3850 50  0001 C CNN
+F 3 "~" H 6550 3850 50  0001 C CNN
+	1    6550 3850
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR0187
 U 1 1 605C9BF8
-P 1000 3550
-F 0 "#PWR0187" H 1000 3400 50  0001 C CNN
-F 1 "+12V" H 1015 3723 50  0000 C CNN
-F 2 "" H 1000 3550 50  0001 C CNN
-F 3 "" H 1000 3550 50  0001 C CNN
-	1    1000 3550
+P 6250 3800
+F 0 "#PWR0187" H 6250 3650 50  0001 C CNN
+F 1 "+12V" H 6265 3973 50  0000 C CNN
+F 2 "" H 6250 3800 50  0001 C CNN
+F 3 "" H 6250 3800 50  0001 C CNN
+	1    6250 3800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1000 3550 1000 3600
+	6250 3800 6250 3850
 Wire Wire Line
-	1000 3600 1200 3600
+	6250 3850 6450 3850
+Wire Wire Line
+	6750 1850 7150 1850
+$Comp
+L Connector_Generic:Conn_02x03_Counter_Clockwise J?
+U 1 1 6171B74D
+P 6450 1850
+AR Path="/5FF26697/6171B74D" Ref="J?"  Part="1" 
+AR Path="/5FF26697/5FF520B9/6171B74D" Ref="J3"  Part="1" 
+F 0 "J3" H 6500 2167 50  0000 C CNN
+F 1 "PCIe_6pin" H 6500 2076 50  0000 C CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5569-06A2_2x03_P4.20mm_Horizontal" H 6450 1850 50  0001 C CNN
+F 3 "~" H 6450 1850 50  0001 C CNN
+	1    6450 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 1750 6800 1750
+Wire Wire Line
+	6750 1950 6800 1950
+$Comp
+L power:+12V #PWR?
+U 1 1 6171B755
+P 6150 1650
+AR Path="/5FF26697/6171B755" Ref="#PWR?"  Part="1" 
+AR Path="/5FF26697/5FF520B9/6171B755" Ref="#PWR0243"  Part="1" 
+F 0 "#PWR0243" H 6150 1500 50  0001 C CNN
+F 1 "+12V" H 6165 1823 50  0000 C CNN
+F 2 "" H 6150 1650 50  0001 C CNN
+F 3 "" H 6150 1650 50  0001 C CNN
+	1    6150 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 1850 6150 1950
+Connection ~ 6150 1850
+Wire Wire Line
+	6250 1850 6150 1850
+Wire Wire Line
+	6150 1750 6150 1850
+Connection ~ 6150 1750
+Wire Wire Line
+	6150 1650 6150 1750
+Wire Wire Line
+	6150 1750 6250 1750
+Wire Wire Line
+	6250 1950 6150 1950
+Connection ~ 6800 1950
+Wire Wire Line
+	6800 1750 6800 1950
+Wire Wire Line
+	6800 1950 6800 2050
+$Comp
+L power:GND #PWR?
+U 1 1 6171B766
+P 6800 2050
+AR Path="/5FF26697/6171B766" Ref="#PWR?"  Part="1" 
+AR Path="/5FF26697/5FF520B9/6171B766" Ref="#PWR0244"  Part="1" 
+F 0 "#PWR0244" H 6800 1800 50  0001 C CNN
+F 1 "GND" H 6805 1877 50  0000 C CNN
+F 2 "" H 6800 2050 50  0001 C CNN
+F 3 "" H 6800 2050 50  0001 C CNN
+	1    6800 2050
+	1    0    0    -1  
+$EndComp
+Text Label 6850 1850 0    50   ~ 0
+SENSEA
+Connection ~ 7550 1700
+Wire Wire Line
+	7550 1800 7550 1700
+Wire Wire Line
+	7600 1800 7550 1800
+Connection ~ 7550 2000
+Wire Wire Line
+	7550 1900 7600 1900
+Wire Wire Line
+	7550 2000 7550 1900
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 61A786D9
+P 7800 1800
+AR Path="/5FF26697/61A786D9" Ref="J?"  Part="1" 
+AR Path="/5FF26697/5FF520B9/61A786D9" Ref="J21"  Part="1" 
+F 0 "J21" H 7880 1792 50  0000 L CNN
+F 1 "PWR_ALT" H 7880 1701 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7800 1800 50  0001 C CNN
+F 3 "~" H 7800 1800 50  0001 C CNN
+	1    7800 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61A786DF
+P 7550 1500
+AR Path="/5FF26697/61A786DF" Ref="#PWR?"  Part="1" 
+AR Path="/5FF26697/5FF520B9/61A786DF" Ref="#PWR0245"  Part="1" 
+F 0 "#PWR0245" H 7550 1350 50  0001 C CNN
+F 1 "+3V3" H 7565 1673 50  0000 C CNN
+F 2 "" H 7550 1500 50  0001 C CNN
+F 3 "" H 7550 1500 50  0001 C CNN
+	1    7550 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1500 7550 1600
+Connection ~ 7550 1600
+Wire Wire Line
+	7600 1600 7550 1600
+Wire Wire Line
+	7550 1700 7550 1600
+Wire Wire Line
+	7600 1700 7550 1700
+Connection ~ 7550 2100
+Wire Wire Line
+	7550 2000 7600 2000
+Wire Wire Line
+	7550 2100 7550 2000
+Wire Wire Line
+	7550 2100 7600 2100
+Wire Wire Line
+	7550 2200 7550 2100
+$Comp
+L power:GND #PWR?
+U 1 1 61A786EF
+P 7550 2200
+AR Path="/5FF26697/61A786EF" Ref="#PWR?"  Part="1" 
+AR Path="/5FF26697/5FF520B9/61A786EF" Ref="#PWR0246"  Part="1" 
+F 0 "#PWR0246" H 7550 1950 50  0001 C CNN
+F 1 "GND" H 7555 2027 50  0000 C CNN
+F 2 "" H 7550 2200 50  0001 C CNN
+F 3 "" H 7550 2200 50  0001 C CNN
+	1    7550 2200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

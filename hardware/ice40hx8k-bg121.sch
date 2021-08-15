@@ -3,10 +3,10 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 5
+Sheet 5 6
 Title "icepool-board"
-Date "2020-11-09"
-Rev "2020-04"
+Date "2021-08-15"
+Rev "CM4"
 Comp "fourside.io"
 Comment1 ""
 Comment2 ""

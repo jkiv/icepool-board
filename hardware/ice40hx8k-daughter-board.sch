@@ -3,11 +3,11 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 4 6
 Title ""
-Date ""
-Rev ""
-Comp ""
+Date "2021-08-15"
+Rev "CM4"
+Comp "fourside.io"
 Comment1 ""
 Comment2 ""
 Comment3 ""

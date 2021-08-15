@@ -152,4 +152,5 @@
   (lib (name jkiv-lattice)(type Legacy)(uri ${KIPRJMOD}/external/jkiv-kicad-library/jkiv-symbols/jkiv-lattice.lib)(options "")(descr ""))
   (lib (name jkiv-diodes)(type Legacy)(uri ${KIPRJMOD}/external/jkiv-kicad-library/jkiv-symbols/jkiv-diodes.lib)(options "")(descr ""))
   (lib (name Raspberry_Pi_Compute_Module_4)(type Legacy)(uri ${KIPRJMOD}/external/RPi-CM4-Kicad/Raspberry_Pi_Compute_Module_4.lib)(options "")(descr ""))
+  (lib (name jkiv-misc)(type Legacy)(uri ${KIPRJMOD}/external/jkiv-kicad-library/jkiv-symbols/jkiv-misc.lib)(options "")(descr ""))
 )

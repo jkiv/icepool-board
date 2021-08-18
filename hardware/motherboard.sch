@@ -1056,7 +1056,7 @@ $Sheet
 S 9100 2250 850  1150
 U 6784E01B
 F0 "Nodes" 50
-F1 "node_array.sch" 50
+F1 "node-array.sch" 50
 F2 "CDONE" O R 9950 2400 50 
 F3 "COPI0" I L 9100 2500 50 
 F4 "SCK0" I L 9100 2400 50 

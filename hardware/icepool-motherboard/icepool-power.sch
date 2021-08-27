@@ -13,22 +13,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:+3V3 #PWR0172
-U 1 1 60782BF4
-P 9450 5450
-F 0 "#PWR0172" H 9450 5300 50  0001 C CNN
-F 1 "+3V3" H 9465 5623 50  0000 C CNN
-F 2 "" H 9450 5450 50  0001 C CNN
-F 3 "" H 9450 5450 50  0001 C CNN
-	1    9450 5450
-	1    0    0    -1  
-$EndComp
 Text Notes 8450 4600 0    50   ~ 0
 Connect for +5% output voltage
 Text Label 8450 5550 0    50   ~ 0
 SW_3v3
-Text Notes 6900 4950 0    50   ~ 0
+Text Notes 6450 4800 0    50   ~ 0
 5V to 3.3V 3A buck: TPS62132
 $Comp
 L Regulator_Switching:TPS62133 U11
@@ -247,33 +236,22 @@ Wire Wire Line
 	9000 5550 9100 5550
 Connection ~ 9000 5550
 Connection ~ 9100 5550
-$Comp
-L Device:R_Small_US R50
-U 1 1 61E3102E
-P 6800 5200
-F 0 "R50" V 6595 5200 50  0000 C CNN
-F 1 "0.1R" V 6686 5200 50  0000 C CNN
-F 2 "" H 6800 5200 50  0001 C CNN
-F 3 "~" H 6800 5200 50  0001 C CNN
-	1    6800 5200
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6900 5200 6950 5200
 Connection ~ 6950 5200
 Wire Wire Line
-	6550 5200 6550 5100
+	6350 5200 6350 5100
 Wire Wire Line
-	6550 5200 6700 5200
+	6350 5200 6500 5200
 $Comp
 L power:+5V #PWR0113
 U 1 1 61F354E9
-P 6550 5100
-F 0 "#PWR0113" H 6550 4950 50  0001 C CNN
-F 1 "+5V" H 6565 5273 50  0000 C CNN
-F 2 "" H 6550 5100 50  0001 C CNN
-F 3 "" H 6550 5100 50  0001 C CNN
-	1    6550 5100
+P 6350 5100
+F 0 "#PWR0113" H 6350 4950 50  0001 C CNN
+F 1 "+5V" H 6365 5273 50  0000 C CNN
+F 2 "" H 6350 5100 50  0001 C CNN
+F 3 "" H 6350 5100 50  0001 C CNN
+	1    6350 5100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -336,8 +314,6 @@ F 3 "~" H 9450 5700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9450 5800 9450 5950
-Text Notes 9650 5550 0    50   ~ 0
-TODO bulk 3v3 cap?
 Text Notes 6450 4700 0    50   ~ 0
 FPGA Power
 Text Label 7800 5200 2    50   ~ 0
@@ -352,168 +328,19 @@ Wire Wire Line
 	7950 4700 7750 4700
 Wire Wire Line
 	8150 4700 8350 4700
-$Comp
-L Connector_Generic:Conn_01x10 J15
-U 1 1 6125326D
-P 3700 2800
-F 0 "J15" H 3780 2792 50  0000 L CNN
-F 1 "PoE_IN" H 3780 2701 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x10_P2.00mm_Vertical" H 3700 2800 50  0001 C CNN
-F 3 "~" H 3700 2800 50  0001 C CNN
-	1    3700 2800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3450 2400 3500 2400
-Wire Wire Line
-	3400 2700 3400 2600
-Wire Wire Line
-	3450 2900 3450 2800
-Wire Wire Line
-	3450 2500 3450 2400
-Wire Wire Line
-	3400 3300 3500 3300
-Wire Wire Line
-	3300 3300 3400 3300
-Connection ~ 3400 3300
-Connection ~ 3400 3200
-Wire Wire Line
-	3400 3200 3400 3300
-Connection ~ 3400 3100
-Wire Wire Line
-	3400 3100 3400 3200
-Wire Wire Line
-	3400 3000 3400 3100
-Wire Wire Line
-	3450 2800 3300 2800
-Connection ~ 3450 2800
-Wire Wire Line
-	3450 2400 3300 2400
-Connection ~ 3450 2400
-Wire Wire Line
-	3400 2600 3500 2600
-Wire Wire Line
-	3400 2700 3400 3000
-Connection ~ 3400 3000
-Wire Wire Line
-	3500 2800 3450 2800
-Wire Wire Line
-	3500 2900 3450 2900
-Wire Wire Line
-	3500 2500 3450 2500
-Connection ~ 3400 2700
-Wire Wire Line
-	3500 3000 3400 3000
-Wire Wire Line
-	3500 3100 3400 3100
-Wire Wire Line
-	3500 3200 3400 3200
-Wire Wire Line
-	3400 2700 3500 2700
-$Comp
-L power:GND #PWR0114
-U 1 1 612A0C9F
-P 3400 2100
-F 0 "#PWR0114" H 3400 1850 50  0001 C CNN
-F 1 "GND" H 3405 1927 50  0000 C CNN
-F 2 "" H 3400 2100 50  0001 C CNN
-F 3 "" H 3400 2100 50  0001 C CNN
-	1    3400 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 2100 3400 2050
-Wire Wire Line
-	3400 2050 3500 2050
-Wire Wire Line
-	3400 2050 3400 1950
-Wire Wire Line
-	3400 1150 3500 1150
-Connection ~ 3400 2050
-Wire Wire Line
-	3500 1250 3400 1250
-Connection ~ 3400 1250
-Wire Wire Line
-	3400 1250 3400 1150
-Wire Wire Line
-	3500 1350 3400 1350
-Wire Wire Line
-	3400 1350 3400 1250
-Wire Wire Line
-	3500 1850 3400 1850
-Wire Wire Line
-	3500 1950 3400 1950
-Connection ~ 3400 1950
-Wire Wire Line
-	3400 1950 3400 1850
-$Comp
-L Connector_Generic:Conn_01x10 J14
-U 1 1 612538B1
-P 3700 1550
-F 0 "J14" H 3780 1542 50  0000 L CNN
-F 1 "PoE_OUT" H 3780 1451 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x10_P2.00mm_Vertical" H 3700 1550 50  0001 C CNN
-F 3 "~" H 3700 1550 50  0001 C CNN
-	1    3700 1550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3500 1450 3450 1450
-Wire Wire Line
-	3450 1450 3450 1550
-Wire Wire Line
-	3450 1750 3500 1750
-Wire Wire Line
-	3500 1650 3450 1650
-Connection ~ 3450 1650
-Wire Wire Line
-	3450 1650 3450 1750
-Wire Wire Line
-	3500 1550 3450 1550
-Connection ~ 3450 1550
-Wire Wire Line
-	3450 1550 3450 1650
-Wire Wire Line
-	3450 1450 3300 1450
-Wire Wire Line
-	3300 1450 3300 1150
-Connection ~ 3450 1450
-$Comp
-L power:+5V #PWR0115
-U 1 1 612CBC2C
-P 3300 1150
-F 0 "#PWR0115" H 3300 1000 50  0001 C CNN
-F 1 "+5V" H 3315 1323 50  0000 C CNN
-F 2 "" H 3300 1150 50  0001 C CNN
-F 3 "" H 3300 1150 50  0001 C CNN
-	1    3300 1150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 1850 3400 1350
-Connection ~ 3400 1850
-Connection ~ 3400 1350
-Text Notes 1600 1950 0    50   ~ 0
-TODO PoE rectifier and filter ckt
-Text HLabel 1400 1650 0    50   Input ~ 0
-ETH_TDC
-Text HLabel 1400 2000 0    50   Input ~ 0
-ETH_RDC
-Text HLabel 1400 1900 0    50   Input ~ 0
-ETH_RD+
-Text HLabel 1400 2100 0    50   Input ~ 0
-ETH_RD-
-Text HLabel 1400 1550 0    50   Input ~ 0
-ETH_TD+
-Text HLabel 1400 1750 0    50   Input ~ 0
-ETH_TD-
-Text HLabel 1400 2300 0    50   Input ~ 0
-ETH_REF
-Text Label 3300 2400 2    50   ~ 0
-ETH_V+
-Text Label 3300 2800 2    50   ~ 0
-ETH_V-
-Text Label 3300 3300 2    50   ~ 0
+Text HLabel 1350 1350 0    50   Input ~ 0
+ETH_TD1-
+Text HLabel 1350 1750 0    50   Input ~ 0
+ETH_TD3+
+Text HLabel 1350 1550 0    50   Input ~ 0
+ETH_TD2-
+Text HLabel 1350 1850 0    50   Input ~ 0
+ETH_TD3-
+Text HLabel 1350 1250 0    50   Input ~ 0
+ETH_TD1+
+Text HLabel 1350 1450 0    50   Input ~ 0
+ETH_TD2+
+Text HLabel 1350 2150 0    50   Input ~ 0
 ETH_REF
 $Comp
 L Interface_USB:STUSB4500QTR U10
@@ -903,4 +730,248 @@ Text Label 8800 1400 0    50   ~ 0
 PD_GOOD
 Text Label 8350 1000 0    50   ~ 0
 PD_2v7
+$Comp
+L Connector_Generic:Conn_02x20_Counter_Clockwise J14
+U 1 1 618A7463
+P 1550 2150
+F 0 "J14" H 1600 3267 50  0000 C CNN
+F 1 "PoE_PWR" H 1600 3176 50  0000 C CNN
+F 2 "jkiv-library:stamp-10x10-P2.0mm_THT" H 1550 2150 50  0001 C CNN
+F 3 "~" H 1550 2150 50  0001 C CNN
+	1    1550 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1250 1900 1250
+Wire Wire Line
+	1900 1250 1900 1350
+Wire Wire Line
+	1900 2150 1850 2150
+Wire Wire Line
+	1900 2050 1850 2050
+Connection ~ 1900 2050
+Wire Wire Line
+	1900 2050 1900 2150
+Wire Wire Line
+	1900 1950 1850 1950
+Connection ~ 1900 1950
+Wire Wire Line
+	1900 1950 1900 2050
+Wire Wire Line
+	1900 1850 1850 1850
+Connection ~ 1900 1850
+Wire Wire Line
+	1900 1850 1900 1950
+Wire Wire Line
+	1900 1750 1850 1750
+Connection ~ 1900 1750
+Wire Wire Line
+	1900 1750 1900 1850
+Wire Wire Line
+	1900 1650 1850 1650
+Connection ~ 1900 1650
+Wire Wire Line
+	1900 1650 1900 1750
+Wire Wire Line
+	1900 1550 1850 1550
+Connection ~ 1900 1550
+Wire Wire Line
+	1900 1550 1900 1650
+Wire Wire Line
+	1900 1450 1850 1450
+Connection ~ 1900 1450
+Wire Wire Line
+	1900 1450 1900 1550
+Wire Wire Line
+	1900 1350 1850 1350
+Connection ~ 1900 1350
+Wire Wire Line
+	1900 1350 1900 1450
+Wire Wire Line
+	1300 3150 1350 3150
+Wire Wire Line
+	1850 3150 1900 3150
+Wire Wire Line
+	1900 3150 1900 3050
+Wire Wire Line
+	1900 2250 1850 2250
+Wire Wire Line
+	1350 3050 1300 3050
+Connection ~ 1300 3050
+Wire Wire Line
+	1300 3050 1300 3150
+Wire Wire Line
+	1350 2950 1300 2950
+Connection ~ 1300 2950
+Wire Wire Line
+	1300 2950 1300 3050
+Wire Wire Line
+	1350 2850 1300 2850
+Connection ~ 1300 2850
+Wire Wire Line
+	1300 2850 1300 2950
+Wire Wire Line
+	1350 2750 1300 2750
+Connection ~ 1300 2750
+Wire Wire Line
+	1300 2750 1300 2850
+Wire Wire Line
+	1350 2650 1300 2650
+Connection ~ 1300 2650
+Wire Wire Line
+	1300 2650 1300 2750
+Wire Wire Line
+	1350 2550 1300 2550
+Connection ~ 1300 2550
+Wire Wire Line
+	1300 2550 1300 2650
+Wire Wire Line
+	1350 2450 1300 2450
+Connection ~ 1300 2450
+Wire Wire Line
+	1300 2450 1300 2550
+Wire Wire Line
+	1350 2350 1300 2350
+Connection ~ 1300 2350
+Wire Wire Line
+	1300 2350 1300 2450
+Wire Wire Line
+	1350 2250 1300 2250
+Wire Wire Line
+	1300 2250 1300 2350
+Wire Wire Line
+	1850 3050 1900 3050
+Connection ~ 1900 3050
+Wire Wire Line
+	1900 3050 1900 2950
+Wire Wire Line
+	1850 2950 1900 2950
+Connection ~ 1900 2950
+Wire Wire Line
+	1900 2950 1900 2850
+Wire Wire Line
+	1850 2850 1900 2850
+Connection ~ 1900 2850
+Wire Wire Line
+	1900 2850 1900 2750
+Wire Wire Line
+	1850 2750 1900 2750
+Connection ~ 1900 2750
+Wire Wire Line
+	1900 2750 1900 2650
+Wire Wire Line
+	1850 2650 1900 2650
+Connection ~ 1900 2650
+Wire Wire Line
+	1900 2650 1900 2550
+Wire Wire Line
+	1850 2550 1900 2550
+Connection ~ 1900 2550
+Wire Wire Line
+	1900 2550 1900 2450
+Wire Wire Line
+	1850 2450 1900 2450
+Connection ~ 1900 2450
+Wire Wire Line
+	1900 2450 1900 2350
+Wire Wire Line
+	1850 2350 1900 2350
+Connection ~ 1900 2350
+Wire Wire Line
+	1900 2350 1900 2250
+$Comp
+L power:GND #PWR0114
+U 1 1 61A29B15
+P 2050 1250
+F 0 "#PWR0114" H 2050 1000 50  0001 C CNN
+F 1 "GND" H 2055 1077 50  0000 C CNN
+F 2 "" H 2050 1250 50  0001 C CNN
+F 3 "" H 2050 1250 50  0001 C CNN
+	1    2050 1250
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 3150
+$Comp
+L power:GND #PWR0115
+U 1 1 61A38D4E
+P 1300 3200
+F 0 "#PWR0115" H 1300 2950 50  0001 C CNN
+F 1 "GND" H 1305 3027 50  0000 C CNN
+F 2 "" H 1300 3200 50  0001 C CNN
+F 3 "" H 1300 3200 50  0001 C CNN
+	1    1300 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 3200 1300 3150
+Connection ~ 1300 3150
+$Comp
+L power:+5V #PWR0132
+U 1 1 61A57C91
+P 2000 3200
+F 0 "#PWR0132" H 2000 3050 50  0001 C CNN
+F 1 "+5V" H 2015 3373 50  0000 C CNN
+F 2 "" H 2000 3200 50  0001 C CNN
+F 3 "" H 2000 3200 50  0001 C CNN
+	1    2000 3200
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 1250
+Text Notes 1000 850  0    50   ~ 0
+TODO PoE rectifier and filter ckt
+Wire Wire Line
+	1900 3250 2000 3250
+Wire Wire Line
+	2000 3250 2000 3200
+Wire Wire Line
+	1900 3150 1900 3250
+Wire Wire Line
+	2050 1250 2050 1150
+Wire Wire Line
+	2050 1150 1900 1150
+Wire Wire Line
+	1900 1150 1900 1250
+$Comp
+L Device:R_Shunt_US R24
+U 1 1 612BA790
+P 6700 5200
+F 0 "R24" V 6567 5200 50  0000 C CNN
+F 1 "0.1R" V 6476 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_Shunt_Vishay_WSKW0612" V 6630 5200 50  0001 C CNN
+F 3 "~" H 6700 5200 50  0001 C CNN
+	1    6700 5200
+	0    1    -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP1
+U 1 1 612D2D8A
+P 6600 5050
+F 0 "TP1" H 6500 5150 50  0000 L CNN
+F 1 "I0+" H 6500 5100 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 6800 5050 50  0001 C CNN
+F 3 "~" H 6800 5050 50  0001 C CNN
+	1    6600 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP2
+U 1 1 612D378C
+P 6800 5050
+F 0 "TP2" H 6750 5150 50  0000 L CNN
+F 1 "I0+" H 6700 5100 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 7000 5050 50  0001 C CNN
+F 3 "~" H 7000 5050 50  0001 C CNN
+	1    6800 5050
+	1    0    0    -1  
+$EndComp
+Text HLabel 1350 1950 0    50   Input ~ 0
+ETH_TD4+
+Text HLabel 1350 2050 0    50   Input ~ 0
+ETH_TD4-
+Text HLabel 1350 1650 0    50   Input ~ 0
+ETH_CT
+Wire Wire Line
+	9450 5450 9650 5450
+Text HLabel 9650 5450 2    50   Output ~ 0
+Node_3v3
 $EndSCHEMATC

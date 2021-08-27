@@ -13,20 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:GND #PWR?
-U 1 1 67895BAC
-P 1800 6300
-AR Path="/5FF26697/67895BAC" Ref="#PWR?"  Part="1" 
-AR Path="/5FF26697/6784E01B/67895BAC" Ref="#PWR0152"  Part="1" 
-AR Path="/6784E01B/67895BAC" Ref="#PWR0152"  Part="1" 
-F 0 "#PWR0152" H 1800 6050 50  0001 C CNN
-F 1 "GND" H 1805 6127 50  0000 C CNN
-F 2 "" H 1800 6300 50  0001 C CNN
-F 3 "" H 1800 6300 50  0001 C CNN
-	1    1800 6300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1800 6200 1800 6300
 Wire Wire Line
@@ -43,17 +29,6 @@ Text Label 2250 1350 0    50   ~ 0
 CRESETB
 Text Label 2250 1050 0    50   ~ 0
 CDONE
-$Comp
-L power:+3V3 #PWR0153
-U 1 1 67B266EB
-P 2250 1650
-F 0 "#PWR0153" H 2250 1500 50  0001 C CNN
-F 1 "+3V3" V 2265 1778 50  0000 L CNN
-F 2 "" H 2250 1650 50  0001 C CNN
-F 3 "" H 2250 1650 50  0001 C CNN
-	1    2250 1650
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2250 1050 2600 1050
 Wire Wire Line
@@ -144,66 +119,23 @@ U 1 1 678B5318
 P 1950 1950
 F 0 "J6" H 2000 3067 50  0000 C CNN
 F 1 "Node0" H 2000 2976 50  0000 C CNN
-F 2 "" H 1950 1950 50  0001 C CNN
+F 2 "jkiv-library:stamp-10x10-P2.0mm_SMD" H 1950 1950 50  0001 C CNN
 F 3 "~" H 1950 1950 50  0001 C CNN
 	1    1950 1950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2250 2750 2300 2750
-Wire Wire Line
-	2300 2750 2300 2650
-Wire Wire Line
-	2250 2650 2300 2650
-Connection ~ 2300 2650
-Wire Wire Line
-	2350 1950 2300 1950
-Connection ~ 2300 1950
-Wire Wire Line
-	2300 1950 2250 1950
-Wire Wire Line
-	2300 2650 2300 2550
 Connection ~ 2300 2550
 Wire Wire Line
 	2250 2550 2300 2550
-Wire Wire Line
-	2300 2550 2300 2450
-Connection ~ 2300 2450
-Wire Wire Line
-	2250 2450 2300 2450
-Wire Wire Line
-	2300 2450 2300 2350
 Connection ~ 2300 2350
 Wire Wire Line
 	2250 2350 2300 2350
 Wire Wire Line
 	2300 2350 2300 2250
-Connection ~ 2300 2250
 Wire Wire Line
 	2250 2250 2300 2250
-Wire Wire Line
-	2300 2250 2300 2150
-Connection ~ 2300 2150
-Wire Wire Line
-	2250 2150 2300 2150
-Wire Wire Line
-	2300 1950 2300 2050
-Wire Wire Line
-	2300 2150 2300 2050
-Connection ~ 2300 2050
-Wire Wire Line
-	2300 2050 2250 2050
-$Comp
-L power:GND #PWR0158
-U 1 1 67AADB5A
-P 2350 1950
-F 0 "#PWR0158" H 2350 1700 50  0001 C CNN
-F 1 "GND" V 2355 1822 50  0000 R CNN
-F 2 "" H 2350 1950 50  0001 C CNN
-F 3 "" H 2350 1950 50  0001 C CNN
-	1    2350 1950
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	1750 2250 1700 2250
 Connection ~ 1700 2250
@@ -276,17 +208,6 @@ Text Label 4250 1350 0    50   ~ 0
 CRESETB
 Text Label 4250 1050 0    50   ~ 0
 CDONE
-$Comp
-L power:+3V3 #PWR0160
-U 1 1 6851806D
-P 4250 1650
-F 0 "#PWR0160" H 4250 1500 50  0001 C CNN
-F 1 "+3V3" V 4265 1778 50  0000 L CNN
-F 2 "" H 4250 1650 50  0001 C CNN
-F 3 "" H 4250 1650 50  0001 C CNN
-	1    4250 1650
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4250 1050 4600 1050
 Wire Wire Line
@@ -358,7 +279,7 @@ U 1 1 685180B7
 P 3950 1950
 F 0 "J8" H 4000 3067 50  0000 C CNN
 F 1 "Node1" H 4000 2976 50  0000 C CNN
-F 2 "" H 3950 1950 50  0001 C CNN
+F 2 "jkiv-library:stamp-10x10-P2.0mm_SMD" H 3950 1950 50  0001 C CNN
 F 3 "~" H 3950 1950 50  0001 C CNN
 	1    3950 1950
 	1    0    0    -1  
@@ -366,17 +287,10 @@ $EndComp
 Wire Wire Line
 	4250 2750 4300 2750
 Wire Wire Line
-	4300 2750 4300 2650
-Wire Wire Line
-	4250 2650 4300 2650
-Connection ~ 4300 2650
-Wire Wire Line
 	4350 1950 4300 1950
 Connection ~ 4300 1950
 Wire Wire Line
 	4300 1950 4250 1950
-Wire Wire Line
-	4300 2650 4300 2550
 Connection ~ 4300 2550
 Wire Wire Line
 	4250 2550 4300 2550
@@ -490,17 +404,6 @@ Text Label 6250 1350 0    50   ~ 0
 CRESETB
 Text Label 6250 1050 0    50   ~ 0
 CDONE
-$Comp
-L power:+3V3 #PWR0166
-U 1 1 68558E11
-P 6250 1650
-F 0 "#PWR0166" H 6250 1500 50  0001 C CNN
-F 1 "+3V3" V 6265 1778 50  0000 L CNN
-F 2 "" H 6250 1650 50  0001 C CNN
-F 3 "" H 6250 1650 50  0001 C CNN
-	1    6250 1650
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6250 1050 6600 1050
 Wire Wire Line
@@ -583,7 +486,7 @@ U 1 1 68558E5B
 P 5950 1950
 F 0 "J10" H 6000 3067 50  0000 C CNN
 F 1 "Node2" H 6000 2976 50  0000 C CNN
-F 2 "" H 5950 1950 50  0001 C CNN
+F 2 "jkiv-library:stamp-10x10-P2.0mm_SMD" H 5950 1950 50  0001 C CNN
 F 3 "~" H 5950 1950 50  0001 C CNN
 	1    5950 1950
 	1    0    0    -1  
@@ -723,13 +626,9 @@ Wire Wire Line
 Wire Wire Line
 	5000 1850 5750 1850
 Wire Wire Line
-	4250 2850 4700 2850
-Wire Wire Line
 	5750 1950 5100 1950
 Wire Wire Line
 	5100 1950 5100 2950
-Wire Wire Line
-	4250 2950 4700 2950
 Wire Wire Line
 	3000 2850 3000 1850
 Wire Wire Line
@@ -750,17 +649,6 @@ Text Label 8250 1350 0    50   ~ 0
 CRESETB
 Text Label 8250 1050 0    50   ~ 0
 CDONE
-$Comp
-L power:+3V3 #PWR0182
-U 1 1 68D73D06
-P 8250 1650
-F 0 "#PWR0182" H 8250 1500 50  0001 C CNN
-F 1 "+3V3" V 8265 1778 50  0000 L CNN
-F 2 "" H 8250 1650 50  0001 C CNN
-F 3 "" H 8250 1650 50  0001 C CNN
-	1    8250 1650
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8250 1050 8600 1050
 Wire Wire Line
@@ -843,7 +731,7 @@ U 1 1 68D73D48
 P 7950 1950
 F 0 "J12" H 8000 3067 50  0000 C CNN
 F 1 "Node3" H 8000 2976 50  0000 C CNN
-F 2 "" H 7950 1950 50  0001 C CNN
+F 2 "jkiv-library:stamp-10x10-P2.0mm_SMD" H 7950 1950 50  0001 C CNN
 F 3 "~" H 7950 1950 50  0001 C CNN
 	1    7950 1950
 	1    0    0    -1  
@@ -968,13 +856,9 @@ Wire Wire Line
 Wire Wire Line
 	7000 1850 7750 1850
 Wire Wire Line
-	6250 2850 6700 2850
-Wire Wire Line
 	7750 1950 7100 1950
 Wire Wire Line
 	7100 1950 7100 2950
-Wire Wire Line
-	6250 2950 6700 2950
 Text Label 6250 2850 0    50   ~ 0
 ~READY_3
 Text Label 6250 2950 0    50   ~ 0
@@ -999,17 +883,6 @@ Text Label 2250 3850 0    50   ~ 0
 CRESETB
 Text Label 2250 3550 0    50   ~ 0
 CDONE
-$Comp
-L power:+3V3 #PWR0243
-U 1 1 68F4CD8F
-P 2250 4150
-F 0 "#PWR0243" H 2250 4000 50  0001 C CNN
-F 1 "+3V3" V 2265 4278 50  0000 L CNN
-F 2 "" H 2250 4150 50  0001 C CNN
-F 3 "" H 2250 4150 50  0001 C CNN
-	1    2250 4150
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2250 3550 2600 3550
 Wire Wire Line
@@ -1103,8 +976,8 @@ L Connector_Generic:Conn_02x20_Counter_Clockwise J7
 U 1 1 68F4CDD7
 P 1950 4450
 F 0 "J7" H 2000 5567 50  0000 C CNN
-F 1 "Node4" H 2000 5476 50  0000 C CNN
-F 2 "" H 1950 4450 50  0001 C CNN
+F 1 "Node5" H 2000 5476 50  0000 C CNN
+F 2 "jkiv-library:stamp-10x10-P2.0mm_SMD" H 1950 4450 50  0001 C CNN
 F 3 "~" H 1950 4450 50  0001 C CNN
 	1    1950 4450
 	1    0    0    -1  
@@ -1236,17 +1109,6 @@ Text Label 4250 3850 0    50   ~ 0
 CRESETB
 Text Label 4250 3550 0    50   ~ 0
 CDONE
-$Comp
-L power:+3V3 #PWR0251
-U 1 1 68F4CE34
-P 4250 4150
-F 0 "#PWR0251" H 4250 4000 50  0001 C CNN
-F 1 "+3V3" V 4265 4278 50  0000 L CNN
-F 2 "" H 4250 4150 50  0001 C CNN
-F 3 "" H 4250 4150 50  0001 C CNN
-	1    4250 4150
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4250 3550 4600 3550
 Wire Wire Line
@@ -1304,8 +1166,8 @@ L Connector_Generic:Conn_02x20_Counter_Clockwise J9
 U 1 1 68F4CE6C
 P 3950 4450
 F 0 "J9" H 4000 5567 50  0000 C CNN
-F 1 "Node1" H 4000 5476 50  0000 C CNN
-F 2 "" H 3950 4450 50  0001 C CNN
+F 1 "Node6" H 4000 5476 50  0000 C CNN
+F 2 "jkiv-library:stamp-10x10-P2.0mm_SMD" H 3950 4450 50  0001 C CNN
 F 3 "~" H 3950 4450 50  0001 C CNN
 	1    3950 4450
 	1    0    0    -1  
@@ -1437,17 +1299,6 @@ Text Label 6250 3850 0    50   ~ 0
 CRESETB
 Text Label 6250 3550 0    50   ~ 0
 CDONE
-$Comp
-L power:+3V3 #PWR0256
-U 1 1 68F4CEC9
-P 6250 4150
-F 0 "#PWR0256" H 6250 4000 50  0001 C CNN
-F 1 "+3V3" V 6265 4278 50  0000 L CNN
-F 2 "" H 6250 4150 50  0001 C CNN
-F 3 "" H 6250 4150 50  0001 C CNN
-	1    6250 4150
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6250 3550 6600 3550
 Wire Wire Line
@@ -1529,8 +1380,8 @@ L Connector_Generic:Conn_02x20_Counter_Clockwise J11
 U 1 1 68F4CF0B
 P 5950 4450
 F 0 "J11" H 6000 5567 50  0000 C CNN
-F 1 "Node2" H 6000 5476 50  0000 C CNN
-F 2 "" H 5950 4450 50  0001 C CNN
+F 1 "Node7" H 6000 5476 50  0000 C CNN
+F 2 "jkiv-library:stamp-10x10-P2.0mm_SMD" H 5950 4450 50  0001 C CNN
 F 3 "~" H 5950 4450 50  0001 C CNN
 	1    5950 4450
 	1    0    0    -1  
@@ -1670,25 +1521,17 @@ Wire Wire Line
 Wire Wire Line
 	5000 4350 5750 4350
 Wire Wire Line
-	4250 5350 4700 5350
-Wire Wire Line
 	5750 4450 5100 4450
 Wire Wire Line
 	5100 4450 5100 5450
-Wire Wire Line
-	4250 5450 4700 5450
 Wire Wire Line
 	3000 5350 3000 4350
 Wire Wire Line
 	3000 4350 3750 4350
 Wire Wire Line
-	2250 5350 2700 5350
-Wire Wire Line
 	3750 4450 3100 4450
 Wire Wire Line
 	3100 4450 3100 5450
-Wire Wire Line
-	2250 5450 2700 5450
 NoConn ~ 8250 3950
 NoConn ~ 8250 4050
 NoConn ~ 8250 4250
@@ -1701,17 +1544,6 @@ Text Label 8250 3850 0    50   ~ 0
 CRESETB
 Text Label 8250 3550 0    50   ~ 0
 CDONE
-$Comp
-L power:+3V3 #PWR0264
-U 1 1 68F4CF80
-P 8250 4150
-F 0 "#PWR0264" H 8250 4000 50  0001 C CNN
-F 1 "+3V3" V 8265 4278 50  0000 L CNN
-F 2 "" H 8250 4150 50  0001 C CNN
-F 3 "" H 8250 4150 50  0001 C CNN
-	1    8250 4150
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8250 3550 8600 3550
 Wire Wire Line
@@ -1793,8 +1625,8 @@ L Connector_Generic:Conn_02x20_Counter_Clockwise J13
 U 1 1 68F4CFC2
 P 7950 4450
 F 0 "J13" H 8000 5567 50  0000 C CNN
-F 1 "Node3" H 8000 5476 50  0000 C CNN
-F 2 "" H 7950 4450 50  0001 C CNN
+F 1 "Node8" H 8000 5476 50  0000 C CNN
+F 2 "jkiv-library:stamp-10x10-P2.0mm_SMD" H 7950 4450 50  0001 C CNN
 F 3 "~" H 7950 4450 50  0001 C CNN
 	1    7950 4450
 	1    0    0    -1  
@@ -1919,21 +1751,15 @@ Wire Wire Line
 Wire Wire Line
 	7000 4350 7750 4350
 Wire Wire Line
-	6250 5350 6700 5350
-Wire Wire Line
 	7750 4450 7100 4450
 Wire Wire Line
 	7100 4450 7100 5450
-Wire Wire Line
-	6250 5450 6700 5450
 Text Label 6250 5350 0    50   ~ 0
 ~READY_7
 Text Label 6250 5450 0    50   ~ 0
 SDO1_6
 Text Label 8250 5450 0    50   ~ 0
 CIPO1
-Text Label 8250 5350 0    50   ~ 0
-~READY_INIT
 Text HLabel 2600 1050 2    50   Output ~ 0
 CDONE
 Text HLabel 2600 1150 2    50   Input ~ 0
@@ -2130,20 +1956,6 @@ F 3 "~" H 10100 1550 50  0001 C CNN
 	1    10100 1550
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 69E0F881
-P 1150 1850
-AR Path="/5FF26697/69E0F881" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/69E0F881" Ref="R?"  Part="1" 
-AR Path="/6784E01B/69E0F881" Ref="R24"  Part="1" 
-F 0 "R24" V 1100 1700 50  0000 C CNN
-F 1 "22R" V 1200 1700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 1150 1850 50  0001 C CNN
-F 3 "~" H 1150 1850 50  0001 C CNN
-	1    1150 1850
-	0    1    1    0   
-$EndComp
 Text Notes 1250 5950 0    50   ~ 0
 TODO pull ups / pull downs
 $Comp
@@ -2168,212 +1980,10 @@ Wire Wire Line
 	8250 5450 8600 5450
 Wire Wire Line
 	8800 5450 8950 5450
-Text HLabel 900  1850 0    50   Output ~ 0
+Text HLabel 1400 1850 0    50   Output ~ 0
 ~READY
 Text Label 1750 1850 2    50   ~ 0
 ~READY
-$Comp
-L Device:R_Small_US R?
-U 1 1 62AB5977
-P 2800 5350
-AR Path="/5FF26697/62AB5977" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62AB5977" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62AB5977" Ref="R28"  Part="1" 
-F 0 "R28" V 2750 5200 50  0000 C CNN
-F 1 "22R" V 2750 5450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 2800 5350 50  0001 C CNN
-F 3 "~" H 2800 5350 50  0001 C CNN
-	1    2800 5350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2900 5350 3000 5350
-$Comp
-L Device:R_Small_US R?
-U 1 1 62AB7353
-P 2800 5450
-AR Path="/5FF26697/62AB7353" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62AB7353" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62AB7353" Ref="R29"  Part="1" 
-F 0 "R29" V 2750 5300 50  0000 C CNN
-F 1 "22R" V 2750 5600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 2800 5450 50  0001 C CNN
-F 3 "~" H 2800 5450 50  0001 C CNN
-	1    2800 5450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2900 5450 3100 5450
-$Comp
-L Device:R_Small_US R?
-U 1 1 62AB8525
-P 4800 5350
-AR Path="/5FF26697/62AB8525" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62AB8525" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62AB8525" Ref="R32"  Part="1" 
-F 0 "R32" V 4750 5200 50  0000 C CNN
-F 1 "22R" V 4750 5450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4800 5350 50  0001 C CNN
-F 3 "~" H 4800 5350 50  0001 C CNN
-	1    4800 5350
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 62AB8E6D
-P 4800 5450
-AR Path="/5FF26697/62AB8E6D" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62AB8E6D" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62AB8E6D" Ref="R33"  Part="1" 
-F 0 "R33" V 4750 5300 50  0000 C CNN
-F 1 "22R" V 4750 5600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4800 5450 50  0001 C CNN
-F 3 "~" H 4800 5450 50  0001 C CNN
-	1    4800 5450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4900 5350 5000 5350
-Wire Wire Line
-	4900 5450 5100 5450
-$Comp
-L Device:R_Small_US R?
-U 1 1 62AF728E
-P 6800 5350
-AR Path="/5FF26697/62AF728E" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62AF728E" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62AF728E" Ref="R36"  Part="1" 
-F 0 "R36" V 6750 5200 50  0000 C CNN
-F 1 "22R" V 6750 5450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 6800 5350 50  0001 C CNN
-F 3 "~" H 6800 5350 50  0001 C CNN
-	1    6800 5350
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 62AF7BFA
-P 6800 5450
-AR Path="/5FF26697/62AF7BFA" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62AF7BFA" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62AF7BFA" Ref="R37"  Part="1" 
-F 0 "R37" V 6750 5300 50  0000 C CNN
-F 1 "22R" V 6750 5600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 6800 5450 50  0001 C CNN
-F 3 "~" H 6800 5450 50  0001 C CNN
-	1    6800 5450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6900 5350 7000 5350
-Wire Wire Line
-	6900 5450 7100 5450
-$Comp
-L Device:R_Small_US R?
-U 1 1 62B36162
-P 6800 2850
-AR Path="/5FF26697/62B36162" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62B36162" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62B36162" Ref="R34"  Part="1" 
-F 0 "R34" V 6750 2700 50  0000 C CNN
-F 1 "22R" V 6750 2950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 6800 2850 50  0001 C CNN
-F 3 "~" H 6800 2850 50  0001 C CNN
-	1    6800 2850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 62B36AF2
-P 6800 2950
-AR Path="/5FF26697/62B36AF2" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62B36AF2" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62B36AF2" Ref="R35"  Part="1" 
-F 0 "R35" V 6750 2800 50  0000 C CNN
-F 1 "22R" V 6750 3100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 6800 2950 50  0001 C CNN
-F 3 "~" H 6800 2950 50  0001 C CNN
-	1    6800 2950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6900 2850 7000 2850
-Wire Wire Line
-	6900 2950 7100 2950
-$Comp
-L Device:R_Small_US R?
-U 1 1 62B76283
-P 4800 2850
-AR Path="/5FF26697/62B76283" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62B76283" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62B76283" Ref="R30"  Part="1" 
-F 0 "R30" V 4750 2700 50  0000 C CNN
-F 1 "22R" V 4750 2950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4800 2850 50  0001 C CNN
-F 3 "~" H 4800 2850 50  0001 C CNN
-	1    4800 2850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 62B76C37
-P 4800 2950
-AR Path="/5FF26697/62B76C37" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62B76C37" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62B76C37" Ref="R31"  Part="1" 
-F 0 "R31" V 4750 2800 50  0000 C CNN
-F 1 "22R" V 4750 3100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4800 2950 50  0001 C CNN
-F 3 "~" H 4800 2950 50  0001 C CNN
-	1    4800 2950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4900 2850 5000 2850
-Wire Wire Line
-	4900 2950 5100 2950
-Wire Wire Line
-	2250 2950 2700 2950
-Wire Wire Line
-	2250 2850 2700 2850
-$Comp
-L Device:R_Small_US R?
-U 1 1 62BF94FF
-P 2800 2850
-AR Path="/5FF26697/62BF94FF" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62BF94FF" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62BF94FF" Ref="R26"  Part="1" 
-F 0 "R26" V 2750 2700 50  0000 C CNN
-F 1 "22R" V 2750 2950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 2800 2850 50  0001 C CNN
-F 3 "~" H 2800 2850 50  0001 C CNN
-	1    2800 2850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 62BF9ED7
-P 2800 2950
-AR Path="/5FF26697/62BF9ED7" Ref="R?"  Part="1" 
-AR Path="/5FF26697/6784E01B/62BF9ED7" Ref="R?"  Part="1" 
-AR Path="/6784E01B/62BF9ED7" Ref="R27"  Part="1" 
-F 0 "R27" V 2750 2800 50  0000 C CNN
-F 1 "22R" V 2750 3100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 2800 2950 50  0001 C CNN
-F 3 "~" H 2800 2950 50  0001 C CNN
-	1    2800 2950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2900 2850 3000 2850
-Wire Wire Line
-	2900 2950 3100 2950
-Wire Wire Line
-	1750 1850 1250 1850
-Wire Wire Line
-	900  1850 1050 1850
-Wire Wire Line
-	8250 5350 8650 5350
 $Comp
 L Device:R_Small_US R?
 U 1 1 67895BA6
@@ -2401,4 +2011,120 @@ F 3 "" H 3400 3750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3400 3750 3750 3750
+Wire Wire Line
+	1750 1850 1400 1850
+Wire Wire Line
+	2250 2850 3000 2850
+Wire Wire Line
+	4250 2850 5000 2850
+Wire Wire Line
+	6250 2850 7000 2850
+Wire Wire Line
+	6250 5350 7000 5350
+Wire Wire Line
+	4250 5350 5000 5350
+Wire Wire Line
+	2250 5350 3000 5350
+$Comp
+L power:GND #PWR?
+U 1 1 67895BAC
+P 1800 6300
+AR Path="/5FF26697/67895BAC" Ref="#PWR?"  Part="1" 
+AR Path="/5FF26697/6784E01B/67895BAC" Ref="#PWR0152"  Part="1" 
+AR Path="/6784E01B/67895BAC" Ref="#PWR0152"  Part="1" 
+F 0 "#PWR0152" H 1800 6050 50  0001 C CNN
+F 1 "GND" H 1805 6127 50  0000 C CNN
+F 2 "" H 1800 6300 50  0001 C CNN
+F 3 "" H 1800 6300 50  0001 C CNN
+	1    1800 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 5350 8650 5350
+Text Label 8250 5350 0    50   ~ 0
+~READY_INIT
+Wire Wire Line
+	2250 5450 3100 5450
+Wire Wire Line
+	4250 5450 5100 5450
+Wire Wire Line
+	6250 5450 7100 5450
+Wire Wire Line
+	6250 2950 7100 2950
+Wire Wire Line
+	4250 2950 5100 2950
+Wire Wire Line
+	2250 2950 3100 2950
+$Comp
+L power:GND #PWR0158
+U 1 1 67AADB5A
+P 2350 1950
+F 0 "#PWR0158" H 2350 1700 50  0001 C CNN
+F 1 "GND" V 2355 1822 50  0000 R CNN
+F 2 "" H 2350 1950 50  0001 C CNN
+F 3 "" H 2350 1950 50  0001 C CNN
+	1    2350 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2250 1950 2300 1950
+NoConn ~ 2250 2150
+NoConn ~ 2250 2050
+Wire Wire Line
+	2300 2350 2300 2550
+NoConn ~ 2250 2450
+Wire Wire Line
+	2300 2250 2300 1950
+Connection ~ 2300 2250
+Connection ~ 2300 1950
+Wire Wire Line
+	2300 1950 2350 1950
+Wire Wire Line
+	2300 2550 2300 2750
+NoConn ~ 2250 2650
+Wire Wire Line
+	4300 2650 4300 2550
+Wire Wire Line
+	4300 2750 4300 2650
+Connection ~ 4300 2650
+Wire Wire Line
+	4250 2650 4300 2650
+Text Label 2250 1650 0    50   ~ 0
+Node_3v3
+Wire Wire Line
+	2250 1650 2650 1650
+Text Label 2250 4150 0    50   ~ 0
+Node_3v3
+Wire Wire Line
+	2250 4150 2650 4150
+Text Label 4250 4150 0    50   ~ 0
+Node_3v3
+Wire Wire Line
+	4250 4150 4650 4150
+Text Label 6250 4150 0    50   ~ 0
+Node_3v3
+Wire Wire Line
+	6250 4150 6650 4150
+Text Label 8250 4150 0    50   ~ 0
+Node_3v3
+Wire Wire Line
+	8250 4150 8650 4150
+Text Label 4250 1650 0    50   ~ 0
+Node_3v3
+Wire Wire Line
+	4250 1650 4650 1650
+Text Label 6250 1650 0    50   ~ 0
+Node_3v3
+Wire Wire Line
+	6250 1650 6650 1650
+Text Label 8250 1650 0    50   ~ 0
+Node_3v3
+Wire Wire Line
+	8250 1650 8650 1650
+Text HLabel 2650 6200 0    50   Input ~ 0
+Node_3v3
+Text Label 2650 6200 0    50   ~ 0
+Node_3v3
+Wire Wire Line
+	2650 6200 3050 6200
 $EndSCHEMATC

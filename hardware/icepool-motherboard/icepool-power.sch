@@ -328,19 +328,7 @@ Wire Wire Line
 	7950 4700 7750 4700
 Wire Wire Line
 	8150 4700 8350 4700
-Text HLabel 1350 1350 0    50   Input ~ 0
-ETH_TD1-
-Text HLabel 1350 1750 0    50   Input ~ 0
-ETH_TD3+
-Text HLabel 1350 1550 0    50   Input ~ 0
-ETH_TD2-
-Text HLabel 1350 1850 0    50   Input ~ 0
-ETH_TD3-
-Text HLabel 1350 1250 0    50   Input ~ 0
-ETH_TD1+
-Text HLabel 1350 1450 0    50   Input ~ 0
-ETH_TD2+
-Text HLabel 1350 2150 0    50   Input ~ 0
+Text HLabel 1250 2850 0    50   Input ~ 0
 ETH_REF
 $Comp
 L Interface_USB:STUSB4500QTR U10
@@ -731,206 +719,18 @@ PD_GOOD
 Text Label 8350 1000 0    50   ~ 0
 PD_2v7
 $Comp
-L Connector_Generic:Conn_02x20_Counter_Clockwise J14
+L Connector_Generic:Conn_01x16 J14
 U 1 1 618A7463
 P 1550 2150
 F 0 "J14" H 1600 3267 50  0000 C CNN
 F 1 "PoE_PWR" H 1600 3176 50  0000 C CNN
-F 2 "jkiv-library:stamp-10x10-P2.0mm_THT" H 1550 2150 50  0001 C CNN
+F 2 "jkiv-library:expansion-18-P2.0mm_SMD" H 1550 2150 50  0001 C CNN
 F 3 "~" H 1550 2150 50  0001 C CNN
 	1    1550 2150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1850 1250 1900 1250
-Wire Wire Line
-	1900 1250 1900 1350
-Wire Wire Line
-	1900 2150 1850 2150
-Wire Wire Line
-	1900 2050 1850 2050
-Connection ~ 1900 2050
-Wire Wire Line
-	1900 2050 1900 2150
-Wire Wire Line
-	1900 1950 1850 1950
-Connection ~ 1900 1950
-Wire Wire Line
-	1900 1950 1900 2050
-Wire Wire Line
-	1900 1850 1850 1850
-Connection ~ 1900 1850
-Wire Wire Line
-	1900 1850 1900 1950
-Wire Wire Line
-	1900 1750 1850 1750
-Connection ~ 1900 1750
-Wire Wire Line
-	1900 1750 1900 1850
-Wire Wire Line
-	1900 1650 1850 1650
-Connection ~ 1900 1650
-Wire Wire Line
-	1900 1650 1900 1750
-Wire Wire Line
-	1900 1550 1850 1550
-Connection ~ 1900 1550
-Wire Wire Line
-	1900 1550 1900 1650
-Wire Wire Line
-	1900 1450 1850 1450
-Connection ~ 1900 1450
-Wire Wire Line
-	1900 1450 1900 1550
-Wire Wire Line
-	1900 1350 1850 1350
-Connection ~ 1900 1350
-Wire Wire Line
-	1900 1350 1900 1450
-Wire Wire Line
-	1300 3150 1350 3150
-Wire Wire Line
-	1850 3150 1900 3150
-Wire Wire Line
-	1900 3150 1900 3050
-Wire Wire Line
-	1900 2250 1850 2250
-Wire Wire Line
-	1350 3050 1300 3050
-Connection ~ 1300 3050
-Wire Wire Line
-	1300 3050 1300 3150
-Wire Wire Line
-	1350 2950 1300 2950
-Connection ~ 1300 2950
-Wire Wire Line
-	1300 2950 1300 3050
-Wire Wire Line
-	1350 2850 1300 2850
-Connection ~ 1300 2850
-Wire Wire Line
-	1300 2850 1300 2950
-Wire Wire Line
-	1350 2750 1300 2750
-Connection ~ 1300 2750
-Wire Wire Line
-	1300 2750 1300 2850
-Wire Wire Line
-	1350 2650 1300 2650
-Connection ~ 1300 2650
-Wire Wire Line
-	1300 2650 1300 2750
-Wire Wire Line
-	1350 2550 1300 2550
-Connection ~ 1300 2550
-Wire Wire Line
-	1300 2550 1300 2650
-Wire Wire Line
-	1350 2450 1300 2450
-Connection ~ 1300 2450
-Wire Wire Line
-	1300 2450 1300 2550
-Wire Wire Line
-	1350 2350 1300 2350
-Connection ~ 1300 2350
-Wire Wire Line
-	1300 2350 1300 2450
-Wire Wire Line
-	1350 2250 1300 2250
-Wire Wire Line
-	1300 2250 1300 2350
-Wire Wire Line
-	1850 3050 1900 3050
-Connection ~ 1900 3050
-Wire Wire Line
-	1900 3050 1900 2950
-Wire Wire Line
-	1850 2950 1900 2950
-Connection ~ 1900 2950
-Wire Wire Line
-	1900 2950 1900 2850
-Wire Wire Line
-	1850 2850 1900 2850
-Connection ~ 1900 2850
-Wire Wire Line
-	1900 2850 1900 2750
-Wire Wire Line
-	1850 2750 1900 2750
-Connection ~ 1900 2750
-Wire Wire Line
-	1900 2750 1900 2650
-Wire Wire Line
-	1850 2650 1900 2650
-Connection ~ 1900 2650
-Wire Wire Line
-	1900 2650 1900 2550
-Wire Wire Line
-	1850 2550 1900 2550
-Connection ~ 1900 2550
-Wire Wire Line
-	1900 2550 1900 2450
-Wire Wire Line
-	1850 2450 1900 2450
-Connection ~ 1900 2450
-Wire Wire Line
-	1900 2450 1900 2350
-Wire Wire Line
-	1850 2350 1900 2350
-Connection ~ 1900 2350
-Wire Wire Line
-	1900 2350 1900 2250
-$Comp
-L power:GND #PWR0114
-U 1 1 61A29B15
-P 2050 1250
-F 0 "#PWR0114" H 2050 1000 50  0001 C CNN
-F 1 "GND" H 2055 1077 50  0000 C CNN
-F 2 "" H 2050 1250 50  0001 C CNN
-F 3 "" H 2050 1250 50  0001 C CNN
-	1    2050 1250
-	1    0    0    -1  
-$EndComp
-Connection ~ 1900 3150
-$Comp
-L power:GND #PWR0115
-U 1 1 61A38D4E
-P 1300 3200
-F 0 "#PWR0115" H 1300 2950 50  0001 C CNN
-F 1 "GND" H 1305 3027 50  0000 C CNN
-F 2 "" H 1300 3200 50  0001 C CNN
-F 3 "" H 1300 3200 50  0001 C CNN
-	1    1300 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1300 3200 1300 3150
-Connection ~ 1300 3150
-$Comp
-L power:+5V #PWR0132
-U 1 1 61A57C91
-P 2000 3200
-F 0 "#PWR0132" H 2000 3050 50  0001 C CNN
-F 1 "+5V" H 2015 3373 50  0000 C CNN
-F 2 "" H 2000 3200 50  0001 C CNN
-F 3 "" H 2000 3200 50  0001 C CNN
-	1    2000 3200
-	1    0    0    -1  
-$EndComp
-Connection ~ 1900 1250
 Text Notes 1000 850  0    50   ~ 0
 TODO PoE rectifier and filter ckt
-Wire Wire Line
-	1900 3250 2000 3250
-Wire Wire Line
-	2000 3250 2000 3200
-Wire Wire Line
-	1900 3150 1900 3250
-Wire Wire Line
-	2050 1250 2050 1150
-Wire Wire Line
-	2050 1150 1900 1150
-Wire Wire Line
-	1900 1150 1900 1250
 $Comp
 L Device:R_Shunt_US R24
 U 1 1 612BA790
@@ -964,14 +764,111 @@ F 3 "~" H 7000 5050 50  0001 C CNN
 	1    6800 5050
 	1    0    0    -1  
 $EndComp
-Text HLabel 1350 1950 0    50   Input ~ 0
-ETH_TD4+
-Text HLabel 1350 2050 0    50   Input ~ 0
-ETH_TD4-
-Text HLabel 1350 1650 0    50   Input ~ 0
-ETH_CT
 Wire Wire Line
 	9450 5450 9650 5450
 Text HLabel 9650 5450 2    50   Output ~ 0
 Node_3v3
+Wire Wire Line
+	1350 1950 1300 1950
+Wire Wire Line
+	1300 1650 1350 1650
+Wire Wire Line
+	1300 1650 1300 1750
+Wire Wire Line
+	1350 1750 1300 1750
+Connection ~ 1300 1750
+Wire Wire Line
+	1300 1750 1300 1850
+Wire Wire Line
+	1350 1850 1300 1850
+Connection ~ 1300 1850
+Wire Wire Line
+	1300 1850 1300 1950
+$Comp
+L power:GND #PWR0114
+U 1 1 613ED1D6
+P 1250 1950
+F 0 "#PWR0114" H 1250 1700 50  0001 C CNN
+F 1 "GND" V 1255 1822 50  0000 R CNN
+F 2 "" H 1250 1950 50  0001 C CNN
+F 3 "" H 1250 1950 50  0001 C CNN
+	1    1250 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 1950 1300 1950
+Connection ~ 1300 1950
+$Comp
+L power:+5V #PWR0115
+U 1 1 613F56C9
+P 1300 1400
+F 0 "#PWR0115" H 1300 1250 50  0001 C CNN
+F 1 "+5V" H 1315 1573 50  0000 C CNN
+F 2 "" H 1300 1400 50  0001 C CNN
+F 3 "" H 1300 1400 50  0001 C CNN
+	1    1300 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1400 1300 1450
+Wire Wire Line
+	1300 1450 1350 1450
+Wire Wire Line
+	1300 1450 1300 1550
+Wire Wire Line
+	1300 1550 1350 1550
+Connection ~ 1300 1450
+Text HLabel 1250 2050 0    50   Input ~ 0
+ETH_TAP0
+Text HLabel 1250 2250 0    50   Input ~ 0
+ETH_TAP1
+Text HLabel 1250 2450 0    50   Input ~ 0
+ETH_TAP2
+Text HLabel 1250 2650 0    50   Input ~ 0
+ETH_TAP3
+Wire Wire Line
+	1250 2850 1300 2850
+Wire Wire Line
+	1350 2650 1300 2650
+Wire Wire Line
+	1350 2450 1300 2450
+Wire Wire Line
+	1350 2250 1300 2250
+Wire Wire Line
+	1350 2050 1300 2050
+Wire Wire Line
+	1300 2050 1300 2150
+Wire Wire Line
+	1300 2150 1350 2150
+Connection ~ 1300 2050
+Wire Wire Line
+	1300 2050 1250 2050
+Wire Wire Line
+	1300 2250 1300 2350
+Wire Wire Line
+	1300 2350 1350 2350
+Connection ~ 1300 2250
+Wire Wire Line
+	1300 2250 1250 2250
+Wire Wire Line
+	1300 2450 1300 2550
+Wire Wire Line
+	1300 2550 1350 2550
+Connection ~ 1300 2450
+Wire Wire Line
+	1300 2450 1250 2450
+Wire Wire Line
+	1300 2650 1300 2750
+Wire Wire Line
+	1300 2750 1350 2750
+Connection ~ 1300 2650
+Wire Wire Line
+	1300 2650 1250 2650
+Wire Wire Line
+	1300 2850 1300 2950
+Wire Wire Line
+	1300 2950 1350 2950
+Connection ~ 1300 2850
+Wire Wire Line
+	1300 2850 1350 2850
 $EndSCHEMATC
